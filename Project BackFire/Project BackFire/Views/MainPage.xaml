@@ -9,10 +9,11 @@
     mc:Ignorable="d">
     <Grid
         x:Name="ContentArea"
-<<<<<<< HEAD
+
         
         Margin="{StaticResource MediumLeftRightMargin}">
-=======
+
+
 
 
 
@@ -31,10 +32,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-<<<<<<< HEAD
-            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.-->
-=======
+
             <Image HorizontalAlignment="Left" Height="320" Margin="58,212,-458,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom1.jpeg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="320" Margin="518,212,-918,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens_green.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="320" Margin="978,212,-1378,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
@@ -49,7 +47,13 @@
         <Grid Margin="0,0,0,0" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="0,0,0,4" VerticalAlignment="Top" Height="130" Background="#FFC0BCB5">
             <Image HorizontalAlignment="Left" Height="114" Margin="0,10,0,0" VerticalAlignment="Top" Width="538" Source="ms-appx:///Images/test_logo.png"/>
             <Button Content="Button" HorizontalAlignment="Stretch" Margin="1752,997,15,-906" VerticalAlignment="Stretch" RenderTransformOrigin="1.246,-0.312" RequestedTheme="Default" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" Foreground="Black" FocusVisualSecondaryBrush="{x:Null}" Background="White"/>
+
+
+
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
         </Grid>
+
 
     </Grid>
 </Page>
