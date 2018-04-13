@@ -20,6 +20,27 @@
             x:Name="TitlePage"
             x:Uid="Main_Title"
             Style="{StaticResource PageTitleStyle}" />
+<<<<<<< HEAD
         <Grid Height="140" Margin="0,0,0,940" Grid.RowSpan="2" VerticalAlignment="Bottom" Background="#FF3581B8" BorderBrush="White" BorderThickness="2" HorizontalAlignment="Right" Width="1920"/>
+=======
+<<<<<<< HEAD
+
+        <Grid 
+            Grid.Row="1" 
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <CommandBar>
+                <CommandBar.Content>
+                    <Grid/>
+                </CommandBar.Content>
+                <AppBarButton Icon="Accept" Label="AppBarButton"/>
+                <AppBarButton Icon="Cancel" Label="AppBarButton"/>
+            </CommandBar>
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
+        </Grid>
+=======
+        <Image HorizontalAlignment="Right" Height="225" Margin="0,0,983,570" VerticalAlignment="Bottom" Width="396" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Row="1"/>
+>>>>>>> ed4a0077860d77d4c840bd5ad6896ee40efa8ea2
+>>>>>>> 1218199150ec8b5b00e94a4304d5bb982a35d19c
     </Grid>
 </Page>
