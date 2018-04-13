@@ -171,6 +171,7 @@
     <Content Include="Images\Konferens.jpg" />
     <Content Include="Images\confroom1.jpeg" />
     <Content Include="Images\confroom2.jpeg" />
+    <Content Include="Images\Konferens_green.jpg" />
     <Content Include="Images\test_logo.png" />
     <Content Include="Images\test_logo_whitetxt.png" />
     <Content Include="Images\user1.png" />
