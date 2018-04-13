@@ -9,7 +9,7 @@
     mc:Ignorable="d">
     <Grid
         x:Name="ContentArea"
-        Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Background="#FF474647">
+        Margin="0,0,0,0" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Background="#FF474647" HorizontalAlignment="Right" Width="1920" Height="1080" VerticalAlignment="Bottom">
 
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow" Height="48"/>
@@ -20,6 +20,6 @@
             x:Name="TitlePage"
             x:Uid="Main_Title"
             Style="{StaticResource PageTitleStyle}" />
-        <Image HorizontalAlignment="Right" Height="225" Margin="0,0,983,570" VerticalAlignment="Bottom" Width="396" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Row="1"/>
+        <Grid Height="140" Margin="0,0,0,940" Grid.RowSpan="2" VerticalAlignment="Bottom" Background="#FF3581B8" BorderBrush="White" BorderThickness="2" HorizontalAlignment="Right" Width="1920"/>
     </Grid>
 </Page>
