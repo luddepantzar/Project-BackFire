@@ -7,36 +7,31 @@
     Style="{StaticResource PageStyle}"
     DataContext="{Binding MainViewModel, Source={StaticResource Locator}}"
     mc:Ignorable="d">
-    <Grid
+    <!--<Grid
         x:Name="ContentArea"
-        Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Background="#FF474647">
+        Margin="{StaticResource MediumLeftRightMargin}">
 
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow" Height="48"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock
-            x:Name="TitlePage"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
-<<<<<<< HEAD
-
         <Grid 
             Grid.Row="1" 
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <CommandBar>
-                <CommandBar.Content>
-                    <Grid/>
-                </CommandBar.Content>
-                <AppBarButton Icon="Accept" Label="AppBarButton"/>
-                <AppBarButton Icon="Cancel" Label="AppBarButton"/>
-            </CommandBar>
+            Background="#FF474647">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Left" Height="320" Margin="58,212,-458,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="518,212,-918,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="978,212,-1378,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="1438,212,-1838,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="58,592,-458,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="518,592,-918,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="978,592,-1378,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Image HorizontalAlignment="Left" Height="320" Margin="1438,592,-1838,0" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>-->
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
         </Grid>
-=======
-        <Image HorizontalAlignment="Right" Height="225" Margin="0,0,983,570" VerticalAlignment="Bottom" Width="396" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Row="1"/>
->>>>>>> ed4a0077860d77d4c840bd5ad6896ee40efa8ea2
     </Grid>
 </Page>
