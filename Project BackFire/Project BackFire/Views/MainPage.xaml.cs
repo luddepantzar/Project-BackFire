@@ -17,5 +17,15 @@ namespace Project_BackFire.Views
         {
             InitializeComponent();
         }
+
+        private void Button_PointerMoved(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            Opacity = 100;
+        }
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            Opacity = 100;
+        }
     }
 }
