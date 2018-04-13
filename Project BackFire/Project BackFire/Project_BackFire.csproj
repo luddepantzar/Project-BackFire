@@ -166,6 +166,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Konferens_green.jpg" />
     <Content Include="Images\kugghjul.png" />
     <Content Include="Images\exeo.png" />
     <Content Include="Images\Konferens.jpg" />
