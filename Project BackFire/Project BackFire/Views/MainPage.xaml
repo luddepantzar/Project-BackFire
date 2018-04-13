@@ -24,6 +24,13 @@
         <Grid 
             Grid.Row="1" 
             Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <CommandBar>
+                <CommandBar.Content>
+                    <Grid/>
+                </CommandBar.Content>
+                <AppBarButton Icon="Accept" Label="AppBarButton"/>
+                <AppBarButton Icon="Cancel" Label="AppBarButton"/>
+            </CommandBar>
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
         </Grid>
