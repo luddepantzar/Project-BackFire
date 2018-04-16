@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Style="{StaticResource PageStyle}" 
     DataContext="{Binding MainViewModel, Source={StaticResource Locator}}"
+    mc:Ignorable="d" Height="1080" RequestedTheme="Dark">
 
     <Page.Resources>
         <!--Ljus Vit färggggggggggggggggg-->
