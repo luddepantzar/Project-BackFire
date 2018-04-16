@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Project_BackFire.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -30,9 +29,9 @@ namespace Project_BackFire.Views
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            string HourMinute;
-
-            HourMinute = DateTime.Now.ToString("HH:mm");
+            DateTime TimeNow = new DateTime();
+            TimeNow = DateTime.Now;
+            String CurrentDatetime = TimeNow.ToString();
         }
     }
 }
