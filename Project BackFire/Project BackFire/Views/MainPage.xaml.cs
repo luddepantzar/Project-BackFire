@@ -7,6 +7,7 @@ namespace Project_BackFire.Views
 {
     public sealed partial class MainPage : Page
     {
+
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -31,7 +32,21 @@ namespace Project_BackFire.Views
         {
             DateTime TimeNow = new DateTime();
             TimeNow = DateTime.Now;
-            String CurrentDatetime = TimeNow.ToString();
+            string CurrentDatetime = TimeNow.ToString();
+        }
+
+        private void AddTime()
+        {
+            try
+            {
+                TextBlock TimeDate = MainPage.Current.FindName("TimeDate") as TextBlock;
+                string sLog = TimeDate.Text;
+                string sNew;
+            }
+            catch
+            {
+
+            }
         }
     }
 }
