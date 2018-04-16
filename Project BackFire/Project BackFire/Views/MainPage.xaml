@@ -3,9 +3,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<<<<<<< HEAD
     xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
     x:Class="Project_BackFire.Views.MainPage"
     mc:Ignorable="d" Height="1080" RequestedTheme="Dark" >
+=======
+    Style="{StaticResource PageStyle}" 
+    DataContext="{Binding MainViewModel, Source={StaticResource Locator}}"
+    mc:Ignorable="d" Height="1080" RequestedTheme="Dark">
+>>>>>>> 6445cead1b0819ccc9da1581efa9dbebead281b1
 
     <Page.Resources>
         <!--Ljus Vit färggggggggggggggggg-->
@@ -19,9 +25,9 @@
         <SolidColorBrush x:Key="MenubarColor2" Color="#EF271B" />
 
         <!--Ljus Vit färg-->
-        <SolidColorBrush x:Key="BackgroundColor3" Color="#F7F7FF"/>
+        <SolidColorBrush x:Key="BackgroundColor3" Color="#011627"/>
         <!--Ljus Blå färg-->
-        <SolidColorBrush x:Key="MenubarColor3" Color="#279AF1" />
+        <SolidColorBrush x:Key="MenubarColor3" Color="#FF0022" />
 
         <!--Default färg-->
         <SolidColorBrush x:Key="BackgroundColorD" Color="#FF333333"/>
@@ -29,9 +35,13 @@
         <SolidColorBrush x:Key="MenubarColorD" Color="#C0BCB5" />
 
 
-    </Page.Resources>
+        <SolidColorBrush x:Key="yellow" Color="Yellow"/>
 
+        <SolidColorBrush x:Key="green" Color="Green"/>
 
+        <SolidColorBrush x:Key="red" Color="Red"/>
+
+<<<<<<< HEAD
     <Page.Style>
         <StaticResource ResourceKey="PageStyle"/>
     </Page.Style>
@@ -40,6 +50,9 @@
     </Page.DataContext>
 
 
+=======
+    </Page.Resources>
+>>>>>>> 6445cead1b0819ccc9da1581efa9dbebead281b1
     <Grid
         x:Name="ContentArea"
         
@@ -61,8 +74,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+
             <Image x:Name="Img1" HorizontalAlignment="Left" Height="320" Margin="63,112,-463,-432" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+<<<<<<< HEAD
             <Grid x:Name="Grid1" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="63,112,-463,-432" VerticalAlignment="Top" Width="400" Background="#003AB40D"  />
+=======
+            <Grid  x:Name="grid1" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="63,112,-463,-432" VerticalAlignment="Top" Width="400" Opacity="0.6"/>
+>>>>>>> 6445cead1b0819ccc9da1581efa9dbebead281b1
             <Image x:Name="Img2" HorizontalAlignment="Left" Height="320" Margin="523,112,-923,-432" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom1.jpeg" Stretch="Fill"/>
             <Grid x:Name="Grid2" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="523,112,-923,-432" VerticalAlignment="Top" Width="400"/>
             <Image x:Name="Img3" HorizontalAlignment="Left" Height="320" Margin="983,112,-1383,-432" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
@@ -76,20 +94,30 @@
             <Image x:Name="Img7" HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill"/>
             <Grid x:Name="Grid7" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400"/>
             <Image x:Name="Img8" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+<<<<<<< HEAD
             <Grid x:Name="Grid8" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
+=======
+            <Grid BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
+
+>>>>>>> 6445cead1b0819ccc9da1581efa9dbebead281b1
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
         </Grid>
 
+
+
         <Grid x:Name="MenuBar" Margin="0,10,0,0" Background="#C0BCB5" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FF593131">
+
             <Image Margin="0,10,1413,0" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Right" Width="473" Height="111" VerticalAlignment="Top"/>
             <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1633,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="210" Height="71" FontSize="48"/>
             <TextBlock x:Name="TodaysDate" HorizontalAlignment="Left" Margin="1633,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="209" FontSize="20"/>
         </Grid>
 
+
+
+
         <Grid Margin="0,0,0,1032">
             <Button x:Name="btn1" Content="button" Height="70" Width="103"  Margin="1770,985,0,-1007" ManipulationMode="None" AllowFocusWhenDisabled="True"  Opacity="10"  Background="#FFC0BCB5">
-
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="ms-appx:///Images/Kugghjul.png"/>
@@ -108,10 +136,11 @@
                             <MenuFlyoutItem x:Name="color3" Text="3" Click="color3_Click"/>
                             <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
                         </MenuFlyoutSubItem>
-                        <MenuFlyoutItem x:Name="SettingsMenu" Text="API Inställningar"/>
+                        <MenuFlyoutItem x:Name="SettingsMenu" Text="API Inställningar" Click="SettingsMenu_Click"/>
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
         </Grid>
     </Grid>
+
 </Page>
