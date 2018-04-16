@@ -42,6 +42,11 @@ namespace Project_BackFire.Views
            
         }
 
+        private void changeColor()
+        {
+            var GreenColor = SolidColorBrush.OpacityProperty;
+        }
+
         private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
             btn1.Visibility = Visibility.Visible;
