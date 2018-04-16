@@ -46,7 +46,7 @@
         </Grid>
 
         <Grid Margin="0,0,0,1032">
-            <Button Content="button" Height="70" Width="103" Margin="1770,985,0,-1007" ManipulationMode="None" AllowFocusWhenDisabled="True" PointerMoved="Button_PointerMoved" Opacity="10" Click="Button_Click" Background="#FFC0BCB5">
+            <Button x:Name="button1" Content="button" Height="70" Width="103" Margin="1770,985,0,-1007" ManipulationMode="None" AllowFocusWhenDisabled="True" PointerEntered="button1_PointerEntered"  Opacity="10" PointerExited ="button1_PointerExited"  Background="#FFC0BCB5">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="ms-appx:///Images/Kugghjul.png"/>
