@@ -20,18 +20,14 @@ namespace Project_BackFire.Views
 
         public MainPage()
         {
-<<<<<<< HEAD
+
             InitializeComponent();
             DataContext = this;
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
-
-=======
-
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             InitializeComponent();              
->>>>>>> c4ce0c41cdba7fc2ecfb638bf55dc09d021ace5d
         }
 
         private void TimerTick(object sender, object e)
@@ -39,43 +35,55 @@ namespace Project_BackFire.Views
             TimeDate.Text = DateTime.Now.ToString("hh:mm");
         }
 
-        private void DateToday( object sender, object e)
-        {
-            DateTime DateToday = DateTime.Today;
-            TodaysDate.Text = DateTime.Today.ToString("MMMM");
-        }
+        //private void DateToday( object sender, object e)
+        //{
+        //    DateTime DateToday = DateTime.Today;
+        //    TodaysDate.Text = DateTime.Today.ToString("MMMM");
+        //}
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
             string HourMinute;
-<<<<<<< HEAD
 
             HourMinute = DateTime.Now.ToString("HH:mm");
         }
 
         private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            button1.Visibility = Visibility.Visible;
+            btn1.Visibility = Visibility.Visible;
         }
 
         private void button1_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            button1.Visibility = Visibility.Collapsed;
-=======
->>>>>>> c4ce0c41cdba7fc2ecfb638bf55dc09d021ace5d
+            btn1.Visibility = Visibility.Collapsed;
             DateTime TimeNow = new DateTime();
             TimeNow = DateTime.Now;
-<<<<<<< HEAD
 
-=======
->>>>>>> 7059df6eb3e3286d3a194cddd7da350e62cdc460
             string CurrentDatetime = TimeNow.ToString();
         }
-<<<<<<< HEAD
-=======
 
-     
+        private void colordefault_Click(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColorD"];
+            MenuBar.Background = (SolidColorBrush)Resources["MenubarColorD"];
+        }
 
->>>>>>> c4ce0c41cdba7fc2ecfb638bf55dc09d021ace5d
+        private void color1_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor1"];
+            MenuBar.Background = (SolidColorBrush)Resources["MenubarColor1"];
+
+        }
+        private void color2_Click(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor2"];
+            MenuBar.Background = (SolidColorBrush)Resources["MenubarColor2"];
+        }
+        private void color3_Click(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor3"];
+            MenuBar.Background = (SolidColorBrush)Resources["MenubarColor3"];
+        }
     }
 }

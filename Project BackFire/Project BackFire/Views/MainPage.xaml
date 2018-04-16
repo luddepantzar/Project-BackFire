@@ -10,9 +10,27 @@
     mc:Ignorable="d" Height="1080" RequestedTheme="Dark" >
 
     <Page.Resources>
+         <!--Ljus Vit färggggggggggggggggg-->
+        <SolidColorBrush x:Key="BackgroundColor1" Color="#F7F7FF"/>
+         <!--Ljus Blå färggggggggggggggggg-->
+        <SolidColorBrush x:Key="MenubarColor1" Color="#279AF1" />
 
-       
-        
+        <!--SVart färg -->
+        <SolidColorBrush x:Key="BackgroundColor2" Color="#E6E8E6"/>
+        <!--Röd färg-->
+        <SolidColorBrush x:Key="MenubarColor2" Color="#EF271B" />
+
+        <!--Ljus Vit färg-->
+        <SolidColorBrush x:Key="BackgroundColor3" Color="#F7F7FF"/>
+        <!--Ljus Blå färg-->
+        <SolidColorBrush x:Key="MenubarColor3" Color="#279AF1" />
+
+        <!--Default färg-->
+        <SolidColorBrush x:Key="BackgroundColorD" Color="#FF333333"/>
+        <!--Default färg-->
+        <SolidColorBrush x:Key="MenubarColorD" Color="#C0BCB5" />
+
+
     </Page.Resources>
         
     
@@ -30,7 +48,7 @@
             x:Uid="Main_Title"
             Style="{StaticResource PageTitleStyle}" Margin="0,2,12,1040" />
 
-        <Grid Background="#FF333333" Margin="0,88,0,0">
+        <Grid x:Name="MainGrid" Background="#FF333333" Margin="0,88,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -49,7 +67,7 @@
                 Place your content here.-->
         </Grid>
 
-        <Grid Margin="0,10,0,0" Background="#C0BCB5" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top">
+        <Grid x:Name="MenuBar" Margin="0,10,0,0" Background="#C0BCB5" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FF593131">
             <Image Margin="0,10,1413,0" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Right" Width="473" Height="111" VerticalAlignment="Top"/>
             <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1633,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="210" Height="71" FontSize="48"/>
             <TextBlock x:Name="TodaysDate" HorizontalAlignment="Left" Margin="1633,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="209" FontSize="20"/>
@@ -67,7 +85,12 @@
                 <Button.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem x:Name="LangMenu" Text="Språk"/>
-                        <MenuFlyoutItem x:Name="ThemeMenu" Text="Tema"/>
+                        <MenuFlyoutSubItem x:Name="ThemeMenu" Text="Tema">
+                            <MenuFlyoutItem x:Name="color1" Text="1" Click="color1_Click"/>
+                            <MenuFlyoutItem x:Name="color2" Text="2" Click="color2_Click"/>
+                            <MenuFlyoutItem x:Name="color3" Text="3" Click="color3_Click"/>
+                            <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
+                        </MenuFlyoutSubItem>
                         <MenuFlyoutItem x:Name="SettingsMenu" Text="API Inställningar"/>
                     </MenuFlyout>
                 </Button.Flyout>
