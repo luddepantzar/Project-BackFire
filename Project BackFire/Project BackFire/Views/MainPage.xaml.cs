@@ -28,7 +28,7 @@ namespace Project_BackFire.Views
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-            InitializeComponent();              
+            InitializeComponent();
         }
 
         private void TimerTick(object sender, object e)
@@ -39,7 +39,7 @@ namespace Project_BackFire.Views
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-           
+
         }
 
         private void changeColor()
@@ -83,6 +83,29 @@ namespace Project_BackFire.Views
         {
             MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor3"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor3"];
+
+
+        }
+
+        private void SettingsMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            int value = rnd.Next(0,4);
+
+            switch (value)
+            {
+                case 1:
+                    grid1.Background = (SolidColorBrush)Resources["red"];
+                    break;
+                case 2:
+                    grid1.Background = (SolidColorBrush)Resources["yellow"];
+                    break;
+
+                default:
+                    grid1.Background = (SolidColorBrush)Resources["green"];
+                    break;
+            }
+
         }
     }
 }
