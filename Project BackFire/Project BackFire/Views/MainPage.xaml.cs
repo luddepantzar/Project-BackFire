@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Project_BackFire.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -33,7 +32,13 @@ namespace Project_BackFire.Views
 
         private void button1_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
+<<<<<<< HEAD
             button1.Visibility = Visibility.Collapsed;
+=======
+            DateTime TimeNow = new DateTime();
+            TimeNow = DateTime.Now;
+            String CurrentDatetime = TimeNow.ToString();
+>>>>>>> c11d9d85dd18f9f1675a84752ebd15fb1e23e18f
         }
     }
 }

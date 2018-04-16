@@ -42,7 +42,7 @@
 
         <Grid Margin="0,10,0,0" Background="#C0BCB5" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top">
             <Image Margin="0,10,1413,0" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Right" Width="473" Height="111" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="1756,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
+            <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1756,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="52"/>
         </Grid>
 
         <Grid Margin="0,0,0,1032">
