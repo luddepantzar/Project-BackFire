@@ -22,11 +22,7 @@ namespace Project_BackFire.Views
 
         public MainPage()
         {
-<<<<<<< HEAD
-=======
-
             InitializeComponent();
->>>>>>> a67d2b47fe59170f7b09f9737cc541c17cf2ada7
             DataContext = this;
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
@@ -37,28 +33,13 @@ namespace Project_BackFire.Views
 
         private void TimerTick(object sender, object e)
         {
-            TimeDate.Text = DateTime.Now.ToString("MM/ddhh:mm");
+            TimeDate.Text = DateTime.Now.ToString("hh:mm");
+            TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
-
-        //private void DateToday( object sender, object e)
-        //{
-        //    DateTime DateToday = DateTime.Today;
-        //    TodaysDate.Text = DateTime.Today.ToString("MMMM");
-<<<<<<< HEAD
-
-=======
->>>>>>> a67d2b47fe59170f7b09f9737cc541c17cf2ada7
-        //}
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            this.
-=======
-            string HourMinute;
-
-            HourMinute = DateTime.Now.ToString("HH:mm");
->>>>>>> a67d2b47fe59170f7b09f9737cc541c17cf2ada7
+           
         }
 
         private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
@@ -74,8 +55,6 @@ namespace Project_BackFire.Views
 
             string CurrentDatetime = TimeNow.ToString();
         }
-<<<<<<< HEAD
-=======
 
         private void colordefault_Click(object sender, RoutedEventArgs e)
         {
@@ -100,6 +79,5 @@ namespace Project_BackFire.Views
             MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor3"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor3"];
         }
->>>>>>> a67d2b47fe59170f7b09f9737cc541c17cf2ada7
     }
 }
