@@ -45,14 +45,14 @@
             <Image HorizontalAlignment="Left" Height="320" Margin="523,492,-923,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
-            <TimePicker HorizontalAlignment="Left" Margin="743,892,-985,-924" VerticalAlignment="Top"/>
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
         </Grid>
 
         <Grid Margin="0,10,0,0" Background="#C0BCB5" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top">
             <Image Margin="0,10,1413,0" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Right" Width="473" Height="111" VerticalAlignment="Top"/>
-            <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1728,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="120" Height="45"/>
+            <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1633,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="210" Height="71" FontSize="48"/>
+            <TextBlock x:Name="TodaysDate" HorizontalAlignment="Left" Margin="1633,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="209" FontSize="20"/>
         </Grid>
 
         <Grid Margin="0,0,0,1032">
