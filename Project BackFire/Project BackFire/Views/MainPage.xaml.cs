@@ -18,20 +18,27 @@ namespace Project_BackFire.Views
             InitializeComponent();
         }
 
-        private void Button_PointerMoved(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
-        {
-            Opacity = 100;
-        }
-
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            Opacity = 100;
-        }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
+            string HourMinute;
+
+            HourMinute = DateTime.Now.ToString("HH:mm");
+        }
+
+        private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            button1.Visibility = Visibility.Visible;
+        }
+
+        private void button1_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+<<<<<<< HEAD
+            button1.Visibility = Visibility.Collapsed;
+=======
             DateTime TimeNow = new DateTime();
             TimeNow = DateTime.Now;
+<<<<<<< HEAD
             string CurrentDatetime = TimeNow.ToString();
         }
 
@@ -47,6 +54,10 @@ namespace Project_BackFire.Views
             {
 
             }
+=======
+            String CurrentDatetime = TimeNow.ToString();
+>>>>>>> c11d9d85dd18f9f1675a84752ebd15fb1e23e18f
+>>>>>>> b1dc87d44d204479753a732f52fa4f9f25f19461
         }
     }
 }
