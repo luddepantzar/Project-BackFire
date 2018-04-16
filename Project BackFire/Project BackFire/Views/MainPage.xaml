@@ -62,7 +62,7 @@
                     <ControlTemplate>
                         <Image Source="ms-appx:///Images/Kugghjul.png"/>
                     </ControlTemplate>
-                    
+
                 </Button.Template>
                 <Button.Flyout>
                     <MenuFlyout>
@@ -71,10 +71,7 @@
                         <MenuFlyoutItem x:Name="SettingsMenu" Text="API Inställningar"/>
                     </MenuFlyout>
                 </Button.Flyout>
-
             </Button>
         </Grid>
-        
-
     </Grid>
 </Page>
