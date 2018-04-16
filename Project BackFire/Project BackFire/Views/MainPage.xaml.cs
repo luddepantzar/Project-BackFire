@@ -7,6 +7,7 @@ namespace Project_BackFire.Views
 {
     public sealed partial class MainPage : Page
     {
+        DispatcherTimer Timer = new DispatcherTimer();
 
         private MainViewModel ViewModel
         {
@@ -16,8 +17,23 @@ namespace Project_BackFire.Views
         public MainPage()
         {
             InitializeComponent();
+            DataContext = this;
+            Timer.Tick += TimerTick;
+            Timer.Interval = new TimeSpan(0, 0, 1);
+            Timer.Start();
+
         }
 
+        private void TimerTick(object sender, object e)
+        {
+            TimeDate.Text = DateTime.Now.ToString("hh:mm");
+        }
+
+        private void DateToday( object sender, object e)
+        {
+            DateTime DateToday = DateTime.Today;
+            TodaysDate.Text = DateTime.Today.ToString("MMMM");
+        }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
@@ -33,31 +49,10 @@ namespace Project_BackFire.Views
 
         private void button1_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-<<<<<<< HEAD
             button1.Visibility = Visibility.Collapsed;
-=======
             DateTime TimeNow = new DateTime();
             TimeNow = DateTime.Now;
-<<<<<<< HEAD
             string CurrentDatetime = TimeNow.ToString();
-        }
-
-        private void AddTime()
-        {
-            try
-            {
-                TextBlock TimeDate = MainPage.Current.FindName("TimeDate") as TextBlock;
-                string sLog = TimeDate.Text;
-                string sNew;
-            }
-            catch
-            {
-
-            }
-=======
-            String CurrentDatetime = TimeNow.ToString();
->>>>>>> c11d9d85dd18f9f1675a84752ebd15fb1e23e18f
->>>>>>> b1dc87d44d204479753a732f52fa4f9f25f19461
         }
     }
 }
