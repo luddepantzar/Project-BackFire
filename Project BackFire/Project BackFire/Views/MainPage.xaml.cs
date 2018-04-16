@@ -8,6 +8,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.ViewManagement;
 using System.Globalization;
 using System.Threading;
+using Windows.UI;
 
 namespace Project_BackFire.Views
 {
@@ -83,6 +84,11 @@ namespace Project_BackFire.Views
         {
             MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor3"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor3"];
+        }
+
+        private void Grid1_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
