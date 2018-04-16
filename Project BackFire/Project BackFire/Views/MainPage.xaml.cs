@@ -1,7 +1,7 @@
 ﻿using System;
 
 using Project_BackFire.ViewModels;
-
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace Project_BackFire.Views
@@ -26,6 +26,13 @@ namespace Project_BackFire.Views
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             Opacity = 100;
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            string HourMinute;
+
+            HourMinute = DateTime.Now.ToString("HH:mm");
         }
     }
 }

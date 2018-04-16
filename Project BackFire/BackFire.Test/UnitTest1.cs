@@ -16,7 +16,7 @@ namespace Nunit.Test
         [Test]
         public void Test2()
         {
-
+            
         }
     }
 }
