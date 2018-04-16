@@ -34,7 +34,7 @@
         <SolidColorBrush x:Key="green" Color="Green"/>
 
         <SolidColorBrush x:Key="red" Color="Red"/>
-        
+
     </Page.Resources>
     <Grid
         x:Name="ContentArea"
@@ -75,9 +75,9 @@
             <Grid x:Name="Grid6" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="523,492,-923,-812" VerticalAlignment="Top" Width="400"/>
             <Image x:Name="Img7" HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill"/>
             <Grid x:Name="Grid7" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400"/>
-                <Image x:Name="Img8" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
-                <Grid x:Name="Grid8" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
-                    <Grid BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img8" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Grid x:Name="Grid8" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
+            <Grid BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
 
             <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.-->
@@ -85,10 +85,17 @@
 
 
 
-        <Grid x:Name="MenuBar" Margin="0,10,0,0" Background="#C0BCB5" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FF593131">
+        <Grid x:Name="MenuBar" Margin="0,10,0,0" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FF593131">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF878787" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
 
             <Image Margin="0,10,1413,0" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Right" Width="473" Height="111" VerticalAlignment="Top"/>
-            <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1633,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="210" Height="71" FontSize="48"/>
+            <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1633,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="210" Height="71" FontSize="48" FocusVisualSecondaryBrush="#99000000"/>
             <TextBlock x:Name="TodaysDate" HorizontalAlignment="Left" Margin="1633,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="209" FontSize="20"/>
         </Grid>
 

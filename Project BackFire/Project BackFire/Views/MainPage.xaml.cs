@@ -34,7 +34,7 @@ namespace Project_BackFire.Views
 
         private void TimerTick(object sender, object e)
         {
-            TimeDate.Text = DateTime.Now.ToString("hh:mm");
+            TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
