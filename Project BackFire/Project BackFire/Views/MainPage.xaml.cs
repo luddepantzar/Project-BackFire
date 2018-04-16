@@ -6,6 +6,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Input;
 using Windows.UI.ViewManagement;
+using System.Globalization;
+using System.Threading;
 
 namespace Project_BackFire.Views
 {
@@ -20,7 +22,6 @@ namespace Project_BackFire.Views
 
         public MainPage()
         {
-
             InitializeComponent();
             DataContext = this;
             Timer.Tick += TimerTick;
@@ -33,19 +34,12 @@ namespace Project_BackFire.Views
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("hh:mm");
+            TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
-
-        //private void DateToday( object sender, object e)
-        //{
-        //    DateTime DateToday = DateTime.Today;
-        //    TodaysDate.Text = DateTime.Today.ToString("MMMM");
-        //}
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            string HourMinute;
-
-            HourMinute = DateTime.Now.ToString("HH:mm");
+           
         }
 
         private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
