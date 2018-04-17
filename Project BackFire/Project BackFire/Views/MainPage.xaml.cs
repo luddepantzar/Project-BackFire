@@ -112,25 +112,25 @@ namespace Project_BackFire.Views
 
         private void colordefault_Click(object sender, RoutedEventArgs e)
         {
-            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColorD"];
+            ContentArea.Background = (SolidColorBrush)Resources["BackgroundColorD"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColorD"];
         }
 
         private void color1_Click(object sender, RoutedEventArgs e)
         {
 
-            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor1"];
+            ContentArea.Background = (SolidColorBrush)Resources["BackgroundColor1"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor1"];
 
         }
         private void color2_Click(object sender, RoutedEventArgs e)
         {
-            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor2"];
+            ContentArea.Background = (SolidColorBrush)Resources["BackgroundColor2"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor2"];
         }
         private void color3_Click(object sender, RoutedEventArgs e)
         {
-            MainGrid.Background = (SolidColorBrush)Resources["BackgroundColor3"];
+            ContentArea.Background = (SolidColorBrush)Resources["BackgroundColor3"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor3"];
 
 
@@ -138,6 +138,7 @@ namespace Project_BackFire.Views
 
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
         {
+            /*
             Random rnd = new Random();
             int value = rnd.Next(0,4);
 
@@ -154,7 +155,7 @@ namespace Project_BackFire.Views
                     Grid1.Background = (SolidColorBrush)Resources["green"];
                     break;
             }
-
+            */
         }
     }
 }
