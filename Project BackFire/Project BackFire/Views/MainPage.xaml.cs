@@ -9,6 +9,7 @@ using Windows.UI.ViewManagement;
 using System.Globalization;
 using System.Threading;
 using Windows.UI;
+using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.Graphics.Effects;
 

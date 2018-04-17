@@ -4,6 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
     x:Class="Project_BackFire.Views.MainPage"
     mc:Ignorable="d" Height="Auto" Width="Auto" RequestedTheme="Dark" >
 
@@ -48,6 +49,7 @@
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow"/>
         </Grid.RowDefinitions>
+<<<<<<< HEAD
         <Grid x:Name="MenuBar" Margin="0,10,0,0" BorderBrush="Black" BorderThickness="0,0,0,4" VerticalAlignment="Top" Height="148">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -67,6 +69,15 @@
 
         <Button Content="Button" HorizontalAlignment="Stretch" Margin="221,233,1610,814" VerticalAlignment="Stretch" Click="Button_Click"/>
         <Grid Margin="85,271,21,129" Width="Auto"  >
+=======
+
+        <TextBlock
+            x:Name="TitlePage"
+            x:Uid="Main_Title"
+            Style="{StaticResource PageTitleStyle}" Margin="0,2,12,1040" />
+
+        <Grid x:Name="MainGrid" Margin="0,88,0,0" Opacity="0.99" Background="#FF000A25">
+>>>>>>> ff9554e587af554225c2f0a950e29d7687c1b70e
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -82,6 +93,7 @@
                     <PlaneProjection RotationY="0" x:Name="RotContent"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
             <Image x:Name="Img2" Margin="26,0,24,35" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom1.jpeg" Stretch="Fill" Grid.Column="1"/>
             <Image x:Name="Img3" Margin="27,0,26,35" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="2"/>
             <Image x:Name="Img5" Margin="-10,45,25,0" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom1.jpeg" Stretch="Fill" Grid.Row="1" Height="Auto" Width="Auto"/>
@@ -89,6 +101,42 @@
             <Image x:Name="Img7" Margin="26,45,26,0" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="2" Grid.Row="1"/>
             <Image x:Name="Img8" Margin="24,45,10,0" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="3" Grid.Row="1"/>
             <Image x:Name="Img3_Copy" Margin="25,1,10,35" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="3"/>
+=======
+
+            <Grid x:Name="Grid1" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="63,112,-463,-432" VerticalAlignment="Top" Width="400" Background="#003AB40D"  />
+            <Image x:Name="Img2" HorizontalAlignment="Left" Height="320" Margin="523,112,-923,-432" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom1.jpeg" Stretch="Fill"/>
+            <Grid x:Name="Grid2" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="523,112,-923,-432" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img3" HorizontalAlignment="Left" Height="320" Margin="983,112,-1383,-432" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Grid x:Name="Grid3" BorderBrush="black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="983,112,-1383,-432" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img4" HorizontalAlignment="Left" Height="320" Margin="1443,112,-1843,-432" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill"/>
+            <Grid x:Name="Grid4" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,112,-1843,-432" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img5" HorizontalAlignment="Left" Height="320" Margin="63,492,-463,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom1.jpeg" Stretch="Fill"/>
+            <Grid x:Name="Grid5" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="63,492,-463,-812" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img6" HorizontalAlignment="Left" Height="320" Margin="523,492,-923,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Grid x:Name="Grid6" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="523,492,-923,-812" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img7" HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill"/>
+            <Grid x:Name="Grid7" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="983,492,-1383,-812" VerticalAlignment="Top" Width="400"/>
+            <Image x:Name="Img8" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400" FocusVisualPrimaryBrush="{x:Null}" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill"/>
+            <Grid x:Name="Grid8" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" Height="320" Margin="1443,492,-1843,-812" VerticalAlignment="Top" Width="400"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="221,74,-286,-106" VerticalAlignment="Top" Click="Button_Click"/>
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
+        </Grid>
+
+
+
+        <Grid x:Name="MenuBar" Margin="0,10,0,0" BorderBrush="Black" BorderThickness="0,0,0,4 " HorizontalAlignment="Right" Width="1896" Height="135" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF87D9FF" Offset="0.853"/>
+                    <GradientStop Color="#FF004CEE" Offset="0.296"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Image Margin="0,10,1413,0" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Right" Width="473" Height="111" VerticalAlignment="Top"/>
+            <TextBlock x:Name="TimeDate" HorizontalAlignment="Left" Margin="1633,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Width="210" Height="71" FontSize="48" FocusVisualPrimaryBrush="{x:Null}" Foreground="Black"/>
+            <TextBlock x:Name="TodaysDate" HorizontalAlignment="Left" Margin="1639,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="203" FontSize="20" Foreground="Black"/>
+>>>>>>> ff9554e587af554225c2f0a950e29d7687c1b70e
         </Grid>
 
 
