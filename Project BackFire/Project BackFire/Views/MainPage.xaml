@@ -124,11 +124,11 @@
                 <Image x:Name="Imgbox7" Margin="24,43,10,2" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill" Grid.Column="3" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg"/>
                 <Image x:Name="Imgbox8" Margin="25,1,10,35" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill" Grid.Column="3" Source="ms-appx:///Images/confroom1.jpeg"/>
                 <Border BorderBrush="Black"  Grid.Column="3" Margin="25,1,10,34" Height="Auto" Width="Auto"  BorderThickness="6"/>
-                <Border BorderBrush="Black" Grid.Column="3" Margin="24,43,0,0" Grid.Row="1" Height="Auto" Width="Auto"  BorderThickness="6"/>
-                <Border BorderBrush="Black" Grid.Column="2" Height="Auto" Margin="26,45,0,0" Grid.Row="1"  Width="Auto"  BorderThickness="6"/>
-                <Border BorderBrush="Black" Grid.Column="1" Margin="25,45,0,0" Grid.Row="1" Width="Auto" Height="Auto" BorderThickness="6"/>
-                <Border BorderBrush="Black" Height="Auto" Margin="-9,45,0,0" Grid.Row="1" Width="Auto" BorderThickness="6"/>
-                <Border BorderBrush="Black" Grid.Column="2" Margin="26,13,0,0" Width="Auto" Height="Auto" BorderThickness="6"/>
+                <Border BorderBrush="Black" Grid.Column="3" Margin="24,43,3,0" Grid.Row="1" Height="Auto" Width="Auto"  BorderThickness="6"/>
+                <Border BorderBrush="Black" Grid.Column="2" Height="Auto" Margin="26,39,20,0" Grid.Row="1"  Width="Auto"  BorderThickness="6"/>
+                <Border BorderBrush="Black" Grid.Column="1" Margin="24,45,17,0" Grid.Row="1" Width="Auto" Height="Auto" BorderThickness="6"/>
+                <Border BorderBrush="Black" Height="Auto" Margin="-16,45,18,0" Grid.Row="1" Width="Auto" BorderThickness="6"/>
+                <Border BorderBrush="Black" Grid.Column="2" Margin="20,-6,19,29" Width="Auto" Height="Auto" BorderThickness="6"/>
 
 
 
