@@ -13,13 +13,8 @@ using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.Graphics.Effects;
 using System.Threading.Tasks;
-<<<<<<< HEAD
-using Windows.UI.Xaml.Media.Imaging;
-=======
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
-
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
 namespace Project_BackFire.Views
 {
     public sealed partial class Main : Page
@@ -49,7 +44,7 @@ namespace Project_BackFire.Views
         public void AnimationFront()
         {
             DependencyObject[] ImageArray = new DependencyObject[8] { Imgbox1, Imgbox2, Imgbox3, Imgbox4, Imgbox5, Imgbox6, Imgbox7, Imgbox8 };
-            DependencyObject AllImages;
+            DependencyObject AllImages = Imgbox1;
             for(var i = 0; i < ImageArray.Length; i++)
             {
                 AllImages = ImageArray[i];
@@ -59,15 +54,8 @@ namespace Project_BackFire.Views
             animation1.To = 180.0;
             animation1.BeginTime = TimeSpan.FromSeconds(0);
             animation1.RepeatBehavior = new RepeatBehavior(1);
-<<<<<<< HEAD
-            Storyboard.SetTarget(animation1, Img1);
-            Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            rotationfront.Children.Clear();
-            rotationfront.Children.Add(animation1);
-
-=======
             animation1.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation1, AllImages);
+            Storyboard.SetTarget(animation1, ImageArray[0]);
             Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront.Children.Clear();
             rotationfront.Children.Add(animation1);
@@ -75,12 +63,7 @@ namespace Project_BackFire.Views
 
         public void AnimationBack()
         {
-<<<<<<< HEAD
-            DependencyObject[] ImageArray = new DependencyObject[2] { BackImg1, BackIm2, /*BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8*/ };
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
-=======
             DependencyObject[] ImageArray = new DependencyObject[2] { BackImg1, BackImg2, /*BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8*/ };
->>>>>>> fd5df16b64ad5e5f7f191c5bbe6c386db7189d8a
             DoubleAnimation animation2 = new DoubleAnimation();
             animation2.From = 180;
             animation2.To = 360;
@@ -91,12 +74,7 @@ namespace Project_BackFire.Views
             Storyboard.SetTargetProperty(animation2, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback.Children.Clear();
             rotationback.Children.Add(animation2);
-
-            
-        
-
-
-    }
+        }
 
         private void TimerTick(object sender, object e)
         {
@@ -106,23 +84,28 @@ namespace Project_BackFire.Views
 
         public void OpacityImage2()
         {
-            BackImg2.Opacity = 0;
+            BackImg1.Opacity = 0;
             DispatcherTimer tm = new DispatcherTimer();
             tm.Interval = TimeSpan.FromSeconds(1.4);
             tm.Tick += (sender, args) =>
             {
-                BackImg2.Opacity = 100;
+                BackImg1.Opacity = 100;
                 tm.Stop();
             };
             tm.Start();
             
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
+        private void Animation()
         {
             rotationfront.Begin();
             rotationback.Begin();
             OpacityImage2();
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            Animation();
         }
 
         //private void Img1_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -204,11 +187,5 @@ namespace Project_BackFire.Views
             }
             */
         }
-
-<<<<<<< HEAD
-      
-=======
-        
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
     }
 }

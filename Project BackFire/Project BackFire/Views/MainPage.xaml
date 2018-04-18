@@ -62,18 +62,13 @@
             <TextBlock x:Name="TimeDate" Margin="0,10,5,58" TextWrapping="Wrap" FontSize="60" FocusVisualPrimaryBrush="{x:Null}" Foreground="Black" HorizontalAlignment="Right" Width="255" MinWidth="200"/>
             <TextBlock x:Name="TodaysDate" Margin="0,78,10,14" Text="" TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="248" MinWidth="200"/>
             <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
-<<<<<<< HEAD
 
         </Grid>
         <Grid Margin="85,271,21,129" Width="Auto">
 
-
-
-=======
         </Grid>
         <Grid Margin="85,271,21,129" Width="Auto">
 
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
             <TextBlock
             x:Name="TitlePage"
             x:Uid="Main_Title"
@@ -96,11 +91,7 @@
                         <PlaneProjection RotationY="0"/>
                     </Image.Projection>
                 </Image>
-<<<<<<< HEAD
-                <Image x:Name="Image2" HorizontalAlignment="Left" Height="307" Margin="-8,1,0,0" VerticalAlignment="Top" Width="432" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Visibility="Visible" Opacity="0">
-=======
                 <Image x:Name="BackImg1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="307" Margin="-8,-2,-424,-305" Grid.RowSpan="2" VerticalAlignment="Top" Width="432" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Visibility="Visible" Opacity="0">
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
                     <Image.FocusVisualPrimaryBrush>
                         <ImageBrush/>
                     </Image.FocusVisualPrimaryBrush>
@@ -108,15 +99,8 @@
                         <PlaneProjection RotationY="0"/>
                     </Image.Projection>
                 </Image>
-<<<<<<< HEAD
-
-
-
-                <Image x:Name="Imgbox2" Margin="26,12,24,23" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill"  Grid.Column="1" Source="ms-appx:///Images/Konferens.jpg"/>
-                <Image x:Name="Imgbox3" Margin="26,13,27,22" FocusVisualPrimaryBrush="{x:Null}"   Stretch="Fill" Grid.Column="2" Source="ms-appx:///Images/confroom1.jpeg"/>
-=======
                 <!--First Image -->
-                
+
                 <!--Second Image -->
                 <Image x:Name="Imgbox2" Margin="26,0,24,35" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill" Grid.Column="1" Source="ms-appx:///Images/Konferens.jpg">
                     <Image.Projection>
@@ -132,9 +116,8 @@
                     </Image.Projection>
                 </Image>
                 <!--Second Image -->
-                
+
                 <Image x:Name="Imgbox3" Margin="27,0,26,35" FocusVisualPrimaryBrush="{x:Null}"   Stretch="Fill" Grid.Column="2" Source="ms-appx:///Images/confroom1.jpeg"/>
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
                 <Image x:Name="Imgbox4" Margin="-10,45,25,0" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill" Grid.Row="1" Height="Auto" Width="Auto" Source="ms-appx:///Images/confroom2.jpeg" />
                 <Image x:Name="Imgbox5" Margin="25,45,24,0" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg"/>
                 <Image x:Name="Imgbox6" Margin="26,45,26,0" FocusVisualPrimaryBrush="{x:Null}"  Stretch="Fill" Grid.Column="2" Grid.Row="1" Source="ms-appx:///Images/confroom1.jpeg"/>
@@ -145,29 +128,14 @@
                 <Border BorderBrush="Black" Grid.Column="2" Height="Auto" Margin="26,45,0,0" Grid.Row="1"  Width="Auto"  BorderThickness="6"/>
                 <Border BorderBrush="Black" Grid.Column="1" Margin="25,45,0,0" Grid.Row="1" Width="Auto" Height="Auto" BorderThickness="6"/>
                 <Border BorderBrush="Black" Height="Auto" Margin="-9,45,0,0" Grid.Row="1" Width="Auto" BorderThickness="6"/>
-               
                 <Border BorderBrush="Black" Grid.Column="2" Margin="26,13,0,0" Width="Auto" Height="Auto" BorderThickness="6"/>
 
 
 
-
-
-<<<<<<< HEAD
-
-
-
             </Grid>
         </Grid>
 
-=======
-            </Grid>
-        </Grid>
->>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
     </Grid>
-
-
-
-
 
 
 </Page>
