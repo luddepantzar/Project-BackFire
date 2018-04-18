@@ -13,7 +13,7 @@ using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.Graphics.Effects;
 using System.Threading.Tasks;
-
+using Windows.UI.Xaml.Media.Imaging;
 namespace Project_BackFire.Views
 {
     public sealed partial class Main : Page
@@ -42,11 +42,11 @@ namespace Project_BackFire.Views
             animation1.To = 180.0;
             animation1.BeginTime = TimeSpan.FromSeconds(0);
             animation1.RepeatBehavior = new RepeatBehavior(1);
-            Storyboard.SetTarget(animation1, Img1, Img2, Img3, Img4);
+            Storyboard.SetTarget(animation1, Img1);
             Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront.Children.Clear();
             rotationfront.Children.Add(animation1);
-            
+
             DoubleAnimation animation2 = new DoubleAnimation();
             animation2.From = 180;
             animation2.To = 360;
@@ -56,7 +56,12 @@ namespace Project_BackFire.Views
             Storyboard.SetTargetProperty(animation2, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback.Children.Clear();
             rotationback.Children.Add(animation2);
-        }
+
+            
+        
+
+
+    }
 
         private void TimerTick(object sender, object e)
         {
@@ -169,5 +174,7 @@ namespace Project_BackFire.Views
             }
             */
         }
+
+      
     }
 }
