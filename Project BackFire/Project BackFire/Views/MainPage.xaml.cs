@@ -12,20 +12,22 @@ using Windows.UI;
 using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.Graphics.Effects;
+using System.Threading.Tasks;
 
 namespace Project_BackFire.Views
 {
-    public sealed partial class MainPage : Page
+    public sealed partial class Main : Page
     {
         DispatcherTimer Timer = new DispatcherTimer();
-        private Storyboard rotation = new Storyboard();
+        private Storyboard rotationfront = new Storyboard();
+        private Storyboard rotationback = new Storyboard();
 
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
         }
 
-        public MainPage()
+        public Main()
         {
             InitializeComponent();
             DataContext = this;
@@ -35,35 +37,25 @@ namespace Project_BackFire.Views
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
 
             InitializeComponent();
-            DoubleAnimation animation = new DoubleAnimation();
-            animation.From = 0.0;
-            animation.To = 360.0;
-            animation.BeginTime = TimeSpan.FromSeconds(1);
-            animation.RepeatBehavior = RepeatBehavior.Forever;
-            Storyboard.SetTarget(animation, Img1);
-            Storyboard.SetTargetProperty(animation, "(UIElement.Projection).(PlaneProjecton.RotationY)");
-            rotation.Children.Clear();
-            rotation.Children.Add(animation);
-            switch (animation.To)
-            {
-                case 180.0:
-                    {
-                        rotation.Stop();
-                        break;
-                    }
-
-                case 360.0:
-                    {
-                        rotation.Stop();
-                        break;
-                    }
-
-                default:
-                    {
-                        rotation.Begin();
-                        break;
-                    }
-            }
+            DoubleAnimation animation1 = new DoubleAnimation();
+            animation1.From = 0.0;
+            animation1.To = 180.0;
+            animation1.BeginTime = TimeSpan.FromSeconds(0);
+            animation1.RepeatBehavior = new RepeatBehavior(1);
+            Storyboard.SetTarget(animation1, Img1, Img2, Img3, Img4);
+            Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
+            rotationfront.Children.Clear();
+            rotationfront.Children.Add(animation1);
+            
+            DoubleAnimation animation2 = new DoubleAnimation();
+            animation2.From = 180;
+            animation2.To = 360;
+            animation2.BeginTime = TimeSpan.FromSeconds(0);
+            animation2.RepeatBehavior = new RepeatBehavior(1);
+            Storyboard.SetTarget(animation2, Image2);
+            Storyboard.SetTargetProperty(animation2, "(UIElement.Projection).(PlaneProjection.RotationY)");
+            rotationback.Children.Clear();
+            rotationback.Children.Add(animation2);
         }
 
         private void TimerTick(object sender, object e)
@@ -72,19 +64,38 @@ namespace Project_BackFire.Views
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
+        private void OpacityImage2()
+        {
+            Image2.Opacity = 0;
+            DispatcherTimer tm = new DispatcherTimer();
+            tm.Interval = TimeSpan.FromSeconds(0.5);
+            tm.Tick += (sender, args) =>
+            {
+                Image2.Opacity = 100;
+                tm.Stop();
+            };
+            tm.Start();
+            
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            rotation.Begin();
+            rotationfront.Begin();
+            rotationback.Begin();
+            OpacityImage2();
         }
 
         private void Img1_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            rotation.Begin();
+            rotationfront.Begin();
+            rotationback.Begin();
+            OpacityImage2();
         }
 
         private void Img1_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-            rotation.Stop();
+            rotationfront.Stop();
+            rotationback.Stop();
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

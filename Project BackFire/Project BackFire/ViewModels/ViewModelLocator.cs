@@ -16,7 +16,7 @@ namespace Project_BackFire.ViewModels
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             SimpleIoc.Default.Register(() => new NavigationServiceEx());
-            Register<MainViewModel, MainPage>();
+            Register<MainViewModel, Main>();
         }
 
         public MainViewModel MainViewModel => ServiceLocator.Current.GetInstance<MainViewModel>();
