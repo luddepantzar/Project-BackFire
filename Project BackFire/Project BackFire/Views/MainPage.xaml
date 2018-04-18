@@ -103,7 +103,7 @@
                         <PlaneProjection RotationY="0"/>
                     </Image.Projection>
                 </Image>
-                <Image x:Name="BackIm2" HorizontalAlignment="Left" Height="306" Margin="25,0,-421,-306" VerticalAlignment="Top" Width="396" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Visibility="Visible" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Opacity="0">
+                <Image x:Name="BackImg2" HorizontalAlignment="Left" Height="306" Margin="25,0,-421,-306" VerticalAlignment="Top" Width="396" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Visibility="Visible" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Opacity="0">
                     <Image.FocusVisualPrimaryBrush>
                         <ImageBrush/>
                     </Image.FocusVisualPrimaryBrush>
