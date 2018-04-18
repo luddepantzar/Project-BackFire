@@ -49,10 +49,10 @@ namespace Project_BackFire.Views
         public void AnimationFront()
         {
             DependencyObject[] ImageArray = new DependencyObject[8] { Imgbox1, Imgbox2, Imgbox3, Imgbox4, Imgbox5, Imgbox6, Imgbox7, Imgbox8 };
-
+            DependencyObject AllImages;
             for(var i = 0; i < ImageArray.Length; i++)
             {
-                DependencyObject AllImages = ImageArray[i];
+                AllImages = ImageArray[i];
             }
             DoubleAnimation animation1 = new DoubleAnimation();
             animation1.From = 0.0;
@@ -67,7 +67,7 @@ namespace Project_BackFire.Views
 
 =======
             animation1.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation1, ImageArray[0]);
+            Storyboard.SetTarget(animation1, AllImages);
             Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront.Children.Clear();
             rotationfront.Children.Add(animation1);
@@ -75,8 +75,12 @@ namespace Project_BackFire.Views
 
         public void AnimationBack()
         {
+<<<<<<< HEAD
             DependencyObject[] ImageArray = new DependencyObject[2] { BackImg1, BackIm2, /*BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8*/ };
 >>>>>>> fe908abe0d19e4952267a4b71e5d0bc0bd87fe03
+=======
+            DependencyObject[] ImageArray = new DependencyObject[2] { BackImg1, BackImg2, /*BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8*/ };
+>>>>>>> fd5df16b64ad5e5f7f191c5bbe6c386db7189d8a
             DoubleAnimation animation2 = new DoubleAnimation();
             animation2.From = 180;
             animation2.To = 360;
@@ -102,12 +106,12 @@ namespace Project_BackFire.Views
 
         public void OpacityImage2()
         {
-            BackIm2.Opacity = 0;
+            BackImg2.Opacity = 0;
             DispatcherTimer tm = new DispatcherTimer();
             tm.Interval = TimeSpan.FromSeconds(1.4);
             tm.Tick += (sender, args) =>
             {
-                BackIm2.Opacity = 100;
+                BackImg2.Opacity = 100;
                 tm.Stop();
             };
             tm.Start();
