@@ -15,11 +15,13 @@ using Windows.Graphics.Effects;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Collections.Generic;
 
 namespace Project_BackFire.Views
 {
     public sealed partial class Main : Page
     {
+        List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
         private Storyboard rotationfront1 = new Storyboard();
@@ -54,12 +56,21 @@ namespace Project_BackFire.Views
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             AnimationBack();
             AnimationFront();
-
+            FlipCardConditions();
         }
 
         public void AnimationFront()
         {
-            ImageArray = { Imgbox1, Imgbox2, Imgbox3, Imgbox4, Imgbox5, Imgbox6, Imgbox7, Imgbox8 };
+            List = new List<DependencyObject>();
+
+            List.Add(Imgbox1);
+            List.Add(Imgbox2);
+            List.Add(Imgbox3);
+            List.Add(Imgbox4);
+            List.Add(Imgbox5);
+            List.Add(Imgbox6);
+            List.Add(Imgbox7);
+            List.Add(Imgbox8);
             //DependencyObject AllImages = ImageArray[1];
             //for(var i = 0; i < ImageArray.Length; i++)
             //{
@@ -71,7 +82,7 @@ namespace Project_BackFire.Views
             animation1.BeginTime = TimeSpan.FromSeconds(0);
             animation1.RepeatBehavior = new RepeatBehavior(1);
             animation1.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation1, ImageArray[0]);
+            Storyboard.SetTarget(animation1, List[0]);
             Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront1.Children.Clear();
             rotationfront1.Children.Add(animation1);
@@ -82,7 +93,7 @@ namespace Project_BackFire.Views
             animation3.BeginTime = TimeSpan.FromSeconds(0);
             animation3.RepeatBehavior = new RepeatBehavior(1);
             animation3.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation3, ImageArray[1]);
+            Storyboard.SetTarget(animation3, List[1]);
             Storyboard.SetTargetProperty(animation3, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront2.Children.Clear();
             rotationfront2.Children.Add(animation3);
@@ -93,7 +104,7 @@ namespace Project_BackFire.Views
             animation5.BeginTime = TimeSpan.FromSeconds(0);
             animation5.RepeatBehavior = new RepeatBehavior(1);
             animation5.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation5, ImageArray[2]);
+            Storyboard.SetTarget(animation5, List[2]);
             Storyboard.SetTargetProperty(animation5, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront3.Children.Clear();
             rotationfront3.Children.Add(animation5);
@@ -104,7 +115,7 @@ namespace Project_BackFire.Views
             animation7.BeginTime = TimeSpan.FromSeconds(0);
             animation7.RepeatBehavior = new RepeatBehavior(1);
             animation7.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation7, ImageArray[3]);
+            Storyboard.SetTarget(animation7, List[3]);
             Storyboard.SetTargetProperty(animation7, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront4.Children.Clear();
             rotationfront4.Children.Add(animation7);
@@ -115,7 +126,7 @@ namespace Project_BackFire.Views
             animation9.BeginTime = TimeSpan.FromSeconds(0);
             animation9.RepeatBehavior = new RepeatBehavior(1);
             animation9.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation9, ImageArray[4]);
+            Storyboard.SetTarget(animation9, List[4]);
             Storyboard.SetTargetProperty(animation9, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront5.Children.Clear();
             rotationfront5.Children.Add(animation9);
@@ -126,7 +137,7 @@ namespace Project_BackFire.Views
             animation11.BeginTime = TimeSpan.FromSeconds(0);
             animation11.RepeatBehavior = new RepeatBehavior(1);
             animation11.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation11, ImageArray[5]);
+            Storyboard.SetTarget(animation11, List[5]);
             Storyboard.SetTargetProperty(animation11, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront6.Children.Clear();
             rotationfront6.Children.Add(animation11);
@@ -137,7 +148,7 @@ namespace Project_BackFire.Views
             animation13.BeginTime = TimeSpan.FromSeconds(0);
             animation13.RepeatBehavior = new RepeatBehavior(1);
             animation13.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation13, ImageArray[6]);
+            Storyboard.SetTarget(animation13, List[6]);
             Storyboard.SetTargetProperty(animation13, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront7.Children.Clear();
             rotationfront7.Children.Add(animation13);
@@ -148,7 +159,7 @@ namespace Project_BackFire.Views
             animation15.BeginTime = TimeSpan.FromSeconds(0);
             animation15.RepeatBehavior = new RepeatBehavior(1);
             animation15.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation15, ImageArray[7]);
+            Storyboard.SetTarget(animation15, List[7]);
             Storyboard.SetTargetProperty(animation15, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationfront8.Children.Clear();
             rotationfront8.Children.Add(animation15);
@@ -157,14 +168,14 @@ namespace Project_BackFire.Views
 
         public void AnimationBack()
         {
-            DependencyObject[] ImageArray = new DependencyObject[8] { BackImg1, BackImg2, BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8 };
+            DependencyObject[] list = new DependencyObject[8] { BackImg1, BackImg2, BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8 };
             DoubleAnimation animation2 = new DoubleAnimation();
             animation2.From = 180;
             animation2.To = 360;
             animation2.BeginTime = TimeSpan.FromSeconds(0);
             animation2.RepeatBehavior = new RepeatBehavior(1);
             animation2.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation2, ImageArray[0]);
+            Storyboard.SetTarget(animation2, list[0]);
             Storyboard.SetTargetProperty(animation2, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback1.Children.Clear();
             rotationback1.Children.Add(animation2);
@@ -175,7 +186,7 @@ namespace Project_BackFire.Views
             animation4.BeginTime = TimeSpan.FromSeconds(0);
             animation4.RepeatBehavior = new RepeatBehavior(1);
             animation4.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation4, ImageArray[1]);
+            Storyboard.SetTarget(animation4, list[1]);
             Storyboard.SetTargetProperty(animation4, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback2.Children.Clear();
             rotationback2.Children.Add(animation4);
@@ -186,7 +197,7 @@ namespace Project_BackFire.Views
             animation6.BeginTime = TimeSpan.FromSeconds(0);
             animation6.RepeatBehavior = new RepeatBehavior(1);
             animation6.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation6, ImageArray[2]);
+            Storyboard.SetTarget(animation6, list[2]);
             Storyboard.SetTargetProperty(animation6, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback3.Children.Clear();
             rotationback3.Children.Add(animation6);
@@ -197,7 +208,7 @@ namespace Project_BackFire.Views
             animation8.BeginTime = TimeSpan.FromSeconds(0);
             animation8.RepeatBehavior = new RepeatBehavior(1);
             animation8.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation8, ImageArray[3]);
+            Storyboard.SetTarget(animation8, list[3]);
             Storyboard.SetTargetProperty(animation8, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback4.Children.Clear();
             rotationback4.Children.Add(animation8);
@@ -208,7 +219,7 @@ namespace Project_BackFire.Views
             animation10.BeginTime = TimeSpan.FromSeconds(0);
             animation10.RepeatBehavior = new RepeatBehavior(1);
             animation10.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation10, ImageArray[4]);
+            Storyboard.SetTarget(animation10, list[4]);
             Storyboard.SetTargetProperty(animation10, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback5.Children.Clear();
             rotationback5.Children.Add(animation10);
@@ -219,7 +230,7 @@ namespace Project_BackFire.Views
             animation12.BeginTime = TimeSpan.FromSeconds(0);
             animation12.RepeatBehavior = new RepeatBehavior(1);
             animation12.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation12, ImageArray[0]);
+            Storyboard.SetTarget(animation12, list[0]);
             Storyboard.SetTargetProperty(animation12, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback6.Children.Clear();
             rotationback6.Children.Add(animation12);
@@ -230,7 +241,7 @@ namespace Project_BackFire.Views
             animation14.BeginTime = TimeSpan.FromSeconds(0);
             animation14.RepeatBehavior = new RepeatBehavior(1);
             animation14.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation14, ImageArray[0]);
+            Storyboard.SetTarget(animation14, list[0]);
             Storyboard.SetTargetProperty(animation14, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback7.Children.Clear();
             rotationback7.Children.Add(animation14);
@@ -241,7 +252,7 @@ namespace Project_BackFire.Views
             animation16.BeginTime = TimeSpan.FromSeconds(0);
             animation16.RepeatBehavior = new RepeatBehavior(1);
             animation16.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation16, ImageArray[0]);
+            Storyboard.SetTarget(animation16, list[0]);
             Storyboard.SetTargetProperty(animation16, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback8.Children.Clear();
             rotationback8.Children.Add(animation16);
@@ -365,30 +376,25 @@ namespace Project_BackFire.Views
 
         private void FlipCardConditions()
         {
-            //switch (ImageArray)
-            //{
-            //    case ImageArray.Length < 8:
-            //        {
-            //            rotationback1.Stop();
-            //            rotationfront1.Stop();
-            //        }
-
-            //    case ImageArray.Length > 8:
-            //        {
-            //            rotationback1.Stop();
-            //            rotationfront1.Stop();
-            //            DispatcherTimer tm8 = new DispatcherTimer();
-            //            tm8.Interval = TimeSpan.FromSeconds(1.4);
-            //            tm8.RepeatBehavior = RepeatBehavior.Forever;
-            //            tm8.Tick += (sender, args) =>
-            //            {
-            //                rotationback1.Begin();
-            //                rotationfront1.Begin();
-            //                tm8.Stop();
-            //            };
-            //            tm8.Start();
-            //        }
-            //}
+            if (List.Count < 8)
+            {
+                rotationback1.Stop();
+                rotationfront1.Stop();
+            }
+            else if (List.Count > 8)
+            {
+                rotationback1.Stop();
+                rotationfront1.Stop();
+                DispatcherTimer tm8 = new DispatcherTimer();
+                tm8.Interval = TimeSpan.FromSeconds(1.4);
+                tm8.Tick += (sender, args) =>
+                {
+                    rotationback1.Begin();
+                    rotationfront1.Begin();
+                    tm8.Stop();
+                };
+                tm8.Start();
+            }
         }
 
         private void changeColor()
