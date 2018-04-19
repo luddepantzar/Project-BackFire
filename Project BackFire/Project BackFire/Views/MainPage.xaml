@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+﻿
+=======
 ﻿<Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -231,3 +234,4 @@
 
 
 </Page>
+>>>>>>> ab3dbfe05ac8db5ff7b5ce45a2dab5d554772418
