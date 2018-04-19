@@ -38,11 +38,13 @@
 
     </Page.Resources>
     <Grid x:Name="ContentArea"
-               Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Height="Auto" Width="Auto">
+               Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Height="Auto" Width="Auto" BorderBrush="Black">
+        
         <Grid.Background>
+
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0.791"/>
-                <GradientStop Color="#FF575656" Offset="0"/>
+                <GradientStop Color="#FF741111" Offset="0.525"/>
+                <GradientStop Color="#FFB40909" Offset="0.74"/>
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -50,21 +52,21 @@
             <RowDefinition x:Name="TitleRow"/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderBrush="Black" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145">
+        <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF6A6A6A" Offset="0.822"/>
-                    <GradientStop Color="#FFCBCBCB" Offset="0.06"/>
+                    <GradientStop Color="White" Offset="0.156"/>
+                    <GradientStop Color="#FF7E7E7E" Offset="0.959"/>
                 </LinearGradientBrush>
             </Grid.Background>
 
             <Image Margin="10,10,0,26" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}"/>
-            <TextBlock x:Name="TimeDate" Margin="0,10,5,58" TextWrapping="Wrap" FontSize="60" FocusVisualPrimaryBrush="{x:Null}" Foreground="Black" HorizontalAlignment="Right" Width="255" MinWidth="200"/>
-            <TextBlock x:Name="TodaysDate" Margin="0,78,10,14" Text="" TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="248" MinWidth="200"/>
             <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
+            <TextBlock x:Name="TodaysDate" Margin="0,78,30,14" Text="" TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
 
         </Grid>
-        <Grid Margin="180,280,180,160" Grid.RowSpan="3">
+        <Grid Margin="140,280,140,160" Grid.RowSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -90,6 +92,11 @@
                 </Image.Projection>
             </Image>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
             <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -105,6 +112,13 @@
             </Image>
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
             <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -140,22 +154,36 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
             <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
+=======
+
+            <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" FocusVisualPrimaryBrush="{x:Null}">
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
             <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
 
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
             <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+=======
+            <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -164,12 +192,26 @@
                 </Image.Projection>
             </Image>
 
+<<<<<<< HEAD
             <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+=======
+
+
+            <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+
+
+
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
             <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+=======
+
+            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -183,7 +225,11 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
             <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" MinWidth="100" MinHeight="100">
+=======
+            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -192,10 +238,28 @@
                 </Image.Projection>
             </Image>
 
+            <Border x:Name="grid1" BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1"/>
+
+            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"/>
+
+            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"/>
+
+<<<<<<< HEAD
+=======
+            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1"/>
+
+            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20"/>
+
+            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20"/>
+
+            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" />
+
+            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20"/>
 
         </Grid>
 
 
+>>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
     </Grid>
 
 
