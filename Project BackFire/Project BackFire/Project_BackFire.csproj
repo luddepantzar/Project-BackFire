@@ -169,6 +169,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets.scale-150.png" />
+    <Content Include="Assets.scale-200.png" />
+    <Content Include="Assets.scale-400.png" />
     <Content Include="Images\Konferens_green.jpg" />
     <Content Include="Images\kugghjul.png" />
     <Content Include="Images\exeo.png" />
