@@ -52,11 +52,11 @@ namespace Project_BackFire.Views
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-            AnimationBack();
-            AnimationFront();
+            //AnimationBack();
+            //AnimationFront();
 
         }
-
+/*
         public void AnimationFront()
         {
             ImageArray = { Imgbox1, Imgbox2, Imgbox3, Imgbox4, Imgbox5, Imgbox6, Imgbox7, Imgbox8 };
@@ -246,13 +246,14 @@ namespace Project_BackFire.Views
             rotationback8.Children.Clear();
             rotationback8.Children.Add(animation16);
         }
-
+        */
+        
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
-
+        /*
         public void OpacityImage2()
         {
             BackImg1.Opacity = 0;
@@ -357,10 +358,10 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
             OpacityImage2();
         }
-
+        */
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            Animation();
+            //Animation();
         }
 
         private void FlipCardConditions()
