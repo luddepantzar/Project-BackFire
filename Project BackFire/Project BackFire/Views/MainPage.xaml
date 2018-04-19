@@ -64,7 +64,7 @@
             <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
 
         </Grid>
-        <Grid Margin="180,280,180,160" Grid.RowSpan="3">
+        <Grid Margin="140,280,140,160" Grid.RowSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -226,23 +226,6 @@
 
         </Grid>
 
-
-
-
-        <!-- 
-      
-       
-      
-     
-     
-   
-
- 
-      
-      
-        
-
--->
 
     </Grid>
 
