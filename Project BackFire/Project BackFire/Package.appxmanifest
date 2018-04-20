@@ -18,7 +18,10 @@
       <uap:VisualElements DisplayName="Project_BackFire" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Project_BackFire" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
+<<<<<<< HEAD
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+=======
+>>>>>>> ee0d2781c41dfd9d358b1cb056b5f9f170b63a83
       </uap:VisualElements>
     </Application>
   </Applications>
