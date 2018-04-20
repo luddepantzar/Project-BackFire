@@ -43,8 +43,8 @@
         <Grid.Background>
 
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF741111" Offset="0.525"/>
-                <GradientStop Color="#FFB40909" Offset="0.74"/>
+                <GradientStop Color="#FF9E9E9E" Offset="0.475"/>
+                <GradientStop Color="#FFFFF1F1" Offset="0.26"/>
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -52,10 +52,10 @@
             <RowDefinition x:Name="TitleRow"/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}">
+        <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0.156"/>
+                    <GradientStop Color="#FF00D1E6" Offset="0.477"/>
                     <GradientStop Color="#FF7E7E7E" Offset="0.959"/>
                 </LinearGradientBrush>
             </Grid.Background>
