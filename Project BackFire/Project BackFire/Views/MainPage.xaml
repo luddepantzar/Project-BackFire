@@ -39,7 +39,7 @@
     </Page.Resources>
     <Grid x:Name="ContentArea"
                Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Height="Auto" Width="Auto" BorderBrush="Black">
-        
+
         <Grid.Background>
 
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -92,11 +92,7 @@
                 </Image.Projection>
             </Image>
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
             <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -112,13 +108,6 @@
             </Image>
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
             <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -154,36 +143,30 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
+
             <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
-=======
 
-            <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" FocusVisualPrimaryBrush="{x:Null}">
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
+
+
+
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
             <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
 
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
+
+
             <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
-=======
-            <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -192,26 +175,19 @@
                 </Image.Projection>
             </Image>
 
-<<<<<<< HEAD
-            <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
-=======
-
 
             <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
 
 
-
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
-            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
-=======
 
-            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
+            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+
+
+
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -225,11 +201,11 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
-            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" MinWidth="100" MinHeight="100">
-=======
-            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
+
+
+
+            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -238,14 +214,13 @@
                 </Image.Projection>
             </Image>
 
+
             <Border x:Name="grid1" BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1"/>
 
             <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"/>
 
             <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"/>
 
-<<<<<<< HEAD
-=======
             <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1"/>
 
             <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20"/>
@@ -259,7 +234,9 @@
         </Grid>
 
 
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
+
+
+
     </Grid>
 
 

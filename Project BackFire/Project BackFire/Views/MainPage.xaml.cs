@@ -54,17 +54,17 @@ namespace Project_BackFire.Views
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-<<<<<<< HEAD
+
             AnimationBack();
             AnimationFront();
             FlipCardConditions();
-=======
-            //AnimationBack();
-            //AnimationFront();
 
->>>>>>> b8a3bff296553d9a1407b2c60dede14eb9df4162
+            AnimationBack();
+            AnimationFront();
+
+
         }
-/*
+
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -236,7 +236,7 @@ namespace Project_BackFire.Views
             animation12.BeginTime = TimeSpan.FromSeconds(0);
             animation12.RepeatBehavior = new RepeatBehavior(1);
             animation12.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation12, list[0]);
+            Storyboard.SetTarget(animation12, list[5]);
             Storyboard.SetTargetProperty(animation12, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback6.Children.Clear();
             rotationback6.Children.Add(animation12);
@@ -247,7 +247,7 @@ namespace Project_BackFire.Views
             animation14.BeginTime = TimeSpan.FromSeconds(0);
             animation14.RepeatBehavior = new RepeatBehavior(1);
             animation14.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation14, list[0]);
+            Storyboard.SetTarget(animation14, list[6]);
             Storyboard.SetTargetProperty(animation14, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback7.Children.Clear();
             rotationback7.Children.Add(animation14);
@@ -258,19 +258,19 @@ namespace Project_BackFire.Views
             animation16.BeginTime = TimeSpan.FromSeconds(0);
             animation16.RepeatBehavior = new RepeatBehavior(1);
             animation16.Duration = TimeSpan.FromSeconds(3);
-            Storyboard.SetTarget(animation16, list[0]);
+            Storyboard.SetTarget(animation16, list[7]);
             Storyboard.SetTargetProperty(animation16, "(UIElement.Projection).(PlaneProjection.RotationY)");
             rotationback8.Children.Clear();
             rotationback8.Children.Add(animation16);
         }
-        */
+        
         
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
-        /*
+        
         public void OpacityImage2()
         {
             BackImg1.Opacity = 0;
@@ -375,10 +375,10 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
             OpacityImage2();
         }
-        */
+        
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            //Animation();
+            Animation();
         }
 
         private void FlipCardConditions()
