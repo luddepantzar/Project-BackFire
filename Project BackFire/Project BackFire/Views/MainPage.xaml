@@ -62,7 +62,6 @@
         <SolidColorBrush x:Key="red" Color="Red"/>
         <Storyboard x:Name="anim">
 
-<<<<<<< HEAD
             <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
                                              EnableDependentAnimation="True"/>
         </Storyboard>
@@ -70,12 +69,8 @@
     </Page.Resources>
     <Grid x:Name="ContentArea" 
                Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
-        
-=======
-    </Page.Resources>
-    <Grid x:Name="ContentArea"
-               Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+
+
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFACACAC" Offset="0.096"/>
@@ -124,8 +119,8 @@
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
-
             </Image>
+            
             <Image x:Name="BackImg1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
@@ -134,16 +129,13 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+            
             <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+            
             <Image x:Name="BackImg2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
@@ -153,15 +145,12 @@
                 </Image.Projection>
             </Image>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
             <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+            
             <Image x:Name="BackImg3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
@@ -170,7 +159,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-
+            
             <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -191,37 +180,24 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+            
             <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
-<<<<<<< HEAD
 
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
->>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
             <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
 
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
 
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
             <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
@@ -232,21 +208,14 @@
             </Image>
 
             <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
-<<<<<<< HEAD
 
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
 
             <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
 
-=======
-            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -260,13 +229,9 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
 
-            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/ghjjconfroom2.jpeg" Stretch="Fill">
-
-=======
             <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -274,63 +239,27 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 
             <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
 
             <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
-=======
-            
->>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
-            <Border x:Name="grid1" BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
 
             <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
 
-<<<<<<< HEAD
             <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
 
-            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100">
-                
-=======
-            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
-            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
-            </Border>
+            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100"/>
 
             <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100"/>
 
             <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100"/>
 
             <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
-           
+
         </Grid>
 
-
-<<<<<<< HEAD
-        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed" >
-=======
-        </Grid>
-<<<<<<< HEAD
-        <!--<Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
-=======
         <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
->>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
+
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///Images/kugghjul.png"/>
             </Button.Background>
@@ -345,32 +274,21 @@
                         <MenuFlyoutItem x:Name="color3" Text="3" Click="color3_Click"/>
                         <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
                     </MenuFlyoutSubItem>
-<<<<<<< HEAD
-                    <MenuFlyoutSubItem Text="Tid">
-=======
+
                     <MenuFlyoutSubItem  Text="Tid">
-<<<<<<< HEAD
-                        <MenuFlyoutItem x:Name="Bighours" Text="24hr" Click="Bighours_Click"/>
-                        <MenuFlyoutItem x:Name="Smallhours" Text="12hr" Click="Smallhours_Click"/>
-                    </MenuFlyoutSubItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>-->
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+
                         <MenuFlyoutItem x:Name="Bighours" Text="24hr"/>
                         <MenuFlyoutItem x:Name="Smallhours" Text="12hr"/>
                     </MenuFlyoutSubItem>
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
-<<<<<<< HEAD
-=======
->>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
+
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
+            <AppBarButton Icon="Setting" Label="Settings"/>
             <AppBarSeparator/>
             <AppBarButton Icon="Setting" Label="API"/>
             <AppBarSeparator/>
@@ -379,7 +297,6 @@
             <AppBarButton Icon="Highlight" Label="Teman" Click="AppBarButton_Click"/>
             <AppBarSeparator/>
         </CommandBar>
-<<<<<<< HEAD
         <ComboBox x:Name="ThemeList" HorizontalAlignment="Left" Margin="1662,975,0,-1013" VerticalAlignment="Top" Height="38" Width="217" Visibility="Collapsed">
             <ComboBoxItem>Tema 1</ComboBoxItem>
             <ComboBoxItem>Tema 2</ComboBoxItem>
@@ -392,12 +309,6 @@
             <Button x:Name="Applybutton" Content="Värkställ" Margin="180,-187,0,0" Click="Applybutton_Click"/>
             <Button x:Name="CloseColorPickerButton" Content="Avbryt" Margin="273,-236,0,0" Click="CloseColorPickerButton_Click"/>
         </ListBox>
-        
-
-=======
->>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
->>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
     </Grid>
-
 
 </Page>
