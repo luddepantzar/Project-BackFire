@@ -6,28 +6,53 @@
     xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
     x:Class="Project_BackFire.Views.Main"
-    mc:Ignorable="d" Height="Auto" Width="Auto" RequestedTheme="Dark" >
+    mc:Ignorable="d" Height="Auto" Width="Auto">
 
     <Page.Resources>
+
+
         <!--Ljus Vit färggggggggggggggggg-->
         <SolidColorBrush x:Key="BackgroundColor1" Color="#F7F7FF"/>
         <!--Ljus Blå färggggggggggggggggg-->
-        <SolidColorBrush x:Key="MenubarColor1" Color="#279AF1" />
+
+        <LinearGradientBrush x:Key="MenubarColor1" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF9E9E9E" Offset="0.475"/>
+            <GradientStop Color="#279AF1" Offset="0.26"/>
+        </LinearGradientBrush>
 
         <!--SVart färg -->
-        <SolidColorBrush x:Key="BackgroundColor2" Color="#E6E8E6"/>
+
+        <LinearGradientBrush x:Key="theme2a" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF808078" Offset="0.039"/>
+            <GradientStop Color="#FF212120" Offset="0.434"/>
+        </LinearGradientBrush>
         <!--Röd färg-->
-        <SolidColorBrush x:Key="MenubarColor2" Color="#EF271B" />
+
+
+        <LinearGradientBrush x:Key="theme2b" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF7A2525" Offset="0.199"/>
+            <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
+        </LinearGradientBrush>
 
         <!--Ljus Vit färg-->
         <SolidColorBrush x:Key="BackgroundColor3" Color="#011627"/>
         <!--Ljus Blå färg-->
         <SolidColorBrush x:Key="MenubarColor3" Color="#FF0022" />
 
-        <!--Default färg-->
-        <SolidColorBrush x:Key="BackgroundColorD" Color="#FF333333"/>
-        <!--Default färg-->
-        <SolidColorBrush x:Key="MenubarColorD" Color="#C0BCB5" />
+        <!--Default färg KLAR-->
+
+        <LinearGradientBrush x:Key="theme3a" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFACACAC" Offset="0.096"/>
+            <GradientStop Color="#FF363636" Offset="0.932"/>
+        </LinearGradientBrush>
+
+
+        <!--Default färg KLAR-->
+
+        <LinearGradientBrush x:Key="theme3b" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
+            <GradientStop Color="#FF6A6A69" Offset="0.48"/>
+        </LinearGradientBrush>
 
 
         <SolidColorBrush x:Key="yellow" Color="Yellow"/>
@@ -35,14 +60,26 @@
         <SolidColorBrush x:Key="green" Color="Green"/>
 
         <SolidColorBrush x:Key="red" Color="Red"/>
+        <Storyboard x:Name="anim">
 
+<<<<<<< HEAD
+            <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
+                                             EnableDependentAnimation="True"/>
+        </Storyboard>
+
+    </Page.Resources>
+    <Grid x:Name="ContentArea" 
+               Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
+        
+=======
     </Page.Resources>
     <Grid x:Name="ContentArea"
                Margin="{StaticResource MediumLeftRightMargin}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF9E9E9E" Offset="0.475"/>
-                <GradientStop Color="#FFFFF1F1" Offset="0.26"/>
+                <GradientStop Color="#FFACACAC" Offset="0.096"/>
+                <GradientStop Color="#FF363636" Offset="0.932"/>
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -53,12 +90,19 @@
         <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF00D1E6" Offset="0.477"/>
-                    <GradientStop Color="#FF7E7E7E" Offset="0.959"/>
+                    <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
+                    <GradientStop Color="#FF6A6A69" Offset="0.48"/>
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <Image Margin="10,10,0,26" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}"/>
+            <Image Margin="10,10,0,26" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
+                <Image.FocusVisualPrimaryBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Image.FocusVisualPrimaryBrush>
+            </Image>
             <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
             <TextBlock x:Name="TodaysDate" Margin="0,78,30,14" Text="" TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
@@ -91,6 +135,10 @@
                 </Image.Projection>
             </Image>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
             <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -105,6 +153,10 @@
                 </Image.Projection>
             </Image>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
             <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -143,16 +195,33 @@
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
+<<<<<<< HEAD
 
-            <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+>>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
+            <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+<<<<<<< HEAD
+
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
             <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
@@ -163,11 +232,21 @@
             </Image>
 
             <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+<<<<<<< HEAD
+
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+
             <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+
+=======
+            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -181,7 +260,13 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+
+            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/ghjjconfroom2.jpeg" Stretch="Fill">
+
+=======
             <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -189,19 +274,32 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+
+            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+=======
+            
+>>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
             <Border x:Name="grid1" BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1">
                 <Border.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Border.Projection>
             </Border>
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
 
-            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
+            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
 
+<<<<<<< HEAD
+            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+
+            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100">
+                
+=======
             <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1">
                 <Border.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -211,34 +309,28 @@
                 <Border.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Border.Projection>
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
             </Border>
 
-            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
+            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100"/>
 
-            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
+            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100"/>
 
-            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" >
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
-
-            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20">
-                <Border.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Border.Projection>
-            </Border>
-
+            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
+           
         </Grid>
+
+
+<<<<<<< HEAD
+        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed" >
+=======
+        </Grid>
+<<<<<<< HEAD
         <!--<Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+=======
+        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+>>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///Images/kugghjul.png"/>
             </Button.Background>
@@ -253,13 +345,28 @@
                         <MenuFlyoutItem x:Name="color3" Text="3" Click="color3_Click"/>
                         <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
                     </MenuFlyoutSubItem>
+<<<<<<< HEAD
+                    <MenuFlyoutSubItem Text="Tid">
+=======
                     <MenuFlyoutSubItem  Text="Tid">
+<<<<<<< HEAD
                         <MenuFlyoutItem x:Name="Bighours" Text="24hr" Click="Bighours_Click"/>
                         <MenuFlyoutItem x:Name="Smallhours" Text="12hr" Click="Smallhours_Click"/>
                     </MenuFlyoutSubItem>
                 </MenuFlyout>
             </Button.Flyout>
         </Button>-->
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+                        <MenuFlyoutItem x:Name="Bighours" Text="24hr"/>
+                        <MenuFlyoutItem x:Name="Smallhours" Text="12hr"/>
+                    </MenuFlyoutSubItem>
+                </MenuFlyout>
+            </Button.Flyout>
+        </Button>
+<<<<<<< HEAD
+=======
+>>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
@@ -272,6 +379,7 @@
             <AppBarButton Icon="Highlight" Label="Teman" Click="AppBarButton_Click"/>
             <AppBarSeparator/>
         </CommandBar>
+<<<<<<< HEAD
         <ComboBox x:Name="ThemeList" HorizontalAlignment="Left" Margin="1662,975,0,-1013" VerticalAlignment="Top" Height="38" Width="217" Visibility="Collapsed">
             <ComboBoxItem>Tema 1</ComboBoxItem>
             <ComboBoxItem>Tema 2</ComboBoxItem>
@@ -286,6 +394,10 @@
         </ListBox>
         
 
+=======
+>>>>>>> ee568450be75999f2b492e3b180037bf53cc164d
+>>>>>>> 07dcd111cacdaa0a455dedd3483043ec522cda39
     </Grid>
+
 
 </Page>

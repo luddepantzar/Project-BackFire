@@ -169,10 +169,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\SplashScreen.scale-125.png" />
-    <Content Include="Assets\SplashScreen.scale-150.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-400.png" />
     <Content Include="Images\Konferens_green.jpg" />
     <Content Include="Images\kugghjul.png" />
     <Content Include="Images\exeo.png" />
