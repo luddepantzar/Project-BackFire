@@ -67,13 +67,6 @@ namespace Project_BackFire.Views
             AnimationBack();
             AnimationFront();
             FlipCardConditions();
-
-            AnimationBack();
-            AnimationFront();
-            FlipCardConditions();
-
-            AnimationBack();
-            AnimationFront();
         }
 
         public void AnimationFront()
@@ -374,6 +367,22 @@ namespace Project_BackFire.Views
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
+        private void TimerTick2(object sender, object e)
+        {
+            TimeDate.Text = DateTime.Now.ToString("hh:mm");
+            TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
+        }
+
+        private void Bighours_Click(object sender, RoutedEventArgs e)
+        {
+            TimerTick2(sender, e);
+        }
+
+        private void Smallhours_Click(object sender, RoutedEventArgs e)
+        {
+            TimerTick(sender, e);
+        }
+
         public void OpacityImage2()
         {
             BackImg1.Opacity = 0;
@@ -593,14 +602,49 @@ namespace Project_BackFire.Views
                 ButtonTimer.Stop();
             };
             ButtonTimer.Start();
+        }
 
-            for(var i = 0; i < ButtonTimer.Interval.Seconds; i++)
-            {
-                Console.WriteLine(i);
-            }
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeList.Visibility = Visibility.Visible;
+            CloseThemeButton.Visibility = Visibility.Visible;
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        }
+
+        private void CloseThemeButton_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeList.Visibility = Visibility.Collapsed;
+            CloseThemeButton.Visibility = Visibility.Collapsed;
+            ColorPickerBox.Visibility = Visibility.Collapsed;
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        }
+
+        private void ComboBoxItem_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            ColorPickerBox.Visibility = Visibility.Visible;
+            CloseThemeButton.Visibility = Visibility.Collapsed;
+            ThemeList.Visibility = Visibility.Collapsed;
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        }
+
+        private void CloseColorPickerButton_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPickerBox.Visibility = Visibility.Collapsed;
+            CloseThemeButton.Visibility = Visibility.Visible;
+            ThemeList.Visibility = Visibility.Visible;
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        }
+
+        private void Applybutton_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPickerBox.Visibility = Visibility.Collapsed;
+            CloseThemeButton.Visibility = Visibility.Visible;
+            ThemeList.Visibility = Visibility.Visible;
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
         }
     }
 }
+
 
 
 

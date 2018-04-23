@@ -75,11 +75,12 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
+
             </Image>
             <Image x:Name="BackImg1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
@@ -146,7 +147,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            
+
             <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -188,7 +189,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            
+
             <Border x:Name="grid1" BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1">
                 <Border.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -237,7 +238,7 @@
             </Border>
 
         </Grid>
-        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+        <!--<Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///Images/kugghjul.png"/>
             </Button.Background>
@@ -253,18 +254,38 @@
                         <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSubItem  Text="Tid">
-                        <MenuFlyoutItem x:Name="Bighours" Text="24hr"/>
-                        <MenuFlyoutItem x:Name="Smallhours" Text="12hr"/>
+                        <MenuFlyoutItem x:Name="Bighours" Text="24hr" Click="Bighours_Click"/>
+                        <MenuFlyoutItem x:Name="Smallhours" Text="12hr" Click="Smallhours_Click"/>
                     </MenuFlyoutSubItem>
                 </MenuFlyout>
             </Button.Flyout>
-        </Button>
+        </Button>-->
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton Icon="Setting" Label="Settings"/>
+            <AppBarSeparator/>
+            <AppBarButton Icon="Setting" Label="API"/>
+            <AppBarSeparator/>
+            <AppBarButton Icon="Clock" Label="Klocka"/>
+            <AppBarSeparator/>
+            <AppBarButton Icon="Highlight" Label="Teman" Click="AppBarButton_Click"/>
+            <AppBarSeparator/>
         </CommandBar>
+        <ComboBox x:Name="ThemeList" HorizontalAlignment="Left" Margin="1662,975,0,-1013" VerticalAlignment="Top" Height="38" Width="217" Visibility="Collapsed">
+            <ComboBoxItem>Tema 1</ComboBoxItem>
+            <ComboBoxItem>Tema 2</ComboBoxItem>
+            <ComboBoxItem>Tema 3</ComboBoxItem>
+            <ComboBoxItem Tapped="ComboBoxItem_Tapped">Gör ett eget tema</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="CloseThemeButton" Content="X" HorizontalAlignment="Left" Margin="1848,940,0,-972" VerticalAlignment="Top" Background="#66000000" Visibility="Collapsed" Click="CloseThemeButton_Click"/>
+        <ListBox x:Name="ColorPickerBox" HorizontalAlignment="Left" Height="470" Margin="1472,452,0,-922" VerticalAlignment="Top" Width="424" Visibility="Collapsed">
+            <ColorPicker/>
+            <Button x:Name="Applybutton" Content="Värkställ" Margin="180,-187,0,0" Click="Applybutton_Click"/>
+            <Button x:Name="CloseColorPickerButton" Content="Avbryt" Margin="273,-236,0,0" Click="CloseColorPickerButton_Click"/>
+        </ListBox>
+        
+
     </Grid>
 
 </Page>
