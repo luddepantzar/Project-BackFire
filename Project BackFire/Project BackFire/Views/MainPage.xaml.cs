@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Project_BackFire.Views
 {
@@ -61,12 +62,7 @@ namespace Project_BackFire.Views
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-<<<<<<< HEAD
-            AnimationBack();
-            AnimationFront();
-            FlipCardConditions();
-=======
+            //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
 
             AnimationBack();
             AnimationFront();
@@ -74,9 +70,10 @@ namespace Project_BackFire.Views
 
             AnimationBack();
             AnimationFront();
+            FlipCardConditions();
 
-
->>>>>>> ee0d2781c41dfd9d358b1cb056b5f9f170b63a83
+            AnimationBack();
+            AnimationFront();
         }
 
         public void AnimationFront()
@@ -277,7 +274,6 @@ namespace Project_BackFire.Views
             rotationback8.Children.Clear();
             rotationback8.Children.Add(animation16);
         }
-<<<<<<< HEAD
 
         public void BorderAnimation()
         {
@@ -370,20 +366,14 @@ namespace Project_BackFire.Views
             rotationBorder8.Children.Clear();
             rotationBorder8.Children.Add(animation24);
         }
-=======
-        
->>>>>>> ee0d2781c41dfd9d358b1cb056b5f9f170b63a83
+
         
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
-<<<<<<< HEAD
- 
-=======
-        
->>>>>>> ee0d2781c41dfd9d358b1cb056b5f9f170b63a83
+
         public void OpacityImage2()
         {
             BackImg1.Opacity = 0;
@@ -496,11 +486,7 @@ namespace Project_BackFire.Views
             rotationBorder8.Begin();
             OpacityImage2();
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> ee0d2781c41dfd9d358b1cb056b5f9f170b63a83
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
@@ -558,10 +544,8 @@ namespace Project_BackFire.Views
 
         private void color1_Click(object sender, RoutedEventArgs e)
         {
-
             ContentArea.Background = (SolidColorBrush)Resources["BackgroundColor1"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor1"];
-
         }
 
         private void color2_Click(object sender, RoutedEventArgs e)
@@ -574,8 +558,6 @@ namespace Project_BackFire.Views
         {
             ContentArea.Background = (SolidColorBrush)Resources["BackgroundColor3"];
             MenuBar.Background = (SolidColorBrush)Resources["MenubarColor3"];
-
-
         }
 
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
@@ -602,15 +584,20 @@ namespace Project_BackFire.Views
 
         public void OnPointerMoved(object Send ,PointerRoutedEventArgs e)
         {
-            SettinsButton.Visibility = Visibility.Visible;
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             DispatcherTimer ButtonTimer = new DispatcherTimer();
-            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+            ButtonTimer.Interval = TimeSpan.FromSeconds(10);
             ButtonTimer.Tick += (sender, args) =>
             {
-                SettinsButton.Visibility = Visibility.Collapsed;
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden; 
                 ButtonTimer.Stop();
             };
             ButtonTimer.Start();
+
+            for(var i = 0; i < ButtonTimer.Interval.Seconds; i++)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
