@@ -289,6 +289,11 @@ namespace Project_BackFire.Views
             rotationback8.Children.Add(animation16);
         }
 
+<<<<<<< HEAD
+=======
+
+       
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
@@ -483,11 +488,14 @@ namespace Project_BackFire.Views
 
         private void color1_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+=======
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
 
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];     
 
         }
 
@@ -499,9 +507,20 @@ namespace Project_BackFire.Views
 
         private void color3_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
         }
+=======
+
+            ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
+            MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
+
+
+        }
+
+     
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
 
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
         {
@@ -514,14 +533,29 @@ namespace Project_BackFire.Views
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             DispatcherTimer ButtonTimer = new DispatcherTimer();
             ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
             ButtonTimer.Tick += (sender, args) =>
             {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 ButtonTimer.Stop();
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
             };
             ButtonTimer.Start();
 
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             ThemeList.Visibility = Visibility.Visible;
@@ -562,3 +596,18 @@ namespace Project_BackFire.Views
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+//            for(var i = 0; i < ButtonTimer.Interval.Seconds; i++)
+//            {
+//                Console.WriteLine(i);
+//            }
+//        }
+//    }
+//}
+
+>>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
