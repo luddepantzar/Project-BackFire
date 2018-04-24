@@ -289,11 +289,7 @@ namespace Project_BackFire.Views
             rotationback8.Children.Add(animation16);
         }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-       
-=======
+
         /* public void BorderAnimation()
          {
              DependencyObject[] BorderList = new DependencyObject[8] { grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8 };
@@ -387,11 +383,7 @@ namespace Project_BackFire.Views
          }
          */
 
-<<<<<<< HEAD
-=======
->>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
 
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
         //public void BorderAnimation()
         //{
         //    DependencyObject[] BorderList = new DependencyObject[8] { grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8 };
@@ -678,16 +670,9 @@ namespace Project_BackFire.Views
 
         private void color1_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
-=======
 
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];     
 
         }
 
@@ -699,37 +684,14 @@ namespace Project_BackFire.Views
 
         private void color3_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            ContentArea.Background = (LinearGradientBrush)Resources["BackgroundColor3"];
-            MenuBar.Background = (LinearGradientBrush)Resources["MenubarColor3"];
-=======
-<<<<<<< HEAD
-            ContentArea.Background = (LinearGradientBrush)Resources["BackgroundColor3"];
-            MenuBar.Background = (LinearGradientBrush)Resources["MenubarColor3"];
-=======
 
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
 
 
-         
         }
 
-        private void color4_Click(object sender, RoutedEventArgs e)
-        {
-
-            ContentArea.Background = (LinearGradientBrush)Resources["BackgroundColor3"];
-            MenuBar.Background = (LinearGradientBrush)Resources["MenubarColor3"];
-
-
-<<<<<<< HEAD
-
-=======
-         
->>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
->>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
-        }
+     
 
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
         {
@@ -742,49 +704,20 @@ namespace Project_BackFire.Views
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             DispatcherTimer ButtonTimer = new DispatcherTimer();
             ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-<<<<<<< HEAD
-=======
-=======
 
 
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            DispatcherTimer ButtonTimer = new DispatcherTimer();
-            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
 
->>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
             ButtonTimer.Tick += (sender, args) =>
             {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 ButtonTimer.Stop();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
->>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
+    
             };
             ButtonTimer.Start();
 
         }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
->>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             ThemeList.Visibility = Visibility.Visible;
@@ -825,12 +758,7 @@ namespace Project_BackFire.Views
         }
     }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -841,6 +769,4 @@ namespace Project_BackFire.Views
 //        }
 //    }
 //}
->>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
->>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
+
