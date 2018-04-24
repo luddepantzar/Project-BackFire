@@ -5,12 +5,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
     x:Class="Project_BackFire.Views.Main"
     mc:Ignorable="d" Height="Auto" Width="Auto">
 
     <Page.Resources>
 
-
+        
         <!--Ljus Vit färggggggggggggggggg-->
         <LinearGradientBrush  x:Key="theme1a" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF939393" Offset="0.913"/>
@@ -36,8 +37,7 @@
             <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
         </LinearGradientBrush>
 
-<<<<<<< HEAD
-=======
+
         
       
         <LinearGradientBrush x:Key="theme4a" EndPoint="0.5,1" StartPoint="0.5,0">
@@ -48,7 +48,6 @@
             <GradientStop Color="#FF808078" Offset="0.039"/>
             <GradientStop Color="#FF212120" Offset="0.434"/>
         </LinearGradientBrush>
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
 
         <!--Default färg KLAR-->
         <LinearGradientBrush x:Key="theme3a" EndPoint="0.5,1" StartPoint="0.5,0">
@@ -63,20 +62,9 @@
             <GradientStop Color="#FF6A6A69" Offset="0.48"/>
         </LinearGradientBrush>
 
-<<<<<<< HEAD
-        <LinearGradientBrush x:Key="theme4b">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White"/>
-        </LinearGradientBrush>
-
-        <LinearGradientBrush x:Key="theme4a">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="#FF454445"/>
-        </LinearGradientBrush>
-        
-=======
    
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
+        
+
         <Storyboard x:Name="anim">
             <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
                                              EnableDependentAnimation="True"/>
@@ -132,9 +120,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
                 <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
+                    <PlaneProjection RotationY="0" />
                 </Image.Projection>
             </Image>
             <Image x:Name="BackImg1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
@@ -261,12 +249,7 @@
             <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
 
         </Grid>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
@@ -297,5 +280,7 @@
             <Button x:Name="Applybutton" Content="Värkställ" Margin="560,-187,0,0" Click="Applybutton_Click"/>
             <Button x:Name="CloseColorPickerButton" Content="Avbryt" Margin="651,-236,0,0" Click="CloseColorPickerButton_Click"/>
         </ListBox>
+        <Button x:Name="btn2" Content="Button" HorizontalAlignment="Left" Margin="1573,195,0,0" VerticalAlignment="Top" Click="btn2_Click"/>
+        <Button x:Name="btn3" Content="Button" HorizontalAlignment="Left" Margin="1691,195,0,-227" VerticalAlignment="Top" Click="btn3_Click"/>
     </Grid>
 </Page>

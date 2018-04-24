@@ -17,6 +17,7 @@ using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Toolkit.Uwp.UI.Animations;
 
 namespace Project_BackFire.Views
 {
@@ -68,27 +69,11 @@ namespace Project_BackFire.Views
             AnimationBack();
             AnimationFront();
             FlipCardConditions();
-            BorderAnimation();
+        
 
         }
 
 
-        private void BorderAnimation()
-        {
-
-            DoubleAnimation Opacityanim = new DoubleAnimation();
-
-            Opacityanim.From = 100;
-            Opacityanim.To = 0;
-            Opacityanim.BeginTime = TimeSpan.FromSeconds(0);
-            Opacityanim.Duration = TimeSpan.FromSeconds(1);
-            Storyboard.SetTarget(Opacityanim, grid1);
-            Storyboard.SetTargetProperty(Opacityanim, "Opacity");
-            BorderOpacity.Children.Clear();
-            BorderOpacity.Children.Add(Opacityanim);
-            AnimationBack();
-            AnimationFront();
-        }
 
         public void AnimationFront()
         {
@@ -289,11 +274,6 @@ namespace Project_BackFire.Views
             rotationback8.Children.Add(animation16);
         }
 
-<<<<<<< HEAD
-=======
-
-       
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
@@ -434,6 +414,30 @@ namespace Project_BackFire.Views
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
+
+            grid1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid8.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+
+            Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+            
+
+
+
         }
 
         private void FlipCardConditions()
@@ -459,8 +463,8 @@ namespace Project_BackFire.Views
                 };
                 tm8.Start();
             }
-        }
 
+        }
         private void changeColor()
         {
             var GreenColor = SolidColorBrush.OpacityProperty;
@@ -488,14 +492,8 @@ namespace Project_BackFire.Views
 
         private void color1_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
-=======
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
-
-            ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];     
 
         }
 
@@ -507,20 +505,12 @@ namespace Project_BackFire.Views
 
         private void color3_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
-        }
-=======
 
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
-
-
         }
 
-     
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
+
 
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
         {
@@ -533,29 +523,18 @@ namespace Project_BackFire.Views
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             DispatcherTimer ButtonTimer = new DispatcherTimer();
             ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
             ButtonTimer.Tick += (sender, args) =>
             {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 ButtonTimer.Stop();
-<<<<<<< HEAD
-=======
-    
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
+
             };
             ButtonTimer.Start();
 
+
         }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             ThemeList.Visibility = Visibility.Visible;
@@ -594,23 +573,35 @@ namespace Project_BackFire.Views
             ThemeList.Visibility = Visibility.Visible;
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
         }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+
+            grid1.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid2.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid3.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid4.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid5.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid6.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid7.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            grid8.Fade(duration: 4000, delay: 0, value: 1f).Start();
+
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+
+            Imgbox1.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox2.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox3.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox4.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox5.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox6.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox7.Fade(duration: 4000, delay: 0, value: 1f).Start();
+            Imgbox8.Fade(duration: 4000, delay: 0, value: 1f).Start();
+
+        }
+
+
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-//            for(var i = 0; i < ButtonTimer.Interval.Seconds; i++)
-//            {
-//                Console.WriteLine(i);
-//            }
-//        }
-//    }
-//}
-
->>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
-=======
->>>>>>> 446b9f6645e823fbfe337d75d589fb2e7a64651d
