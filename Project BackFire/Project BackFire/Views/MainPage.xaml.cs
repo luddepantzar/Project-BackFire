@@ -573,15 +573,3 @@ namespace Project_BackFire.Views
         }
     }
 }
-
-
-
-
-//            for(var i = 0; i < ButtonTimer.Interval.Seconds; i++)
-//            {
-//                Console.WriteLine(i);
-//            }
-//        }
-//    }
-//}
-
