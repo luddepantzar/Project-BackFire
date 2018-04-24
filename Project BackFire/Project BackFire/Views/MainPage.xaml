@@ -12,48 +12,49 @@
 
 
         <!--Ljus Vit färggggggggggggggggg-->
-        <SolidColorBrush x:Key="BackgroundColor1" Color="#F7F7FF"/>
+        <LinearGradientBrush  x:Key="theme1a" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF939393" Offset="0.913"/>
+            <GradientStop Color="#FFF7F7FF" Offset="0.068"/>
+        </LinearGradientBrush>
         <!--Ljus Blå färggggggggggggggggg-->
 
-        <LinearGradientBrush x:Key="MenubarColor1" EndPoint="0.5,1" StartPoint="0.5,0">
+        <LinearGradientBrush x:Key="theme1b" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF9E9E9E" Offset="0.475"/>
             <GradientStop Color="#279AF1" Offset="0.26"/>
         </LinearGradientBrush>
 
-        <!--SVart färg -->
-
+        <!--SVart färg  DONE-->
+        <!--Röd    DONE-->
         <LinearGradientBrush x:Key="theme2a" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF808078" Offset="0.039"/>
             <GradientStop Color="#FF212120" Offset="0.434"/>
         </LinearGradientBrush>
-        <!--Röd färg-->
 
-
+        
         <LinearGradientBrush x:Key="theme2b" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF7A2525" Offset="0.199"/>
             <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
         </LinearGradientBrush>
 
         <!--Ljus Vit färg-->
-        <SolidColorBrush x:Key="BackgroundColor3" Color="#011627"/>
+        <SolidColorBrush x:Key="theme4a" Color="#011627"/>
         <!--Ljus Blå färg-->
-        <SolidColorBrush x:Key="MenubarColor3" Color="#FF0022" />
+        <SolidColorBrush x:Key="theme4b" Color="#FF0022" />
 
+
+        
         <!--Default färg KLAR-->
-
         <LinearGradientBrush x:Key="theme3a" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FFACACAC" Offset="0.096"/>
             <GradientStop Color="#FF363636" Offset="0.932"/>
         </LinearGradientBrush>
 
-
+       
         <!--Default färg KLAR-->
-
         <LinearGradientBrush x:Key="theme3b" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
             <GradientStop Color="#FF6A6A69" Offset="0.48"/>
         </LinearGradientBrush>
-
 
         <SolidColorBrush x:Key="yellow" Color="Yellow"/>
 
@@ -67,6 +68,7 @@
         </Storyboard>
 
     </Page.Resources>
+    
     <Grid x:Name="ContentArea" 
                Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
         <Grid.Background>
@@ -242,12 +244,47 @@
             <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
 
         </Grid>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        <!--<Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+=======
+<<<<<<< HEAD
+=======
+        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
+
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Images/kugghjul.png"/>
+            </Button.Background>
+            <Button.Flyout>
+                <MenuFlyout>
+                    <MenuFlyoutSubItem Text="API Settings">
+                        <MenuFlyoutItem/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSubItem x:Name="ThemeMenu" Text="Tema">
+                        <MenuFlyoutItem x:Name="color1" Text="1" Click="color1_Click"/>
+                        <MenuFlyoutItem x:Name="color2" Text="2" Click="color2_Click"/>
+                        <MenuFlyoutItem x:Name="color3" Text="3" Click="color3_Click"/>
+                        <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
+                    </MenuFlyoutSubItem>
+
+                    <MenuFlyoutSubItem  Text="Tid">
+
+                        <MenuFlyoutItem x:Name="Bighours" Text="24hr"/>
+                        <MenuFlyoutItem x:Name="Smallhours" Text="12hr"/>
+                    </MenuFlyoutSubItem>
+                </MenuFlyout>
+            </Button.Flyout>
+        </Button-->
+
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
+>>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton Icon="Setting" Label="Settings"/>
-            <AppBarSeparator/>
             <AppBarButton Icon="Setting" Label="API"/>
             <AppBarSeparator/>
             <AppBarButton Icon="Clock" Label="Klocka"/>
