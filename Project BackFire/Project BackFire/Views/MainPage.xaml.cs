@@ -597,6 +597,7 @@ namespace Project_BackFire.Views
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -611,3 +612,5 @@ namespace Project_BackFire.Views
 //}
 
 >>>>>>> 1e893491f9c06532143eac5a67fde52318a85b7c
+=======
+>>>>>>> 446b9f6645e823fbfe337d75d589fb2e7a64651d
