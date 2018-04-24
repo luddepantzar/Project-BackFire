@@ -30,19 +30,13 @@
             <GradientStop Color="#FF212120" Offset="0.434"/>
         </LinearGradientBrush>
 
-        
+
         <LinearGradientBrush x:Key="theme2b" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF7A2525" Offset="0.199"/>
             <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
         </LinearGradientBrush>
 
-        <!--Ljus Vit färg-->
-        <SolidColorBrush x:Key="theme4a" Color="#011627"/>
-        <!--Ljus Blå färg-->
-        <SolidColorBrush x:Key="theme4b" Color="#FF0022" />
 
-
-        
         <!--Default färg KLAR-->
         <LinearGradientBrush x:Key="theme3a" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FFACACAC" Offset="0.096"/>
@@ -56,12 +50,16 @@
             <GradientStop Color="#FF6A6A69" Offset="0.48"/>
         </LinearGradientBrush>
 
-        <SolidColorBrush x:Key="yellow" Color="Yellow"/>
+        <LinearGradientBrush x:Key="theme4b">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
 
-        <SolidColorBrush x:Key="green" Color="Green"/>
-
-        <SolidColorBrush x:Key="red" Color="Red"/>
-
+        <LinearGradientBrush x:Key="theme4a">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF454445"/>
+        </LinearGradientBrush>
+        
         <Storyboard x:Name="anim">
             <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
                                              EnableDependentAnimation="True"/>
@@ -244,50 +242,18 @@
             <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
 
         </Grid>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-        <!--<Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
-=======
-<<<<<<< HEAD
-=======
-        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
->>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
-
-            <Button.Background>
-                <ImageBrush ImageSource="ms-appx:///Images/kugghjul.png"/>
-            </Button.Background>
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutSubItem Text="API Settings">
-                        <MenuFlyoutItem/>
-                    </MenuFlyoutSubItem>
-                    <MenuFlyoutSubItem x:Name="ThemeMenu" Text="Tema">
-                        <MenuFlyoutItem x:Name="color1" Text="1" Click="color1_Click"/>
-                        <MenuFlyoutItem x:Name="color2" Text="2" Click="color2_Click"/>
-                        <MenuFlyoutItem x:Name="color3" Text="3" Click="color3_Click"/>
-                        <MenuFlyoutItem x:Name="colordefault" Text="Default" Click="colordefault_Click"/>
-                    </MenuFlyoutSubItem>
-
-                    <MenuFlyoutSubItem  Text="Tid">
-
-                        <MenuFlyoutItem x:Name="Bighours" Text="24hr"/>
-                        <MenuFlyoutItem x:Name="Smallhours" Text="12hr"/>
-                    </MenuFlyoutSubItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button-->
-
->>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
->>>>>>> 542f29d70f5b631672aa9cd7dc0646857940f824
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
             <AppBarButton Icon="Setting" Label="API"/>
             <AppBarSeparator/>
-            <AppBarButton Icon="Clock" Label="Klocka"/>
+            <AppBarButton Icon="Clock" Label="Klocka">
+                <ComboBox>
+                    <ComboBoxItem Tapped="TimerTick" Content="24 Timmars"/>
+                    <ComboBoxItem Tapped="TimerTick2" Content="12 Timmars"/>
+                </ComboBox>
+            </AppBarButton>
             <AppBarSeparator/>
             <AppBarButton Icon="Highlight" Label="Teman" Click="AppBarButton_Click"/>
             <AppBarSeparator/>
@@ -295,8 +261,8 @@
         <ComboBox x:Name="ThemeList" HorizontalAlignment="Left" Margin="1662,975,0,-1013" VerticalAlignment="Top" Height="38" Width="217" Visibility="Collapsed">
             <ComboBoxItem Tapped="colordefault_Click">Default</ComboBoxItem>
             <ComboBoxItem Tapped="color1_Click">Tema 1</ComboBoxItem>
-            <ComboBoxItem>Tema 2</ComboBoxItem>
-            <ComboBoxItem>Tema 3</ComboBoxItem>
+            <ComboBoxItem Tapped="color2_Click">Tema 2</ComboBoxItem>
+            <ComboBoxItem Tapped="color3_Click">Tema 3</ComboBoxItem>
             <ComboBoxItem Tapped="ComboBoxItem_Tapped">Gör ett eget tema</ComboBoxItem>
         </ComboBox>
         <Button x:Name="CloseThemeButton" Content="X" HorizontalAlignment="Left" Margin="1848,940,0,-972" VerticalAlignment="Top" Background="#66000000" Visibility="Collapsed" Click="CloseThemeButton_Click"/>
