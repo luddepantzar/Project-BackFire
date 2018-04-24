@@ -62,7 +62,10 @@
 
         <SolidColorBrush x:Key="red" Color="Red"/>
         <Storyboard x:Name="anim">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
             <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
                                              EnableDependentAnimation="True"/>
         </Storyboard>
@@ -71,8 +74,11 @@
     
     <Grid x:Name="ContentArea" 
                Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFACACAC" Offset="0.096"/>
@@ -131,7 +137,11 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+
+=======
             
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
             <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
@@ -187,7 +197,10 @@
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -199,7 +212,10 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
             <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
@@ -210,14 +226,21 @@
             </Image>
 
             <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+<<<<<<< HEAD
+=======
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+=======
 
             <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -231,9 +254,13 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+=======
 
             <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -241,6 +268,10 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
 
             <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
 
@@ -260,7 +291,13 @@
 
         </Grid>
 
+<<<<<<< HEAD
         <!--<Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+=======
+<<<<<<< HEAD
+=======
+        <Button x:Name="SettingsButton" Margin="1748,431,0,-492" Width="103" Height="80" Visibility="Collapsed">
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
 
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///Images/kugghjul.png"/>
@@ -286,6 +323,7 @@
             </Button.Flyout>
         </Button-->
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
@@ -310,5 +348,8 @@
             <Button x:Name="CloseColorPickerButton" Content="Avbryt" Margin="273,-236,0,0" Click="CloseColorPickerButton_Click"/>
         </ListBox>
     </Grid>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
 </Page>

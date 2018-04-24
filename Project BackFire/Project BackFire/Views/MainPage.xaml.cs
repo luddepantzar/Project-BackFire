@@ -64,6 +64,12 @@ namespace Project_BackFire.Views
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
+<<<<<<< HEAD
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+            AnimationBack();
+            AnimationFront();
+            FlipCardConditions();
+=======
             
 
             //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
@@ -79,6 +85,7 @@ namespace Project_BackFire.Views
 
 
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
             BorderAnimation();
 
         }
@@ -97,11 +104,16 @@ namespace Project_BackFire.Views
             Storyboard.SetTargetProperty(Opacityanim, "Opacity");
             BorderOpacity.Children.Clear();
             BorderOpacity.Children.Add(Opacityanim);
+<<<<<<< HEAD
+            AnimationBack();
+            AnimationFront();
+=======
 
 
             AnimationBack();
             AnimationFront();
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
         }
 
         public void AnimationFront()
@@ -303,7 +315,105 @@ namespace Project_BackFire.Views
             rotationback8.Children.Add(animation16);
         }
 
+<<<<<<< HEAD
        
+=======
+        /* public void BorderAnimation()
+         {
+             DependencyObject[] BorderList = new DependencyObject[8] { grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8 };
+             DoubleAnimation animation17 = new DoubleAnimation();
+             animation17.From = 180;
+             animation17.To = 360;
+             animation17.BeginTime = TimeSpan.FromSeconds(0);
+             animation17.RepeatBehavior = new RepeatBehavior(1);
+             animation17.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation17, BorderList[0]);
+             Storyboard.SetTargetProperty(animation17, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder1.Children.Clear();
+             rotationBorder1.Children.Add(animation17);
+
+             DoubleAnimation animation18 = new DoubleAnimation();
+             animation18.From = 180;
+             animation18.To = 360;
+             animation18.BeginTime = TimeSpan.FromSeconds(0);
+             animation18.RepeatBehavior = new RepeatBehavior(1);
+             animation18.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation18, BorderList[1]);
+             Storyboard.SetTargetProperty(animation18, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder2.Children.Clear();
+             rotationBorder2.Children.Add(animation18);
+
+             DoubleAnimation animation19 = new DoubleAnimation();
+             animation19.From = 180;
+             animation19.To = 360;
+             animation19.BeginTime = TimeSpan.FromSeconds(0);
+             animation19.RepeatBehavior = new RepeatBehavior(1);
+             animation19.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation19, BorderList[2]);
+             Storyboard.SetTargetProperty(animation19, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder3.Children.Clear();
+             rotationBorder3.Children.Add(animation19);
+
+             DoubleAnimation animation20 = new DoubleAnimation();
+             animation20.From = 180;
+             animation20.To = 360;
+             animation20.BeginTime = TimeSpan.FromSeconds(0);
+             animation20.RepeatBehavior = new RepeatBehavior(1);
+             animation20.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation20, BorderList[3]);
+             Storyboard.SetTargetProperty(animation20, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder4.Children.Clear();
+             rotationBorder4.Children.Add(animation20);
+
+             DoubleAnimation animation21 = new DoubleAnimation();
+             animation21.From = 180;
+             animation21.To = 360;
+             animation21.BeginTime = TimeSpan.FromSeconds(0);
+             animation21.RepeatBehavior = new RepeatBehavior(1);
+             animation21.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation21, BorderList[4]);
+             Storyboard.SetTargetProperty(animation21, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder5.Children.Clear();
+             rotationBorder5.Children.Add(animation21);
+
+             DoubleAnimation animation22 = new DoubleAnimation();
+             animation22.From = 180;
+             animation22.To = 360;
+             animation22.BeginTime = TimeSpan.FromSeconds(0);
+             animation22.RepeatBehavior = new RepeatBehavior(1);
+             animation22.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation22, BorderList[5]);
+             Storyboard.SetTargetProperty(animation22, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder6.Children.Clear();
+             rotationBorder6.Children.Add(animation22);
+
+             DoubleAnimation animation23 = new DoubleAnimation();
+             animation23.From = 180;
+             animation23.To = 360;
+             animation23.BeginTime = TimeSpan.FromSeconds(0);
+             animation23.RepeatBehavior = new RepeatBehavior(1);
+             animation23.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation23, BorderList[6]);
+             Storyboard.SetTargetProperty(animation23, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder7.Children.Clear();
+             rotationBorder7.Children.Add(animation23);
+
+             DoubleAnimation animation24 = new DoubleAnimation();
+             animation24.From = 180;
+             animation24.To = 360;
+             animation24.BeginTime = TimeSpan.FromSeconds(0);
+             animation24.RepeatBehavior = new RepeatBehavior(1);
+             animation24.Duration = TimeSpan.FromSeconds(3);
+             Storyboard.SetTarget(animation24, BorderList[7]);
+             Storyboard.SetTargetProperty(animation24, "(UIElement.Projection).(PlaneProjection.RotationY)");
+             rotationBorder8.Children.Clear();
+             rotationBorder8.Children.Add(animation24);
+         }
+         */
+
+<<<<<<< HEAD
+=======
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
 
         //public void BorderAnimation()
         //{
@@ -398,13 +508,17 @@ namespace Project_BackFire.Views
         //}
 
         
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
         private void TimerTick(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
         private void TimerTick2(object sender, object e)
         {
             TimeDate.Text = DateTime.Now.ToString("hh:mm");
@@ -593,11 +707,16 @@ namespace Project_BackFire.Views
 
         private void color1_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+            ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
+            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+=======
 
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
 
             
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
         }
 
         private void color2_Click(object sender, RoutedEventArgs e)
@@ -608,6 +727,10 @@ namespace Project_BackFire.Views
 
         private void color3_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+            ContentArea.Background = (LinearGradientBrush)Resources["BackgroundColor3"];
+            MenuBar.Background = (LinearGradientBrush)Resources["MenubarColor3"];
+=======
 
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
@@ -623,7 +746,12 @@ namespace Project_BackFire.Views
             MenuBar.Background = (LinearGradientBrush)Resources["MenubarColor3"];
 
 
+<<<<<<< HEAD
 
+=======
+         
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
         }
 
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
@@ -636,23 +764,44 @@ namespace Project_BackFire.Views
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
+<<<<<<< HEAD
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            DispatcherTimer ButtonTimer = new DispatcherTimer();
+            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+=======
 
 
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             DispatcherTimer ButtonTimer = new DispatcherTimer();
             ButtonTimer.Interval = TimeSpan.FromSeconds(5);
 
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
             ButtonTimer.Tick += (sender, args) =>
             {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 ButtonTimer.Stop();
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
             };
             ButtonTimer.Start();
 
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             ThemeList.Visibility = Visibility.Visible;
@@ -693,3 +842,19 @@ namespace Project_BackFire.Views
         }
     }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+
+//            for(var i = 0; i < ButtonTimer.Interval.Seconds; i++)
+//            {
+//                Console.WriteLine(i);
+//            }
+//        }
+//    }
+//}
+>>>>>>> 94e9397dfd18c12623949d7ca5c0e89f90181439
+>>>>>>> b6a6be47f44525d04d3dde566bf360ec732271c5
