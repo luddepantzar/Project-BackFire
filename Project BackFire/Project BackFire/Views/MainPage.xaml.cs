@@ -17,14 +17,11 @@ using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System.IO;
-=======
 using Microsoft.Toolkit.Uwp.UI.Animations;
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
 
 namespace Project_BackFire.Views
 {
@@ -76,16 +73,8 @@ namespace Project_BackFire.Views
             AnimationBack();
             AnimationFront();
             FlipCardConditions();
-<<<<<<< HEAD
         }
-=======
-        
-
-        }
-
-
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
-
+  
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -504,12 +493,7 @@ namespace Project_BackFire.Views
         private void color1_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-<<<<<<< HEAD
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];     
-=======
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
-
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
         }
 
         private void color2_Click(object sender, RoutedEventArgs e)
@@ -520,19 +504,10 @@ namespace Project_BackFire.Views
 
         private void color3_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-=======
-
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
         }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
         {
             /*
@@ -544,82 +519,16 @@ namespace Project_BackFire.Views
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             DispatcherTimer ButtonTimer = new DispatcherTimer();
             ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-<<<<<<< HEAD
-=======
-
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
             ButtonTimer.Tick += (sender, args) =>
             {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 ButtonTimer.Stop();
-<<<<<<< HEAD
             };
             ButtonTimer.Start();
 
         }
-
-        //private void AppBarButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ThemeList.Visibility = Visibility.Visible;
-        //    CloseThemeButton.Visibility = Visibility.Visible;
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //}
-
-        //private void CloseThemeButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ThemeList.Visibility = Visibility.Collapsed;
-        //    CloseThemeButton.Visibility = Visibility.Collapsed;
-        //    ColorPickerBox.Visibility = Visibility.Collapsed;
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //}
-
-        //private void ComboBoxItem_Tapped(object sender, TappedRoutedEventArgs e)
-        //{
-        //    ColorPickerBox.Visibility = Visibility.Visible;
-        //    CloseThemeButton.Visibility = Visibility.Collapsed;
-        //    ThemeList.Visibility = Visibility.Collapsed;
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //}
-
-        //private void CloseColorPickerButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ColorPickerBox.Visibility = Visibility.Collapsed;
-        //    CloseThemeButton.Visibility = Visibility.Visible;
-        //    ThemeList.Visibility = Visibility.Visible;
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //}
-
-        //private void Applybutton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ColorPickerBox.Visibility = Visibility.Collapsed;
-        //    CloseThemeButton.Visibility = Visibility.Visible;
-        //    ThemeList.Visibility = Visibility.Visible;
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //}
-
-        //private void ClockButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ClockBox.Visibility = Visibility.Visible;
-        //    CloseClockButton.Visibility = Visibility.Visible;
-        //}
-
-        //private void CloseClock_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ClockBox.Visibility = Visibility.Collapsed;
-        //    CloseClockButton.Visibility = Visibility.Collapsed;
-        //}
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
-=======
-
-            };
-            ButtonTimer.Start();
-
-
-        }
-
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
         {
             SettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Visible;
@@ -652,7 +561,6 @@ namespace Project_BackFire.Views
             ThemeGrid.Visibility = Visibility.Collapsed;
         }
 
-<<<<<<< HEAD
         private void GeneralSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             GeneralSettingsGrid.Visibility = Visibility.Visible;
@@ -662,10 +570,21 @@ namespace Project_BackFire.Views
 
         private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
         {
+            ContentArea.Background = new GradientBrush(
+                new Point(),
+                new Point(),
+                args.NewColor,
+                Color.FromArgb(56, 56, 56, 100));
+
             ContentArea.Background = new LinearGradientBrush(
                 ); //Standard second color for the gradient.
         }
-=======
+
+        private void ColorPicker_ColorChanged_1(ColorPicker sender, ColorChangedEventArgs args)
+        {
+            MenuBar.Background = new SolidColorBrush(args.NewColor);
+        }
+
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -693,8 +612,5 @@ namespace Project_BackFire.Views
             Imgbox8.Fade(duration: 4000, delay: 0, value: 1f).Start();
 
         }
-
-
->>>>>>> ef6ae0b08da611d9ebc9d3c14ccebeec099f2f60
     }
 }
