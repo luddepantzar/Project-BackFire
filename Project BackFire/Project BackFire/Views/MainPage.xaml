@@ -7,20 +7,10 @@
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:data="using:Microsoft.Toolkit.Uwp.SampleApp.Data"
-<<<<<<< HEAD
     xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors">
 
 
     <Page.Resources>
-
-=======
-    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
-    x:Class="Project_BackFire.Views.Main"
-    mc:Ignorable="d" Height="Auto" Width="Auto">
-
-    <Page.Resources>
-
-        
         <!--Ljus Vit färggggggggggggggggg-->
         <LinearGradientBrush  x:Key="theme1a" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF939393" Offset="0.913"/>
@@ -72,68 +62,10 @@
             <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
                                              EnableDependentAnimation="True"/>
         </Storyboard>
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
-
-    <!--Ljus Vit färggggggggggggggggg-->
-    <LinearGradientBrush  x:Key="theme1a" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF939393" Offset="0.913"/>
-        <GradientStop Color="#FFF7F7FF" Offset="0.068"/>
-    </LinearGradientBrush>
-    <!--Ljus Blå färggggggggggggggggg-->
-
-    <LinearGradientBrush x:Key="theme1b" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF407299" Offset="0.16"/>
-        <GradientStop Color="#279AF1" Offset="0.537"/>
-    </LinearGradientBrush>
-
-    <!--SVart färg  DONE-->
-    <!--Röd    DONE-->
-    <LinearGradientBrush x:Key="theme2a" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF808078" Offset="0.039"/>
-        <GradientStop Color="#FF212120" Offset="0.434"/>
-    </LinearGradientBrush>
-
-
-    <LinearGradientBrush x:Key="theme2b" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF7A2525" Offset="0.199"/>
-        <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
-    </LinearGradientBrush>
-
-
-    <LinearGradientBrush x:Key="theme4a" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF7A2525" Offset="0.199"/>
-        <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
-    </LinearGradientBrush>
-
-
-    <LinearGradientBrush x:Key="theme4b" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF808078" Offset="0.039"/>
-        <GradientStop Color="#FF212120" Offset="0.434"/>
-    </LinearGradientBrush>
-
-    <!--Default färg KLAR-->
-    <LinearGradientBrush x:Key="theme3a" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FFACACAC" Offset="0.096"/>
-        <GradientStop Color="#FF363636" Offset="0.932"/>
-    </LinearGradientBrush>
-
-
-    <!--Default färg KLAR-->
-    <LinearGradientBrush x:Key="theme3b" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
-        <GradientStop Color="#FF6A6A69" Offset="0.48"/>
-    </LinearGradientBrush>
-
-
-    <Storyboard x:Name="anim">
-        <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
-                                             EnableDependentAnimation="True"/>
-    </Storyboard>
     </Page.Resources>
 
-
     <Grid x:Name="ContentArea" 
-               Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" PointerMoved="OnPointerMoved">
+               Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" Tapped="ContentArea_Tapped">
 
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -166,6 +98,7 @@
             <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
             <TextBlock x:Name="TodaysDate" Margin="0,78,30,14" Text="" TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TimeDate12h" Margin="280,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black" Visibility="Visible" Canvas.ZIndex="100"/>
 
         </Grid>
         <Grid Margin="140,280,140,160" Grid.RowSpan="3">
@@ -309,92 +242,91 @@
             <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
 
         </Grid>
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
-            <!--<AppBarSeparator/>
-            <AppBarButton x:Name="ClockButton" Icon="Clock" Label="Klocka" Click="ClockButton_Click"/>
+            <AppBarSeparator/>
+            <!--<AppBarButton x:Name="ClockButton" Icon="Clock" Label="Klocka" Click="ClockButton_Click"/>
             <AppBarSeparator/>
             <AppBarButton Icon="Highlight" Label="Teman" Click="AppBarButton_Click"/>
             <AppBarSeparator/>-->
         </CommandBar>
-<<<<<<< HEAD
-        <Grid x:Name="SettingsGrid" Background="{StaticResource theme2a}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="800" Height="640" Visibility="Collapsed" Margin="0,315,0,0" Padding="0,0,0,0">
-            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
-=======
-            <Grid x:Name="SettingsGrid" Background="{StaticResource theme2a}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="800" Height="640" Visibility="Collapsed" Margin="0,315,0,0" Padding="0,0,0,0">
-                <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
-               CompactPaneLength="50" OpenPaneLength="150" VerticalAlignment="Stretch">
-                    <SplitView.Pane>
-                        <StackPanel>
-                            <StackPanel.Background>
+
+        <Grid x:Name="SettingsGrid" Background="{StaticResource theme2a}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="800" Height="640" Visibility="Visible" Margin="0,315,0,0" Padding="0,0,0,0">
+            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False">
+                <SplitView.Pane>
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF363636" Offset="0.226"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </StackPanel.Background>
+                        <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="GeneralSettingsButton" FontFamily="Segoe MDL2 Assets" Content="&#xE713;"
+                    Width="50" Height="50" Background="Transparent" Click="GeneralSettingsButton_Click"/>
+                            <TextBlock Text="General" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="ApiButton" FontFamily="Segoe MDL2 Assets" Content="&#xF080;"
+                        Width="50" Height="50" Background="Transparent" Click="ApiButton_Click"/>
+                            <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="ThemeButton" FontFamily="Segoe MDL2 Assets" Content="&#xE7E6;"
+                        Width="50" Height="50" Background="Transparent" Click="ThemeButton_Click"/>
+                            <TextBlock Text="Teman" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+                <SplitView.Content>
+                    <Grid>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="681,586,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="48" Height="37">
+                            <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF363636" Offset="0.226"/>
+                                    <GradientStop Color="#FF303030"/>
                                     <GradientStop Color="White" Offset="1"/>
                                 </LinearGradientBrush>
-                            </StackPanel.Background>
-                            <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                            <StackPanel Orientation="Horizontal">
-                                <Button x:Name="GeneralSettingsButton" FontFamily="Segoe MDL2 Assets" Content="&#xE713;"
-                    Width="50" Height="50" Background="Transparent" Click="GeneralSettingsButton_Click"/>
-                                <TextBlock Text="General" FontSize="18" VerticalAlignment="Center" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Button x:Name="ApiButton" FontFamily="Segoe MDL2 Assets" Content="&#xF080;"
-                        Width="50" Height="50" Background="Transparent" Click="ApiButton_Click"/>
-                                <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Button x:Name="ThemeButton" FontFamily="Segoe MDL2 Assets" Content="&#xE7E6;"
-                        Width="50" Height="50" Background="Transparent" Click="ThemeButton_Click"/>
-                                <TextBlock Text="Teman" FontSize="18" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </StackPanel>
-                    </SplitView.Pane>
-                    <SplitView.Content>
-                        <Grid>
-                            <Button FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="681,586,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="48" Height="37">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF444444"/>
-                                        <GradientStop Color="#FFAAA9A9" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                            </Button>
-                            <Grid x:Name="GeneralSettingsGrid">
-                                <ToggleSwitch Header="12 Timmars klocka" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top"/>
-                                <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,40,0,0" VerticalAlignment="Top" Width="20" Fill="#FF14A61E"/>
-                                <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,87,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE2E201"/>
-                                <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,136,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE20101"/>
-                                <TextBlock HorizontalAlignment="Left" Margin="71,40,0,0" Text="- Rummet är ledigt" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="249"/>
-                                <TextBlock HorizontalAlignment="Left" Margin="71,86,0,0" Text="- Rummet är ledigt om ca 45 minuter." TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="278"/>
-                                <TextBlock HorizontalAlignment="Left" Margin="71,134,0,0" Text="- Rummet är bokat" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="254"/>
-                            </Grid>
-                            <Grid x:Name="ApiSettingsGrid" Visibility="Collapsed">
-                                <PasswordBox HorizontalAlignment="Left" Margin="200,197,0,0" VerticalAlignment="Top" Width="286"/>
-                            </Grid>
-                            <Grid x:Name="ThemeGrid" Visibility="Collapsed">
-                                <TextBlock HorizontalAlignment="Left" Margin="74,6,0,-434" Text="Bakgrund" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
-                                <TextBlock HorizontalAlignment="Left" Margin="478,6,0,-434" Text="Panel" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
-                                <ColorPicker HorizontalAlignment="Left" Margin="41,80,0,0" VerticalAlignment="Top" Height="450" Width="249" ColorChanged="ColorPicker_ColorChanged"/>
-                                <ColorPicker HorizontalAlignment="Left" Margin="393,80,0,0" VerticalAlignment="Top" Height="450" Width="249" ColorChanged="ColorPicker_ColorChanged_1"/>
-                            </Grid>
+                            </Button.Background>
+                        </Button>
+                        <Grid x:Name="GeneralSettingsGrid" Visibility="Collapsed">
+                            <ToggleButton Content="12 Timmars klocka" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top" Checked="ToggleSwitch_Toggled" Unchecked="ToggleButton_Unchecked"/>
+                            <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,40,0,0" VerticalAlignment="Top" Width="20" Fill="#FF14A61E"/>
+                            <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,87,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE2E201"/>
+                            <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,136,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE20101"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="71,40,0,0" Text="- Rummet är ledigt" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="249"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="71,86,0,0" Text="- Rummet är ledigt om ca 45 minuter." TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="278"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="71,134,0,0" Text="- Rummet är bokat" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="254"/>
                         </Grid>
-<<<<<<< HEAD
-                        <Grid x:Name="ThemeGrid" Visibility="Visible">
+                        <Grid x:Name="ApiSettingsGrid" Visibility="Collapsed">
+                            <PasswordBox HorizontalAlignment="Left" Margin="200,197,0,0" VerticalAlignment="Top" Width="286"/>
+                        </Grid>
+                        <Grid x:Name="ThemeGrid" Visibility="Collapsed">
+                            <StackPanel Orientation="Vertical" Margin="0,2,532,225">
+                                <Button x:Name="Theme1But" Content="Tema 1" Width="200" Margin="0,158,0,0" Height="50"></Button>
+                                <Button x:Name="Theme2But" Content="Tema 2" Width="200" Margin="0,10,0,0" Height="50"></Button>
+                                <Button x:Name="Theme3But" Content="Tema 2" Margin="0,10,0,0" Width="200" Height="48"></Button>
+                                <Button x:Name="OwnThemeBut" Content="Gör ditt egena tema" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10,0,0" Height="50" Click="OwnThemeBut_Click"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="MakeYoureThemeGrid" Visibility="Visible">
                             <TextBlock HorizontalAlignment="Left" Margin="74,6,0,-434" Text="Bakgrund" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
                             <TextBlock HorizontalAlignment="Left" Margin="478,6,0,-434" Text="Panel" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
                             <ColorPicker HorizontalAlignment="Left" Margin="41,80,0,0" VerticalAlignment="Top" Height="450" Width="249" ColorChanged="ColorPicker_ColorChanged"/>
-                            <ColorPicker HorizontalAlignment="Left" Margin="393,80,0,0" VerticalAlignment="Top" Height="450" Width="249"/>
+                            <ColorPicker HorizontalAlignment="Left" Margin="393,80,0,0" VerticalAlignment="Top" Height="450" Width="249" ColorChanged="ColorPicker_ColorChanged_1"/>
+                            <Button Content="Värkställ" HorizontalAlignment="Left" Margin="587,586,0,0" VerticalAlignment="Top" Height="37">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF464646" Offset="0"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
                         </Grid>
                     </Grid>
                 </SplitView.Content>
@@ -402,11 +334,5 @@
             <Button x:Name="btn2" Content="Button" HorizontalAlignment="Left" Margin="1573,195,0,0" VerticalAlignment="Top" Click="btn2_Click"/>
             <Button x:Name="btn3" Content="Button" HorizontalAlignment="Left" Margin="1691,195,0,-227" VerticalAlignment="Top" Click="btn3_Click"/>
         </Grid>
-
-=======
-                    </SplitView.Content>
-                </SplitView>
-            </Grid>
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
     </Grid>
 </Page>

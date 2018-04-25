@@ -8,17 +8,12 @@ using Windows.UI.ViewManagement;
 using Windows.UI;
 using Windows.UI.Xaml.Media.Animation;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using Microsoft.Toolkit.Uwp.UI.Animations;
 using System.Drawing;
-=======
 using System.Linq;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System.IO;
-using Microsoft.Toolkit.Uwp.UI.Animations;
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
 
 namespace Project_BackFire.Views
 {
@@ -70,14 +65,8 @@ namespace Project_BackFire.Views
             AnimationBack();
             AnimationFront();
             FlipCardConditions();
-<<<<<<< HEAD
-
         }
 
-=======
-        }
-  
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -285,7 +274,7 @@ namespace Project_BackFire.Views
 
         private void TimerTick2(object sender, object e)
         {
-            TimeDate.Text = DateTime.Now.ToString("hh:mm");
+            TimeDate12h.Text = DateTime.Now.ToString("hh:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
@@ -380,7 +369,6 @@ namespace Project_BackFire.Views
                 tm8.Stop();
             };
             tm8.Start();
-
         }
 
         private void Animation()
@@ -411,7 +399,6 @@ namespace Project_BackFire.Views
             rotationBorder7.Begin();
             rotationBorder8.Begin();
             OpacityImage2();
-
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
@@ -427,7 +414,6 @@ namespace Project_BackFire.Views
             grid7.Fade(duration: 1000, delay: 0, value: 0).Start();
             grid8.Fade(duration: 1000, delay: 0, value: 0).Start();
 
-
             Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -436,11 +422,6 @@ namespace Project_BackFire.Views
             Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-
-
-
-
         }
 
         private void FlipCardConditions()
@@ -493,7 +474,6 @@ namespace Project_BackFire.Views
             btn1.Visibility = Visibility.Collapsed;
             DateTime TimeNow = new DateTime();
             TimeNow = DateTime.Now;
-
             string CurrentDatetime = TimeNow.ToString();
         }
 
@@ -506,11 +486,7 @@ namespace Project_BackFire.Views
         private void color1_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-<<<<<<< HEAD
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
-=======
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];     
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
         }
 
         private void color2_Click(object sender, RoutedEventArgs e)
@@ -521,10 +497,6 @@ namespace Project_BackFire.Views
 
         private void color3_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-
-=======
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
         }
@@ -535,25 +507,20 @@ namespace Project_BackFire.Views
            */
         }
 
-        public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
-        {
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            DispatcherTimer ButtonTimer = new DispatcherTimer();
-            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            ButtonTimer.Tick += (sender, args) =>
-            {
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                ButtonTimer.Stop();
-            };
-            ButtonTimer.Start();
-
-        }
+        //public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
+        //{
+        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        //    DispatcherTimer ButtonTimer = new DispatcherTimer();
+        //    ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+        //    ButtonTimer.Tick += (sender, args) =>
+        //    {
+        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+        //        ButtonTimer.Stop();
+        //    };
+        //    ButtonTimer.Start();
+        //}
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
-<<<<<<< HEAD
-
-=======
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
         {
             SettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Visible;
@@ -574,9 +541,20 @@ namespace Project_BackFire.Views
 
         private void ThemeButton_Click(object sender, RoutedEventArgs e)
         {
-            ThemeGrid.Visibility = Visibility.Visible;
-            GeneralSettingsGrid.Visibility = Visibility.Collapsed;
-            ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            switch(ThemeGrid.Visibility)
+            {
+                case Visibility.Visible:
+                    {
+                        ThemeGrid.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+                case Visibility.Collapsed:
+                    {
+                        ThemeGrid.Visibility = Visibility.Visible;
+                        break;
+                    }
+            }
         }
 
         private void ApiButton_Click(object sender, RoutedEventArgs e)
@@ -584,6 +562,7 @@ namespace Project_BackFire.Views
             ApiSettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Collapsed;
             ThemeGrid.Visibility = Visibility.Collapsed;
+            MakeYoureThemeGrid.Visibility = Visibility.Collapsed;
         }
 
         private void GeneralSettingsButton_Click(object sender, RoutedEventArgs e)
@@ -591,23 +570,15 @@ namespace Project_BackFire.Views
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ThemeGrid.Visibility = Visibility.Collapsed;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            MakeYoureThemeGrid.Visibility = Visibility.Collapsed;
         }
 
         private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
         {
-<<<<<<< HEAD
-            //ContentArea.Background
-        }
-
-=======
-            ContentArea.Background = new GradientBrush(
-                new Point(),
-                new Point(),
-                args.NewColor,
-                Color.FromArgb(56, 56, 56, 100));
-
-            ContentArea.Background = new LinearGradientBrush(
-                ); //Standard second color for the gradient.
+            ContentArea.Background = new SolidColorBrush(args.NewColor);
+            //ContentArea.Background = new LinearGradientBrush(
+            //    new GradientStopCollection(args.NewColor, 0.0, 0.1, 0.2),
+            //    new GradientStopCollection(System.Drawing.Color.FromArgb(56, 56, 56, 100), 0.75)); //Standard second color for the gradient.
         }
 
         private void ColorPicker_ColorChanged_1(ColorPicker sender, ColorChangedEventArgs args)
@@ -615,7 +586,6 @@ namespace Project_BackFire.Views
             MenuBar.Background = new SolidColorBrush(args.NewColor);
         }
 
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -642,10 +612,38 @@ namespace Project_BackFire.Views
             Imgbox8.Fade(duration: 4000, delay: 0, value: 1f).Start();
 
         }
-<<<<<<< HEAD
 
+        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            TimeDate.Visibility = Visibility.Collapsed;
+            TimeDate12h.Visibility = Visibility.Visible;
+        }
 
-=======
->>>>>>> 1dd4cc31ee65d2af2e7e49a6b9296e379f19e24a
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            TimeDate.Visibility = Visibility.Visible;
+            TimeDate12h.Visibility = Visibility.Collapsed;
+        }
+
+        private void OwnThemeBut_Click(object sender, RoutedEventArgs e)
+        {
+            MakeYoureThemeGrid.Visibility = Visibility.Visible;
+            ThemeGrid.Visibility = Visibility.Collapsed;
+            ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            GeneralSettingsGrid.Visibility = Visibility.Collapsed;
+        }
+
+        private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
+        {
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            DispatcherTimer ButtonTimer = new DispatcherTimer();
+            ButtonTimer.Interval = TimeSpan.FromSeconds(20);
+            ButtonTimer.Tick += (sender, args) =>
+            {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                ButtonTimer.Stop();
+            };
+            ButtonTimer.Start();
+        }
     }
 }
