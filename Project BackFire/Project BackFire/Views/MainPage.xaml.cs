@@ -429,6 +429,15 @@ namespace Project_BackFire.Views
             BackImg6.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg7.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg8.Fade(duration: 4000, delay: 2000, value: 1).Start();
+
+            grid1.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid2.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid3.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid4.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid5.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid6.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid7.Fade(duration: 1000, delay: 10000, value: 1).Start();
+            grid8.Fade(duration: 1000, delay: 106000, value: 1).Start();
         }
         private void FlipCardConditions()
         {
