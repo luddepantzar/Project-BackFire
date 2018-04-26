@@ -12,7 +12,6 @@ using Microsoft.Toolkit.Uwp.UI.Animations;
 using System.Drawing;
 using System.Linq;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System.IO;
 
@@ -65,10 +64,15 @@ namespace Project_BackFire.Views
             AnimationBack();
             AnimationFront();
             FlipCardConditions();
+<<<<<<< HEAD
+        }
+
+=======
             
             this.DataContext = new MainViewModel();
             this.InitializeComponent();
         } 
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -271,6 +275,21 @@ namespace Project_BackFire.Views
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
+<<<<<<< HEAD
+
+        private void TimerTick2(object sender, object e)
+        {
+            TimeDate12h.Text = DateTime.Now.ToString("hh:mm");
+            TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
+        }
+
+        private void Bighours_Click(object sender, RoutedEventArgs e)
+        {
+            TimerTick2(sender, e);
+        }
+
+=======
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         private void Smallhours_Click(object sender, RoutedEventArgs e)
         {
             TimerTick(sender, e);
@@ -356,7 +375,6 @@ namespace Project_BackFire.Views
                 tm8.Stop();
             };
             tm8.Start();
-
         }
 
         private void Animation()
@@ -387,13 +405,31 @@ namespace Project_BackFire.Views
             rotationBorder7.Begin();
             rotationBorder8.Begin();
             OpacityImage2();
-
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
 
+<<<<<<< HEAD
+            grid1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            grid8.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+            Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
+=======
             grid1.Fade(duration: 50, delay: 0, value: 0).Start();
             grid2.Fade(duration: 50, delay: 0, value: 0).Start();
             grid3.Fade(duration: 50, delay: 0, value: 0).Start();
@@ -429,6 +465,7 @@ namespace Project_BackFire.Views
             BackImg6.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg7.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg8.Fade(duration: 4000, delay: 2000, value: 1).Start();
+<<<<<<< HEAD
 
             grid1.Fade(duration: 1000, delay: 10000, value: 1).Start();
             grid2.Fade(duration: 1000, delay: 10000, value: 1).Start();
@@ -438,6 +475,9 @@ namespace Project_BackFire.Views
             grid6.Fade(duration: 1000, delay: 10000, value: 1).Start();
             grid7.Fade(duration: 1000, delay: 10000, value: 1).Start();
             grid8.Fade(duration: 1000, delay: 106000, value: 1).Start();
+=======
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
+>>>>>>> 1fd738922e6c7835544ddee68e1b435287acc66e
         }
         private void FlipCardConditions()
         {
@@ -483,7 +523,11 @@ namespace Project_BackFire.Views
         private void color1_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
+<<<<<<< HEAD
+            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+=======
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];              
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         }
         private void color2_Click(object sender, RoutedEventArgs e)
         {
@@ -500,6 +544,22 @@ namespace Project_BackFire.Views
             /*
            */
         }
+<<<<<<< HEAD
+
+        //public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
+        //{
+        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        //    DispatcherTimer ButtonTimer = new DispatcherTimer();
+        //    ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+        //    ButtonTimer.Tick += (sender, args) =>
+        //    {
+        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+        //        ButtonTimer.Stop();
+        //    };
+        //    ButtonTimer.Start();
+        //}
+
+=======
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -512,6 +572,7 @@ namespace Project_BackFire.Views
             };
             ButtonTimer.Start();
         }
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
         {
             SettingsGrid.Visibility = Visibility.Visible;
@@ -530,25 +591,44 @@ namespace Project_BackFire.Views
         }
         private void ThemeButton_Click(object sender, RoutedEventArgs e)
         {
-            ThemeGrid.Visibility = Visibility.Visible;
-            GeneralSettingsGrid.Visibility = Visibility.Collapsed;
-            ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            switch(ThemeGrid.Visibility)
+            {
+                case Visibility.Visible:
+                    {
+                        ThemeGrid.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+                case Visibility.Collapsed:
+                    {
+                        ThemeGrid.Visibility = Visibility.Visible;
+                        break;
+                    }
+            }
         }
         private void ApiButton_Click(object sender, RoutedEventArgs e)
         {
             ApiSettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Collapsed;
             ThemeGrid.Visibility = Visibility.Collapsed;
+            MakeYoureThemeGrid.Visibility = Visibility.Collapsed;
         }
         private void GeneralSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ThemeGrid.Visibility = Visibility.Collapsed;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            MakeYoureThemeGrid.Visibility = Visibility.Collapsed;
         }
 
         private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
         {
+<<<<<<< HEAD
+            ContentArea.Background = new SolidColorBrush(args.NewColor);
+            //ContentArea.Background = new LinearGradientBrush(
+            //    new GradientStopCollection(args.NewColor, 0.0, 0.1, 0.2),
+            //    new GradientStopCollection(System.Drawing.Color.FromArgb(56, 56, 56, 100), 0.75)); //Standard second color for the gradient.
+=======
             ////ContentArea.Background       
             //ContentArea.Background = new GradientBrush(
             //    new Point(),
@@ -558,11 +638,16 @@ namespace Project_BackFire.Views
 
             ContentArea.Background = new LinearGradientBrush(
                 ); //Standard second color for the gradient.
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         }
         private void ColorPicker_ColorChanged_1(ColorPicker sender, ColorChangedEventArgs args)
         {
             MenuBar.Background = new SolidColorBrush(args.NewColor);
         }
+<<<<<<< HEAD
+
+=======
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
 
@@ -587,6 +672,39 @@ namespace Project_BackFire.Views
             Imgbox8.Fade(duration: 4000, delay: 0, value: 1f).Start();
         }
 
+<<<<<<< HEAD
+        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            TimeDate.Visibility = Visibility.Collapsed;
+            TimeDate12h.Visibility = Visibility.Visible;
+        }
+
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            TimeDate.Visibility = Visibility.Visible;
+            TimeDate12h.Visibility = Visibility.Collapsed;
+        }
+
+        private void OwnThemeBut_Click(object sender, RoutedEventArgs e)
+        {
+            MakeYoureThemeGrid.Visibility = Visibility.Visible;
+            ThemeGrid.Visibility = Visibility.Collapsed;
+            ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            GeneralSettingsGrid.Visibility = Visibility.Collapsed;
+        }
+
+        private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
+        {
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            DispatcherTimer ButtonTimer = new DispatcherTimer();
+            ButtonTimer.Interval = TimeSpan.FromSeconds(20);
+            ButtonTimer.Tick += (sender, args) =>
+            {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                ButtonTimer.Stop();
+            };
+            ButtonTimer.Start();
+=======
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
         //    timebtn.Content = "12 Timmars klocka";
@@ -599,6 +717,7 @@ namespace Project_BackFire.Views
         //    timebtn.Content = "24 Timmars klocka";
         //    TimeDate12h.Text = DateTime.Now.ToString("HH:mm");
                     
+>>>>>>> b27ff6a66cfa1db9fd15c0a74189b44e1c8c7d75
         }
     }
 }
