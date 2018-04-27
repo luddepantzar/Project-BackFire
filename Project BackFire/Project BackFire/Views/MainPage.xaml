@@ -10,7 +10,10 @@
     xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors">
 
     <Page.Resources>
+<<<<<<< HEAD
+=======
 
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
         <!--Ljus Vit färggggggggggggggggg-->
         <LinearGradientBrush  x:Key="theme1a" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF939393" Offset="0.913"/>
@@ -29,7 +32,10 @@
             <GradientStop Color="#FF808078" Offset="0.039"/>
             <GradientStop Color="#FF212120" Offset="0.434"/>
         </LinearGradientBrush>
+<<<<<<< HEAD
+=======
 
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
         <LinearGradientBrush x:Key="theme2b" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF7A2525" Offset="0.199"/>
             <GradientStop Color="#FFEE1B1B" Offset="0.925"/>
@@ -71,6 +77,10 @@
                 <GradientStop Color="#FF363636" Offset="0.932"/>
             </LinearGradientBrush>
         </Grid.Background>
+<<<<<<< HEAD
+
+=======
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow"/>
         </Grid.RowDefinitions>
@@ -95,6 +105,12 @@
             <TextBlock x:Name="TodaysDate" Margin="0,78,30,14"   TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TimeDate12h" Margin="280,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black" Visibility="Visible" Canvas.ZIndex="100"/>
+<<<<<<< HEAD
+
+        </Grid>
+
+        <Grid Margin="140,280,140,160" Grid.RowSpan="3">
+=======
             <Button x:Name="btn4" Content="3x2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
             <Button x:Name="btn5" Content="3x2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>
             <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
@@ -102,6 +118,7 @@
         </Grid>
 
         <Grid x:Name="Grid4x4" Margin="75,190,75,100" Visibility="Collapsed">
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -218,37 +235,56 @@
                 </Image.Projection>
             </Image>
 
-            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid1_Tapped">
+                <Rectangle x:Name="RectangelGrid1" Margin="0,0,0,0" Canvas.ZIndex="2" RenderTransformOrigin="0.5,0.5" Fill="#A717FF00" HorizontalAlignment="Right" Width="352" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
+                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
+                <Rectangle x:Name="RectangelGrid3" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100"/>
+            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
+                <Rectangle x:Name="RectangelGrid4" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100"/>
+            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100">
+                <Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100"/>
+            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100">
+                <Rectangle x:Name="RectangelGrid6" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100"/>
+            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100">
+                <Rectangle x:Name="RectangelGrid7" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
-            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100"/>
+            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100">
+                <Rectangle x:Name="RectangelGrid8" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" RadiusX="0" RadiusY="0" Height="44" VerticalAlignment="Top"/>
+            </Border>
 
         </Grid>
+<<<<<<< HEAD
+=======
 
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
-            <!--<AppBarButton x:Name="ClockButton" Icon="Clock" Label="Klocka" Click="ClockButton_Click"/>
-            <AppBarSeparator/>
-            <AppBarButton Icon="Highlight" Label="Teman" Click="AppBarButton_Click"/>
-            <AppBarSeparator/>-->
         </CommandBar>
 
+<<<<<<< HEAD
+        <Grid x:Name="SettingsGrid" Background="{StaticResource theme2a}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+=======
         <Grid x:Name="SettingsGrid" Background="{StaticResource theme2a}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="800" Height="640" Visibility="Collapsed" Margin="0,315,0,0" Padding="0,0,0,0">
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False">
                 <SplitView.Pane>
                     <StackPanel>
@@ -270,16 +306,11 @@
                         Width="50" Height="50" Background="Transparent" Click="ApiButton_Click"/>
                             <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="ThemeButton" FontFamily="Segoe MDL2 Assets" Content="&#xE7E6;"
-                        Width="50" Height="50" Background="Transparent" Click="ThemeButton_Click"/>
-                            <TextBlock Text="Teman" FontSize="18" VerticalAlignment="Center" />
-                        </StackPanel>
                     </StackPanel>
                 </SplitView.Pane>
                 <SplitView.Content>
                     <Grid>
-                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="681,586,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="48" Height="37">
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="405,256,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="30" Height="30">
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="#FF303030"/>
@@ -287,7 +318,11 @@
                                 </LinearGradientBrush>
                             </Button.Background>
                         </Button>
+<<<<<<< HEAD
+                        <Grid x:Name="GeneralSettingsGrid" Visibility="Collapsed">
+=======
                         <Grid x:Name="GeneralSettingsGrid">
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
                             <ToggleButton x:Name="timebtn" Content="24 Timmars klocka" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top" Checked="ToggleButton_Checked" Unchecked="timebtn_Unchecked"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,40,0,0" VerticalAlignment="Top" Width="20" Fill="#FF14A61E"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,87,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE2E201"/>
@@ -296,6 +331,10 @@
                             <TextBlock HorizontalAlignment="Left" Margin="71,86,0,0" Text="- Rummet är ledigt om ca 45 minuter." TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="278"/>
                             <TextBlock HorizontalAlignment="Left" Margin="71,134,0,0" Text="- Rummet är bokat" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="254"/>
                         </Grid>
+<<<<<<< HEAD
+                        <Grid x:Name="ApiSettingsGrid" Visibility="Visible">
+                            <PasswordBox HorizontalAlignment="Left" Margin="75,125,0,125" VerticalAlignment="Top" Width="286"/>
+=======
                         <Grid x:Name="ApiSettingsGrid" Visibility="Collapsed">
                             <PasswordBox HorizontalAlignment="Left" Margin="200,197,0,0" VerticalAlignment="Top" Width="286"/>
                         </Grid>
@@ -320,10 +359,17 @@
                                     </LinearGradientBrush>
                                 </Button.Background>
                             </Button>
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
                         </Grid>
                     </Grid>
                 </SplitView.Content>
             </SplitView>
+<<<<<<< HEAD
+            <Button x:Name="btn2" Content="Button" HorizontalAlignment="Left" Margin="1573,195,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btn3" Content="Button" HorizontalAlignment="Left" Margin="1691,195,0,-227" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+=======
         </Grid>
         <Button x:Name="btn2" Content="4x4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="btn2_Click"/>
         <Button Content="btn3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
@@ -578,6 +624,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
+>>>>>>> e37c953a1f25b9758a8ff27e4567d59c967c8c88
 
 
 
