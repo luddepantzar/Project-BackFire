@@ -14,11 +14,16 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.Foundation.Collections;
 using System.IO;
 using Windows.Foundation;
+using System.Windows;
+using Microsoft.Win32;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Project_BackFire.Views
 {
     public sealed partial class Main : Page
     {
+
+
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
@@ -38,6 +43,7 @@ namespace Project_BackFire.Views
         private Storyboard rotationfront6 = new Storyboard();
         private Storyboard rotationfront7 = new Storyboard();
         private Storyboard rotationfront8 = new Storyboard();
+<<<<<<< HEAD
         //private Storyboard rotationBorder1 = new Storyboard();
         //private Storyboard rotationBorder2 = new Storyboard();
         //private Storyboard rotationBorder3 = new Storyboard();
@@ -51,8 +57,16 @@ namespace Project_BackFire.Views
         //SolidColorBrush RedBrush = new SolidColorBrush(Color.FromArgb(200, 211, 63, 73));
         //SolidColorBrush YellowBrush = new SolidColorBrush(Color.FromArgb(200, 239, 153, 32));
 
+=======
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         private Storyboard BorderOpacity = new Storyboard();
 
+
+        SolidColorBrush GreenBrush = new SolidColorBrush(Color.FromArgb(200, 23, 255, 0));
+        SolidColorBrush RedBrush = new SolidColorBrush(Color.FromArgb(200, 211, 63, 73));
+        SolidColorBrush YellowBrush = new SolidColorBrush(Color.FromArgb(200, 239, 153, 32));
+
+           
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -67,10 +81,24 @@ namespace Project_BackFire.Views
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             AnimationBack();
+            AnimationFront();           
+        
+
+
             AnimationFront();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
             FlipCardConditions();
+        
+
+<<<<<<< HEAD
+=======
+      
         }
 
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -293,7 +321,15 @@ namespace Project_BackFire.Views
 
         private void Animation()
         {
-            BorderOpacity.Begin();
+            Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
+
             rotationfront1.Begin();
             rotationfront2.Begin();
             rotationfront3.Begin();
@@ -310,12 +346,64 @@ namespace Project_BackFire.Views
             rotationback6.Begin();
             rotationback7.Begin();
             rotationback8.Begin();
+<<<<<<< HEAD
+=======
+        }
+
+        private void Fade()
+        {
+            BackImg1.Opacity = 0;
+            BackImg2.Opacity = 0;
+            BackImg3.Opacity = 0;
+            BackImg4.Opacity = 0;
+            BackImg5.Opacity = 0;
+            BackImg6.Opacity = 0;
+            BackImg7.Opacity = 0;
+            BackImg8.Opacity = 0;
+
+            grid1.Opacity = 0;
+            grid2.Opacity = 0;
+            grid3.Opacity = 0;
+            grid4.Opacity = 0;
+            grid5.Opacity = 0;
+            grid6.Opacity = 0;
+            grid7.Opacity = 0;
+            grid8.Opacity = 0;
+
+            grid1.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid1.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid2.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid3.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid4.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid5.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid6.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid7.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+            grid8.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+
+            BackImg1.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg2.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg3.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg4.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg5.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg6.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg7.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+            BackImg8.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+
+            rotationback8.Begin();
+
+            rotationback8.Begin();         
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
 
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
+<<<<<<< HEAD
+=======
+            Fade();
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
             Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -324,6 +412,19 @@ namespace Project_BackFire.Views
             Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
+<<<<<<< HEAD
+=======
+
+
+            Imgbox1.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox2.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox3.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox4.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox5.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox6.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox7.Fade(duration: 1500, delay: 0, value: 0).Start();
+            Imgbox8.Fade(duration: 1500, delay: 0, value: 0).Start();
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
 
             BackImg1.Fade(duration: 100, delay: 0, value: 0).Start();
             BackImg2.Fade(duration: 100, delay: 0, value: 0).Start();
@@ -342,37 +443,43 @@ namespace Project_BackFire.Views
             BackImg6.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg7.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg8.Fade(duration: 4000, delay: 2000, value: 1).Start();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         }
 
         private void FlipCardConditions()
         {
-            if (List.Count < 8)
-            {
-                rotationback1.Stop();
-                rotationfront1.Stop();
-                //rotationBorder1.Stop();
-            }
-            else if (List.Count > 8)
-            {
-                rotationback1.Stop();
-                rotationfront1.Stop();
-                DispatcherTimer tm8 = new DispatcherTimer();
-                tm8.Interval = TimeSpan.FromSeconds(1.4);
-                tm8.Tick += (sender, args) =>
-                {
-                    rotationback1.Begin();
-                    rotationfront1.Begin();
-                    //rotationBorder1.Begin();
-                    tm8.Stop();
-                };
-                tm8.Start();
-            }
+
+            //if (List.Count < 8)
+            //{
+            //    rotationback1.Stop();
+            //    rotationfront1.Stop();
+            //    //rotationBorder1.Stop();
+            //}
+            //else if (List.Count > 8)
+            //{
+            //    rotationback1.Stop();
+            //    rotationfront1.Stop();
+            //    DispatcherTimer tm8 = new DispatcherTimer();
+            //    tm8.Interval = TimeSpan.FromSeconds(1.4);
+            //    tm8.Tick += (sender, args) =>
+            //    {
+            //        rotationback1.Begin();
+            //        rotationfront1.Begin();
+            //        //rotationBorder1.Begin();
+            //        tm8.Stop();
+            //    };
+            //    tm8.Start();
+            //}
         }
 
         private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
             btn1.Visibility = Visibility.Visible;
         }
+
         public void button1_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
             btn1.Visibility = Visibility.Collapsed;
@@ -380,26 +487,41 @@ namespace Project_BackFire.Views
             TimeNow = DateTime.Now;
             string CurrentDatetime = TimeNow.ToString();
         }
+
         private void colordefault_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme3b"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme3a"];
         }
+
         private void color1_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+<<<<<<< HEAD
+=======
+
+
+            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+
+            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
+
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         }
+
         private void color2_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme1a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme1b"];
         }
+
         private void color3_Click(object sender, RoutedEventArgs e)
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
         }
+
         private void SettingsMenu_Click(object sender, RoutedEventArgs e)
         {
             /*
@@ -430,8 +552,12 @@ namespace Project_BackFire.Views
                 ButtonTimer.Stop();
             };
             ButtonTimer.Start();
+<<<<<<< HEAD
         }
 
+=======
+}
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
         {
             SettingsGrid.Visibility = Visibility.Visible;
@@ -462,6 +588,27 @@ namespace Project_BackFire.Views
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
         }
 
+<<<<<<< HEAD
+=======
+        private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
+        {
+            ContentArea.Background = new SolidColorBrush(args.NewColor);
+            //ContentArea.Background = new LinearGradientBrush(
+            //    new GradientStopCollection(args.NewColor, 0.0, 0.1, 0.2),
+            //    new GradientStopCollection(System.Drawing.Color.FromArgb(56, 56, 56, 100), 0.75)); //Standard second color for the gradient.
+            ////ContentArea.Background       
+            //ContentArea.Background = new GradientBrush(
+            //    new Point(),
+            //    new Point(),
+            //    args.NewColor,
+            //    Color.FromArgb(56, 56, 56, 100));
+        }
+        private void ColorPicker_ColorChanged_1(ColorPicker sender, ColorChangedEventArgs args)
+        {
+            MenuBar.Background = new SolidColorBrush(args.NewColor);
+        }
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             TimeDate.Visibility = Visibility.Collapsed;
@@ -495,16 +642,25 @@ namespace Project_BackFire.Views
 
         private void timebtn_Unchecked(object sender, RoutedEventArgs e)
         {
-        //    timebtn.Content = "24 Timmars klocka";
-        //    TimeDate12h.Text = DateTime.Now.ToString("HH:mm");
+            //    timebtn.Content = "24 Timmars klocka";
+            //    TimeDate12h.Text = DateTime.Now.ToString("HH:mm");
         }
 
         public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+<<<<<<< HEAD
             LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
             LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
             LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
 
+=======
+            //
+        }
+
+        private void grid1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
             RectangelGrid1.Fill = RedBrush;
             RectangelGrid2.Fill = RedBrush;
             RectangelGrid3.Fill = RedBrush;
@@ -544,6 +700,7 @@ namespace Project_BackFire.Views
                 };
                 ColorTimer2.Start();
             };
+<<<<<<< HEAD
             ColorTimer.Start();
         }
 
@@ -551,7 +708,24 @@ namespace Project_BackFire.Views
         {
 
         }
+=======
 
+            ColorTimer.Start();
+        }
+
+            //    timebtn.Content = "24 Timmars klocka";
+            //    TimeDate12h.Text = DateTime.Now.ToString("HH:mm");
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
+
+       public void Image_Loaded(object sender, RoutedEventArgs e)
+        {
+            Image img = sender as Image;
+            BitmapImage bitmapImage = new BitmapImage();         
+            bitmapImage.UriSource = new Uri(img.BaseUri, "ms-appx:///Images/test_logo.png");
+            //Image img = new Image();
+            //img.Source = new BitmapImage(new Uri("ms-appx:///Images/test_logo.png"));
+        }
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             if (Grid4x2.Visibility == Visibility.Collapsed)
@@ -579,10 +753,16 @@ namespace Project_BackFire.Views
 
 
             }
+            
             else if (Grid3x2.Visibility == Visibility.Visible) 
             {
                 Grid3x2.Visibility = Visibility.Collapsed;
             }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
@@ -591,6 +771,9 @@ namespace Project_BackFire.Views
             if (Grid2x3.Visibility == Visibility.Collapsed)
             {
                 Grid2x3.Visibility = Visibility.Visible;
+                Grid2x2.Visibility = Visibility.Collapsed;
+                Grid3x2.Visibility = Visibility.Collapsed;
+
                 Grid2x2.Visibility = Visibility.Collapsed;              
                 Grid3x2.Visibility = Visibility.Collapsed;
                 Grid4x2.Visibility = Visibility.Collapsed;
@@ -608,6 +791,7 @@ namespace Project_BackFire.Views
                 Grid2x2.Visibility = Visibility.Visible;
                 Grid2x3.Visibility = Visibility.Collapsed;
                 Grid3x2.Visibility = Visibility.Collapsed;
+                Grid3x2.Visibility = Visibility.Collapsed;
                 Grid4x2.Visibility = Visibility.Collapsed;
             }
             else
@@ -615,6 +799,7 @@ namespace Project_BackFire.Views
                 Grid2x2.Visibility = Visibility.Collapsed;
             }
         }
+<<<<<<< HEAD
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -663,6 +848,102 @@ namespace Project_BackFire.Views
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
             ApiContainer.Visibility = Visibility.Visible;
+=======
+
+        private void rndbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            Random rnd = new Random();
+            int value = rnd.Next(0, 5); // creates a number between 0 and 5
+
+
+            switch (value)
+            {
+
+                case 1:
+                    //Gör en animation
+                    BackImg1.Opacity = 0;
+                    grid1.Opacity = 0;
+                    rotationfront1.Begin();
+                    rotationback1.Begin();
+                    Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+                    grid1.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
+                    BackImg1.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
+                    break;
+
+                case 2:
+                    //Bli Röd
+                    RectangelGrid1.Fill = RedBrush;
+                    RectangelGrid2.Fill = RedBrush;
+                    RectangelGrid3.Fill = RedBrush;
+                    RectangelGrid4.Fill = RedBrush;
+                    RectangelGrid5.Fill = RedBrush;
+                    RectangelGrid6.Fill = RedBrush;
+                    RectangelGrid7.Fill = RedBrush;
+                    RectangelGrid8.Fill = RedBrush;
+                    break;
+
+                case 3:
+                    //Bli Gul
+                    RectangelGrid1.Fill = YellowBrush;
+                    RectangelGrid2.Fill = YellowBrush;
+                    RectangelGrid3.Fill = YellowBrush;
+                    RectangelGrid4.Fill = YellowBrush;
+                    RectangelGrid5.Fill = YellowBrush;
+                    RectangelGrid6.Fill = YellowBrush;
+                    RectangelGrid7.Fill = YellowBrush;
+                    RectangelGrid8.Fill = YellowBrush;
+                    break;
+
+                case 4:
+                    //Gör animation på övreraden
+                    break;
+
+                case 5:
+                    //gör animation på undreraden
+                    break;
+
+                default:
+                    RectangelGrid1.Fill = GreenBrush;
+                    RectangelGrid2.Fill = GreenBrush;
+                    RectangelGrid3.Fill = GreenBrush;
+                    RectangelGrid4.Fill = GreenBrush;
+                    RectangelGrid5.Fill = GreenBrush;
+                    RectangelGrid6.Fill = GreenBrush;
+                    RectangelGrid7.Fill = GreenBrush;
+                    RectangelGrid8.Fill = GreenBrush;
+                    break;
+
+
+            }
+        }
+
+        private async void imgbtn_Click(object sender, RoutedEventArgs e)
+        {
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+
+            Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
+            {
+                //Application now has read/write access to the picked file
+                //this.textBlock.Text = "Picked photo: " + file.Path;
+                //Imgbox1.Source = new ImageSource(file.Path);
+
+               Logo.Source = new BitmapImage(new Uri(file.Path));
+                          
+            }
+            else
+            {
+               //
+            }
+
+>>>>>>> 5d15159261e8047dc16d721b7dda7f28eaa20c79
         }
     }
+
 }
