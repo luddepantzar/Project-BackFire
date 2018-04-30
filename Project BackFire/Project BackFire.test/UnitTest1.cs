@@ -14,7 +14,7 @@ namespace Project_BackFire.test
         private int Value;
 
         [Test]
-        public async Task TestIfColorsOnCardChangeOnBookedandChangesOnTime()
+        public void TestIfColorsOnCardChangeOnBookedandChangesOnTime()
         {
             Value = 0;
         }
