@@ -1,13 +1,6 @@
 <Page x:Class="Project_BackFire.Views.Main"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
-    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
-    xmlns:data="using:Microsoft.Toolkit.Uwp.SampleApp.Data"
-    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Page.Resources>
         <!--Ljus Vit färggggggggggggggggg-->
@@ -82,7 +75,7 @@
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <Image Margin="10,10,0,26" Source="ms-appx:///Images/test_logo.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
+            <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Images/test_logo.png" Loaded="Image_Loaded" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
                 <Image.FocusVisualPrimaryBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -98,14 +91,13 @@
 
         <Button x:Name="btn2" Content="4x4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="btn2_Click"/>
         <Button Content="btn3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
-
         <Button x:Name="btn4" Content="3x2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
         <Button x:Name="btn5" Content="3x2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
 
 
-        <Grid x:Name="Grid4x4" Margin="75,190,75,100" Visibility="Visible">
+        <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -118,7 +110,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             
-            <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -131,12 +123,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -144,7 +136,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -157,7 +149,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -170,7 +162,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -183,7 +175,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -196,7 +188,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -209,7 +201,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox8" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox8" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -223,34 +215,34 @@
                 </Image.Projection>
             </Image>
 
-            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid1_Tapped">
-                <Rectangle x:Name="RectangelGrid1" Margin="0,0,0,0" Canvas.ZIndex="2" RenderTransformOrigin="0.5,0.5" Fill="#A717FF00" Height="44" VerticalAlignment="Top"/>
+            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid1_Tapped" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid1" Margin="0,0,0,0"  RenderTransformOrigin="0.5,0.5" Fill="#A717FF00" Height="44" VerticalAlignment="Top"/>
             </Border>
 
-            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
-                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Fill="#A717FF00"  Height="44" VerticalAlignment="Top"/>
             </Border>
-            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
-            </Border>
-
-            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
-                <Rectangle x:Name="RectangelGrid3" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Fill="#A717FF00"  Height="44" VerticalAlignment="Top"/>
             </Border>
 
-            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
-                <Rectangle x:Name="RectangelGrid4" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid3" Margin="0,0,0,0" Fill="#A717FF00"  Height="44" VerticalAlignment="Top"/>
             </Border>
 
-            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid7" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
-            </Border>
-            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid6" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>
+            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid4" Margin="0,0,0,0" Fill="#A717FF00"  Height="44" VerticalAlignment="Top"/>
             </Border>
 
-            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid8" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" RadiusX="0" RadiusY="0" Height="44" VerticalAlignment="Top"/>
+            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid7" Margin="0,0,0,0" Fill="#A717FF00"  Height="44" VerticalAlignment="Top"/>
+            </Border>
+            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid6" Margin="0,0,0,0" Fill="#A717FF00" Height="44" VerticalAlignment="Top"/>
+            </Border>
+
+            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid8" Margin="0,0,0,0" Fill="#A717FF00" RadiusX="0" RadiusY="0" Height="44" VerticalAlignment="Top"/>
             </Border>
 
         </Grid>
@@ -664,5 +656,7 @@
 
 
         </Grid>
+        <Button x:Name="rndbtn" Content="Button" HorizontalAlignment="Left" Margin="573,95,0,-127" VerticalAlignment="Top" Click="rndbtn_Click"/>
+        <Button x:Name="imgbtn" Content="Button" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
     </Grid>
 </Page>
