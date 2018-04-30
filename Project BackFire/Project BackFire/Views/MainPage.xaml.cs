@@ -55,10 +55,7 @@ namespace Project_BackFire.Views
         {
             get { return DataContext as MainViewModel; }
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         public Main()
         {
             InitializeComponent();
@@ -68,21 +65,18 @@ namespace Project_BackFire.Views
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             AnimationBack();
-<<<<<<< HEAD
             AnimationFront();           
-        }
+        
 
-=======
+
             AnimationFront();
-<<<<<<< HEAD
+
             FlipCardConditions();
+        
+
+      
         }
 
-=======
-            FlipCardConditions();        
-        }
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -302,15 +296,7 @@ namespace Project_BackFire.Views
         {
             TimerTick(sender, e);
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        
-=======
-       
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
 
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
         private void Animation()
         {
             Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -337,7 +323,6 @@ namespace Project_BackFire.Views
             rotationback5.Begin();
             rotationback6.Begin();
             rotationback7.Begin();
-<<<<<<< HEAD
             rotationback8.Begin();
         }
 
@@ -379,22 +364,18 @@ namespace Project_BackFire.Views
             BackImg6.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
             BackImg7.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
             BackImg8.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
-=======
-<<<<<<< HEAD
+
             rotationback8.Begin();
-=======
+
             rotationback8.Begin();         
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
+
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
-<<<<<<< HEAD
             Fade();
-=======
-<<<<<<< HEAD
+
             Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -403,8 +384,7 @@ namespace Project_BackFire.Views
             Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
             Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
+
 
             Imgbox1.Fade(duration: 1500, delay: 0, value: 0).Start();
             Imgbox2.Fade(duration: 1500, delay: 0, value: 0).Start();
@@ -432,11 +412,7 @@ namespace Project_BackFire.Views
             BackImg6.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg7.Fade(duration: 4000, delay: 2000, value: 1).Start();
             BackImg8.Fade(duration: 4000, delay: 2000, value: 1).Start();
-<<<<<<< HEAD
-=======
 
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         }
 
         private void FlipCardConditions()
@@ -488,17 +464,13 @@ namespace Project_BackFire.Views
         {
             ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
 
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
 
             MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
 
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
+
         }
 
         private void color2_Click(object sender, RoutedEventArgs e)
@@ -518,14 +490,7 @@ namespace Project_BackFire.Views
             /*
            */
         }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         //public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         //{
         //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -538,14 +503,7 @@ namespace Project_BackFire.Views
         //    };
         //    ButtonTimer.Start();
         //}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -557,15 +515,7 @@ namespace Project_BackFire.Views
                 ButtonTimer.Stop();
             };
             ButtonTimer.Start();
-        }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
+}
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
         {
             SettingsGrid.Visibility = Visibility.Visible;
@@ -583,15 +533,7 @@ namespace Project_BackFire.Views
         {
             SettingsGrid.Visibility = Visibility.Collapsed;
         }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-       
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         private void ApiButton_Click(object sender, RoutedEventArgs e)
         {
             ApiSettingsGrid.Visibility = Visibility.Visible;
@@ -604,7 +546,6 @@ namespace Project_BackFire.Views
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
         }
 
-<<<<<<< HEAD
         private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
         {
             ContentArea.Background = new SolidColorBrush(args.NewColor);
@@ -623,8 +564,6 @@ namespace Project_BackFire.Views
             MenuBar.Background = new SolidColorBrush(args.NewColor);
         }
 
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             TimeDate.Visibility = Visibility.Collapsed;
@@ -649,14 +588,7 @@ namespace Project_BackFire.Views
             };
             ButtonTimer.Start();
         }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             //    timebtn.Content = "12 Timmars klocka";
@@ -716,17 +648,13 @@ namespace Project_BackFire.Views
                 };
                 ColorTimer2.Start();
             };
-<<<<<<< HEAD
+
             ColorTimer.Start();
         }
-=======
-<<<<<<< HEAD
-            ColorTimer.Start();
+
             //    timebtn.Content = "24 Timmars klocka";
             //    TimeDate12h.Text = DateTime.Now.ToString("HH:mm");
-=======
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
+
 
        public void Image_Loaded(object sender, RoutedEventArgs e)
         {
@@ -763,11 +691,8 @@ namespace Project_BackFire.Views
 
 
             }
-<<<<<<< HEAD
-            else if (Grid3x3.Visibility == Visibility.Visible)
-=======
+            
             else if (Grid3x2.Visibility == Visibility.Visible) 
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
             {
                 Grid3x2.Visibility = Visibility.Collapsed;
             }
@@ -781,13 +706,11 @@ namespace Project_BackFire.Views
             if (Grid2x3.Visibility == Visibility.Collapsed)
             {
                 Grid2x3.Visibility = Visibility.Visible;
-<<<<<<< HEAD
                 Grid2x2.Visibility = Visibility.Collapsed;
-                Grid3x3.Visibility = Visibility.Collapsed;
-=======
+                Grid3x2.Visibility = Visibility.Collapsed;
+
                 Grid2x2.Visibility = Visibility.Collapsed;              
                 Grid3x2.Visibility = Visibility.Collapsed;
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
                 Grid4x2.Visibility = Visibility.Collapsed;
             }
             else
@@ -802,18 +725,14 @@ namespace Project_BackFire.Views
             {
                 Grid2x2.Visibility = Visibility.Visible;
                 Grid2x3.Visibility = Visibility.Collapsed;
-<<<<<<< HEAD
-                Grid3x3.Visibility = Visibility.Collapsed;
-=======
                 Grid3x2.Visibility = Visibility.Collapsed;
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
+                Grid3x2.Visibility = Visibility.Collapsed;
                 Grid4x2.Visibility = Visibility.Collapsed;
             }
             else
             {
                 Grid2x2.Visibility = Visibility.Collapsed;
             }
-<<<<<<< HEAD
         }
 
         private void rndbtn_Click(object sender, RoutedEventArgs e)
@@ -907,12 +826,7 @@ namespace Project_BackFire.Views
             {
                //
             }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 1e457964df1e60018a255422414abfb65f4a4de9
 
->>>>>>> 8732ceaa0899acca5883e5264fa9a7a61aa54628
         }
     }
 
