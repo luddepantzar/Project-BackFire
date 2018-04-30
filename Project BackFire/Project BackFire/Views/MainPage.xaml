@@ -31,8 +31,7 @@
             </Storyboard>
     </Page.Resources>
 
-    <Grid x:Name="ContentArea" 
-               Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" Tapped="ContentArea_Tapped" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" Tapped="ContentArea_Tapped" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
 
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -80,9 +79,13 @@
 
 
 
+<<<<<<< HEAD
 
         <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
 
+=======
+        <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -745,7 +748,12 @@
             </Border>
 
         </Grid>
+<<<<<<< HEAD
         <Grid x:Name="Grid1x1" Margin="150,190,150,100" Visibility="Visible">
+=======
+
+        <Grid x:Name="Grid1x1" Margin="150,190,150,100" Visibility="Collapsed">
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -812,7 +820,11 @@
             <AppBarSeparator/>
         </CommandBar>
 
+<<<<<<< HEAD
         <Grid x:Name="SettingsGrid" Background="{StaticResource SettingsBackground}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+=======
+        <Grid x:Name="SettingsGrid" Background="Black" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">

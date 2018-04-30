@@ -43,6 +43,21 @@ namespace Project_BackFire.Views
         private Storyboard rotationfront6 = new Storyboard();
         private Storyboard rotationfront7 = new Storyboard();
         private Storyboard rotationfront8 = new Storyboard();
+<<<<<<< HEAD
+=======
+        //private Storyboard rotationBorder1 = new Storyboard();
+        //private Storyboard rotationBorder2 = new Storyboard();
+        //private Storyboard rotationBorder3 = new Storyboard();
+        //private Storyboard rotationBorder4 = new Storyboard();
+        //private Storyboard rotationBorder5 = new Storyboard();
+        //private Storyboard rotationBorder6 = new Storyboard();
+        //private Storyboard rotationBorder7 = new Storyboard();
+        //private Storyboard rotationBorder8 = new Storyboard();
+
+        //SolidColorBrush GreenBrush = new SolidColorBrush(Color.FromArgb(200, 23, 255, 0));
+        //SolidColorBrush RedBrush = new SolidColorBrush(Color.FromArgb(200, 211, 63, 73));
+        //SolidColorBrush YellowBrush = new SolidColorBrush(Color.FromArgb(200, 239, 153, 32));
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
 
         private Storyboard BorderOpacity = new Storyboard();
 
@@ -66,10 +81,16 @@ namespace Project_BackFire.Views
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             AnimationBack();
+<<<<<<< HEAD
             AnimationFront();                     
             FlipCardConditions();
 
 
+=======
+            AnimationFront();           
+            AnimationFront();
+            FlipCardConditions();
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
         }
 
         public void AnimationFront()
@@ -312,7 +333,10 @@ namespace Project_BackFire.Views
             rotationback6.Begin();
             rotationback7.Begin();
             rotationback8.Begin();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
         }
 
         private void Fade()
@@ -364,14 +388,19 @@ namespace Project_BackFire.Views
             BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
 
             rotationback8.Begin();
+<<<<<<< HEAD
 
              
 
+=======
+            rotationback8.Begin();         
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
+<<<<<<< HEAD
 
             Fade();
 
@@ -379,6 +408,9 @@ namespace Project_BackFire.Views
             
 
 
+=======
+            Fade();
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
             //Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -388,7 +420,10 @@ namespace Project_BackFire.Views
             //Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
             //Imgbox1.Fade(duration: 1500, delay: 0, value: 0).Start();
             //Imgbox2.Fade(duration: 1500, delay: 0, value: 0).Start();
             //Imgbox3.Fade(duration: 1500, delay: 0, value: 0).Start();
@@ -543,6 +578,7 @@ namespace Project_BackFire.Views
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
         }
 
+<<<<<<< HEAD
 
         private void ColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
         {
@@ -562,6 +598,8 @@ namespace Project_BackFire.Views
             MenuBar.Background = new SolidColorBrush(args.NewColor);
         }
 
+=======
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             TimeDate.Visibility = Visibility.Collapsed;
@@ -646,6 +684,7 @@ namespace Project_BackFire.Views
             };
             ColorTimer.Start();
         }
+<<<<<<< HEAD
 
         //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         //{
@@ -692,14 +731,21 @@ namespace Project_BackFire.Views
 
         //    ColorTimer.Start();
         //}
+=======
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
 
         private void grid9_Tapped(object sender, TappedRoutedEventArgs e)
         {
 
             //ColorTimer.Start();
         }
+<<<<<<< HEAD
  
         public void Image_Loaded(object sender, RoutedEventArgs e)
+=======
+
+       public void Image_Loaded(object sender, RoutedEventArgs e)
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
         {
             Image img = sender as Image;
             BitmapImage bitmapImage = new BitmapImage();         
@@ -770,9 +816,13 @@ namespace Project_BackFire.Views
             {
                 Grid3x2.Visibility = Visibility.Collapsed;
             }
+<<<<<<< HEAD
 
             }        
         
+=======
+        }
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
@@ -808,6 +858,7 @@ namespace Project_BackFire.Views
                 Grid2x2.Visibility = Visibility.Collapsed;
             }
         }
+<<<<<<< HEAD
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -853,11 +904,16 @@ namespace Project_BackFire.Views
                     }
             }
         }
+=======
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
             ApiContainer.Visibility = Visibility.Visible;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
         }
 
         private void rndbtn_Click(object sender, RoutedEventArgs e)
