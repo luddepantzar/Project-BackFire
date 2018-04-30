@@ -68,8 +68,7 @@
         </Storyboard>
     </Page.Resources>
 
-    <Grid x:Name="ContentArea" 
-               Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" Tapped="ContentArea_Tapped" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" Tapped="ContentArea_Tapped" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
 
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -112,7 +111,7 @@
 
 
 
-        <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Collapsed">
+        <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -790,7 +789,7 @@
 
         </Grid>
 
-        <Grid x:Name="Grid1x1" Margin="150,190,150,100" Visibility="Visible">
+        <Grid x:Name="Grid1x1" Margin="150,190,150,100" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -864,7 +863,7 @@
             <AppBarSeparator/>
         </CommandBar>
 
-        <Grid x:Name="SettingsGrid" Background="{StaticResource theme2a}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+        <Grid x:Name="SettingsGrid" Background="Black" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
                 <SplitView.Pane>
                     <StackPanel>
