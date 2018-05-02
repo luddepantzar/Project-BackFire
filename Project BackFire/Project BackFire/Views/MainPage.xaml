@@ -24,15 +24,9 @@
             <GradientStop Color="#FF363636" Offset="0.226"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
-
-        <Storyboard x:Name="anim">
-                <DoubleAnimation  Storyboard.TargetName="grid7" Storyboard.TargetProperty="Opacity" From="100" To="0" Duration="0:0:5"
-                                             EnableDependentAnimation="True"/>
-            </Storyboard>
     </Page.Resources>
 
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="Auto" BorderBrush="Black" Tapped="ContentArea_Tapped" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
-
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFACACAC" Offset="0.096"/>
@@ -63,8 +57,6 @@
             <Button x:Name="btn1" Content="Button" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
             <TextBlock x:Name="TodaysDate" Margin="0,78,30,14"   TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
-            <TextBlock x:Name="TimeDate12h" Margin="280,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black" Visibility="Visible" Canvas.ZIndex="100"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="1088,83,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         </Grid>
 
         <Button x:Name="btn2" Content="4-4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="btn2_Click"/>
@@ -77,15 +69,7 @@
 
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-
-
-<<<<<<< HEAD
-
         <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
-
-=======
-        <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
->>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -145,8 +129,6 @@
 
 
             <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
-
-
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -162,9 +144,6 @@
 
 
             <Image x:Name="Imgbox5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
-
-
-
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -180,9 +159,6 @@
 
 
             <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
-
-
-
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -198,8 +174,6 @@
 
 
             <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
-
-
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -215,8 +189,6 @@
 
 
             <Image x:Name="Imgbox8" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
-
-
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
@@ -230,8 +202,8 @@
                 </Image.Projection>
             </Image>
 
-            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid1_Tapped">
-                <Rectangle x:Name="RectangelGrid1" Margin="0,0,0,0" Canvas.ZIndex="2" Height="158" VerticalAlignment="Top">
+            <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid1_Tapped" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid1" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -241,8 +213,8 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
-                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Canvas.ZIndex="2" Height="158" VerticalAlignment="Top">
+            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -251,9 +223,9 @@
                     </Rectangle.Fill>
                 </Rectangle>
             </Border>
-            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100">
+            <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
                 <!--<Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>-->
-                <Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Canvas.ZIndex="2" Height="160" VerticalAlignment="Top">
+                <Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -263,8 +235,8 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
-                <Rectangle x:Name="RectangelGrid3" Margin="0,0,0,0" Canvas.ZIndex="2" Height="157" VerticalAlignment="Top">
+            <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid3" Margin="0,0,0,0"  Height="157" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -274,8 +246,8 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
-                <Rectangle x:Name="RectangelGrid4" Margin="0,0,0,0" Canvas.ZIndex="2" Height="160" VerticalAlignment="Top">
+            <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid4" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -285,8 +257,8 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid7" Margin="0,0,0,0" Canvas.ZIndex="2" Height="160" VerticalAlignment="Top">
+            <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid7" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -295,8 +267,8 @@
                     </Rectangle.Fill>
                 </Rectangle>
             </Border>
-            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid6" Margin="0,0,0,0" Canvas.ZIndex="2" Height="160" VerticalAlignment="Top">
+            <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid6" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -306,8 +278,8 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100">
-                <Rectangle x:Name="RectangelGrid8" Margin="0,0,0,0" Canvas.ZIndex="2" Height="160" VerticalAlignment="Top">
+            <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
+                <Rectangle x:Name="RectangelGrid8" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -330,12 +302,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image x:Name="Imgbox9" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox9"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
-                    <PlaneProjection RotationY="0" />
+                    <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg9" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg9"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -343,12 +315,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox10"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox10" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg10"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg10" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -356,12 +328,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox11" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox11" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg11" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg11" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -369,12 +341,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox12" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg12" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="Imgbox12" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -382,7 +349,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg14" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg12" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -390,26 +357,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox15" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox13" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg15" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
-                <Image.FocusVisualPrimaryBrush>
-                    <ImageBrush/>
-                </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-
-            <Image x:Name="Imgbox16" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg16" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg13" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -418,18 +371,21 @@
                 </Image.Projection>
             </Image>
 
-            <Border x:Name="grid9"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid9_Tapped">
-                <Rectangle x:Name="RectangelGrid9" Height="82" VerticalAlignment="Top">
-                    <Rectangle.Fill>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#00000000" Offset="0.801"/>
-                            <GradientStop Color="#CC17FF00" Offset="0.098"/>
-                        </LinearGradientBrush>
-                    </Rectangle.Fill>
-                </Rectangle>
-            </Border>
+            <Image x:Name="Imgbox14" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="BackImg14" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
 
-            <Border  x:Name="grid10"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
+            <Border  x:Name="grid9"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid10" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -440,7 +396,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid11"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
+            <Border  x:Name="grid10"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid11" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -451,7 +407,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid12"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100">
+            <Border  x:Name="grid11"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid12" Height="159.8" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -462,7 +418,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid14"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100">
+            <Border  x:Name="grid12"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid13" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -473,7 +429,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid15"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100">
+            <Border  x:Name="grid13"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid14" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -484,7 +440,7 @@
                 </Rectangle>
             </Border>
 
-            <Border x:Name="grid16"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Column="3" Opacity="100">
+            <Border x:Name="grid14"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Column="3" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid15" Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -506,12 +462,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image x:Name="Imgbox13" Margin="20,20,1676,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.ColumnSpan="2">
+            <Image x:Name="Imgbox15"  Grid.Column="1"  Margin="20,20,1155,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
-                    <PlaneProjection RotationY="0" />
+                    <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg13" Margin="20,20,1676,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.ColumnSpan="2">
+            <Image x:Name="BackImg15"  Grid.Column="1"  Margin="20,20,1155,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -519,12 +475,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox14"  Grid.Column="1"  Margin="20,20,1155,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox16" Grid.Column="1"  Margin="585,20,589,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg17"  Grid.Column="1"  Margin="20,20,1155,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg16" Grid.Column="1"  Margin="585,20,589,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -532,33 +488,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox17" Grid.Column="1"  Margin="585,20,589,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox17" Grid.Column="1"  Margin="1151,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg18" Grid.Column="1"  Margin="585,20,589,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
-                <Image.FocusVisualPrimaryBrush>
-                    <ImageBrush/>
-                </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="Imgbox18" Grid.Column="1"  Margin="1151,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg19" Grid.Column="1"  Margin="1151,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
-                <Image.FocusVisualPrimaryBrush>
-                    <ImageBrush/>
-                </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg20" Grid.Column="1" Margin="303,20,871,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg17" Grid.Column="1"  Margin="1151,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -567,12 +502,15 @@
                 </Image.Projection>
             </Image>
 
-            <Image x:Name="Imgbox20" Grid.Column="1"  Margin="873,20,302,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" >
+            <Image x:Name="Imgbox18" Grid.Column="1" Margin="303,20,871,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg21" Grid.Column="1"  Margin="869,20,306,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg18" Grid.Column="1" Margin="303,20,871,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -581,9 +519,23 @@
                 </Image.Projection>
             </Image>
 
-            <Border x:Name="grid13"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,1676,20" Grid.Row="1" Opacity="100" Grid.ColumnSpan="2"/>
+            <Image x:Name="Imgbox19" Grid.Column="1"  Margin="873,20,302,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="BackImg19" Grid.Column="1"  Margin="869,20,306,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
 
-            <Border  x:Name="grid17"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,1155,20" Grid.Row="1" Opacity="100">
+            <!--<Border x:Name="grid13"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,1676,20" Grid.Row="1" Opacity="100" Grid.ColumnSpan="2"/>-->
+
+            <Border  x:Name="grid15"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,1155,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -594,7 +546,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid18"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="585,20,589,20" Grid.Row="1" Opacity="100">
+            <Border  x:Name="grid16"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="585,20,589,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -605,7 +557,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid19"  BorderBrush="Black" BorderThickness="4"   Grid.Column="1"  Margin="1151,20,24,20" Grid.Row="1" Opacity="100">
+            <Border  x:Name="grid17"  BorderBrush="Black" BorderThickness="4"   Grid.Column="1"  Margin="1151,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -616,7 +568,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid21"  BorderBrush="Black" BorderThickness="4"   Grid.Column="1" Margin="303,20,871,20" Opacity="100">
+            <Border  x:Name="grid18"  BorderBrush="Black" BorderThickness="4"   Grid.Column="1" Margin="303,20,871,20" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -627,7 +579,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid22"  BorderBrush="Black" BorderThickness="4"   Grid.Column="2"  Margin="869,20,306,20" Opacity="100">
+            <Border  x:Name="grid19"  BorderBrush="Black" BorderThickness="4"   Grid.Column="2"  Margin="869,20,306,20" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -649,12 +601,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image x:Name="Imgbox19" Margin="20,20,20,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox20" Margin="20,20,20,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0" />
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg22" Margin="20,20,20,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg20" Margin="20,20,20,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -662,39 +614,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox21"  Margin="20,20,20,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="1" >
+            <Image x:Name="Imgbox21"  Margin="20,20,20,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="1" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg23" Margin="20,20,20,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="1" >
-                <Image.FocusVisualPrimaryBrush>
-                    <ImageBrush/>
-                </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-
-            <Image x:Name="Imgbox26"  Margin="20,20,20,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="1" >
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg28"  Margin="20,20,20,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="1" >
-                <Image.FocusVisualPrimaryBrush>
-                    <ImageBrush/>
-                </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="Imgbox27" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg29" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg21" Margin="20,20,20,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="1" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -703,7 +628,34 @@
                 </Image.Projection>
             </Image>
 
-            <Border x:Name="grid20"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,20,20" Grid.Row="1" Opacity="100">
+            <Image x:Name="Imgbox22"  Margin="20,20,20,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="1" Canvas.ZIndex="1" >
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="BackImg22"  Margin="20,20,20,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="1" >
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="Imgbox23" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="BackImg23" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+
+            <Border x:Name="grid20"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,20,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle x:Name="RectangelGrid16"  Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -714,7 +666,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid23"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Grid.Row="1" Opacity="100" Grid.Column="1">
+            <Border  x:Name="grid21"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Grid.Row="1" Opacity="100" Grid.Column="1" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -725,7 +677,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid28"  BorderBrush="Black" BorderThickness="4"   Margin="20,20,20,20" Opacity="100" Grid.Column="1">
+            <Border  x:Name="grid22"  BorderBrush="Black" BorderThickness="4"   Margin="20,20,20,20" Opacity="100" Grid.Column="1" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -736,7 +688,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid29"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Opacity="100">
+            <Border  x:Name="grid23"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -748,12 +700,8 @@
             </Border>
 
         </Grid>
-<<<<<<< HEAD
-        <Grid x:Name="Grid1x1" Margin="150,190,150,100" Visibility="Visible">
-=======
-
         <Grid x:Name="Grid1x1" Margin="150,190,150,100" Visibility="Collapsed">
->>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -762,12 +710,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image x:Name="Imgbox24"  Margin="80,217,20,217"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="1" >
+            <Image x:Name="Imgbox24"  Margin="80,217,20,217"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Grid.Column="1" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg26"  Margin="80,180,20,180"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="1" >
+            <Image x:Name="BackImg24"  Margin="80,180,20,180"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" Grid.Column="1" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -775,12 +723,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox25" Margin="20,217,80,217"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill">
+            <Image x:Name="Imgbox25" Margin="20,217,80,217"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg27" Margin="20,180,80,180"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg25" Margin="20,180,80,180"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -789,7 +737,7 @@
                 </Image.Projection>
             </Image>
 
-            <Border  x:Name="grid26"  BorderBrush="Black" BorderThickness="4"   Margin="80,180,20,180" Opacity="100" Grid.Column="1">
+            <Border  x:Name="grid24"  BorderBrush="Black" BorderThickness="4"   Margin="80,180,20,180" Opacity="100" Grid.Column="1" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -800,7 +748,7 @@
                 </Rectangle>
             </Border>
 
-            <Border  x:Name="grid27"  BorderBrush="Black" BorderThickness="4"  Margin="20,180,80,180" Opacity="100">
+            <Border  x:Name="grid25"  BorderBrush="Black" BorderThickness="4"  Margin="20,180,80,180" Opacity="100" Canvas.ZIndex="2">
                 <Rectangle Height="160" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -820,12 +768,8 @@
             <AppBarSeparator/>
         </CommandBar>
 
-<<<<<<< HEAD
-        <Grid x:Name="SettingsGrid" Background="{StaticResource SettingsBackground}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
-=======
-        <Grid x:Name="SettingsGrid" Background="Black" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
->>>>>>> 47bf827c631519a03e95f83f655385dd9bc7e9a1
-            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
+            <Grid x:Name="SettingsGrid" Background="Black" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+                <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
@@ -854,7 +798,7 @@
                         </Button>
                         
                         <Grid x:Name="GeneralSettingsGrid" Visibility="Collapsed">
-                            <ToggleButton x:Name="timebtn" Content="24 Timmars klocka" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top" Checked="ToggleButton_Checked" Unchecked="timebtn_Unchecked"/>
+                            <ToggleButton x:Name="timebtn" Content="24 Timmars klocka" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,40,0,0" VerticalAlignment="Top" Width="20" Fill="#FF14A61E"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,87,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE2E201"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,136,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE20101"/>
@@ -876,10 +820,8 @@
             </SplitView>
         </Grid>
 
-
-            <Grid>
-                <Button x:Name="rndbtn" Content="Button" HorizontalAlignment="Left" Margin="573,95,0,-127" VerticalAlignment="Top" Click="rndbtn_Click"/>
-                <Button x:Name="imgbtn" Content="Button" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
+        <Grid>
+            <Button x:Name="imgbtn" Content="Button" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
             </Grid>
 
       </Grid>

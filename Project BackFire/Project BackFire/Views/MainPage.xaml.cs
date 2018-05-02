@@ -46,11 +46,6 @@ namespace Project_BackFire.Views
 
         private Storyboard BorderOpacity = new Storyboard();
 
-
-        SolidColorBrush GreenBrush = new SolidColorBrush(Color.FromArgb(200, 23, 255, 0));
-        SolidColorBrush RedBrush = new SolidColorBrush(Color.FromArgb(200, 211, 63, 73));
-        SolidColorBrush YellowBrush = new SolidColorBrush(Color.FromArgb(200, 239, 153, 32));
-
            
         private MainViewModel ViewModel
         {
@@ -274,22 +269,6 @@ namespace Project_BackFire.Views
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
-        private void TimerTick2(object sender, object e)
-        {
-            TimeDate12h.Text = DateTime.Now.ToString("hh:mm");
-            TodaysDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
-        }
-
-        private void Bighours_Click(object sender, RoutedEventArgs e)
-        {
-            TimerTick2(sender, e);
-        }
-
-        private void Smallhours_Click(object sender, RoutedEventArgs e)
-        {
-            TimerTick(sender, e);
-        }
-
         private void Animation()
         {
           
@@ -367,42 +346,6 @@ namespace Project_BackFire.Views
         {
             Animation();
             Fade();
-            //Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-            //Imgbox1.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox2.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox3.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox4.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox5.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox6.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox7.Fade(duration: 1500, delay: 0, value: 0).Start();
-            //Imgbox8.Fade(duration: 1500, delay: 0, value: 0).Start();
-
-            //BackImg1.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg2.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg3.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg4.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg5.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg6.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg7.Fade(duration: 100, delay: 0, value: 0).Start();
-            //BackImg8.Fade(duration: 100, delay: 0, value: 0).Start();
-
-            //BackImg1.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg2.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg3.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg4.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg5.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg6.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg7.Fade(duration: 4000, delay: 2000, value: 1).Start();
-            //BackImg8.Fade(duration: 4000, delay: 2000, value: 1).Start();
-
         }
 
         private void FlipCardConditions()
@@ -431,61 +374,6 @@ namespace Project_BackFire.Views
             //}
         }
 
-        private void button1_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
-        {
-            btn1.Visibility = Visibility.Visible;
-        }
-
-        public void button1_PointerExited(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
-        {
-            btn1.Visibility = Visibility.Collapsed;
-            DateTime TimeNow = new DateTime();
-            TimeNow = DateTime.Now;
-            string CurrentDatetime = TimeNow.ToString();
-        }
-
-        private void colordefault_Click(object sender, RoutedEventArgs e)
-        {
-            ContentArea.Background = (LinearGradientBrush)Resources["theme3b"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme3a"];
-        }
-
-        private void color1_Click(object sender, RoutedEventArgs e)
-        {
-            ContentArea.Background = (LinearGradientBrush)Resources["theme2a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme2b"];
-        }
-
-        private void color2_Click(object sender, RoutedEventArgs e)
-        {
-            ContentArea.Background = (LinearGradientBrush)Resources["theme1a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme1b"];
-        }
-
-        private void color3_Click(object sender, RoutedEventArgs e)
-        {
-            ContentArea.Background = (LinearGradientBrush)Resources["theme4a"];
-            MenuBar.Background = (LinearGradientBrush)Resources["theme4b"];
-        }
-
-        private void SettingsMenu_Click(object sender, RoutedEventArgs e)
-        {
-            /*
-           */
-        }
-
-        //public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
-        //{
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //    DispatcherTimer ButtonTimer = new DispatcherTimer();
-        //    ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-        //    ButtonTimer.Tick += (sender, args) =>
-        //    {
-        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-        //        ButtonTimer.Stop();
-        //    };
-        //    ButtonTimer.Start();
-        //}
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
@@ -530,18 +418,6 @@ namespace Project_BackFire.Views
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
         }
 
-        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
-        {
-            TimeDate.Visibility = Visibility.Collapsed;
-            TimeDate12h.Visibility = Visibility.Visible;
-        }
-
-        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
-        {
-            TimeDate.Visibility = Visibility.Visible;
-            TimeDate12h.Visibility = Visibility.Collapsed;
-        }
-
         private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
         {
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -553,18 +429,6 @@ namespace Project_BackFire.Views
                 ButtonTimer.Stop();
             };
             ButtonTimer.Start();
-        }
-
-        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
-        {
-            //    timebtn.Content = "12 Timmars klocka";
-            //    TimeDate12h.Text = DateTime.Now.ToString("hh:mm");
-        }
-
-        private void timebtn_Unchecked(object sender, RoutedEventArgs e)
-        {
-            //    timebtn.Content = "24 Timmars klocka";
-            //    TimeDate12h.Text = DateTime.Now.ToString("HH:mm");
         }
 
         public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
@@ -615,12 +479,6 @@ namespace Project_BackFire.Views
             ColorTimer.Start();
         }
 
-        private void grid9_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-
-            //ColorTimer.Start();
-        }
-
         public void Image_Loaded(object sender, RoutedEventArgs e)
         {
             Image img = sender as Image;
@@ -629,6 +487,7 @@ namespace Project_BackFire.Views
             //Image img = new Image();
             //img.Source = new BitmapImage(new Uri("ms-appx:///Images/test_logo.png"));
         }
+
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             if (Grid4x2.Visibility == Visibility.Collapsed)
@@ -696,7 +555,6 @@ namespace Project_BackFire.Views
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-
             if (Grid2x3.Visibility == Visibility.Collapsed)
             {
                 Grid2x3.Visibility = Visibility.Visible;
@@ -732,74 +590,6 @@ namespace Project_BackFire.Views
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
             ApiContainer.Visibility = Visibility.Visible;
-        }
-
-        private void rndbtn_Click(object sender, RoutedEventArgs e)
-        {
-
-            Random rnd = new Random();
-            int value = rnd.Next(0, 5); // creates a number between 0 and 5
-
-
-            switch (value)
-            {
-
-                case 1:
-                    //Gör en animation
-                    BackImg1.Opacity = 0;
-                    grid1.Opacity = 0;
-                    rotationfront1.Begin();
-                    rotationback1.Begin();
-                    Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
-                    grid1.Fade(duration: 4000, delay: 3000, value: 1).StartAsync();
-                    BackImg1.Fade(duration: 4000, delay: 1200, value: 1).StartAsync();
-                    break;
-
-                case 2:
-                    //Bli Röd
-                    RectangelGrid1.Fill = RedBrush;
-                    RectangelGrid2.Fill = RedBrush;
-                    RectangelGrid3.Fill = RedBrush;
-                    RectangelGrid4.Fill = RedBrush;
-                    RectangelGrid5.Fill = RedBrush;
-                    RectangelGrid6.Fill = RedBrush;
-                    RectangelGrid7.Fill = RedBrush;
-                    RectangelGrid8.Fill = RedBrush;
-                    break;
-
-                case 3:
-                    //Bli Gul
-                    RectangelGrid1.Fill = YellowBrush;
-                    RectangelGrid2.Fill = YellowBrush;
-                    RectangelGrid3.Fill = YellowBrush;
-                    RectangelGrid4.Fill = YellowBrush;
-                    RectangelGrid5.Fill = YellowBrush;
-                    RectangelGrid6.Fill = YellowBrush;
-                    RectangelGrid7.Fill = YellowBrush;
-                    RectangelGrid8.Fill = YellowBrush;
-                    break;
-
-                case 4:
-                    //Gör animation på övreraden
-                    break;
-
-                case 5:
-                    //gör animation på undreraden
-                    break;
-
-                default:
-                    RectangelGrid1.Fill = GreenBrush;
-                    RectangelGrid2.Fill = GreenBrush;
-                    RectangelGrid3.Fill = GreenBrush;
-                    RectangelGrid4.Fill = GreenBrush;
-                    RectangelGrid5.Fill = GreenBrush;
-                    RectangelGrid6.Fill = GreenBrush;
-                    RectangelGrid7.Fill = GreenBrush;
-                    RectangelGrid8.Fill = GreenBrush;
-                    break;
-
-
-            }
         }
 
         private async void imgbtn_Click(object sender, RoutedEventArgs e)
