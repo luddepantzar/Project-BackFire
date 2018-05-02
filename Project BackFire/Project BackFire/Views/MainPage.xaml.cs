@@ -45,12 +45,7 @@ namespace Project_BackFire.Views
         private Storyboard rotationfront8 = new Storyboard();
 
         private Storyboard BorderOpacity = new Storyboard();
-<<<<<<< HEAD
 
-           
-=======
-         
->>>>>>> 4b47c6c49dc68c1dd905221bca45e606dc558bcd
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -272,10 +267,7 @@ namespace Project_BackFire.Views
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b47c6c49dc68c1dd905221bca45e606dc558bcd
         private void Animation()
         {       
             rotationfront1.Begin();
@@ -350,11 +342,7 @@ namespace Project_BackFire.Views
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Animation();
-<<<<<<< HEAD
             Fade();
-=======
-            Fade();        
->>>>>>> 4b47c6c49dc68c1dd905221bca45e606dc558bcd
         }
 
         private void FlipCardConditions()
@@ -383,10 +371,6 @@ namespace Project_BackFire.Views
             //}
         }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b47c6c49dc68c1dd905221bca45e606dc558bcd
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -429,11 +413,7 @@ namespace Project_BackFire.Views
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 4b47c6c49dc68c1dd905221bca45e606dc558bcd
         private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
         {
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -572,11 +552,7 @@ namespace Project_BackFire.Views
             ApiContainer.Visibility = Visibility.Visible;
         }
 
-<<<<<<< HEAD
         private async void imgbtn_Click(object sender, RoutedEventArgs e)
-=======
-       private async void imgbtn_Click(object sender, RoutedEventArgs e)
->>>>>>> 4b47c6c49dc68c1dd905221bca45e606dc558bcd
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
