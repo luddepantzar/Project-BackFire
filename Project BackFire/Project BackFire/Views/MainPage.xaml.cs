@@ -25,6 +25,8 @@ namespace Project_BackFire.Views
     public partial class Main : Page
     {
 
+        private List<Attributes> Attributes;
+
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
@@ -54,7 +56,7 @@ namespace Project_BackFire.Views
 
         public Main()
         {
-            InitializeComponent();
+           InitializeComponent();
             DataContext = this;
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
@@ -63,6 +65,8 @@ namespace Project_BackFire.Views
             AnimationBack();
             AnimationFront();                     
             FlipCardConditions();
+
+            Attributes = AttributeManager.GetAttributes();
         }
 
         public void AnimationFront()
@@ -708,36 +712,6 @@ namespace Project_BackFire.Views
         }
     }
 
-    //public class Attribute : Main
-    //{
-    //    public int RoomId { get; set; }
-    //    //public string Projector { get; set; }
-    //    //public string Wboard { get; set; }
-    //    public string FrontImage { get; set; }
-    //    public string BackImage { get; set; }
-
-    //}
-
-    //public class AttributeManager : Main
-    //{
-    //    public static List<Attribute> GetAttributes()
-    //    {
-    //        var attributes = new List<Attribute>();
-
-    //        attributes.Add(new Attribute { RoomId = 1, FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg" });
-    //        attributes.Add(new Attribute { RoomId = 2, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c2.jpeg" });
-    //        attributes.Add(new Attribute { RoomId = 3, FrontImage = "Assets/c1.jpeg", BackImage = "Assets/c3.jpg" });
-    //        attributes.Add(new Attribute { RoomId = 4, FrontImage = "Assets/c1.jpeg", BackImage = "Assets/c1.jpeg" });
-    //        attributes.Add(new Attribute { RoomId = 5, FrontImage = "Assets/c2.jpeg", BackImage = "Assets/c1.jpeg" });
-    //        attributes.Add(new Attribute { RoomId = 6, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c2.jpeg" });
-    //        attributes.Add(new Attribute { RoomId = 7, FrontImage = "Assets/c2.jpeg", BackImage = "Assets/c1.jpeg" });
-    //        attributes.Add(new Attribute { RoomId = 8, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c1.jpeg" });
-
-
-    //        return attributes;
-
-    //    }
-
-    //}
+  
 
 }
