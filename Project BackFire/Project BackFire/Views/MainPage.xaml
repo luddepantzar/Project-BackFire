@@ -1,7 +1,7 @@
 <Page x:Class="Project_BackFire.Views.Main"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:data="using:Project_BackFire.Models">
+    xmlns:data="using:Project_BackFire.Models">
 
 
 
