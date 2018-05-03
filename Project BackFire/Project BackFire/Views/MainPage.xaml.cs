@@ -18,14 +18,12 @@ using Windows.Foundation;
 using System.Windows;
 using Microsoft.Win32;
 using Windows.UI.Xaml.Media.Imaging;
-using Project_BackFire.Models;
 
 namespace Project_BackFire.Views
 {
     public sealed partial class Main : Page
     {
 
-        private List<Models.Attribute> Attributes;
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
@@ -46,30 +44,24 @@ namespace Project_BackFire.Views
         private Storyboard rotationfront7 = new Storyboard();
         private Storyboard rotationfront8 = new Storyboard();
 
-<<<<<<< HEAD
-=======
         public DispatcherTimer DisTimer = new DispatcherTimer();
 
->>>>>>> 65efbbc82ea7109c74ee76edf5694f2f6a61eb54
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
-
         }
 
         public Main()
         {
-           this.InitializeComponent();
+            InitializeComponent();
             DataContext = this;
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             AnimationBack();
-            AnimationFront();
+            AnimationFront();                     
             FlipCardConditions();
-
-            Attributes = AttributeManager.GetAttributes();
         }
 
         public void AnimationFront()
@@ -97,7 +89,7 @@ namespace Project_BackFire.Views
             animation1.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation1, List[0]);
             Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationfront1.Children.Clear();
+           // rotationfront1.Children.Clear();
             rotationfront1.Children.Add(animation1);
 
             DoubleAnimation animation3 = new DoubleAnimation();
@@ -108,7 +100,7 @@ namespace Project_BackFire.Views
             animation3.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation3, List[1]);
             Storyboard.SetTargetProperty(animation3, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            rotationfront2.Children.Clear();
+            //rotationfront2.Children.Clear();
             rotationfront2.Children.Add(animation3);
 
             DoubleAnimation animation5 = new DoubleAnimation();
@@ -130,7 +122,7 @@ namespace Project_BackFire.Views
             animation7.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation7, List[3]);
             Storyboard.SetTargetProperty(animation7, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            //rotationfront4.Children.Clear();
+          //rotationfront4.Children.Clear();
             rotationfront4.Children.Add(animation7);
 
             DoubleAnimation animation9 = new DoubleAnimation();
@@ -141,7 +133,7 @@ namespace Project_BackFire.Views
             animation9.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation9, List[4]);
             Storyboard.SetTargetProperty(animation9, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationfront5.Children.Clear();
+           // rotationfront5.Children.Clear();
             rotationfront5.Children.Add(animation9);
 
             DoubleAnimation animation11 = new DoubleAnimation();
@@ -152,7 +144,7 @@ namespace Project_BackFire.Views
             animation11.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation11, List[5]);
             Storyboard.SetTargetProperty(animation11, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationfront6.Children.Clear();
+           // rotationfront6.Children.Clear();
             rotationfront6.Children.Add(animation11);
 
             DoubleAnimation animation13 = new DoubleAnimation();
@@ -174,7 +166,7 @@ namespace Project_BackFire.Views
             animation15.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation15, List[7]);
             Storyboard.SetTargetProperty(animation15, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationfront8.Children.Clear();
+           // rotationfront8.Children.Clear();
             rotationfront8.Children.Add(animation15);
         }
 
@@ -189,7 +181,7 @@ namespace Project_BackFire.Views
             animation2.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation2, list[0]);
             Storyboard.SetTargetProperty(animation2, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationback1.Children.Clear();
+           // rotationback1.Children.Clear();
             rotationback1.Children.Add(animation2);
 
             DoubleAnimation animation4 = new DoubleAnimation();
@@ -200,7 +192,7 @@ namespace Project_BackFire.Views
             animation4.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation4, list[1]);
             Storyboard.SetTargetProperty(animation4, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationback2.Children.Clear();
+           // rotationback2.Children.Clear();
             rotationback2.Children.Add(animation4);
 
             DoubleAnimation animation6 = new DoubleAnimation();
@@ -211,7 +203,7 @@ namespace Project_BackFire.Views
             animation6.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation6, list[2]);
             Storyboard.SetTargetProperty(animation6, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            //  rotationback3.Children.Clear();
+          //  rotationback3.Children.Clear();
             rotationback3.Children.Add(animation6);
 
             DoubleAnimation animation8 = new DoubleAnimation();
@@ -222,7 +214,7 @@ namespace Project_BackFire.Views
             animation8.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation8, list[3]);
             Storyboard.SetTargetProperty(animation8, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationback4.Children.Clear();
+           // rotationback4.Children.Clear();
             rotationback4.Children.Add(animation8);
 
             DoubleAnimation animation10 = new DoubleAnimation();
@@ -233,7 +225,7 @@ namespace Project_BackFire.Views
             animation10.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation10, list[4]);
             Storyboard.SetTargetProperty(animation10, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            // rotationback5.Children.Clear();
+           // rotationback5.Children.Clear();
             rotationback5.Children.Add(animation10);
 
             DoubleAnimation animation12 = new DoubleAnimation();
@@ -244,7 +236,7 @@ namespace Project_BackFire.Views
             animation12.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation12, list[5]);
             Storyboard.SetTargetProperty(animation12, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            //rotationback6.Children.Clear();
+          //rotationback6.Children.Clear();
             rotationback6.Children.Add(animation12);
 
             DoubleAnimation animation14 = new DoubleAnimation();
@@ -255,7 +247,7 @@ namespace Project_BackFire.Views
             animation14.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation14, list[6]);
             Storyboard.SetTargetProperty(animation14, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            //rotationback7.Children.Clear();
+          //rotationback7.Children.Clear();
             rotationback7.Children.Add(animation14);
 
             DoubleAnimation animation16 = new DoubleAnimation();
@@ -266,7 +258,7 @@ namespace Project_BackFire.Views
             animation16.Duration = TimeSpan.FromSeconds(3);
             Storyboard.SetTarget(animation16, list[7]);
             Storyboard.SetTargetProperty(animation16, "(UIElement.Projection).(PlaneProjection.RotationY)");
-            //rotationback8.Children.Clear();
+           //rotationback8.Children.Clear();
             rotationback8.Children.Add(animation16);
         }
 
@@ -277,7 +269,7 @@ namespace Project_BackFire.Views
         }
 
         private void Animation()
-        {
+        {       
             rotationfront1.Begin();
             rotationfront2.Begin();
             rotationfront3.Begin();
@@ -296,10 +288,16 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
         }
 
-
-
-        public void Fade()
+        private void Fade()
         {
+            BackImg1.Opacity = 0;
+            BackImg2.Opacity = 0;
+            BackImg3.Opacity = 0;
+            BackImg4.Opacity = 0;
+            BackImg5.Opacity = 0;
+            BackImg6.Opacity = 0;
+            BackImg7.Opacity = 0;
+            BackImg8.Opacity = 0;
 
             grid1.Opacity = 0;
             grid2.Opacity = 0;
@@ -310,83 +308,39 @@ namespace Project_BackFire.Views
             grid7.Opacity = 0;
             grid8.Opacity = 0;
 
-            BackImg1.Opacity = 0;
-            BackImg2.Opacity = 0;
-            BackImg3.Opacity = 0;
-            BackImg4.Opacity = 0;
-            BackImg5.Opacity = 0;
-            BackImg6.Opacity = 0;
-            BackImg7.Opacity = 0;
-            BackImg8.Opacity = 0;
+            Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
 
-            grid1.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid2.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid3.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid4.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid5.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid6.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid7.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            grid8.Fade(duration: 1000, delay: 0, value: 0f).Start();
+            grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
 
-       
-            
-            //Imgbox1.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox2.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox3.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox4.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox5.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox6.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox7.Fade(duration: 1000, delay: 0, value: 0f).Start();
-            Imgbox8.Fade(duration: 1000, delay: 0, value: 0f).Start();
+            BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
 
-            grid1.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid2.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid3.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid4.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid5.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid6.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid7.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-            grid8.Fade(duration: 2000, delay: 3200, value: 1f).Start();
-
-            BackImg1.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg2.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg3.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg4.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg5.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg6.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg7.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-            BackImg8.Fade(duration: 4000, delay: 1200, value: 1f).Start();
-
+            rotationback8.Begin();
         }
 
-        private void FadeBack()
-        {
-
-       
-
-            //Imgbox1.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox2.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox3.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox4.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox5.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox6.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox7.Fade(duration: 100, delay: 0, value: 1).Start();
-            Imgbox8.Fade(duration: 100, delay: 0, value: 1).Start();
-
-
-            BackImg1.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg2.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg3.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg4.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg5.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg6.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg7.Fade(duration: 100, delay: 0, value: 0).Start();
-            BackImg8.Fade(duration: 100, delay: 0, value: 0).Start();
-
-        }
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-      
             Animation();
             Fade();
         }
@@ -419,24 +373,25 @@ namespace Project_BackFire.Views
 
         public void StartTimer(int IntervalSec)
         {
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            if(IntervalSec > 0)
-            {
-                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-                DisTimer.Tick += (sender, args) =>
-                {
-                    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                    DisTimer.Start();
-                };
-            }
-            else
-            {
-                DisTimer.Tick += (sender, args) =>
-                {
-                    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                    DisTimer.Stop();
-                };
-            }
+            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            //if(IntervalSec > 0)
+            //{
+            //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+            //    DisTimer.Tick += DispatcherTimer_Tick;
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Start();
+            //}
+            //else
+            //{
+            //    DisTimer.Tick += 
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Stop();
+            //}
+        }
+
+        protected void DispatcherTimer_Tick()
+        {
+            
         }
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
@@ -547,7 +502,7 @@ namespace Project_BackFire.Views
         public void Image_Loaded(object sender, RoutedEventArgs e)
         {
             Image img = sender as Image;
-            BitmapImage bitmapImage = new BitmapImage();
+            BitmapImage bitmapImage = new BitmapImage();         
             bitmapImage.UriSource = new Uri(img.BaseUri, "ms-appx:///Images/test_logo.png");
             //Image img = new Image();
             //img.Source = new BitmapImage(new Uri("ms-appx:///Images/test_logo.png"));
@@ -555,14 +510,12 @@ namespace Project_BackFire.Views
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-
             if (Grid4x2.Visibility == Visibility.Collapsed)
             {
                 Grid4x2.Visibility = Visibility.Visible;
                 Grid2x2.Visibility = Visibility.Collapsed;
                 Grid2x3.Visibility = Visibility.Collapsed;
-                Grid3x2.Visibility = Visibility.Collapsed;
-            
+                Grid3x2.Visibility = Visibility.Collapsed;          
             }
             else
             {
@@ -578,8 +531,8 @@ namespace Project_BackFire.Views
                 Grid2x2.Visibility = Visibility.Collapsed;
                 Grid2x3.Visibility = Visibility.Collapsed;
                 Grid4x2.Visibility = Visibility.Collapsed;
-            }
-            else if (Grid3x2.Visibility == Visibility.Visible)
+            }           
+            else if (Grid3x2.Visibility == Visibility.Visible) 
             {
                 Grid3x2.Visibility = Visibility.Collapsed;
             }
@@ -592,7 +545,7 @@ namespace Project_BackFire.Views
                 Grid2x3.Visibility = Visibility.Visible;
                 Grid2x2.Visibility = Visibility.Collapsed;
                 Grid3x2.Visibility = Visibility.Collapsed;
-                Grid2x2.Visibility = Visibility.Collapsed;
+                Grid2x2.Visibility = Visibility.Collapsed;              
                 Grid3x2.Visibility = Visibility.Collapsed;
                 Grid4x2.Visibility = Visibility.Collapsed;
             }
@@ -639,31 +592,15 @@ namespace Project_BackFire.Views
                 //this.textBlock.Text = "Picked photo: " + file.Path;
                 //Imgbox1.Source = new ImageSource(file.Path);
 
-<<<<<<< HEAD
-                Logo.Source = new BitmapImage(new Uri(file.Path));
-                this.textblok.Text = "Picked photo: " + file.Path;
-
-=======
                Logo.Source = new BitmapImage(new Uri(file.Path));         
->>>>>>> 65efbbc82ea7109c74ee76edf5694f2f6a61eb54
             }
             else
             {
-                //
+               //
             }
 
         }
 
-<<<<<<< HEAD
-        private void resetbtn_Click(object sender, RoutedEventArgs e)
-        {
-            FadeBack();
-       
-
-        }
-
-      
-=======
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Random rndm = new Random();
@@ -744,7 +681,6 @@ namespace Project_BackFire.Views
                     }
             }
         }
->>>>>>> 65efbbc82ea7109c74ee76edf5694f2f6a61eb54
     }
 
 }
