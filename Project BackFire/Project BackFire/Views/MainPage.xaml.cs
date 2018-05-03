@@ -44,7 +44,7 @@ namespace Project_BackFire.Views
         private Storyboard rotationfront7 = new Storyboard();
         private Storyboard rotationfront8 = new Storyboard();
 
-        private Storyboard BorderOpacity = new Storyboard();
+        public DispatcherTimer DisTimer = new DispatcherTimer();
 
         private MainViewModel ViewModel
         {
@@ -371,17 +371,40 @@ namespace Project_BackFire.Views
             //}
         }
 
-        public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
+        public void StartTimer(int IntervalSec)
         {
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            DispatcherTimer ButtonTimer = new DispatcherTimer();
-            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            ButtonTimer.Tick += (sender, args) =>
+            if(IntervalSec > 0)
             {
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                ButtonTimer.Stop();
-            };
-            ButtonTimer.Start();
+                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+                DisTimer.Tick += (sender, args) =>
+                {
+                    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                    DisTimer.Start();
+                };
+            }
+            else
+            {
+                DisTimer.Tick += (sender, args) =>
+                {
+                    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                    DisTimer.Stop();
+                };
+            }
+        }
+
+        public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
+        {
+            StartTimer(5);
+            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            //DispatcherTimer ButtonTimer = new DispatcherTimer();
+            //ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+            //ButtonTimer.Tick += (sender, args) =>
+            //{
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    ButtonTimer.Stop();
+            //};
+            //ButtonTimer.Start();
         }
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
@@ -568,14 +591,94 @@ namespace Project_BackFire.Views
                 //this.textBlock.Text = "Picked photo: " + file.Path;
                 //Imgbox1.Source = new ImageSource(file.Path);
 
-               Logo.Source = new BitmapImage(new Uri(file.Path));
-                          
+               Logo.Source = new BitmapImage(new Uri(file.Path));         
             }
             else
             {
                //
             }
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Random rndm = new Random();
+            var value = rndm.Next(0, 9);
+
+            switch(value)
+            {
+                case 1:
+                    {
+                        CheckProj1.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard1.Visibility = Visibility.Collapsed;
+                        ErrWhiteboad1.Visibility = Visibility.Visible;
+                        ErrProj1.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case 2:
+                    {
+                        ErrWhiteboad2.Visibility = Visibility.Visible;
+                        ErrProj2.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard2.Visibility = Visibility.Collapsed;
+                        CheckProj2.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case 3:
+                    {
+                        ErrWhiteboad3.Visibility = Visibility.Visible;
+                        ErrProj3.Visibility = Visibility.Visible;
+                        CheckProj3.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard3.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+                case 4:
+                    {
+                        ErrWhiteboad4.Visibility = Visibility.Visible;
+                        ErrProj4.Visibility = Visibility.Visible;
+                        CheckWhiteboard4.Visibility = Visibility.Collapsed;
+                        CheckProj4.Visibility= Visibility.Collapsed;
+                        break;
+                    }
+
+                case 5:
+                    {
+                        ErrProj5.Visibility = Visibility.Visible;
+                        ErrWhiteboad5.Visibility = Visibility.Visible;
+                        CheckProj5.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard5.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+                case 6:
+                    {
+                        ErrWhiteboad6.Visibility = Visibility.Visible;
+                        ErrProj6.Visibility = Visibility.Visible;
+                        CheckProj6.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard6.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+                case 7:
+                    {
+                        ErrProj7.Visibility = Visibility.Visible;
+                        ErrWhiteboad7.Visibility = Visibility.Visible;
+                        CheckProj7.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard7.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+                case 8:
+                    {
+                        ErrProj8.Visibility = Visibility.Visible;
+                        ErrWhiteboad8.Visibility = Visibility.Visible;
+                        CheckProj8.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard8.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
         }
     }
 
