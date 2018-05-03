@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Project_BackFire.ViewModels;
 using Project_BackFire.Views;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Project_BackFire.Models
 {
@@ -33,11 +34,20 @@ namespace Project_BackFire.Models
             attributes.Add(new Attribute { RoomId = 7, FrontImage = "Assets/c2.jpeg", BackImage = "Assets/c1.jpeg" });
             attributes.Add(new Attribute { RoomId = 8, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c1.jpeg" });
 
-
-            return attributes;
-            
+            return attributes; 
         }
-
     }
 
+    public class Images
+    {
+        public void GetAllImages()
+        {
+            BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
+            BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
+            BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
+            BitmapImage Four = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
+            BitmapImage Five = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
+            BitmapImage Six = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
+        }
+    }
 }

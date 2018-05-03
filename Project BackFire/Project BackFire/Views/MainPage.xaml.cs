@@ -704,10 +704,7 @@ namespace Project_BackFire.Views
         public void GetRoomid()
         {
             var attributes =  AttributeManager.GetAttributes();
-            testBlock.Text = attributes.GetEnumerator().ToString();
-
-            //TimeDate.Text = DateTime.Now.ToString("HH:mm");
-            //TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            testBlock.Text = attributes.GetRange(1, 4).ToString();
         }
     }
 
