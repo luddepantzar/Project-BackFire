@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Project_BackFire.ViewModels;
+using Project_BackFire.Views;
 
 namespace Project_BackFire.Models
 {
@@ -33,7 +35,7 @@ namespace Project_BackFire.Models
 
 
             return attributes;
-
+            
         }
 
     }

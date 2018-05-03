@@ -61,6 +61,7 @@
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
 
             <TextBlock x:Name="textblok" HorizontalAlignment="Left" Margin="1001,10,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock x:Name="testBlock" HorizontalAlignment="Left" Margin="1699,65,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="181"/>
         </Grid>
 
         <Button x:Name="btn2" Content="4-4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="btn2_Click"/>
@@ -82,14 +83,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-
-
-            <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -98,12 +97,12 @@
                 </Image.Projection>
             </Image>
 
-            <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -112,28 +111,13 @@
                 </Image.Projection>
             </Image>
 
-            <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
 
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
-                <Image.FocusVisualPrimaryBrush>
-                    <ImageBrush/>
-                </Image.FocusVisualPrimaryBrush>
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-
-
-            <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
-                <Image.Projection>
-                    <PlaneProjection RotationY="0"/>
-                </Image.Projection>
-            </Image>
-            <Image x:Name="BackImg4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -143,12 +127,12 @@
             </Image>
 
 
-            <Image x:Name="Imgbox5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -158,12 +142,12 @@
             </Image>
 
 
-            <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -173,12 +157,12 @@
             </Image>
 
 
-            <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+            <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -188,12 +172,27 @@
             </Image>
 
 
-            <Image x:Name="Imgbox8" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+
+
+            <Image x:Name="Imgbox8" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -232,6 +231,7 @@
                             <TextBlock x:Name="CheckWhiteboard1" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad1" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj1" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -267,7 +267,7 @@
                             <TextBlock x:Name="CheckWhiteboard2" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad2" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj2" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -303,7 +303,7 @@
                             <TextBlock x:Name="CheckWhiteboard3" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad3" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj3" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -339,7 +339,7 @@
                             <TextBlock x:Name="CheckWhiteboard4" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad4" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj4" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -375,7 +375,7 @@
                             <TextBlock x:Name="CheckWhiteboard5" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad5" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj5" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -411,7 +411,7 @@
                             <TextBlock x:Name="CheckWhiteboard6" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad6" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj6" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -447,7 +447,7 @@
                             <TextBlock x:Name="CheckWhiteboard7" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad7" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj7" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -483,7 +483,7 @@
                             <TextBlock x:Name="CheckWhiteboard8" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                             <TextBlock x:Name="ErrWhiteboad8" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                             <TextBlock x:Name="ErrProj8" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-
+                            <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -501,12 +501,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image x:Name="Imgbox9"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+            <Image x:Name="Imgbox9"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg9"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg9"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -514,12 +514,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox10" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox10" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg10" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg10" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -527,12 +527,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox11" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+            <Image x:Name="Imgbox11" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg11" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg11" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -540,7 +540,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox12" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1">
+            <Image x:Name="Imgbox12" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -548,7 +548,7 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg12" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill">
+            <Image x:Name="BackImg12" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -556,12 +556,12 @@
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="Imgbox13" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+            <Image x:Name="Imgbox13" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg13" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg13" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>
@@ -570,12 +570,14 @@
                 </Image.Projection>
             </Image>
 
-            <Image x:Name="Imgbox14" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/Konferens.jpg" Stretch="Fill" Canvas.ZIndex="1" >
+            <Image x:Name="Imgbox14" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg
+
+                   " Stretch="Fill" Canvas.ZIndex="1" >
                 <Image.Projection>
                     <PlaneProjection RotationY="0"/>
                 </Image.Projection>
             </Image>
-            <Image x:Name="BackImg14" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/confroom2.jpeg" Stretch="Fill" >
+            <Image x:Name="BackImg14" Grid.Column="3"  Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
                 <Image.FocusVisualPrimaryBrush>
                     <ImageBrush/>
                 </Image.FocusVisualPrimaryBrush>

@@ -18,10 +18,11 @@ using Windows.Foundation;
 using System.Windows;
 using Microsoft.Win32;
 using Windows.UI.Xaml.Media.Imaging;
+using Project_BackFire.Models;
 
 namespace Project_BackFire.Views
 {
-    public sealed partial class Main : Page
+    public partial class Main : Page
     {
 
         List<DependencyObject> List { get; set; }
@@ -76,10 +77,10 @@ namespace Project_BackFire.Views
             List.Add(Imgbox6);
             List.Add(Imgbox7);
             List.Add(Imgbox8);
-            //DependencyObject AllImages = ImageArray[1];
-            //for(var i = 0; i < ImageArray.Length; i++)
+            List.Add(Imgbox9);
+            //for(var i = 0; i < List.Count; i++)
             //{
-            //    AllImages = ImageArray[i];
+                
             //}
             DoubleAnimation animation1 = new DoubleAnimation();
             animation1.From = 0.0;
@@ -341,33 +342,51 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            Animation();
             Fade();
+            Animation();
         }
 
         private void FlipCardConditions()
         {
-
             //if (List.Count < 8)
             //{
             //    rotationback1.Stop();
             //    rotationfront1.Stop();
-            //    //rotationBorder1.Stop();
             //}
-            //else if (List.Count > 8)
+            
+            //while (List.Count > 8)
             //{
-            //    rotationback1.Stop();
-            //    rotationfront1.Stop();
-            //    DispatcherTimer tm8 = new DispatcherTimer();
-            //    tm8.Interval = TimeSpan.FromSeconds(1.4);
-            //    tm8.Tick += (sender, args) =>
+
+            //    try
             //    {
-            //        rotationback1.Begin();
-            //        rotationfront1.Begin();
-            //        //rotationBorder1.Begin();
-            //        tm8.Stop();
-            //    };
-            //    tm8.Start();
+            //        rotationback1.Stop();
+            //        rotationfront1.Stop();
+            //        DispatcherTimer tm8 = new DispatcherTimer();
+            //        tm8.Interval = TimeSpan.FromSeconds(10);
+            //        tm8.Tick += (sender, args) =>
+            //        {
+            //            rotationback1.Begin();
+            //            rotationfront1.Begin();
+
+            //            BackImg1.Opacity = 0;
+
+            //            grid1.Opacity = 0;
+
+            //            Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+            //            grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+
+            //            BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
+
+            //            tm8.Stop();
+            //        };
+            //        tm8.Start();
+            //    }
+            //    finally
+            //    {
+            //        rotationback1.Stop();
+            //        rotationfront1.Stop();
+            //    }
             //}
         }
 
@@ -681,6 +700,47 @@ namespace Project_BackFire.Views
                     }
             }
         }
+
+        public void GetRoomid()
+        {
+            var attributes =  AttributeManager.GetAttributes();
+            testBlock.Text = attributes.GetEnumerator().ToString();
+
+            //TimeDate.Text = DateTime.Now.ToString("HH:mm");
+            //TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+        }
     }
+
+    //public class Attribute : Main
+    //{
+    //    public int RoomId { get; set; }
+    //    //public string Projector { get; set; }
+    //    //public string Wboard { get; set; }
+    //    public string FrontImage { get; set; }
+    //    public string BackImage { get; set; }
+
+    //}
+
+    //public class AttributeManager : Main
+    //{
+    //    public static List<Attribute> GetAttributes()
+    //    {
+    //        var attributes = new List<Attribute>();
+
+    //        attributes.Add(new Attribute { RoomId = 1, FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg" });
+    //        attributes.Add(new Attribute { RoomId = 2, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c2.jpeg" });
+    //        attributes.Add(new Attribute { RoomId = 3, FrontImage = "Assets/c1.jpeg", BackImage = "Assets/c3.jpg" });
+    //        attributes.Add(new Attribute { RoomId = 4, FrontImage = "Assets/c1.jpeg", BackImage = "Assets/c1.jpeg" });
+    //        attributes.Add(new Attribute { RoomId = 5, FrontImage = "Assets/c2.jpeg", BackImage = "Assets/c1.jpeg" });
+    //        attributes.Add(new Attribute { RoomId = 6, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c2.jpeg" });
+    //        attributes.Add(new Attribute { RoomId = 7, FrontImage = "Assets/c2.jpeg", BackImage = "Assets/c1.jpeg" });
+    //        attributes.Add(new Attribute { RoomId = 8, FrontImage = "Assets/c3.jpg", BackImage = "Assets/c1.jpeg" });
+
+
+    //        return attributes;
+
+    //    }
+
+    //}
 
 }
