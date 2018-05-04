@@ -24,10 +24,59 @@
             <GradientStop Color="#FF363636" Offset="0.226"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
+
+        <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate">
+            <Grid>
+
+                <Image x:Name="one" Margin="20,20,20,20"  Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
+                    <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                    </Image.Projection>
+                </Image>
+                <Image x:Name="two" Margin="20,20,20,20"  Source="{Binding BackImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
+                <Image.Projection>
+                    <PlaneProjection RotationY="0"/>
+                </Image.Projection>
+                </Image>
+
+                <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Opacity="100" Canvas.ZIndex="2">
+                    <Grid>
+                        <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#00000000" Offset="0.801"/>
+                                    <GradientStop Color="#CC17FF00" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="{Binding RoomId}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
+                        <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black" Offset="0.88"/>
+                                    <GradientStop Color="#00000000" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="CompanyNote2" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
+                                <TextBlock x:Name="ProjIcon2" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
+                                <TextBlock x:Name="WhiteboardIcon2" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                                <TextBlock x:Name="SeatsIcon2" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                                <TextBlock x:Name="CheckProj2" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                                <TextBlock x:Name="CheckWhiteboard2" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                                <TextBlock x:Name="ErrWhiteboad2" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                                <TextBlock x:Name="ErrProj2" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                                <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </DataTemplate>
     </Page.Resources>
-
-
-
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="1890" BorderBrush="Black" PointerMoved="OnPointerMoved" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -67,440 +116,18 @@
         <Button x:Name="btn4" Content="3-2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
         <Button x:Name="btn5" Content="2-2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>
 
-        <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-<<<<<<< HEAD
-        <GridView x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
-=======
+        <GridView ItemsSource = "{x:Bind Attributes}"  Width="Auto" Height="Auto" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}">
 
-
-        <GridView ItemsSource = "{x:Bind Attributes}" IsHitTestVisible="False" Width="Auto" Height="Auto" Margin="75,190,75,100">
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:Attributes">
-                    <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Visible">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-
-                        <Image x:Name="Imgbox1" Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg1" Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-                        <Image x:Name="Imgbox2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg2"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-                        <Image x:Name="Imgbox3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg3" Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-
-                        <Image x:Name="Imgbox4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg4" Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-
-                        <Image x:Name="Imgbox5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg5" Grid.Column="3" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-
-                        <Image x:Name="Imgbox6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg6" Grid.Column="2" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-
-                        <Image x:Name="Imgbox7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1" >
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg7" Grid.Column="1"  Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill" >
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-
-                        <Image x:Name="Imgbox8" Margin="20,20,24,20"  Source="ms-appx:///Images/c1.jpeg" Stretch="Fill" Canvas.ZIndex="1">
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-                        <Image x:Name="BackImg8" Margin="20,20,24,20"  Source="ms-appx:///Images/c3.jpg" Stretch="Fill">
-                            <Image.FocusVisualPrimaryBrush>
-                                <ImageBrush/>
-                            </Image.FocusVisualPrimaryBrush>
-                            <Image.Projection>
-                                <PlaneProjection RotationY="0"/>
-                            </Image.Projection>
-                        </Image>
-
-                        <Border x:Name="grid1"   BorderBrush="Black" BorderThickness="4"   Margin="20,20,24,20" Grid.Row="1" Opacity="100" Tapped="grid1_Tapped" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid1" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0.098"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid x:Name="RoomAttributes1">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote1" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon1" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon1" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon1" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj1" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard1" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad1" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj1" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote2" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon2" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon2" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon2" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj2" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard2" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad2" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj2" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-                        <Border  x:Name="grid5"  BorderBrush="Black" BorderThickness="4"  Grid.Column="3" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
-                            <!--<Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Fill="#A717FF00" Canvas.ZIndex="2" Height="44" VerticalAlignment="Top"/>-->
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid5" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote3" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon3" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon3" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon3" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj3" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard3" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad3" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj3" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border  x:Name="grid3"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid3" Margin="0,0,0,0"  Height="157" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote4" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon4" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon4" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon4" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj4" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard4" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad4" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj4" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border  x:Name="grid4"  BorderBrush="Black" BorderThickness="4"   Grid.Column="3"  Margin="20,20,24,20" Grid.Row="1" Opacity="100" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid4" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote5" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon5" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon5" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon5" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj5" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard5" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad5" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj5" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border  x:Name="grid7"  BorderBrush="Black" BorderThickness="4"  Grid.Column="1"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid7" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote6" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon6" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon6" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon6" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj6" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard6" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad6" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj6" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border  x:Name="grid6"  BorderBrush="Black" BorderThickness="4"  Grid.Column="2" Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid6" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="Rum 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote7" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon7" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon7" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon7" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj7" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard7" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad7" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj7" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border  x:Name="grid8"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,24,20" Opacity="100" Canvas.ZIndex="2">
-                            <Grid>
-                                <Rectangle x:Name="RectangelGrid8" Margin="0,0,0,0" Height="160" VerticalAlignment="Top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#00000000" Offset="0.801"/>
-                                            <GradientStop Color="#CC17FF00" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                                <TextBlock HorizontalAlignment="Left" Margin="239,2,0,0" Text="{Binding RoomId}" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="48" Height="63.8438"/>
-                                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
-                                    <Border.Background>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.88"/>
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock x:Name="CompanyNote8" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                        <TextBlock x:Name="ProjIcon8" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                        <TextBlock x:Name="WhiteboardIcon8" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="SeatsIcon8" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                        <TextBlock x:Name="CheckProj8" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="CheckWhiteboard8" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                        <TextBlock x:Name="ErrWhiteboad8" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock x:Name="ErrProj8" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                        <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
+            <DataTemplate x:DataType="data:Attributes">
+                <Grid>
+                    
+                </Grid>
+            </DataTemplate>
         </GridView>
 
 
         <Grid x:Name="Grid4x2" Margin="75,190,75,100" Visibility="Collapsed">
->>>>>>> 2de678245843a6af35baf8fae2b777e3b44d5d72
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -916,7 +543,8 @@
                     </Border>
                 </Grid>
             </Border>
-        </GridView>
+        </Grid>
+
         <Grid x:Name="Grid3x2" Margin="100,190,100,100" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0*"/>
@@ -1890,8 +1518,6 @@
                 </SplitView.Content>
             </SplitView>
         </Grid>
-
-
         <Grid>
             <Button x:Name="imgbtn" Content="imgbtn" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
         </Grid>

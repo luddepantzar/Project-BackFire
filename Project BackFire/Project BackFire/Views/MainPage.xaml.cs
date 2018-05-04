@@ -72,7 +72,7 @@ namespace Project_BackFire.Views
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
-
+            
             List.Add(Imgbox1);
             List.Add(Imgbox2);
             List.Add(Imgbox3);
@@ -82,10 +82,7 @@ namespace Project_BackFire.Views
             List.Add(Imgbox7);
             List.Add(Imgbox8);
             List.Add(Imgbox9);
-            //for(var i = 0; i < List.Count; i++)
-            //{
-                
-            //}
+
             DoubleAnimation animation1 = new DoubleAnimation();
             animation1.From = 0.0;
             animation1.To = 180.0;
