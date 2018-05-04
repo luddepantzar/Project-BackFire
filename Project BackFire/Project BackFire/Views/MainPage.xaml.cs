@@ -73,19 +73,19 @@ namespace Project_BackFire.Views
         {
             List = new List<DependencyObject>();
 
-            List.Add(Imgbox1);
-            List.Add(Imgbox2);
-            List.Add(Imgbox3);
-            List.Add(Imgbox4);
-            List.Add(Imgbox5);
-            List.Add(Imgbox6);
-            List.Add(Imgbox7);
-            List.Add(Imgbox8);
-            List.Add(Imgbox9);
-            //for(var i = 0; i < List.Count; i++)
-            //{
-                
-            //}
+            List = Attributes.Count;
+            //List.Add(Imgbox1);
+            //List.Add(Imgbox2);
+            //List.Add(Imgbox3);
+            //List.Add(Imgbox4);
+            //List.Add(Imgbox5);
+            //List.Add(Imgbox6);
+            //List.Add(Imgbox7);
+            //List.Add(Imgbox8);
+            //List.Add(Imgbox9);
+
+            
+
             DoubleAnimation animation1 = new DoubleAnimation();
             animation1.From = 0.0;
             animation1.To = 180.0;
@@ -396,39 +396,34 @@ namespace Project_BackFire.Views
 
         public void StartTimer(int IntervalSec)
         {
-            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //if(IntervalSec > 0)
-            //{
-            //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-            //    DisTimer.Tick += DispatcherTimer_Tick;
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    DisTimer.Start();
-            //}
-            //else
-            //{
-            //    DisTimer.Tick += 
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    DisTimer.Stop();
-            //}
-        }
-
-        protected void DispatcherTimer_Tick()
-        {
-            
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            if (IntervalSec > 0)
+            {
+                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+                DisTimer.Tick +=  ;
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                DisTimer.Start();
+            }
+            else
+            {
+                DisTimer.Tick += ;
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                DisTimer.Stop();
+            }
         }
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
             StartTimer(5);
-            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //DispatcherTimer ButtonTimer = new DispatcherTimer();
-            //ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            //ButtonTimer.Tick += (sender, args) =>
-            //{
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    ButtonTimer.Stop();
-            //};
-            //ButtonTimer.Start();
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            DispatcherTimer ButtonTimer = new DispatcherTimer();
+            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+            ButtonTimer.Tick += (sender, args) =>
+            {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                ButtonTimer.Stop();
+            };
+            ButtonTimer.Start();
         }
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
