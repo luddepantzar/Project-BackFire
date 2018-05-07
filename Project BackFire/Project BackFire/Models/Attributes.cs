@@ -19,6 +19,11 @@ namespace Project_BackFire.Models
         public string BackImage { get; set; }
         public int Seats { get; set; }
 <<<<<<< HEAD
+        public bool Tv { get; set; }
+        public bool Wifi { get; set; }
+        public string CompanyNote { get; set; }
+=======
+<<<<<<< HEAD
         public string Note { get; set; }
 =======
 <<<<<<< HEAD
@@ -27,6 +32,7 @@ namespace Project_BackFire.Models
 >>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
 
 >>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
+>>>>>>> 94d6947c351e63df93954cfe2dfe1ce545f32682
     }
 
     public class AttributeManager
@@ -39,6 +45,16 @@ namespace Project_BackFire.Models
         {
             var attributes = new List<Attributes>();
 
+<<<<<<< HEAD
+            attributes.Add(new Attributes { RoomId = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 8 });
+            attributes.Add(new Attributes { RoomId = "Rum 2", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10});
+            attributes.Add(new Attributes { RoomId = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c3.jpg", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
+            attributes.Add(new Attributes { RoomId = "Rum 4", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
+            attributes.Add(new Attributes { RoomId = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            attributes.Add(new Attributes { RoomId = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            attributes.Add(new Attributes { RoomId = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            attributes.Add(new Attributes { RoomId = "Rum 8", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+=======
 <<<<<<< HEAD
             attributes.Add(new Attributes { RoomId = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = false, Seats = 8 });
             attributes.Add(new Attributes { RoomId = "Rum 2", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Seats = 10 });
@@ -61,21 +77,8 @@ namespace Project_BackFire.Models
 >>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
 
 
+>>>>>>> 94d6947c351e63df93954cfe2dfe1ce545f32682
             return attributes;
          }
     }
-<<<<<<< HEAD
-=======
-             
-    public class Images
-    {
-        public void GetAllImages()
-        {
-            BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
-            BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
-            BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
-
-        }
-    }
->>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
 }
