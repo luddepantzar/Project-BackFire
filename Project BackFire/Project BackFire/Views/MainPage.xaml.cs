@@ -24,9 +24,8 @@ namespace Project_BackFire.Views
 {
     public partial class Main : Page
     {
-
-        private List<Attributes> Attributes;
-
+        public List<Attributes> Attributes;
+        public int Count { get; set; }
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
@@ -63,11 +62,16 @@ namespace Project_BackFire.Views
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             //AnimationBack();
+<<<<<<< HEAD
             //AnimationFront();                     
+=======
+            AnimationFront();                     
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
             FlipCardConditions();
             Attributes = AttributeManager.GetAttributes();
         }
 
+<<<<<<< HEAD
         //public void AnimationFront()
         //{
 
@@ -160,6 +164,108 @@ namespace Project_BackFire.Views
         //   // rotationfront8.Children.Clear();
         //    rotationfront8.Children.Add(animation15);
         //}
+=======
+        public void AnimationFront()
+        {
+            List = new List<DependencyObject>();
+            //List.Add(Imgbox1);
+            //List.Add(Imgbox2);
+            //List.Add(Imgbox3);
+            //List.Add(Imgbox4);
+            //List.Add(Imgbox5);
+            //List.Add(Imgbox6);
+            //List.Add(Imgbox7);
+            //List.Add(Imgbox8);
+
+            DoubleAnimation animation1 = new DoubleAnimation();
+            animation1.From = 0.0;
+            animation1.To = 180.0;
+            animation1.BeginTime = TimeSpan.FromSeconds(0);
+            animation1.RepeatBehavior = new RepeatBehavior(1);
+            animation1.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation1, List[0]);
+            Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
+           // rotationfront1.Children.Clear();
+            rotationfront1.Children.Add(animation1);
+
+            DoubleAnimation animation3 = new DoubleAnimation();
+            animation3.From = 0.0;
+            animation3.To = 180.0;
+            animation3.BeginTime = TimeSpan.FromSeconds(0);
+            animation3.RepeatBehavior = new RepeatBehavior(1);
+            animation3.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation3, List[1]);
+            Storyboard.SetTargetProperty(animation3, "(UIElement.Projection).(PlaneProjection.RotationY)");
+            //rotationfront2.Children.Clear();
+            rotationfront2.Children.Add(animation3);
+
+            DoubleAnimation animation5 = new DoubleAnimation();
+            animation5.From = 0.0;
+            animation5.To = 180.0;
+            animation5.BeginTime = TimeSpan.FromSeconds(0);
+            animation5.RepeatBehavior = new RepeatBehavior(1);
+            animation5.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation5, List[2]);
+            Storyboard.SetTargetProperty(animation5, "(UIElement.Projection).(PlaneProjection.RotationY)");
+            //rotationfront3.Children.Clear();
+            rotationfront3.Children.Add(animation5);
+
+            DoubleAnimation animation7 = new DoubleAnimation();
+            animation7.From = 0.0;
+            animation7.To = 180.0;
+            animation7.BeginTime = TimeSpan.FromSeconds(0);
+            animation7.RepeatBehavior = new RepeatBehavior(1);
+            animation7.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation7, List[3]);
+            Storyboard.SetTargetProperty(animation7, "(UIElement.Projection).(PlaneProjection.RotationY)");
+          //rotationfront4.Children.Clear();
+            rotationfront4.Children.Add(animation7);
+
+            DoubleAnimation animation9 = new DoubleAnimation();
+            animation9.From = 0.0;
+            animation9.To = 180.0;
+            animation9.BeginTime = TimeSpan.FromSeconds(0);
+            animation9.RepeatBehavior = new RepeatBehavior(1);
+            animation9.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation9, List[4]);
+            Storyboard.SetTargetProperty(animation9, "(UIElement.Projection).(PlaneProjection.RotationY)");
+           // rotationfront5.Children.Clear();
+            rotationfront5.Children.Add(animation9);
+
+            DoubleAnimation animation11 = new DoubleAnimation();
+            animation11.From = 0.0;
+            animation11.To = 180.0;
+            animation11.BeginTime = TimeSpan.FromSeconds(0);
+            animation11.RepeatBehavior = new RepeatBehavior(1);
+            animation11.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation11, List[5]);
+            Storyboard.SetTargetProperty(animation11, "(UIElement.Projection).(PlaneProjection.RotationY)");
+           // rotationfront6.Children.Clear();
+            rotationfront6.Children.Add(animation11);
+
+            DoubleAnimation animation13 = new DoubleAnimation();
+            animation13.From = 0.0;
+            animation13.To = 180.0;
+            animation13.BeginTime = TimeSpan.FromSeconds(0);
+            animation13.RepeatBehavior = new RepeatBehavior(1);
+            animation13.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation13, List[6]);
+            Storyboard.SetTargetProperty(animation13, "(UIElement.Projection).(PlaneProjection.RotationY)");
+            //rotationfront7.Children.Clear();
+            rotationfront7.Children.Add(animation13);
+
+            DoubleAnimation animation15 = new DoubleAnimation();
+            animation15.From = 0.0;
+            animation15.To = 180.0;
+            animation15.BeginTime = TimeSpan.FromSeconds(0);
+            animation15.RepeatBehavior = new RepeatBehavior(1);
+            animation15.Duration = TimeSpan.FromSeconds(3);
+            Storyboard.SetTarget(animation15, List[7]);
+            Storyboard.SetTargetProperty(animation15, "(UIElement.Projection).(PlaneProjection.RotationY)");
+           // rotationfront8.Children.Clear();
+            rotationfront8.Children.Add(animation15);
+        }
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         //public void AnimationBack()
         //{
@@ -279,6 +385,7 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
         }
 
+<<<<<<< HEAD
         private void Fade()
         {
             //BackImg1.Opacity = 0;
@@ -329,10 +436,62 @@ namespace Project_BackFire.Views
 
             //rotationback8.Begin();
         }
+=======
+        //private void Fade()
+        //{
+        //    BackImg1.Opacity = 0;
+        //    BackImg2.Opacity = 0;
+        //    BackImg3.Opacity = 0;
+        //    BackImg4.Opacity = 0;
+        //    BackImg5.Opacity = 0;
+        //    BackImg6.Opacity = 0;
+        //    BackImg7.Opacity = 0;
+        //    BackImg8.Opacity = 0;
+
+        //    grid1.Opacity = 0;
+        //    grid2.Opacity = 0;
+        //    grid3.Opacity = 0;
+        //    grid4.Opacity = 0;
+        //    grid5.Opacity = 0;
+        //    grid6.Opacity = 0;
+        //    grid7.Opacity = 0;
+        //    grid8.Opacity = 0;
+
+        //    Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
+        //    Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+        //    grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
+        //    grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
+
+        //    BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
+        //    BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
+
+        //    rotationback8.Begin();
+        //}
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            Fade();
+            //Fade();
             Animation();
         }
 
@@ -455,8 +614,13 @@ namespace Project_BackFire.Views
             ButtonTimer.Start();
         }
 
+<<<<<<< HEAD
         public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+=======
+        //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
+        //{
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
         //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
         //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
         //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
@@ -501,7 +665,11 @@ namespace Project_BackFire.Views
         //        ColorTimer2.Start();
         //    };
         //    ColorTimer.Start();
+<<<<<<< HEAD
         }
+=======
+        //}
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         public void Image_Loaded(object sender, RoutedEventArgs e)
         {
@@ -512,6 +680,7 @@ namespace Project_BackFire.Views
             //img.Source = new BitmapImage(new Uri("ms-appx:///Images/test_logo.png"));
         }
 
+<<<<<<< HEAD
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             //if (Grid4x2.Visibility == Visibility.Collapsed)
@@ -574,6 +743,70 @@ namespace Project_BackFire.Views
             //    Grid2x2.Visibility = Visibility.Collapsed;
             //}
         }
+=======
+        //private void btn2_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Grid4x2.Visibility == Visibility.Collapsed)
+        //    {
+        //        Grid4x2.Visibility = Visibility.Visible;
+        //        Grid2x2.Visibility = Visibility.Collapsed;
+        //        Grid2x3.Visibility = Visibility.Collapsed;
+        //        Grid3x2.Visibility = Visibility.Collapsed;          
+        //    }
+        //    else
+        //    {
+        //        Grid4x2.Visibility = Visibility.Collapsed;
+        //    }
+        //}
+
+        //private void btn3_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Grid3x2.Visibility == Visibility.Collapsed)
+        //    {
+        //        Grid3x2.Visibility = Visibility.Visible;
+        //        Grid2x2.Visibility = Visibility.Collapsed;
+        //        Grid2x3.Visibility = Visibility.Collapsed;
+        //        Grid4x2.Visibility = Visibility.Collapsed;
+        //    }           
+        //    else if (Grid3x2.Visibility == Visibility.Visible) 
+        //    {
+        //        Grid3x2.Visibility = Visibility.Collapsed;
+        //    }
+        //}
+
+        //private void btn4_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Grid2x3.Visibility == Visibility.Collapsed)
+        //    {
+        //        Grid2x3.Visibility = Visibility.Visible;
+        //        Grid2x2.Visibility = Visibility.Collapsed;
+        //        Grid3x2.Visibility = Visibility.Collapsed;
+        //        Grid2x2.Visibility = Visibility.Collapsed;              
+        //        Grid3x2.Visibility = Visibility.Collapsed;
+        //        Grid4x2.Visibility = Visibility.Collapsed;
+        //    }
+        //    else
+        //    {
+        //        Grid2x3.Visibility = Visibility.Collapsed;
+        //    }
+        //}
+
+        //private void btn5_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Grid2x2.Visibility == Visibility.Collapsed)
+        //    {
+        //        Grid2x2.Visibility = Visibility.Visible;
+        //        Grid2x3.Visibility = Visibility.Collapsed;
+        //        Grid3x2.Visibility = Visibility.Collapsed;
+        //        Grid3x2.Visibility = Visibility.Collapsed;
+        //        Grid4x2.Visibility = Visibility.Collapsed;
+        //    }
+        //    else
+        //    {
+        //        Grid2x2.Visibility = Visibility.Collapsed;
+        //    }
+        //}
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
@@ -607,6 +840,7 @@ namespace Project_BackFire.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             //Random rndm = new Random();
             //var value = rndm.Next(0, 9);
 
@@ -691,6 +925,98 @@ namespace Project_BackFire.Views
         //    var attributes =  AttributeManager.GetAttributes();
         //    testBlock.Text = attributes.GetRange(1, 4).ToString();
         //}
+=======
+            
+        }
+
+        public void GetRoomid()
+        {
+            var attributes =  AttributeManager.GetAttributes();
+            testBlock.Text = attributes.GetRange(1, 4).ToString();
+        }
+
+        public void SwitchAttributes()
+        {
+            var attributes = AttributeManager.GetAttributes();
+            var Getattributes = Attributes;
+
+            Attribute[] AttributeArray = attributes.ToArray();
+
+            //switch (Getattributes)
+            //{
+            //    case (Projector = false && Wboard = false):
+            //        {
+            //            ErrProj.Visibility = Visibility.Visible;
+            //            ErrWhiteboad.Visibility = Visibility.Visible;
+            //            CheckProj.Visibility = Visibility.Collapsed;
+            //            CheckWhiteboard.Visibility = Visibility.Collapsed;
+
+            //            break;
+            //        }
+
+            //    case (Projector = true && Wboard = true):
+            //        {
+            //            ErrProj.Visibility = Visibility.Collapsed;
+            //            ErrWhiteboad.Visibility = Visibility.Collapsed;
+            //            CheckProj.Visibility = Visibility.Visible;
+            //            CheckWhiteboard.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+            //}
+        }
+
+        public void SwitchGrids()
+        {
+            var attributes = AttributeManager.GetAttributes();
+
+            for(var i = 0; i < attributes.Count; i++)
+            {
+                var count = i;
+            }
+            switch (attributes.Count)
+            {
+                case 1 :
+                    {
+                        break;
+                    }
+
+                case 2:
+                    {
+                        break;
+                    }
+
+                case 3:
+                    {
+                        break;
+                    }
+
+                case 4:
+                    {
+                        break;
+                    }
+
+                case 5:
+                    {
+                        break;
+                    }
+
+                case 6:
+                    {
+                        break;
+                    }
+
+                case 7:
+                    {
+                        break;
+                    }
+
+                case 8:
+                    {
+                        break;
+                    }
+            }
+        }
+>>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
     }
 
 }
