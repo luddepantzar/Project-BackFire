@@ -157,6 +157,9 @@ namespace Project_BackFire.Views
         //   // rotationfront8.Children.Clear();
         //    rotationfront8.Children.Add(animation15);
         //}
+<<<<<<< HEAD
+
+=======
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -257,6 +260,7 @@ namespace Project_BackFire.Views
            // rotationfront8.Children.Clear();
             rotationfront8.Children.Add(animation15);
         }
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
 
         //public void AnimationBack()
         //{
@@ -379,6 +383,63 @@ namespace Project_BackFire.Views
        
         private void Fade()
         {
+<<<<<<< HEAD
+=======
+            //BackImg1.Opacity = 0;
+            //BackImg2.Opacity = 0;
+            //BackImg3.Opacity = 0;
+            //BackImg4.Opacity = 0;
+            //BackImg5.Opacity = 0;
+            //BackImg6.Opacity = 0;
+            //BackImg7.Opacity = 0;
+            //BackImg8.Opacity = 0;
+
+            //grid1.Opacity = 0;
+            //grid2.Opacity = 0;
+            //grid3.Opacity = 0;
+            //grid4.Opacity = 0;
+            //grid5.Opacity = 0;
+            //grid6.Opacity = 0;
+            //grid7.Opacity = 0;
+            //grid8.Opacity = 0;
+
+            //Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+            //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
+            //grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
+
+            //BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
+            //BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
+
+            //rotationback8.Begin();
+        }
+<<<<<<< HEAD
+
+=======
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
+        //private void Fade()
+        //{
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
         //    BackImg1.Opacity = 0;
         //    BackImg2.Opacity = 0;
         //    BackImg3.Opacity = 0;
@@ -553,8 +614,11 @@ namespace Project_BackFire.Views
 
         public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+<<<<<<< HEAD
+=======
         //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         //{
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
         //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
         //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
         //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
@@ -600,8 +664,11 @@ namespace Project_BackFire.Views
         //    };
         //    ColorTimer.Start();
         }
+<<<<<<< HEAD
+=======
 
         //}
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
 
         public void Image_Loaded(object sender, RoutedEventArgs e)
         {
@@ -674,6 +741,8 @@ namespace Project_BackFire.Views
             //    Grid2x2.Visibility = Visibility.Collapsed;
             //}
         }
+<<<<<<< HEAD
+=======
 
         //private void btn2_Click(object sender, RoutedEventArgs e)
         //{
@@ -737,6 +806,7 @@ namespace Project_BackFire.Views
         //        Grid2x2.Visibility = Visibility.Collapsed;
         //    }
         //}
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
@@ -846,19 +916,42 @@ namespace Project_BackFire.Views
             //            break;
             //        }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
 
         //public void GetRoomid()
         //{
         //    var attributes =  AttributeManager.GetAttributes();
         //    testBlock.Text = attributes.GetRange(1, 4).ToString();
         //}
+<<<<<<< HEAD
               
+=======
+
+            
+        
+
+
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
+
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
         public void SwitchAttributes()
         {
             var attributes = AttributeManager.GetAttributes();
             var Getattributes = Attributes;
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
             //Attribute[] AttributeArray = attributes.ToArray();
 
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
             //switch (Getattributes)
             //{
             //    case (Projector = false && Wboard = false):
