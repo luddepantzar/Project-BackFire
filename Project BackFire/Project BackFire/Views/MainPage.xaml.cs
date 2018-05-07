@@ -62,16 +62,11 @@ namespace Project_BackFire.Views
             Timer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             //AnimationBack();
-<<<<<<< HEAD
             //AnimationFront();                     
-=======
-            AnimationFront();                     
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
             FlipCardConditions();
             Attributes = AttributeManager.GetAttributes();
         }
 
-<<<<<<< HEAD
         //public void AnimationFront()
         //{
 
@@ -164,7 +159,6 @@ namespace Project_BackFire.Views
         //   // rotationfront8.Children.Clear();
         //    rotationfront8.Children.Add(animation15);
         //}
-=======
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
@@ -265,7 +259,6 @@ namespace Project_BackFire.Views
            // rotationfront8.Children.Clear();
             rotationfront8.Children.Add(animation15);
         }
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         //public void AnimationBack()
         //{
@@ -385,7 +378,6 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
         }
 
-<<<<<<< HEAD
         private void Fade()
         {
             //BackImg1.Opacity = 0;
@@ -436,7 +428,6 @@ namespace Project_BackFire.Views
 
             //rotationback8.Begin();
         }
-=======
         //private void Fade()
         //{
         //    BackImg1.Opacity = 0;
@@ -487,7 +478,6 @@ namespace Project_BackFire.Views
 
         //    rotationback8.Begin();
         //}
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
@@ -614,13 +604,10 @@ namespace Project_BackFire.Views
             ButtonTimer.Start();
         }
 
-<<<<<<< HEAD
         public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         {
-=======
         //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         //{
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
         //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
         //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
         //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
@@ -665,11 +652,9 @@ namespace Project_BackFire.Views
         //        ColorTimer2.Start();
         //    };
         //    ColorTimer.Start();
-<<<<<<< HEAD
         }
-=======
+
         //}
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         public void Image_Loaded(object sender, RoutedEventArgs e)
         {
@@ -680,7 +665,6 @@ namespace Project_BackFire.Views
             //img.Source = new BitmapImage(new Uri("ms-appx:///Images/test_logo.png"));
         }
 
-<<<<<<< HEAD
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             //if (Grid4x2.Visibility == Visibility.Collapsed)
@@ -743,7 +727,7 @@ namespace Project_BackFire.Views
             //    Grid2x2.Visibility = Visibility.Collapsed;
             //}
         }
-=======
+
         //private void btn2_Click(object sender, RoutedEventArgs e)
         //{
         //    if (Grid4x2.Visibility == Visibility.Collapsed)
@@ -806,7 +790,6 @@ namespace Project_BackFire.Views
         //        Grid2x2.Visibility = Visibility.Collapsed;
         //    }
         //}
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
@@ -840,7 +823,6 @@ namespace Project_BackFire.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             //Random rndm = new Random();
             //var value = rndm.Next(0, 9);
 
@@ -925,22 +907,18 @@ namespace Project_BackFire.Views
         //    var attributes =  AttributeManager.GetAttributes();
         //    testBlock.Text = attributes.GetRange(1, 4).ToString();
         //}
-=======
-            
-        }
 
-        public void GetRoomid()
-        {
-            var attributes =  AttributeManager.GetAttributes();
-            testBlock.Text = attributes.GetRange(1, 4).ToString();
-        }
+            
+        
+
+
 
         public void SwitchAttributes()
         {
             var attributes = AttributeManager.GetAttributes();
             var Getattributes = Attributes;
 
-            Attribute[] AttributeArray = attributes.ToArray();
+            //Attribute[] AttributeArray = attributes.ToArray();
 
             //switch (Getattributes)
             //{
@@ -1016,7 +994,6 @@ namespace Project_BackFire.Views
                     }
             }
         }
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
     }
 
 }

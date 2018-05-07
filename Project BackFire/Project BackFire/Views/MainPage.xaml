@@ -39,7 +39,7 @@
                 </Image>
 
                 <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Opacity="100" Canvas.ZIndex="2">
-                    <Grid>
+                    <Grid Margin="0,0,0,0">
                         <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
                             <Rectangle.Fill>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -48,7 +48,9 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <TextBlock HorizontalAlignment="Left" Margin="0,2,0,0" Text="{Binding RoomId}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="15,2,0,0" Text="{Binding RoomId}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
+                        <TextBlock x:Name="SeatsIcon2" Width="40" Margin="0,13,50,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="CheckSeats2" Height="47" Margin="0,9,3,0" Text="8" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="40" FontFamily="Berlin Sans FB Demi" />
                         <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
                             <Border.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -56,41 +58,25 @@
                                     <GradientStop Color="#00000000" Offset="0"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-<<<<<<< HEAD
-=======
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-                                <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>
-                                <TextBlock x:Name="ProjIcon" Height="40" Margin="15,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                                <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="147,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                <TextBlock x:Name="SeatsIcon" Width="40" Margin="280,0,0,12" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                                <TextBlock x:Name="CheckProj" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                                <TextBlock x:Name="ErrWhiteboad" Height="40" Margin="189,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                <TextBlock x:Name="ErrProj" Height="40" Margin="57,0,0,13" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                                <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
-                            </Grid>
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
-                        </Border>
+                                     </Border>
 
-                        <!--<TextBlock x:Name="CompanyNote2" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>-->
-                        <TextBlock x:Name="ProjIcon2" Height="40" Margin="15,0,0,2" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
-                        <TextBlock x:Name="WhiteboardIcon2" Width="40" Margin="15,0,0,42" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                        <TextBlock x:Name="SeatsIcon2" Width="40" Margin="15,0,0,89" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                        <TextBlock x:Name="Wifiicon" Width="40" Margin="15,0,0,140" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                        <TextBlock x:Name="Tvicon" Width="40" Margin="15,0,0,171" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                        <TextBlock x:Name="CheckProj2" Height="40" Margin="59,0,0,2" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                        <TextBlock x:Name="CheckWhiteboard2" Height="40" Margin="59,0,0,42" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                        <TextBlock x:Name="CheckWifi" Height="40" Margin="59,0,0,135" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                        <TextBlock x:Name="CheckSeats2" Height="40" Margin="59,0,0,86" Text="8" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FontFamily="Berlin Sans FB Demi" />
-                        <TextBlock x:Name="CheckTV" Height="40" Margin="59,0,0,171" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+
+                        <Grid Margin="0,0,0,0" Width="311">
+                            <!--<TextBlock x:Name="CompanyNote2" HorizontalAlignment="Left" Margin="8,7,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" Height="19.9512"/>-->
+                        <TextBlock x:Name="ProjIcon2" Height="40" Margin="15,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
+                        <TextBlock x:Name="WhiteboardIcon2" Width="40" Margin="100,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="Wifiicon" Width="40" Margin="171,0,0,10" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="Tvicon" Width="40" Margin="245,0,0,3" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="CheckProj2" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="CheckWhiteboard2" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13E;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
                         <TextBlock x:Name="ErrWhiteboad2" Height="40" Margin="59,0,0,42" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                        <TextBlock x:Name="ErrProj2" Height="40" Margin="59,0,0,2" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                        <TextBlock x:Name="ErrProj2" Height="40" Margin="59,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                         <TextBlock x:Name="ErrWifi" Height="40" Margin="59,0,0,135" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                         <TextBlock x:Name="ErrTv" Height="40" Margin="59,0,0,171" FontFamily="Segoe MDL2 Assets" Text="&#xF13D;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                         <TextBlock HorizontalAlignment="Left" Margin="326,39,0,-77" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="40" Foreground="White"/>
+                        </Grid>
                     </Grid>
                 </Border>
             </Grid>
@@ -138,23 +124,12 @@
 
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-        <GridView ItemsSource = "{x:Bind Attributes}"  Width="Auto" Height="Auto" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}">
-<<<<<<< HEAD
+        <GridView ItemsSource = "{x:Bind Attributes}"  Width="Auto" Height="Auto" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
             <Grid>
                 <Image x:Name="one"/>
             </Grid>
         </GridView>
-
-
-=======
-
-            <DataTemplate x:DataType="data:Attributes">
-                <Grid>
-
-                </Grid>
-            </DataTemplate>
-        </GridView>
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
+    
 
         <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
@@ -213,10 +188,7 @@
                 </SplitView.Content>
             </SplitView>
         </Grid>
-<<<<<<< HEAD
-=======
 
->>>>>>> d979cef0d5e445b69855b97b1405c8a339e9eada
         <Grid>
             <Button x:Name="imgbtn" Content="imgbtn" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
         </Grid>
