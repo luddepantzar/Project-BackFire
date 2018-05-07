@@ -25,7 +25,7 @@ namespace Project_BackFire.Views
     public partial class Main : Page
     {
 
-        private List<Attributes> Attributes;
+        public List<Attributes> Attributes;
 
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
@@ -72,22 +72,6 @@ namespace Project_BackFire.Views
         public void AnimationFront()
         {
             List = new List<DependencyObject>();
-<<<<<<< HEAD
-
-            List = Attributes.Count;
-            //List.Add(Imgbox1);
-            //List.Add(Imgbox2);
-            //List.Add(Imgbox3);
-            //List.Add(Imgbox4);
-            //List.Add(Imgbox5);
-            //List.Add(Imgbox6);
-            //List.Add(Imgbox7);
-            //List.Add(Imgbox8);
-            //List.Add(Imgbox9);
-
-            
-=======
-            
             List.Add(Imgbox1);
             List.Add(Imgbox2);
             List.Add(Imgbox3);
@@ -96,8 +80,6 @@ namespace Project_BackFire.Views
             List.Add(Imgbox6);
             List.Add(Imgbox7);
             List.Add(Imgbox8);
-            List.Add(Imgbox9);
->>>>>>> 171b312c16211002225a75f3e7b492b778c6febf
 
             DoubleAnimation animation1 = new DoubleAnimation();
             animation1.From = 0.0;
@@ -409,20 +391,20 @@ namespace Project_BackFire.Views
 
         public void StartTimer(int IntervalSec)
         {
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            if (IntervalSec > 0)
-            {
-                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-                DisTimer.Tick +=  ;
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                DisTimer.Start();
-            }
-            else
-            {
-                DisTimer.Tick += ;
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                DisTimer.Stop();
-            }
+            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            //if (IntervalSec > 0)
+            //{
+            //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+            //    DisTimer.Tick +=  ;
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Start();
+            //}
+            //else
+            //{
+            //    DisTimer.Tick += ;
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Stop();
+            //}
         }
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
@@ -634,89 +616,41 @@ namespace Project_BackFire.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Random rndm = new Random();
-            var value = rndm.Next(0, 9);
-
-            switch(value)
-            {
-                case 1:
-                    {
-                        CheckProj1.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard1.Visibility = Visibility.Collapsed;
-                        ErrWhiteboad1.Visibility = Visibility.Visible;
-                        ErrProj1.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                case 2:
-                    {
-                        ErrWhiteboad2.Visibility = Visibility.Visible;
-                        ErrProj2.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard2.Visibility = Visibility.Collapsed;
-                        CheckProj2.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                case 3:
-                    {
-                        ErrWhiteboad3.Visibility = Visibility.Visible;
-                        ErrProj3.Visibility = Visibility.Visible;
-                        CheckProj3.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard3.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-
-                case 4:
-                    {
-                        ErrWhiteboad4.Visibility = Visibility.Visible;
-                        ErrProj4.Visibility = Visibility.Visible;
-                        CheckWhiteboard4.Visibility = Visibility.Collapsed;
-                        CheckProj4.Visibility= Visibility.Collapsed;
-                        break;
-                    }
-
-                case 5:
-                    {
-                        ErrProj5.Visibility = Visibility.Visible;
-                        ErrWhiteboad5.Visibility = Visibility.Visible;
-                        CheckProj5.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard5.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-
-                case 6:
-                    {
-                        ErrWhiteboad6.Visibility = Visibility.Visible;
-                        ErrProj6.Visibility = Visibility.Visible;
-                        CheckProj6.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard6.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-
-                case 7:
-                    {
-                        ErrProj7.Visibility = Visibility.Visible;
-                        ErrWhiteboad7.Visibility = Visibility.Visible;
-                        CheckProj7.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard7.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-
-                case 8:
-                    {
-                        ErrProj8.Visibility = Visibility.Visible;
-                        ErrWhiteboad8.Visibility = Visibility.Visible;
-                        CheckProj8.Visibility = Visibility.Collapsed;
-                        CheckWhiteboard8.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
+            
         }
 
         public void GetRoomid()
         {
             var attributes =  AttributeManager.GetAttributes();
             testBlock.Text = attributes.GetRange(1, 4).ToString();
+        }
+
+        public void SwitchAttributes()
+        {
+            var attributes = AttributeManager.GetAttributes();
+            var Getattributes = Attributes;
+
+            switch (Getattributes)
+            {
+                case (Projector = false && Wboard = false):
+                    {
+                        ErrProj.Visibility = Visibility.Visible;
+                        ErrWhiteboad.Visibility = Visibility.Visible;
+                        CheckProj.Visibility = Visibility.Collapsed;
+                        CheckWhiteboard.Visibility = Visibility.Collapsed;
+
+                        break;
+                    }
+
+                case (Projector = true && Wboard = true):
+                    {
+                        ErrProj.Visibility = Visibility.Collapsed;
+                        ErrWhiteboad.Visibility = Visibility.Collapsed;
+                        CheckProj.Visibility = Visibility.Visible;
+                        CheckWhiteboard.Visibility = Visibility.Visible;
+                        break;
+                    }
+            }
         }
     }
 
