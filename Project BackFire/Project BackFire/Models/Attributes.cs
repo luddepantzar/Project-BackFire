@@ -22,7 +22,6 @@ namespace Project_BackFire.Models
 
     public class AttributeManager
     {
-
         public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
         public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
