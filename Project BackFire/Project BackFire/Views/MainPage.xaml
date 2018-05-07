@@ -24,8 +24,7 @@
             <GradientStop Color="#FF363636" Offset="0.226"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
-<<<<<<< HEAD
-=======
+
         <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate">
             <Grid>
 
@@ -81,7 +80,6 @@
                 </Border>
             </Grid>
         </DataTemplate>
->>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
     </Page.Resources>
 
 
@@ -125,30 +123,12 @@
 
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-<<<<<<< HEAD
-        <GridView ItemsSource = "{x:Bind Attributes}"  Width="Auto" Height="Auto" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}">
-            <Grid>
-                <Image x:Name="one"/>
-    </Grid>
-    </GridView>
 
 
-    <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
-        <CommandBar.Content>
-            <Grid/>
-        </CommandBar.Content>
-        <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
-        <AppBarSeparator/>
-    </CommandBar>
-
-    <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
-        <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
-            <SplitView.Pane>
-                <StackPanel  Background="{StaticResource SettingsBackground}">
-                    <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-=======
         <GridView ItemsSource = "{x:Bind Attributes}"  Width="Auto" Height="Auto" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
-            <Grid></Grid>
+            <Grid>
+                
+            </Grid>
         </GridView>
 
 
@@ -165,7 +145,6 @@
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
->>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
                     Width="50" Height="50"  Click="HamburgerButton_Click"/>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="GeneralSettingsButton" FontFamily="Segoe MDL2 Assets" Content="&#xE713;"
@@ -198,7 +177,6 @@
                         <TextBlock HorizontalAlignment="Left" Margin="71,86,0,0" Text="- Rummet är ledigt om ca 45 minuter." TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="278"/>
                         <TextBlock HorizontalAlignment="Left" Margin="71,134,0,0" Text="- Rummet är bokat" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="254"/>
                     </Grid>
-<<<<<<< HEAD
                     <Grid x:Name="ApiSettingsGrid" Visibility="Collapsed">
                         <PasswordBox x:Name="ApiInput" HorizontalAlignment="Left" Margin="75,59,0,125" VerticalAlignment="Top" Width="286" Canvas.ZIndex="2"/>
                         <TextBlock HorizontalAlignment="Left" Margin="133,18,0,0" Text="API Lösenord" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontStyle="Italic" FontFamily="Franklin Gothic Demi"/>
@@ -215,7 +193,6 @@
     <Grid>
         <Button x:Name="imgbtn" Content="imgbtn" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
     </Grid>
-=======
                 </SplitView.Content>
             </SplitView>
         </Grid>
@@ -223,6 +200,5 @@
         <Grid>
             <Button x:Name="imgbtn" Content="imgbtn" HorizontalAlignment="Left" Margin="573,30,0,-62" VerticalAlignment="Top" Click="imgbtn_Click"/>
         </Grid>
->>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
     </Grid>
 </Page>
