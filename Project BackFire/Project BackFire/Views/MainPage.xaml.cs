@@ -69,8 +69,6 @@ namespace Project_BackFire.Views
 
         //public void AnimationFront()
         //{
-
-
         //    DoubleAnimation animation1 = new DoubleAnimation();
         //    animation1.From = 0.0;
         //    animation1.To = 180.0;
@@ -278,8 +276,11 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
         }
 
+       
         private void Fade()
         {
+<<<<<<< HEAD
+=======
             //BackImg1.Opacity = 0;
             //BackImg2.Opacity = 0;
             //BackImg3.Opacity = 0;
@@ -331,6 +332,7 @@ namespace Project_BackFire.Views
 
         //private void Fade()
         //{
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
         //    BackImg1.Opacity = 0;
         //    BackImg2.Opacity = 0;
         //    BackImg3.Opacity = 0;
@@ -367,7 +369,6 @@ namespace Project_BackFire.Views
         //    grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
         //    grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
         //    grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
         //    BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
@@ -376,9 +377,8 @@ namespace Project_BackFire.Views
         //    BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
         //    rotationback8.Begin();
-        //}
+        }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
@@ -625,7 +625,6 @@ namespace Project_BackFire.Views
                 //Application now has read/write access to the picked file
                 //this.textBlock.Text = "Picked photo: " + file.Path;
                 //Imgbox1.Source = new ImageSource(file.Path);
-
                 Logo.Source = new BitmapImage(new Uri(file.Path));
             }
             else
@@ -714,11 +713,48 @@ namespace Project_BackFire.Views
             //            break;
             //        }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
+
+        //public void GetRoomid()
+        //{
+        //    var attributes =  AttributeManager.GetAttributes();
+        //    testBlock.Text = attributes.GetRange(1, 4).ToString();
+        //}
+<<<<<<< HEAD
+              
+=======
+
+            
+        
+
+
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
+
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
+>>>>>>> 94d6947c351e63df93954cfe2dfe1ce545f32682
         public void SwitchAttributes()
         {
             var attributes = AttributeManager.GetAttributes();
             var Getattributes = Attributes;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
+            //Attribute[] AttributeArray = attributes.ToArray();
+
+>>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
+>>>>>>> 94d6947c351e63df93954cfe2dfe1ce545f32682
             //switch (Getattributes)
             //{
             //    case (Projector = false && Wboard = false):
