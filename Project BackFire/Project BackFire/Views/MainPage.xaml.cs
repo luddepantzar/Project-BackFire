@@ -69,8 +69,6 @@ namespace Project_BackFire.Views
 
         //public void AnimationFront()
         //{
-
-
         //    DoubleAnimation animation1 = new DoubleAnimation();
         //    animation1.From = 0.0;
         //    animation1.To = 180.0;
@@ -378,58 +376,9 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
         }
 
+       
         private void Fade()
         {
-            //BackImg1.Opacity = 0;
-            //BackImg2.Opacity = 0;
-            //BackImg3.Opacity = 0;
-            //BackImg4.Opacity = 0;
-            //BackImg5.Opacity = 0;
-            //BackImg6.Opacity = 0;
-            //BackImg7.Opacity = 0;
-            //BackImg8.Opacity = 0;
-
-            //grid1.Opacity = 0;
-            //grid2.Opacity = 0;
-            //grid3.Opacity = 0;
-            //grid4.Opacity = 0;
-            //grid5.Opacity = 0;
-            //grid6.Opacity = 0;
-            //grid7.Opacity = 0;
-            //grid8.Opacity = 0;
-
-            //Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
-            //Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-            //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
-            //grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
-            //BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
-            //BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
-            //rotationback8.Begin();
-        }
-        //private void Fade()
-        //{
         //    BackImg1.Opacity = 0;
         //    BackImg2.Opacity = 0;
         //    BackImg3.Opacity = 0;
@@ -466,7 +415,6 @@ namespace Project_BackFire.Views
         //    grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
         //    grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
         //    grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
         //    BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
@@ -475,9 +423,8 @@ namespace Project_BackFire.Views
         //    BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
         //    BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
         //    rotationback8.Begin();
-        //}
+        }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
@@ -811,7 +758,6 @@ namespace Project_BackFire.Views
                 //Application now has read/write access to the picked file
                 //this.textBlock.Text = "Picked photo: " + file.Path;
                 //Imgbox1.Source = new ImageSource(file.Path);
-
                 Logo.Source = new BitmapImage(new Uri(file.Path));
             }
             else
@@ -900,24 +846,17 @@ namespace Project_BackFire.Views
             //            break;
             //        }
         }
-    
 
         //public void GetRoomid()
         //{
         //    var attributes =  AttributeManager.GetAttributes();
         //    testBlock.Text = attributes.GetRange(1, 4).ToString();
         //}
-
-            
-        
-
-
-
+              
         public void SwitchAttributes()
         {
             var attributes = AttributeManager.GetAttributes();
             var Getattributes = Attributes;
-
             //Attribute[] AttributeArray = attributes.ToArray();
 
             //switch (Getattributes)
