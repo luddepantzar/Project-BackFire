@@ -59,25 +59,45 @@ namespace Project_BackFire.Views
 
         }
 
-
         async void Getname()
         {
-            string url = "https://api.rumsbokning.nu/api/companies";
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
             HttpClient client = new HttpClient();
 
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
-        
-            btn2.Content = data.id.ToString();
+
+            testbox.Text = data.name.ToString();
+
+            idbox.Text = data.mainColor.ToString();
+
+            switch(data.name)
+            {
+                case "Exeo AB":
+
+
+                    break;
+
+
+                case "företag2 AB":
+
+
+                    break;
+
+
+                default:
+
+                    break;
+
+            }
 
         }
 
+
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
-
 
         }
 
@@ -342,7 +362,7 @@ namespace Project_BackFire.Views
 
             if (attribute.Seats == 5 && attribute.RoomID == 1)
             {
-                
+
 
             }
             else
@@ -731,7 +751,7 @@ namespace Project_BackFire.Views
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-      
+
 
         }
     }
