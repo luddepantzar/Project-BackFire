@@ -26,6 +26,7 @@ namespace Project_BackFire.Views
     {
         public List<Attributes> Attributes;
         public int Count { get; set; }
+        private bool _allowexicution = false;
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
@@ -48,6 +49,10 @@ namespace Project_BackFire.Views
 
         public DispatcherTimer DisTimer = new DispatcherTimer();
 
+        public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
+        public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
+        public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
+
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -63,7 +68,8 @@ namespace Project_BackFire.Views
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             //AnimationBack();
             //AnimationFront();                     
-            FlipCardConditions();
+            //FlipCardConditions();
+            SwitchAttributes();
             Attributes = AttributeManager.GetAttributes();
         }
 
@@ -279,8 +285,6 @@ namespace Project_BackFire.Views
        
         private void Fade()
         {
-<<<<<<< HEAD
-=======
             //BackImg1.Opacity = 0;
             //BackImg2.Opacity = 0;
             //BackImg3.Opacity = 0;
@@ -330,56 +334,6 @@ namespace Project_BackFire.Views
             //rotationback8.Begin();
         }
 
-        //private void Fade()
-        //{
->>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
-        //    BackImg1.Opacity = 0;
-        //    BackImg2.Opacity = 0;
-        //    BackImg3.Opacity = 0;
-        //    BackImg4.Opacity = 0;
-        //    BackImg5.Opacity = 0;
-        //    BackImg6.Opacity = 0;
-        //    BackImg7.Opacity = 0;
-        //    BackImg8.Opacity = 0;
-
-        //    grid1.Opacity = 0;
-        //    grid2.Opacity = 0;
-        //    grid3.Opacity = 0;
-        //    grid4.Opacity = 0;
-        //    grid5.Opacity = 0;
-        //    grid6.Opacity = 0;
-        //    grid7.Opacity = 0;
-        //    grid8.Opacity = 0;
-
-        //    Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-        //    grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    rotationback8.Begin();
-        }
-
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             //Fade();
@@ -388,13 +342,13 @@ namespace Project_BackFire.Views
 
         private void FlipCardConditions()
         {
-            //if (List.Count < 8)
+            //if (Attributes.Count < 8)
             //{
             //    rotationback1.Stop();
             //    rotationfront1.Stop();
             //}
 
-            //while (List.Count > 8)
+            //while (Attributes.Count > 8)
             //{
 
             //    try
@@ -436,15 +390,16 @@ namespace Project_BackFire.Views
             //if (IntervalSec > 0)
             //{
             //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-            //    DisTimer.Tick +=  ;
+            //    DisTimer.Tick += ;
             //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
             //    DisTimer.Start();
+            //    _allowexicution = true;
             //}
             //else
             //{
-            //    DisTimer.Tick += ;
             //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
             //    DisTimer.Stop();
+            //    _allowexicution = false;
             //}
         }
 
@@ -507,7 +462,7 @@ namespace Project_BackFire.Views
 
         //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
         //{
-            
+
         //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
         //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
         //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
@@ -634,145 +589,73 @@ namespace Project_BackFire.Views
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //Random rndm = new Random();
-            //var value = rndm.Next(0, 9);
-
-            //switch(value)
-            //{
-            //    case 1:
-            //        {
-            //            CheckProj1.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard1.Visibility = Visibility.Collapsed;
-            //            ErrWhiteboad1.Visibility = Visibility.Visible;
-            //            ErrProj1.Visibility = Visibility.Visible;
-            //            break;
-            //        }
-
-            //    case 2:
-            //        {
-            //            ErrWhiteboad2.Visibility = Visibility.Visible;
-            //            ErrProj2.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard2.Visibility = Visibility.Collapsed;
-            //            CheckProj2.Visibility = Visibility.Visible;
-            //            break;
-            //        }
-
-            //    case 3:
-            //        {
-            //            ErrWhiteboad3.Visibility = Visibility.Visible;
-            //            ErrProj3.Visibility = Visibility.Visible;
-            //            CheckProj3.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard3.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-
-            //    case 4:
-            //        {
-            //            ErrWhiteboad4.Visibility = Visibility.Visible;
-            //            ErrProj4.Visibility = Visibility.Visible;
-            //            CheckWhiteboard4.Visibility = Visibility.Collapsed;
-            //            CheckProj4.Visibility= Visibility.Collapsed;
-            //            break;
-            //        }
-
-            //    case 5:
-            //        {
-            //            ErrProj5.Visibility = Visibility.Visible;
-            //            ErrWhiteboad5.Visibility = Visibility.Visible;
-            //            CheckProj5.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard5.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-
-            //    case 6:
-            //        {
-            //            ErrWhiteboad6.Visibility = Visibility.Visible;
-            //            ErrProj6.Visibility = Visibility.Visible;
-            //            CheckProj6.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard6.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-
-            //    case 7:
-            //        {
-            //            ErrProj7.Visibility = Visibility.Visible;
-            //            ErrWhiteboad7.Visibility = Visibility.Visible;
-            //            CheckProj7.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard7.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-
-            //    case 8:
-            //        {
-            //            ErrProj8.Visibility = Visibility.Visible;
-            //            ErrWhiteboad8.Visibility = Visibility.Visible;
-            //            CheckProj8.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard8.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-        }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
-
-        //public void GetRoomid()
-        //{
-        //    var attributes =  AttributeManager.GetAttributes();
-        //    testBlock.Text = attributes.GetRange(1, 4).ToString();
-        //}
-<<<<<<< HEAD
-              
-=======
-
-            
-        
-
-
->>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
-
->>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
->>>>>>> 94d6947c351e63df93954cfe2dfe1ce545f32682
         public void SwitchAttributes()
         {
-            var attributes = AttributeManager.GetAttributes();
-            var Getattributes = Attributes;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 5d862a1313d283e597d864f9a6eff82345ff1d49
-            //Attribute[] AttributeArray = attributes.ToArray();
-
->>>>>>> e771a96420580d9e3ea6995c12fb55a81633f571
->>>>>>> 94d6947c351e63df93954cfe2dfe1ce545f32682
-            //switch (Getattributes)
+            //var attributes = Attributes.FindAll();
+            //switch ()
             //{
-            //    case (Projector = false && Wboard = false):
+            //    case false:
             //        {
             //            ErrProj.Visibility = Visibility.Visible;
-            //            ErrWhiteboad.Visibility = Visibility.Visible;
             //            CheckProj.Visibility = Visibility.Collapsed;
-            //            CheckWhiteboard.Visibility = Visibility.Collapsed;
-
             //            break;
             //        }
 
-            //    case (Projector = true && Wboard = true):
+            //    case true:
             //        {
             //            ErrProj.Visibility = Visibility.Collapsed;
-            //            ErrWhiteboad.Visibility = Visibility.Collapsed;
             //            CheckProj.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+            //}
+
+            //switch (Wboard)
+            //{
+            //    case false:
+            //        {
+            //            CheckWhiteboard.Visibility = Visibility.Collapsed;
+            //            ErrWhiteboard.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+
+            //    case true:
+            //        {
             //            CheckWhiteboard.Visibility = Visibility.Visible;
+            //            ErrWhiteboard.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
+
+            //switch (Tv)
+            //{
+            //    case false:
+            //        {
+            //            CheckTV.Visibility = Visibility.Collapsed;
+            //            ErrTv.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+
+            //    case true:
+            //        {
+            //            CheckTV.Visibility = Visibility.Visible;
+            //            ErrTv.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
+
+            //switch (Wifi)
+            //{
+            //    case false:
+            //        {
+            //            CheckWifi.Visibility = Visibility.Collapsed;
+            //            ErrWifi.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+
+            //    case true:
+            //        {
+            //            CheckWifi.Visibility = Visibility.Visible;
+            //            ErrWifi.Visibility = Visibility.Collapsed;
             //            break;
             //        }
             //}
@@ -830,5 +713,4 @@ namespace Project_BackFire.Views
             }
         }
     }
-
 }
