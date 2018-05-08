@@ -32,7 +32,6 @@ namespace Project_BackFire.Views
 
 
 
-
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -68,6 +67,7 @@ namespace Project_BackFire.Views
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
+<<<<<<< HEAD
 
             testbox.Text = data.name.ToString();
 
@@ -93,6 +93,10 @@ namespace Project_BackFire.Views
 
             }
 
+=======
+        
+            btn2.Content = data.id.ToString();
+>>>>>>> ba70356e0c662f615c7248a4e166102d45699f07
         }
 
 
