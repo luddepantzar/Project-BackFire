@@ -2,32 +2,27 @@
 using Project_BackFire.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Input;
-using Windows.ApplicationModel.Resources.Core;
 using Windows.UI.ViewManagement;
-using Windows.UI;
 using Windows.UI.Xaml.Media.Animation;
-using System.Collections.Generic;
-using Microsoft.Toolkit.Uwp.UI.Animations;
-using System.Linq;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.Foundation.Collections;
-using System.IO;
-using Windows.Foundation;
-using System.Windows;
-using Microsoft.Win32;
 using Windows.UI.Xaml.Media.Imaging;
 using Project_BackFire.Models;
+using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
     {
-        public List<Attributes> Attributes;
+
+
         public int Count { get; set; }
-        private bool _allowexicution = false;
+
+        //private bool _allowexicution = false;
+
         List<DependencyObject> List { get; set; }
+
         DependencyObject ImageArray { get; set; }
         DispatcherTimer Timer = new DispatcherTimer();
         private Storyboard rotationfront1 = new Storyboard();
@@ -49,18 +44,28 @@ namespace Project_BackFire.Views
 
         public DispatcherTimer DisTimer = new DispatcherTimer();
 
+
+        private List<Attributes> Attributes;
+
         public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
         public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
 
+
+
+
+
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
+
+
         }
 
         public Main()
         {
             InitializeComponent();
+
             DataContext = this;
             Timer.Tick += TimerTick;
             Timer.Interval = new TimeSpan(0, 0, 1);
@@ -70,7 +75,32 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
             SwitchAttributes();
+
             Attributes = AttributeManager.GetAttributes();
+
+
+        }
+
+
+        async void Getname()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies ,aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Rootobject>(response);
+
+            Namnpåenjävlatextboxsomviintehar.text = data.name.ToString();
+
+        }
+
+
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+           
+
+
         }
 
         //public void AnimationFront()
@@ -258,8 +288,13 @@ namespace Project_BackFire.Views
 
         private void TimerTick(object sender, object e)
         {
+
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+
+
+
+
         }
 
         private void Animation()
@@ -282,7 +317,7 @@ namespace Project_BackFire.Views
             rotationback8.Begin();
         }
 
-       
+
         private void Fade()
         {
             //BackImg1.Opacity = 0;
@@ -337,7 +372,21 @@ namespace Project_BackFire.Views
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             //Fade();
-            Animation();
+            //Animation();
+
+
+            var attribute = (Attributes)e.OriginalSource;
+
+            if (attribute.Seats == 5 && attribute.RoomID == 1)
+            {
+                
+
+            }
+            else
+            {
+
+            }
+
         }
 
         private void FlipCardConditions()
@@ -665,13 +714,13 @@ namespace Project_BackFire.Views
         {
             var attributes = AttributeManager.GetAttributes();
 
-            for(var i = 0; i < attributes.Count; i++)
+            for (var i = 0; i < attributes.Count; i++)
             {
                 var count = i;
             }
             switch (attributes.Count)
             {
-                case 1 :
+                case 1:
                     {
                         break;
                     }
@@ -712,5 +761,13 @@ namespace Project_BackFire.Views
                     }
             }
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+      
+
+        }
+
+      
     }
 }
