@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation\ActivationHandler.cs" />
+    <Compile Include="ApiData.cs" />
     <Compile Include="Models\Attributes.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultLaunchActivationHandler.cs" />
