@@ -7,44 +7,24 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Project_BackFire.Models;
-<<<<<<< HEAD
 using System.Net;
-using Windows.Web.Http;
-=======
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
->>>>>>> d355e4946cdce8781a5a33b7a28ea060c2eb381f
 
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
     {
-<<<<<<< HEAD
         List<DependencyObject> List { get; set; }
         DependencyObject ImageArray { get; set; }
         public List<Attributes> Attributes;
         public int Count { get; set; }
         private bool _allowexicution = false;
-=======
-
-
-        public int Count { get; set; }
-
-        //private bool _allowexicution = false;
-
-        List<DependencyObject> List { get; set; }
-
-        DependencyObject ImageArray { get; set; }
-        DispatcherTimer Timer = new DispatcherTimer();
->>>>>>> d355e4946cdce8781a5a33b7a28ea060c2eb381f
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
         public DispatcherTimer DisTimer = new DispatcherTimer();
         private TimeSpan SpanTime;
-
-
-        private List<Attributes> Attributes;
 
         public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
@@ -93,7 +73,6 @@ namespace Project_BackFire.Views
             Namnpåenjävlatextboxsomviintehar.text = data.name.ToString();
 
         }
-
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -301,12 +280,7 @@ namespace Project_BackFire.Views
             rotationfront1.Begin();
             rotationback1.Begin();
         }
-<<<<<<< HEAD
-       
-=======
 
-
->>>>>>> d355e4946cdce8781a5a33b7a28ea060c2eb381f
         private void Fade()
         {
             //BackImg1.Opacity = 0;
@@ -760,7 +734,5 @@ namespace Project_BackFire.Views
       
 
         }
-
-      
     }
 }
