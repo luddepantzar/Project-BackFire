@@ -32,7 +32,6 @@ namespace Project_BackFire.Views
 
 
 
-
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -62,7 +61,7 @@ namespace Project_BackFire.Views
 
         async void Getname()
         {
-            string url = "https://api.rumsbokning.nu/api/companies";
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
             HttpClient client = new HttpClient();
 
@@ -71,7 +70,6 @@ namespace Project_BackFire.Views
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
         
             btn2.Content = data.id.ToString();
-
         }
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
