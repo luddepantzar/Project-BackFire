@@ -7,6 +7,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Project_BackFire.Models;
+using System.Net;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -14,37 +15,15 @@ namespace Project_BackFire.Views
 {
     public partial class Main : Page
     {
-
-
-        public int Count { get; set; }
-
-        //private bool _allowexicution = false;
-
         List<DependencyObject> List { get; set; }
-
         DependencyObject ImageArray { get; set; }
-        DispatcherTimer Timer = new DispatcherTimer();
+        public List<Attributes> Attributes;
+        public int Count { get; set; }
+        private bool _allowexicution = false;
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
-        private Storyboard rotationback2 = new Storyboard();
-        private Storyboard rotationback3 = new Storyboard();
-        private Storyboard rotationback4 = new Storyboard();
-        private Storyboard rotationback5 = new Storyboard();
-        private Storyboard rotationback6 = new Storyboard();
-        private Storyboard rotationback7 = new Storyboard();
-        private Storyboard rotationback8 = new Storyboard();
-        private Storyboard rotationfront2 = new Storyboard();
-        private Storyboard rotationfront3 = new Storyboard();
-        private Storyboard rotationfront4 = new Storyboard();
-        private Storyboard rotationfront5 = new Storyboard();
-        private Storyboard rotationfront6 = new Storyboard();
-        private Storyboard rotationfront7 = new Storyboard();
-        private Storyboard rotationfront8 = new Storyboard();
-
         public DispatcherTimer DisTimer = new DispatcherTimer();
-
-
-        private List<Attributes> Attributes;
+        private TimeSpan SpanTime;
 
         public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
@@ -66,9 +45,9 @@ namespace Project_BackFire.Views
             InitializeComponent();
 
             DataContext = this;
-            Timer.Tick += TimerTick;
-            Timer.Interval = new TimeSpan(0, 0, 1);
-            Timer.Start();
+            DisTimer.Tick += TimerTick;
+            DisTimer.Interval = new TimeSpan(0, 0, 1);
+            DisTimer.Start();
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             //AnimationBack();
             //AnimationFront();                     
@@ -94,7 +73,6 @@ namespace Project_BackFire.Views
             btn2.Content = data.id.ToString();
 
         }
-
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -300,23 +278,8 @@ namespace Project_BackFire.Views
         private void Animation()
         {
             rotationfront1.Begin();
-            rotationfront2.Begin();
-            rotationfront3.Begin();
-            rotationfront4.Begin();
-            rotationfront5.Begin();
-            rotationfront6.Begin();
-            rotationfront7.Begin();
-            rotationfront8.Begin();
             rotationback1.Begin();
-            rotationback2.Begin();
-            rotationback3.Begin();
-            rotationback4.Begin();
-            rotationback5.Begin();
-            rotationback6.Begin();
-            rotationback7.Begin();
-            rotationback8.Begin();
         }
-
 
         private void Fade()
         {
@@ -435,35 +398,39 @@ namespace Project_BackFire.Views
 
         public void StartTimer(int IntervalSec)
         {
-            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //if (IntervalSec > 0)
-            //{
-            //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-            //    DisTimer.Tick += ;
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    DisTimer.Start();
-            //    _allowexicution = true;
-            //}
-            //else
-            //{
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    DisTimer.Stop();
-            //    _allowexicution = false;
-            //}
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            if (IntervalSec > 0)
+            {
+                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+                DisTimer.Tick += TimerOnTick;
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                DisTimer.Start();
+            }
+            else
+            {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                DisTimer.Stop();
+                _allowexicution = false;
+            }
+        }
+
+        public void TimerOnTick(object sender, object o)
+        {
+            SpanTime = SpanTime.Add(DisTimer.Interval);
         }
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
             StartTimer(5);
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            DispatcherTimer ButtonTimer = new DispatcherTimer();
-            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            ButtonTimer.Tick += (sender, args) =>
-            {
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                ButtonTimer.Stop();
-            };
-            ButtonTimer.Start();
+            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            //DispatcherTimer ButtonTimer = new DispatcherTimer();
+            //ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+            //ButtonTimer.Tick += (sender, args) =>
+            //{
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    ButtonTimer.Stop();
+            //};
+            //ButtonTimer.Start();
         }
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
@@ -767,7 +734,5 @@ namespace Project_BackFire.Views
       
 
         }
-
-      
     }
 }
