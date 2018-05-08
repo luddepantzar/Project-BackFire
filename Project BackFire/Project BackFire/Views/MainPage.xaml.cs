@@ -10,7 +10,6 @@ using Project_BackFire.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
-
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
@@ -77,21 +76,22 @@ namespace Project_BackFire.Views
             SwitchAttributes();
 
             Attributes = AttributeManager.GetAttributes();
-
+            Getname();
 
         }
 
 
         async void Getname()
         {
-            string url = "https://api.rumsbokning.nu/api/companies ,aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
+            string url = "https://api.rumsbokning.nu/api/companies";
+
             HttpClient client = new HttpClient();
 
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
-
-            Namnpåenjävlatextboxsomviintehar.text = data.name.ToString();
+        
+            btn2.Content = data.id.ToString();
 
         }
 
