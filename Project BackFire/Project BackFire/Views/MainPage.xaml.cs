@@ -11,6 +11,9 @@ using System.Net;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Windows.UI.Xaml.Media;
+using Windows.UI;
+
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
@@ -19,7 +22,6 @@ namespace Project_BackFire.Views
         DependencyObject ImageArray { get; set; }
         public List<Attributes> Attributes;
         public int Count { get; set; }
-        private bool _allowexicution = false;
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
         public DispatcherTimer DisTimer = new DispatcherTimer();
@@ -62,27 +64,29 @@ namespace Project_BackFire.Views
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
+            BitmapImage image = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/image"));
+
             HttpClient client = new HttpClient();
 
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
-<<<<<<< HEAD
 
             testbox.Text = data.name.ToString();
 
             idbox.Text = data.mainColor.ToString();
 
-            switch(data.name)
+            //Logo.Source = image;
+
+            switch (data.mainColor)
             {
-                case "Exeo AB":
-
-
+                case "#FF3399BD":
+                    ContentArea.Background = (LinearGradientBrush)Resources["Test"];
+                    MenuBar.Background = (LinearGradientBrush)Resources["tja"];
                     break;
 
 
                 case "företag2 AB":
-
 
                     break;
 
@@ -92,11 +96,6 @@ namespace Project_BackFire.Views
                     break;
 
             }
-
-=======
-        
-            btn2.Content = data.id.ToString();
->>>>>>> ba70356e0c662f615c7248a4e166102d45699f07
         }
 
 
@@ -366,8 +365,7 @@ namespace Project_BackFire.Views
 
             if (attribute.Seats == 5 && attribute.RoomID == 1)
             {
-
-
+                
             }
             else
             {
@@ -422,20 +420,20 @@ namespace Project_BackFire.Views
 
         public void StartTimer(int IntervalSec)
         {
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            if (IntervalSec > 0)
-            {
-                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-                DisTimer.Tick += TimerOnTick;
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                DisTimer.Start();
-            }
-            else
-            {
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                DisTimer.Stop();
-                _allowexicution = false;
-            }
+            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            //if (IntervalSec > 0)
+            //{
+            //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+            //    DisTimer.Tick += TimerOnTick;
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Start();
+            //}
+            //else
+            //{
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Stop();
+            //    _allowexicution = false;
+            //}
         }
 
         public void TimerOnTick(object sender, object o)
@@ -445,16 +443,16 @@ namespace Project_BackFire.Views
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
-            StartTimer(5);
-            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //DispatcherTimer ButtonTimer = new DispatcherTimer();
-            //ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            //ButtonTimer.Tick += (sender, args) =>
-            //{
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    ButtonTimer.Stop();
-            //};
-            //ButtonTimer.Start();
+            //StartTimer(5);
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            DispatcherTimer ButtonTimer = new DispatcherTimer();
+            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+            ButtonTimer.Tick += (sender, args) =>
+            {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                ButtonTimer.Stop();
+            };
+            ButtonTimer.Start();
         }
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)

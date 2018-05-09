@@ -25,6 +25,16 @@
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
 
+        <LinearGradientBrush x:Key="Test" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF9958FF" Offset="0.826"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="tja" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#455254" Offset="0.010"/>
+            <GradientStop Color="#293132" Offset="0.48"/>
+        </LinearGradientBrush>
+
         <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate">
             <Grid>
                 <Image x:Name="one" Margin="20,20,20,20"  Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
@@ -99,7 +109,7 @@
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Assets/test_logo.png" Loaded="Image_Loaded" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
+            <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Assets/test_logo_whitetxt.png" Loaded="Image_Loaded" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
                 <Image.FocusVisualPrimaryBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -108,8 +118,8 @@
                 </Image.FocusVisualPrimaryBrush>
             </Image>
             <Button x:Name="btn1" Content="btn1" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
-            <TextBlock x:Name="TodaysDate" Margin="0,78,30,14"   TextWrapping="Wrap" FontSize="20" Foreground="Black" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
-            <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TodaysDate" Margin="0,78,30,14"   TextWrapping="Wrap" FontSize="20" Foreground="White" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
 
         </Grid>
@@ -125,7 +135,55 @@
 
         <GridView ItemsSource = "{x:Bind Attributes}" ItemClick="GridView_ItemClick" Width="Auto" Height="Auto" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
             <Grid>
-                
+                <Image x:Name="one" Margin="20,20,20,20"  Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
+                    <Image.Projection>
+                        <PlaneProjection RotationY="0"/>
+                    </Image.Projection>
+                </Image>
+                <Image x:Name="two" Margin="20,20,20,20"  Source="{Binding BackImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
+                    <Image.Projection>
+                        <PlaneProjection RotationY="0"/>
+                    </Image.Projection>
+                </Image>
+
+                <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Opacity="100" Canvas.ZIndex="2">
+                    <Grid Margin="0,0,0,0">
+                        <Rectangle x:Name="RectangelGrid2" x:Uid='BookedIndicator' Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#00000000" Offset="0.801"/>
+                                    <GradientStop Color="#CC17FF00" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock x:Name="SeatsIcon" Width="40" Margin="0,13,65,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{Binding Seats}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
+                        <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black" Offset="0.88"/>
+                                    <GradientStop Color="#00000000" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+
+                        <Grid Margin="0,0,0,0" Width="311">
+                            <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" Margin="8,140,0,0" Text="{Binding Note}" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="99" FontSize="16" FocusVisualSecondaryBrush="#99FFFFFF"/>
+                            <TextBlock x:Name="ProjIcon" Height="40" Margin="15,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
+                            <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="100,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                            <TextBlock x:Name="Wifiicon" Width="40" Margin="171,0,0,10" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                            <TextBlock x:Name="Tvicon" Width="40" Margin="245,0,0,3" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                            <TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="ErrWhiteboad" Height="40" Margin="59,0,0,42" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="ErrProj" Height="40" Margin="59,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="ErrWifi" Height="40" Margin="59,0,0,135" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="ErrTv" Height="40" Margin="59,0,0,171" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                        </Grid>
+                    </Grid>
+                </Border>
             </Grid>
         </GridView>
 
