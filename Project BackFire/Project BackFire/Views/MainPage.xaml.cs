@@ -11,9 +11,9 @@ using System.Net;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Microsoft.Toolkit.Uwp.UI.Animations;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
-
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
@@ -34,8 +34,6 @@ namespace Project_BackFire.Views
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
-
-
         }
 
         public Main()
@@ -52,6 +50,10 @@ namespace Project_BackFire.Views
             //FlipCardConditions();
             SwitchAttributes();
             Attributes = AttributeManager.GetAttributes();
+<<<<<<< HEAD
+=======
+            Getname();
+>>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
         }
 
         async void Getname()
@@ -66,18 +68,30 @@ namespace Project_BackFire.Views
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
 
+<<<<<<< HEAD
             Logo.Source = image;
+=======
+            //testbox.Text = data.name.ToString();
 
-            switch (data.mainColor)
-            {
-                case "#FF3399BD":
-                    ContentArea.Background = (LinearGradientBrush)Resources["Test"];
-                    MenuBar.Background = (LinearGradientBrush)Resources["tja"];
-                    break;
+            //idbox.Text = data.mainColor.ToString();
 
+            //switch (data.code)
+            //{
+            //    case "1234":
+>>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
+
+            //        ContentArea.Background = (LinearGradientBrush)Resources["Test"];
+            //        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+            //        break;
+
+<<<<<<< HEAD
                 default:
+=======
 
-                    break;
+            //    case "företag2 AB":
+>>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
+
+            //        break;
 
             }
         }
@@ -86,6 +100,7 @@ namespace Project_BackFire.Views
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
+<<<<<<< HEAD
             BitmapImage image = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/image"));
 
             HttpClient client = new HttpClient();
@@ -98,6 +113,13 @@ namespace Project_BackFire.Views
             {
                 Getname();
             }
+=======
+            //    default:
+
+            //        break;
+
+            //}
+>>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
         }
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
@@ -106,10 +128,6 @@ namespace Project_BackFire.Views
             InputApiBox();
         }
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
 
         //public void AnimationFront()
         //{
@@ -299,10 +317,6 @@ namespace Project_BackFire.Views
 
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
-
-
-
-
         }
 
         private void Animation()
@@ -331,7 +345,7 @@ namespace Project_BackFire.Views
             //grid7.Opacity = 0;
             //grid8.Opacity = 0;
 
-            //Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //bild1.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -364,20 +378,9 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            //Fade();
-            //Animation();
+            Fade();
+            Animation();
 
-
-            var attribute = (Attributes)e.OriginalSource;
-
-            if (attribute.Seats == 5 && attribute.RoomID == 1)
-            {
-                
-            }
-            else
-            {
-
-            }
 
         }
 
@@ -748,5 +751,7 @@ namespace Project_BackFire.Views
 
 
         }
+
+      
     }
 }
