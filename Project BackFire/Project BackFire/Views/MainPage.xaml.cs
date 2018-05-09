@@ -11,6 +11,8 @@ using System.Net;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Microsoft.Toolkit.Uwp.UI.Animations;
+
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
@@ -35,8 +37,6 @@ namespace Project_BackFire.Views
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
-
-
         }
 
         public Main()
@@ -55,7 +55,6 @@ namespace Project_BackFire.Views
 
             Attributes = AttributeManager.GetAttributes();
             Getname();
-
         }
 
         async void Getname()
@@ -67,36 +66,12 @@ namespace Project_BackFire.Views
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
-<<<<<<< HEAD
 
             testbox.Text = data.name.ToString();
 
             idbox.Text = data.mainColor.ToString();
 
-            switch(data.name)
-            {
-                case "Exeo AB":
-
-
-                    break;
-
-
-                case "företag2 AB":
-
-
-                    break;
-
-
-                default:
-
-                    break;
-
-            }
-
-=======
-        
-            btn2.Content = data.id.ToString();
->>>>>>> ba70356e0c662f615c7248a4e166102d45699f07
+          
         }
 
 
@@ -293,10 +268,6 @@ namespace Project_BackFire.Views
 
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
-
-
-
-
         }
 
         private void Animation()
@@ -325,7 +296,7 @@ namespace Project_BackFire.Views
             //grid7.Opacity = 0;
             //grid8.Opacity = 0;
 
-            //Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            bild1.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -358,21 +329,21 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            //Fade();
-            //Animation();
+            Fade();
+            Animation();
 
 
-            var attribute = (Attributes)e.OriginalSource;
+            //var attribute = (Attributes)e.OriginalSource;
 
-            if (attribute.Seats == 5 && attribute.RoomID == 1)
-            {
+            //if (attribute.Seats == 5 && attribute.RoomID == 1)
+            //{
 
 
-            }
-            else
-            {
+            //}
+            //else
+            //{
 
-            }
+            //}
 
         }
 
