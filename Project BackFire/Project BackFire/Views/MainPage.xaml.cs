@@ -11,13 +11,9 @@ using System.Net;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
-<<<<<<< HEAD
 using Microsoft.Toolkit.Uwp.UI.Animations;
-=======
 using Windows.UI.Xaml.Media;
 using Windows.UI;
->>>>>>> 8726d28fca8a2e8d0bd5865cfd1e83359257b253
-
 namespace Project_BackFire.Views
 {
     public partial class Main : Page
@@ -73,41 +69,32 @@ namespace Project_BackFire.Views
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
 
-            testbox.Text = data.name.ToString();
+            //testbox.Text = data.name.ToString();
 
-            idbox.Text = data.mainColor.ToString();
+            //idbox.Text = data.mainColor.ToString();
 
-<<<<<<< HEAD
-          
-=======
-            //Logo.Source = image;
+            //switch (data.code)
+            //{
+            //    case "1234":
 
-            switch (data.mainColor)
-            {
-                case "#FF3399BD":
-                    ContentArea.Background = (LinearGradientBrush)Resources["Test"];
-                    MenuBar.Background = (LinearGradientBrush)Resources["tja"];
-                    break;
+            //        ContentArea.Background = (LinearGradientBrush)Resources["Test"];
+            //        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+            //        break;
 
 
-                case "företag2 AB":
+            //    case "företag2 AB":
 
-                    break;
+            //        break;
 
 
-                default:
+            //    default:
 
-                    break;
+            //        break;
 
-            }
->>>>>>> 8726d28fca8a2e8d0bd5865cfd1e83359257b253
+            //}
         }
 
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
 
         //public void AnimationFront()
         //{
@@ -325,7 +312,7 @@ namespace Project_BackFire.Views
             //grid7.Opacity = 0;
             //grid8.Opacity = 0;
 
-            bild1.Fade(duration: 1000, delay: 0, value: 0).Start();
+            //bild1.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
             //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
@@ -361,27 +348,6 @@ namespace Project_BackFire.Views
             Fade();
             Animation();
 
-
-            //var attribute = (Attributes)e.OriginalSource;
-
-<<<<<<< HEAD
-            //if (attribute.Seats == 5 && attribute.RoomID == 1)
-            //{
-
-
-            //}
-            //else
-            //{
-=======
-            if (attribute.Seats == 5 && attribute.RoomID == 1)
-            {
-                
-            }
-            else
-            {
->>>>>>> 8726d28fca8a2e8d0bd5865cfd1e83359257b253
-
-            //}
 
         }
 
@@ -767,5 +733,7 @@ namespace Project_BackFire.Views
 
 
         }
+
+      
     }
 }
