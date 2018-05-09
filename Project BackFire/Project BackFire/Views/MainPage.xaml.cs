@@ -31,9 +31,6 @@ namespace Project_BackFire.Views
         public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
         public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
 
-
-
-
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -54,10 +51,7 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
             SwitchAttributes();
-
             Attributes = AttributeManager.GetAttributes();
-            Getname();
-
         }
 
         async void Getname()
@@ -72,11 +66,7 @@ namespace Project_BackFire.Views
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
 
-            testbox.Text = data.name.ToString();
-
-            idbox.Text = data.mainColor.ToString();
-
-            //Logo.Source = image;
+            Logo.Source = image;
 
             switch (data.mainColor)
             {
@@ -85,12 +75,6 @@ namespace Project_BackFire.Views
                     MenuBar.Background = (LinearGradientBrush)Resources["tja"];
                     break;
 
-
-                case "företag2 AB":
-
-                    break;
-
-
                 default:
 
                     break;
@@ -98,6 +82,29 @@ namespace Project_BackFire.Views
             }
         }
 
+        public async void InputApiBox()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
+
+            BitmapImage image = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/image"));
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Rootobject>(response);
+
+            if (ApiInput.Password == data.code)
+            {
+                Getname();
+            }
+        }
+
+        private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
+        {
+            ApiContainer.Visibility = Visibility.Visible;
+            InputApiBox();
+        }
 
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -598,11 +605,6 @@ namespace Project_BackFire.Views
             //}
         }
 
-        private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
-        {
-            ApiContainer.Visibility = Visibility.Visible;
-        }
-
         private async void imgbtn_Click(object sender, RoutedEventArgs e)
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -709,16 +711,6 @@ namespace Project_BackFire.Views
             }
             switch (attributes.Count)
             {
-                case 1:
-                    {
-                        break;
-                    }
-
-                case 2:
-                    {
-                        break;
-                    }
-
                 case 3:
                     {
                         break;
