@@ -11,7 +11,12 @@ using System.Net;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
+<<<<<<< HEAD
 using Microsoft.Toolkit.Uwp.UI.Animations;
+=======
+using Windows.UI.Xaml.Media;
+using Windows.UI;
+>>>>>>> 8726d28fca8a2e8d0bd5865cfd1e83359257b253
 
 namespace Project_BackFire.Views
 {
@@ -21,7 +26,6 @@ namespace Project_BackFire.Views
         DependencyObject ImageArray { get; set; }
         public List<Attributes> Attributes;
         public int Count { get; set; }
-        private bool _allowexicution = false;
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
         public DispatcherTimer DisTimer = new DispatcherTimer();
@@ -61,6 +65,8 @@ namespace Project_BackFire.Views
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
+            BitmapImage image = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/image"));
+
             HttpClient client = new HttpClient();
 
             string response = await client.GetStringAsync(url);
@@ -71,7 +77,30 @@ namespace Project_BackFire.Views
 
             idbox.Text = data.mainColor.ToString();
 
+<<<<<<< HEAD
           
+=======
+            //Logo.Source = image;
+
+            switch (data.mainColor)
+            {
+                case "#FF3399BD":
+                    ContentArea.Background = (LinearGradientBrush)Resources["Test"];
+                    MenuBar.Background = (LinearGradientBrush)Resources["tja"];
+                    break;
+
+
+                case "företag2 AB":
+
+                    break;
+
+
+                default:
+
+                    break;
+
+            }
+>>>>>>> 8726d28fca8a2e8d0bd5865cfd1e83359257b253
         }
 
 
@@ -335,6 +364,7 @@ namespace Project_BackFire.Views
 
             //var attribute = (Attributes)e.OriginalSource;
 
+<<<<<<< HEAD
             //if (attribute.Seats == 5 && attribute.RoomID == 1)
             //{
 
@@ -342,6 +372,14 @@ namespace Project_BackFire.Views
             //}
             //else
             //{
+=======
+            if (attribute.Seats == 5 && attribute.RoomID == 1)
+            {
+                
+            }
+            else
+            {
+>>>>>>> 8726d28fca8a2e8d0bd5865cfd1e83359257b253
 
             //}
 
@@ -393,20 +431,20 @@ namespace Project_BackFire.Views
 
         public void StartTimer(int IntervalSec)
         {
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            if (IntervalSec > 0)
-            {
-                DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-                DisTimer.Tick += TimerOnTick;
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                DisTimer.Start();
-            }
-            else
-            {
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                DisTimer.Stop();
-                _allowexicution = false;
-            }
+            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            //if (IntervalSec > 0)
+            //{
+            //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+            //    DisTimer.Tick += TimerOnTick;
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Start();
+            //}
+            //else
+            //{
+            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    DisTimer.Stop();
+            //    _allowexicution = false;
+            //}
         }
 
         public void TimerOnTick(object sender, object o)
@@ -416,16 +454,16 @@ namespace Project_BackFire.Views
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
-            StartTimer(5);
-            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //DispatcherTimer ButtonTimer = new DispatcherTimer();
-            //ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            //ButtonTimer.Tick += (sender, args) =>
-            //{
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    ButtonTimer.Stop();
-            //};
-            //ButtonTimer.Start();
+            //StartTimer(5);
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            DispatcherTimer ButtonTimer = new DispatcherTimer();
+            ButtonTimer.Interval = TimeSpan.FromSeconds(5);
+            ButtonTimer.Tick += (sender, args) =>
+            {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                ButtonTimer.Stop();
+            };
+            ButtonTimer.Start();
         }
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
