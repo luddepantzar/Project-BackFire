@@ -36,7 +36,7 @@
 
         <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate" >
             <Grid>
-                <Image x:Name="bild1" Margin="20,20,20,20"  Source="{Binding FrontImage}" Opacity="{Binding UpdateSourceTrigger=PropertyChanged, ElementName=bild1}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
+                <Image x:Name="bildtemp1" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
                     <Image.Projection>
                         <PlaneProjection RotationY="0"/>
                     </Image.Projection>
@@ -119,11 +119,10 @@
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
         <Button x:Name="btn4" Content="3-2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
         <Button x:Name="btn5" Content="2-2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>
-        <TextBlock Name="testbox" HorizontalAlignment="Left" Margin="15,2,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-        <TextBlock Name="idbox" HorizontalAlignment="Left" Margin="15,2,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="63.8438"/>
-
+      
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
+<<<<<<< HEAD
         <GridView x:Name="GridView" ItemsSource = "{x:Bind Attributes}" Width="Auto" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
             <Grid>
                 <TextBlock Name="CheckProj" Text="{Binding Projector}"/>
@@ -134,6 +133,12 @@
                 <TextBlock Name="ErrProj" Text="{Binding Projector}"/>
                 <TextBlock Name="ErrWifi" Text="{Binding Wifi}"/>
                 <TextBlock Name="ErrTv" Text="{Binding Tv}"/>
+=======
+        <GridView ItemsSource ="{x:Bind Attributes}" Width="Auto" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
+            <Grid>
+
+
+>>>>>>> f0965137b7a9039aeb22b09f56356cd1a06c0720
             </Grid>
         </GridView>
 
