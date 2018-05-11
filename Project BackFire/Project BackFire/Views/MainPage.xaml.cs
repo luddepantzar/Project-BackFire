@@ -50,10 +50,6 @@ namespace Project_BackFire.Views
             //FlipCardConditions();
             SwitchAttributes();
             Attributes = AttributeManager.GetAttributes();
-<<<<<<< HEAD
-=======
-            Getname();
->>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
         }
 
         async void Getname()
@@ -68,30 +64,20 @@ namespace Project_BackFire.Views
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
 
-<<<<<<< HEAD
-            Logo.Source = image;
-=======
-            //testbox.Text = data.name.ToString();
+            switch (data.code)
+            {
+                case "1234":
+                    {
+                        Logo.Source = image;
+                        ContentArea.Background = (LinearGradientBrush)Resources["Test"];
+                        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+                        break;
+                    }
 
-            //idbox.Text = data.mainColor.ToString();
-
-            //switch (data.code)
-            //{
-            //    case "1234":
->>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
-
-            //        ContentArea.Background = (LinearGradientBrush)Resources["Test"];
-            //        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
-            //        break;
-
-<<<<<<< HEAD
                 default:
-=======
-
-            //    case "företag2 AB":
->>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
-
-            //        break;
+                    {
+                        break;
+                    }
 
             }
         }
@@ -100,7 +86,6 @@ namespace Project_BackFire.Views
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
-<<<<<<< HEAD
             BitmapImage image = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/image"));
 
             HttpClient client = new HttpClient();
@@ -113,13 +98,7 @@ namespace Project_BackFire.Views
             {
                 Getname();
             }
-=======
-            //    default:
-
-            //        break;
-
-            //}
->>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
+            
         }
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
@@ -634,7 +613,7 @@ namespace Project_BackFire.Views
 
         public void SwitchAttributes()
         {
-            //var attributes = Attributes.FindAll();
+            //var Temp1 = Attributes.GetRange(1, 2);
             //switch ()
             //{
             //    case false:
@@ -657,14 +636,14 @@ namespace Project_BackFire.Views
             //    case false:
             //        {
             //            CheckWhiteboard.Visibility = Visibility.Collapsed;
-            //            ErrWhiteboard.Visibility = Visibility.Visible;
+            //            ErrWhiteboad.Visibility = Visibility.Visible;
             //            break;
             //        }
 
             //    case true:
             //        {
             //            CheckWhiteboard.Visibility = Visibility.Visible;
-            //            ErrWhiteboard.Visibility = Visibility.Collapsed;
+            //            ErrWhiteboad.Visibility = Visibility.Collapsed;
             //            break;
             //        }
             //}

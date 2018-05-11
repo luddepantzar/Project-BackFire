@@ -34,7 +34,7 @@
             <GradientStop Color="#293132" Offset="0.48"/>
         </LinearGradientBrush>
 
-        <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate">
+        <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate" >
             <Grid>
                 <Image x:Name="bild1" Margin="20,20,20,20"  Source="{Binding FrontImage}" Opacity="{Binding UpdateSourceTrigger=PropertyChanged, ElementName=bild1}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
                     <Image.Projection>
@@ -67,14 +67,14 @@
                             <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="100,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
                             <TextBlock x:Name="Wifiicon" Width="40" Margin="171,0,0,10" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
                             <TextBlock x:Name="Tvicon" Width="40" Margin="245,0,0,3" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
-                            <TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                            <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                            <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                            <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-                            <TextBlock x:Name="ErrWhiteboad" Height="40" Margin="59,0,0,42" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                            <TextBlock x:Name="ErrProj" Height="40" Margin="59,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                            <TextBlock x:Name="ErrWifi" Height="40" Margin="59,0,0,135" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
-                            <TextBlock x:Name="ErrTv" Height="40" Margin="59,0,0,171" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="CheckProj1" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=CheckProj}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="CheckWhiteboard1" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=CheckWhiteboard}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="CheckWifi1" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=CheckWifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="CheckTV1" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=CheckTV}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                            <TextBlock x:Name="ErrWhiteboad1" Height="40" Margin="59,0,0,42" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=ErrWhiteboad}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="ErrProj1" Height="40" Margin="59,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=ErrProj}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="ErrWifi1" Height="40" Margin="59,0,0,135" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=ErrWifi}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
+                            <TextBlock x:Name="ErrTv" Height="40" Margin="59,0,0,171" FontFamily="Segoe MDL2 Assets" Text="{Binding ElementName=ErrTv}" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                         </Grid>
                     </Grid>
                 </Border>
@@ -124,13 +124,16 @@
 
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-        <GridView ItemsSource = "{x:Bind Attributes}" Width="Auto" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
+        <GridView x:Name="GridView" ItemsSource = "{x:Bind Attributes}" Width="Auto" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
             <Grid>
-<<<<<<< HEAD
-                
-=======
-
->>>>>>> 0f5c532ad3fca537c87e0f84784ac3e3aa6eccb3
+                <TextBlock Name="CheckProj" Text="{Binding Projector}"/>
+                <TextBlock Name="CheckWhiteboard" Text="{Binding Wboard}"/>
+                <TextBlock Name="CheckWifi" Text="{Binding Wifi}"/>
+                <TextBlock Name="CheckTV" Text="44"/>
+                <TextBlock Name="ErrWhiteboad" Text="{Binding Wboard}"/>
+                <TextBlock Name="ErrProj" Text="{Binding Projector}"/>
+                <TextBlock Name="ErrWifi" Text="{Binding Wifi}"/>
+                <TextBlock Name="ErrTv" Text="{Binding Tv}"/>
             </Grid>
         </GridView>
 
@@ -180,7 +183,7 @@
                             <TextBlock HorizontalAlignment="Left" Margin="71,134,0,0" Text="- Rummet är bokat" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="254"/>
                         </Grid>
                         <Grid x:Name="ApiSettingsGrid" Visibility="Collapsed">
-                            <PasswordBox x:Name="ApiInput" PasswordChar="*" HorizontalAlignment="Left" Margin="75,59,0,125" VerticalAlignment="Top" Width="286" Canvas.ZIndex="2"/>
+                            <PasswordBox x:Name="ApiInput" HorizontalAlignment="Left" Margin="75,59,0,125" VerticalAlignment="Top" Width="286" Canvas.ZIndex="2"/>
                             <TextBlock HorizontalAlignment="Left" Margin="133,18,0,0" Text="API Lösenord" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontStyle="Italic" FontFamily="Franklin Gothic Demi"/>
                             <Border x:Name="ApiContainer" BorderBrush="#FF272727" BorderThickness="2" HorizontalAlignment="Left" Height="26" Margin="75,173,0,0" VerticalAlignment="Top" Width="286" Background="#FF959593" Visibility="Collapsed">
                                 <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible"/>
