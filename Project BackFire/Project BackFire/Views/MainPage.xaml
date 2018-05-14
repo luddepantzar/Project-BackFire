@@ -117,7 +117,7 @@
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
 
-        <Button x:Name="btn2" Content="4-4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="btn2_Click"/>
+        <Button x:Name="btn2" Content="4-4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="button2_click"/>
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
         <Button x:Name="btn4" Content="3-2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
         <Button x:Name="btn5" Content="2-2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>
@@ -136,20 +136,25 @@
             <AppBarSeparator/>
         </CommandBar>
 
+<<<<<<< HEAD
         <Grid x:Name="SettingsGrid"  Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
+=======
+        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
+>>>>>>> 10b4c4831ee12b817539b44454c4f55a4af30cf3
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50"  Click="HamburgerButton_Click"/>
+                    Width="50" Height="50"  Click="HamburgerButton_Click" Background="{x:Null}"/>
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="GeneralSettingsButton" FontFamily="Segoe MDL2 Assets" Content="&#xE713;"
-                    Width="50" Height="50"   Click="GeneralSettingsButton_Click"/>
+                    Width="50" Height="50"   Click="GeneralSettingsButton_Click" Background="{x:Null}"/>
                             <TextBlock Text="General" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="ApiButton" FontFamily="Segoe MDL2 Assets" Content="&#xF080;"
-                        Width="50" Height="50"  Click="ApiButton_Click"/>
+                        Width="50" Height="50"  Click="ApiButton_Click" Background="{x:Null}"/>
                             <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                     </StackPanel>
