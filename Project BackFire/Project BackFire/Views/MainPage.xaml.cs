@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using Microsoft.Toolkit.Uwp.UI.Animations;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
+using System.Collections.ObjectModel;
 
 namespace Project_BackFire.Views
 {
@@ -35,6 +36,27 @@ namespace Project_BackFire.Views
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
+        }
+
+        public static ObservableCollection<Attributes> GetAttributes()
+        {
+            var attributes = new ObservableCollection<Attributes>();
+
+            var c1 = new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" };
+            var c2 = new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 };
+            var c3 = new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c3.jpg", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 };
+            var c4 = new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 };
+
+            attributes.Add(c1);
+            attributes.Add(c2);
+            attributes.Add(c3);
+            attributes.Add(c4);
+            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+            
+            return attributes;
         }
 
         public Main()
@@ -482,35 +504,35 @@ namespace Project_BackFire.Views
                 ButtonTimer.Start();
             }
 
-            //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
-            //{
+        public void button2_click(object sender, TappedRoutedEventArgs e)
+        {
 
-            //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-            //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-            //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
+            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
+            LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
 
-            //    RectangleGrid2.Fill = RedBrush;
+            RectangleGrid2.Fill = RedBrush;
 
-            //    DispatcherTimer ColorTimer = new DispatcherTimer();
-            //    ColorTimer.Interval = TimeSpan.FromSeconds(5);
-            //    ColorTimer.Tick += (Sender, args) =>
-            //    {
-            //        BookedIndicator.Fill = YellowBrush;
-            //        ColorTimer.Stop();
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(5);
+            ColorTimer.Tick += (Sender, args) =>
+            {
+                BookedIndicator.Fill = YellowBrush;
+                ColorTimer.Stop();
 
-            //        DispatcherTimer ColorTimer2 = new DispatcherTimer();
-            //        ColorTimer2.Interval = TimeSpan.FromMinutes(45);
-            //        ColorTimer2.Tick += (Zender, Args) =>
-            //        {
-            //            BookedIndicator.Fill = GreenBrush;
-            //            ColorTimer2.Stop();
-            //        };
-            //        ColorTimer2.Start();
-            //    };
-            //    ColorTimer.Start();
-            //}
+                DispatcherTimer ColorTimer2 = new DispatcherTimer();
+                ColorTimer2.Interval = TimeSpan.FromMinutes(45);
+                ColorTimer2.Tick += (Zender, Args) =>
+                {
+                    BookedIndicator.Fill = GreenBrush;
+                    ColorTimer2.Stop();
+                };
+                ColorTimer2.Start();
+            };
+            ColorTimer.Start();
+        }
 
-            public void Image_Loaded(object sender, RoutedEventArgs e)
+        public void Image_Loaded(object sender, RoutedEventArgs e)
             {
                 Image img = sender as Image;
                 BitmapImage bitmapImage = new BitmapImage();

@@ -115,7 +115,7 @@
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
 
-        <Button x:Name="btn2" Content="4-4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="btn2_Click"/>
+        <Button x:Name="btn2" Content="4-4" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" Click="button2_click"/>
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
         <Button x:Name="btn4" Content="3-2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
         <Button x:Name="btn5" Content="2-2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>

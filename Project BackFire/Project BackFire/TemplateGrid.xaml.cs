@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Project_BackFire.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,6 +24,11 @@ namespace Project_BackFire
         public TemplateGrid()
         {
             this.InitializeComponent();
+        }
+
+        public void SwitchOnAttrubtes()
+        {
+
         }
     }
 }
