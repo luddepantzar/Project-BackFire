@@ -34,9 +34,9 @@
             <GradientStop Color="#293132" Offset="0.48"/>
         </LinearGradientBrush>
 
-        <DataTemplate x:DataType="data:Attributes" x:Key="AttributesTemplate" >
+        <DataTemplate x:DataType="data:Attributes" x:Key="AttributeDataTemplate">
             <Grid>
-                <Image x:Name="bildtemp1" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
+                <Image x:Name="img1" Margin="20,20,20,20" Source="{x:Bind FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
                     <Image.Projection>
                         <PlaneProjection RotationY="0"/>
                     </Image.Projection>
@@ -52,7 +52,7 @@
                             </Rectangle.Fill>
                         </Rectangle>
                         <TextBlock x:Name="SeatsIcon" Width="40" Margin="0,13,65,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{Binding Seats}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
+                        <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{x:Bind Seats}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
                         <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
                             <Border.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -80,6 +80,8 @@
                 </Border>
             </Grid>
         </DataTemplate>
+
+
     </Page.Resources>
 
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="1890" BorderBrush="Black" PointerMoved="OnPointerMoved" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
@@ -119,23 +121,14 @@
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
         <Button x:Name="btn4" Content="3-2" HorizontalAlignment="Left" Margin="1428,95,0,0" VerticalAlignment="Top" Click="btn4_Click"/>
         <Button x:Name="btn5" Content="2-2" HorizontalAlignment="Left" Margin="1499,95,0,0" VerticalAlignment="Top" Click="btn5_Click"/>
-      
+
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-        <GridView x:Name="GridView" ItemsSource = "{x:Bind Attributes}" Width="Auto" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" ItemTemplate="{StaticResource AttributesTemplate}" FontFamily="Segoe MDL2 Assets">
-            <Grid>
-                <TextBlock Name="CheckProj" Text="{Binding Projector}"/>
-                <TextBlock Name="CheckWhiteboard" Text="{Binding Wboard}"/>
-                <TextBlock Name="CheckWifi" Text="{Binding Wifi}"/>
-                <TextBlock Name="CheckTV" Text="44"/>
-                <TextBlock Name="ErrWhiteboad" Text="{Binding Wboard}"/>
-                <TextBlock Name="ErrProj" Text="{Binding Projector}"/>
-                <TextBlock Name="ErrWifi" Text="{Binding Wifi}"/>
-                <TextBlock Name="ErrTv" Text="{Binding Tv}"/>
-            </Grid>
+        <GridView x:Name="GridView" ItemsSource = "{x:Bind Attributes}" ItemTemplate="{StaticResource AttributeDataTemplate}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" Canvas.ZIndex="1">
+            <Grid></Grid>
         </GridView>
 
-        <CommandBar x:Name="CmdBar" ClosedDisplayMode="Hidden" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
+        <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
@@ -143,7 +136,7 @@
             <AppBarSeparator/>
         </CommandBar>
 
-        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+        <Grid x:Name="SettingsGrid"  Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">
@@ -163,7 +156,7 @@
                 </SplitView.Pane>
                 <SplitView.Content>
                     <Grid>
-                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="405,256,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="30" Height="30">
+                        <Button x:Name="EscBtn" FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="405,256,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="30" Height="30">
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="#FF303030"/>
@@ -172,7 +165,6 @@
                             </Button.Background>
                         </Button>
                         <Grid x:Name="GeneralSettingsGrid" Visibility="Collapsed">
-                            <ToggleButton x:Name="timebtn" Content="24 Timmars klocka" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,40,0,0" VerticalAlignment="Top" Width="20" Fill="#FF14A61E"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,87,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE2E201"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,136,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE20101"/>
