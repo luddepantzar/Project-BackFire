@@ -50,7 +50,7 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
             SwitchAttributes();
-            Attributes = AttributeManager.GetAttributes();
+            //Attributes = AttributeManager.GetAttributes();
         }
 
         async void Getname()

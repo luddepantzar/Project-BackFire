@@ -144,19 +144,19 @@
         </CommandBar>
 
         <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
-            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi">
+            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50"  Click="HamburgerButton_Click"/>
+                    Width="50" Height="50"  Click="HamburgerButton_Click" Background="{x:Null}"/>
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="GeneralSettingsButton" FontFamily="Segoe MDL2 Assets" Content="&#xE713;"
-                    Width="50" Height="50"   Click="GeneralSettingsButton_Click"/>
+                    Width="50" Height="50"   Click="GeneralSettingsButton_Click" Background="{x:Null}"/>
                             <TextBlock Text="General" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="ApiButton" FontFamily="Segoe MDL2 Assets" Content="&#xF080;"
-                        Width="50" Height="50"  Click="ApiButton_Click"/>
+                        Width="50" Height="50"  Click="ApiButton_Click" Background="{x:Null}"/>
                             <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                     </StackPanel>

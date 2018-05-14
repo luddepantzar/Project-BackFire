@@ -8,6 +8,7 @@ using Project_BackFire.Views;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml;
+using System.Collections.ObjectModel;
 
 namespace Project_BackFire.Models
 {
@@ -29,9 +30,9 @@ namespace Project_BackFire.Models
 
     public class AttributeManager
     {
-        public static List<Attributes> GetAttributes()
+        public static ObservableCollection<Attributes> GetAttributes()
         {
-            var attributes = new List<Attributes>();
+            var attributes = new ObservableCollection<Attributes>();
 
             attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
             attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
