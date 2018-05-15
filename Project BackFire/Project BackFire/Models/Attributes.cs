@@ -28,9 +28,6 @@ namespace Project_BackFire.Models
         public int Status { get; set; }
     }
 
-<<<<<<< HEAD
-   
-=======
     public class AttributeManager
     {
         public static ObservableCollection<Attributes> GetAttributes()
@@ -49,5 +46,4 @@ namespace Project_BackFire.Models
             return attributes;
         }
     }
->>>>>>> 10b4c4831ee12b817539b44454c4f55a4af30cf3
 }

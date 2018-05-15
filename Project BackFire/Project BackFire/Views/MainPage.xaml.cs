@@ -23,17 +23,17 @@ namespace Project_BackFire.Views
         List<DependencyObject> List { get; set; }
 
         DependencyObject ImageArray { get; set; }
-
         
-        public ObservableCollection<Attributes> Attributes;
-
+        public ObservableCollection<Attributes> attributes;
+        public bool projactor { get; set; }
         
         public int Count { get; set; }
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
         public DispatcherTimer DisTimer = new DispatcherTimer();
         private TimeSpan SpanTime;
-
+        
+        
         //public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         //public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
         //public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
@@ -41,27 +41,6 @@ namespace Project_BackFire.Views
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
-        }
-
-        public static ObservableCollection<Attributes> GetAttributes()
-        {
-            var attributes = new ObservableCollection<Attributes>();
-
-            var c1 = new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" };
-            var c2 = new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 };
-            var c3 = new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c3.jpg", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 };
-            var c4 = new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 };
-
-            attributes.Add(c1);
-            attributes.Add(c2);
-            attributes.Add(c3);
-            attributes.Add(c4);
-            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
-            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
-            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
-            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
-            
-            return attributes;
         }
 
         public Main()
@@ -77,24 +56,82 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
             SwitchAttributes();
-<<<<<<< HEAD
             hidesettinggrid();
-
-
-            Attributes = new ObservableCollection<Attributes>();
-
-            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            Attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
-            Attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c3.jpg", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
-            Attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
-            Attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
-            Attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
-            Attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
-            Attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c2.jpeg", BackImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
-            
-=======
             //Attributes = AttributeManager.GetAttributes();
->>>>>>> 10b4c4831ee12b817539b44454c4f55a4af30cf3
+        }
+
+        public void SwitchAttributes()
+        {
+            switch (Attributes.Projector)
+            {
+                case false:
+                    {
+                        CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 255, 0, 0));
+                        CheckProj1.Text = "&#xF13E;";
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 0, 255, 0));
+                        CheckProj1.Text = "&#xF13D;";
+                        break;
+                    }
+
+                default:
+                    break;
+            }
+
+            //switch (Wboard)
+            //{
+            //    case false:
+            //        {
+            //            CheckWboard.Visibility = Visibility.Collapsed;
+            //            ErrWboard.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+
+            //    case true:
+            //        {
+            //            CheckWboard.Visibility = Visibility.Visible;
+            //            ErrWboard.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
+
+            //switch (Tv)
+            //{
+            //    case false:
+            //        {
+            //            CheckTv.Visibility = Visibility.Collapsed;
+            //            ErrTv.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+
+            //    case true:
+            //        {
+            //            CheckTv.Visibility = Visibility.Visible;
+            //            ErrTv.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
+
+            //switch (Wifi)
+            //{
+            //    case false:
+            //        {
+            //            CheckWifi.Visibility = Visibility.Collapsed;
+            //            ErrWifi.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+
+            //    case true:
+            //        {
+            //            CheckWifi.Visibility = Visibility.Visible;
+            //            ErrWifi.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
         }
 
         async void Getname()
@@ -399,7 +436,7 @@ namespace Project_BackFire.Views
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
 
-            Attributes.Clear();
+            attributes.Clear();
             //Fade();
             //Animation();
         }
@@ -537,34 +574,37 @@ namespace Project_BackFire.Views
             ButtonTimer.Start();
         }
 
-<<<<<<< HEAD
-        //public void grid1_Tapped(object sender, TappedRoutedEventArgs e)
-        //{
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
-        //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-        //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-        //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            RectangelGrid2.Fill = RedBrush;
 
-        //    RectangleGrid2.Fill = RedBrush;
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(5);
+            ColorTimer.Tick += (Sender, args) =>
+            {
+                YellowindIcatorColorToGreenIndicatorColor();
+                ColorTimer.Stop();
+            };
+            ColorTimer.Start();
+        }
 
-        //    DispatcherTimer ColorTimer = new DispatcherTimer();
-        //    ColorTimer.Interval = TimeSpan.FromSeconds(5);
-        //    ColorTimer.Tick += (Sender, args) =>
-        //    {
-        //        BookedIndicator.Fill = YellowBrush;
-        //        ColorTimer.Stop();
+        public void YellowindIcatorColorToGreenIndicatorColor()
+        {
+            LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
+            LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            RectangelGrid2.Fill = YellowBrush;
 
-        //        DispatcherTimer ColorTimer2 = new DispatcherTimer();
-        //        ColorTimer2.Interval = TimeSpan.FromMinutes(45);
-        //        ColorTimer2.Tick += (Zender, Args) =>
-        //        {
-        //            BookedIndicator.Fill = GreenBrush;
-        //            ColorTimer2.Stop();
-        //        };
-        //        ColorTimer2.Start();
-        //    };
-        //    ColorTimer.Start();
-        //}
+            DispatcherTimer ColorTimer2 = new DispatcherTimer();
+            ColorTimer2.Interval = TimeSpan.FromMinutes(45);
+            ColorTimer2.Tick += (Zender, Args) =>
+            {
+                RectangelGrid2.Fill = GreenBrush;
+                ColorTimer2.Stop();
+            };
+            ColorTimer2.Start();
+        }
 
         public void Image_Loaded(object sender, RoutedEventArgs e)
         {
@@ -573,21 +613,6 @@ namespace Project_BackFire.Views
             bitmapImage.UriSource = new Uri(img.BaseUri, "ms-appx:///Images/test_logo.png");
             //Image img = new Image();
             //img.Source = new BitmapImage(new Uri("ms-appx:///Images/test_logo.png"));
-        }
-
-        private void btn2_Click(object sender, RoutedEventArgs e)
-        {
-            //if (Grid4x2.Visibility == Visibility.Collapsed)
-            //{
-            //    Grid4x2.Visibility = Visibility.Visible;
-            //    Grid2x2.Visibility = Visibility.Collapsed;
-            //    Grid2x3.Visibility = Visibility.Collapsed;
-            //    Grid3x2.Visibility = Visibility.Collapsed;          
-            //}
-            //else
-            //{
-            //    Grid4x2.Visibility = Visibility.Collapsed;
-            //}
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
@@ -649,37 +674,6 @@ namespace Project_BackFire.Views
 
             Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
             if (file != null)
-=======
-        public void button2_click(object sender, TappedRoutedEventArgs e)
-        {
-
-            LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-            LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
-
-            RectangleGrid2.Fill = RedBrush;
-
-            DispatcherTimer ColorTimer = new DispatcherTimer();
-            ColorTimer.Interval = TimeSpan.FromSeconds(5);
-            ColorTimer.Tick += (Sender, args) =>
-            {
-                BookedIndicator.Fill = YellowBrush;
-                ColorTimer.Stop();
-
-                DispatcherTimer ColorTimer2 = new DispatcherTimer();
-                ColorTimer2.Interval = TimeSpan.FromMinutes(45);
-                ColorTimer2.Tick += (Zender, Args) =>
-                {
-                    BookedIndicator.Fill = GreenBrush;
-                    ColorTimer2.Stop();
-                };
-                ColorTimer2.Start();
-            };
-            ColorTimer.Start();
-        }
-
-        public void Image_Loaded(object sender, RoutedEventArgs e)
->>>>>>> 10b4c4831ee12b817539b44454c4f55a4af30cf3
             {
                 //Application now has read/write access to the picked file
                 //this.textBlock.Text = "Picked photo: " + file.Path;
@@ -690,79 +684,6 @@ namespace Project_BackFire.Views
             {
                 //
             }
-
-        }
-
-        public void SwitchAttributes()
-        {
-            //var attributes = Attributes.FindAll();
-            //switch ()
-            //{
-            //    case false:
-            //        {
-            //            ErrProj.Visibility = Visibility.Visible;
-            //            CheckProj.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-
-            //    case true:
-            //        {
-            //            ErrProj.Visibility = Visibility.Collapsed;
-            //            CheckProj.Visibility = Visibility.Visible;
-            //            break;
-            //        }
-            //}
-
-            //switch (Wboard)
-            //{
-            //    case false:
-            //        {
-            //            CheckWhiteboard.Visibility = Visibility.Collapsed;
-            //            ErrWhiteboard.Visibility = Visibility.Visible;
-            //            break;
-            //        }
-
-            //    case true:
-            //        {
-            //            CheckWhiteboard.Visibility = Visibility.Visible;
-            //            ErrWhiteboard.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-            //}
-
-            //switch (Tv)
-            //{
-            //    case false:
-            //        {
-            //            CheckTV.Visibility = Visibility.Collapsed;
-            //            ErrTv.Visibility = Visibility.Visible;
-            //            break;
-            //        }
-
-            //    case true:
-            //        {
-            //            CheckTV.Visibility = Visibility.Visible;
-            //            ErrTv.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-            //}
-
-            //switch (Wifi)
-            //{
-            //    case false:
-            //        {
-            //            CheckWifi.Visibility = Visibility.Collapsed;
-            //            ErrWifi.Visibility = Visibility.Visible;
-            //            break;
-            //        }
-
-            //    case true:
-            //        {
-            //            CheckWifi.Visibility = Visibility.Visible;
-            //            ErrWifi.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-            //}
         }
 
         //public void SwitchGrids()
@@ -811,7 +732,5 @@ namespace Project_BackFire.Views
 
 
         }
-
-
     }
 }
