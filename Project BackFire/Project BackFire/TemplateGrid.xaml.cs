@@ -19,16 +19,110 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Project_BackFire
 {
+
+
     public sealed partial class TemplateGrid : UserControl
     {
+        public ObservableCollection<Attributes> Attributes;
+
+
         public TemplateGrid()
         {
             this.InitializeComponent();
+            SwitchAttributes();
         }
 
-        public void SwitchOnAttrubtes()
+        public void SwitchAttributes()
         {
 
+            Attributes = new ObservableCollection<Attributes>();
+
+            Attributes c1 = new Attributes
+            {
+                RoomID = 10,
+                RoomName = "Rum 10",
+                Projector = true,
+                Wboard = false,
+                Tv = false,
+                Wifi = true,
+                Seats = 5,
+                Note = "Lorem ipsum dolor sit amet, co"
+            };
+
+            switch (c1.Projector)
+            {
+                case false:
+                    {
+                        CheckProj.Visibility = Visibility.Collapsed;
+                        ErrProj.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        ErrProj.Visibility = Visibility.Collapsed;
+                        CheckProj.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                default:
+                    break;
+            }
+
+            switch (c1.Wboard)
+            {
+                case false:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Collapsed;
+                        ErrWboard.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Visible;
+                        ErrWboard.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+
+            switch (c1.Tv)
+            {
+                case false:
+                    {
+                        CheckTV.Visibility = Visibility.Collapsed;
+                        ErrTv.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckTV.Visibility = Visibility.Visible;
+                        ErrTv.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+
+            switch (c1.Wifi)
+            {
+                case false:
+                    {
+                        CheckWifi.Visibility = Visibility.Collapsed;
+                        ErrWifi.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckWifi.Visibility = Visibility.Visible;
+                        ErrWifi.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+
+
+
+            }
         }
+
     }
 }

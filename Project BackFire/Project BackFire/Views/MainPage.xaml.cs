@@ -23,17 +23,17 @@ namespace Project_BackFire.Views
         List<DependencyObject> List { get; set; }
 
         DependencyObject ImageArray { get; set; }
-        
-        public ObservableCollection<Attributes> attributes;
+
+        public ObservableCollection<Attributes> Attributes;
+
         public bool projactor { get; set; }
-        
+
         public int Count { get; set; }
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
         public DispatcherTimer DisTimer = new DispatcherTimer();
         private TimeSpan SpanTime;
-        
-        
+
         //public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         //public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
         //public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
@@ -46,7 +46,6 @@ namespace Project_BackFire.Views
         public Main()
         {
             InitializeComponent();
-
             DataContext = this;
             DisTimer.Tick += TimerTick;
             DisTimer.Interval = new TimeSpan(0, 0, 1);
@@ -55,161 +54,21 @@ namespace Project_BackFire.Views
             //AnimationBack();
             //AnimationFront();                     
             //FlipCardConditions();
-            SwitchAttributes();
             hidesettinggrid();
-            //Attributes = AttributeManager.GetAttributes();
+
+            Attributes = new ObservableCollection<Attributes>();
+
+            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            Attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
+            Attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
+            Attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
+            Attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            Attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            Attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            Attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+
         }
 
-        public void SwitchAttributes()
-        {
-<<<<<<< HEAD
-            Attributes c1 = new Attributes { RoomID = 10, RoomName = "Rum 10", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg",
-                                                Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" };
-
-            switch (c1.Projector)
-            {
-                case false:
-                    {
-                        CheckProj.Visibility = Visibility.Collapsed;
-                        ErrProj.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                case true:
-                    {
-                        ErrProj.Visibility = Visibility.Collapsed;
-                        CheckProj.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                default:
-                    break;
-            }
-
-            switch (c1.Wboard)
-            {
-                case false:
-                    {
-                        CheckWhiteboard.Visibility = Visibility.Collapsed;
-                        ErrWboard.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                case true:
-                    {
-                        CheckWhiteboard.Visibility = Visibility.Visible;
-                        ErrWboard.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
-
-            switch (c1.Tv)
-            {
-                case false:
-                    {
-                        CheckTV.Visibility = Visibility.Collapsed;
-                        ErrTv.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                case true:
-                    {
-                        CheckTV.Visibility = Visibility.Visible;
-                        ErrTv.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
-
-            switch (c1.Wifi)
-            {
-                case false:
-                    {
-                        CheckWifi.Visibility = Visibility.Collapsed;
-                        ErrWifi.Visibility = Visibility.Visible;
-                        break;
-                    }
-
-                case true:
-                    {
-                        CheckWifi.Visibility = Visibility.Visible;
-                        ErrWifi.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
-=======
-            //bool Proj = Attributes.Projector;
-            //switch (Attributes.Projector)
-            //{
-            //    case false:
-            //        {
-            //            CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 255, 0, 0));
-            //            CheckProj1.Text = "&#xF13E;";
-            //            break;
-            //        }
-
-            //    case true:
-            //        {
-            //            CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 0, 255, 0));
-            //            CheckProj1.Text = "&#xF13D;";
-            //            break;
-            //        }
-
-            //    default:
-            //        break;
-            //}
-
-            ////switch (Wboard)
-            ////{
-            ////    case false:
-            ////        {
-            ////            CheckWboard.Visibility = Visibility.Collapsed;
-            ////            ErrWboard.Visibility = Visibility.Visible;
-            ////            break;
-            ////        }
-
-            ////    case true:
-            ////        {
-            ////            CheckWboard.Visibility = Visibility.Visible;
-            ////            ErrWboard.Visibility = Visibility.Collapsed;
-            ////            break;
-            ////        }
-            ////}
-
-            ////switch (Tv)
-            ////{
-            ////    case false:
-            ////        {
-            ////            CheckTv.Visibility = Visibility.Collapsed;
-            ////            ErrTv.Visibility = Visibility.Visible;
-            ////            break;
-            ////        }
-
-            ////    case true:
-            ////        {
-            ////            CheckTv.Visibility = Visibility.Visible;
-            ////            ErrTv.Visibility = Visibility.Collapsed;
-            ////            break;
-            ////        }
-            ////}
-
-            ////switch (Wifi)
-            ////{
-            ////    case false:
-            ////        {
-            ////            CheckWifi.Visibility = Visibility.Collapsed;
-            ////            ErrWifi.Visibility = Visibility.Visible;
-            ////            break;
-            ////        }
-
-            ////    case true:
-            ////        {
-            ////            CheckWifi.Visibility = Visibility.Visible;
-            ////            ErrWifi.Visibility = Visibility.Collapsed;
-            ////            break;
-            ////        }
-            ////}
->>>>>>> a8562c58b9a23d165d7e64de0916e01d1502e5ac
-        }
 
         async void Getname()
         {
@@ -239,6 +98,7 @@ namespace Project_BackFire.Views
                     }
             }
         }
+
         public async void InputApiBox()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
@@ -448,7 +308,6 @@ namespace Project_BackFire.Views
 
         private void TimerTick(object sender, object e)
         {
-
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
@@ -512,8 +371,7 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-
-            attributes.Clear();
+            Attributes.Clear();
             //Fade();
             //Animation();
         }
@@ -629,12 +487,11 @@ namespace Project_BackFire.Views
 
         public void hidesettinggrid()
         {
-
             switch (SettingsGrid)
             {
-           
+
             }
-            
+
         }
 
         private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
@@ -652,18 +509,8 @@ namespace Project_BackFire.Views
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
-            //RectangelGrid2.Fill = RedBrush;
-
-            //DispatcherTimer ColorTimer = new DispatcherTimer();
-            //ColorTimer.Interval = TimeSpan.FromSeconds(5);
-            //ColorTimer.Tick += (Sender, args) =>
-            //{
-            //    YellowindIcatorColorToGreenIndicatorColor();
-            //    ColorTimer.Stop();
-            //};
-            //ColorTimer.Start();
+            
         }
 
         public void YellowindIcatorColorToGreenIndicatorColor()
@@ -693,17 +540,8 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            //if (Grid3x2.Visibility == Visibility.Collapsed)
-            //{
-            //    Grid3x2.Visibility = Visibility.Visible;
-            //    Grid2x2.Visibility = Visibility.Collapsed;
-            //    Grid2x3.Visibility = Visibility.Collapsed;
-            //    Grid4x2.Visibility = Visibility.Collapsed;
-            //}           
-            //else if (Grid3x2.Visibility == Visibility.Visible) 
-            //{
-            //    Grid3x2.Visibility = Visibility.Collapsed;
-            //}
+            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+           
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
