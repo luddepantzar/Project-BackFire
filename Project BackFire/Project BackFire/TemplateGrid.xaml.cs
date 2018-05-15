@@ -23,19 +23,23 @@ namespace Project_BackFire
 
     public sealed partial class TemplateGrid : UserControl
     {
-        public ObservableCollection<Attributes> Attributes;
+        //public Models.Attributes Attributes {  get { return this.DataContext as Models.Attributes; } }
 
+        public ObservableCollection<Attributes> attributes;
 
         public TemplateGrid()
         {
             this.InitializeComponent();
+
+            //this.DataContextChanged += (s, e) => Bindings.Update();
+
             SwitchAttributes();
         }
 
         public void SwitchAttributes()
         {
 
-            Attributes = new ObservableCollection<Attributes>();
+            attributes = new ObservableCollection<Attributes>();
 
             Attributes c1 = new Attributes
             {
@@ -57,7 +61,6 @@ namespace Project_BackFire
                         ErrProj.Visibility = Visibility.Visible;
                         break;
                     }
-
                 case true:
                     {
                         ErrProj.Visibility = Visibility.Collapsed;

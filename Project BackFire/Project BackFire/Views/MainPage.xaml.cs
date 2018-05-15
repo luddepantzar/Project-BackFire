@@ -24,7 +24,7 @@ namespace Project_BackFire.Views
 
         DependencyObject ImageArray { get; set; }
 
-        public ObservableCollection<Attributes> Attributes;
+        public ObservableCollection<Attributes> attributes;
 
         public bool projactor { get; set; }
 
@@ -56,16 +56,16 @@ namespace Project_BackFire.Views
             //FlipCardConditions();
             hidesettinggrid();
 
-            Attributes = new ObservableCollection<Attributes>();
+            attributes = new ObservableCollection<Attributes>();
 
-            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            Attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
-            Attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
-            Attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
-            Attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
-            Attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
-            Attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
-            Attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10  });
+            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
+            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
+            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
 
         }
 
@@ -371,7 +371,7 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            Attributes.Clear();
+            attributes.Clear();
             //Fade();
             //Animation();
         }
@@ -510,7 +510,7 @@ namespace Project_BackFire.Views
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
 
-            
+
         }
 
         public void YellowindIcatorColorToGreenIndicatorColor()
@@ -540,8 +540,7 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-           
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
