@@ -21,6 +21,7 @@ namespace Project_BackFire.Models
         public int Seats { get; set; }
         public bool Tv { get; set; }
         public bool Wifi { get; set; }
+        public string FrontImage { get; set; }
         public string CompanyNote { get; set; }
         public string Note { get; set; }
         public int Status { get; set; }

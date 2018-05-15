@@ -1,5 +1,6 @@
 ﻿using System;
 using Project_BackFire.ViewModels;
+using Project_BackFire;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -26,16 +27,25 @@ namespace Project_BackFire.Views
 
         public ObservableCollection<Attributes> attributes;
 
+<<<<<<< HEAD
 
         //public int Count { get; set; }
 
         //private Storyboard rotationfront1 = new Storyboard();
         //private Storyboard rotationback1 = new Storyboard();
 
+=======
+        //public int Count { get; set; }
+        //private Storyboard rotationfront1 = new Storyboard();
+        //private Storyboard rotationback1 = new Storyboard();
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
         public DispatcherTimer DisTimer = new DispatcherTimer();
 
+<<<<<<< HEAD
         private TimeSpan SpanTime;
 
+=======
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -55,6 +65,16 @@ namespace Project_BackFire.Views
 
             attributes = new ObservableCollection<Attributes>();
 
+<<<<<<< HEAD
+            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage= "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            Attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
+            Attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
+            Attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
+            Attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            Attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            Attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            Attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+=======
             attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
             attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
             attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
@@ -63,6 +83,30 @@ namespace Project_BackFire.Views
             attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
             attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
             attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+            switch (c1.Wifi)
+            {
+                case false:
+                    {
+                        CheckWifi.Visibility = Visibility.Collapsed;
+                        ErrWifi.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckWifi.Visibility = Visibility.Visible;
+                        ErrWifi.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+=======
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
+>>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
         }
 
         async void Getname()
@@ -371,6 +415,7 @@ namespace Project_BackFire.Views
             //Animation();
         }
 
+<<<<<<< HEAD
         private void FlipCardConditions()
         {
             //    //if (Attributes.Count < 8)
@@ -432,6 +477,69 @@ namespace Project_BackFire.Views
             //    //    _allowexicution = false;
             //    //}
         }
+=======
+        //private void FlipCardConditions()
+        //{
+        //    if (Attributes.Count < 8)
+        //    {
+        //        rotationback1.Stop();
+        //        rotationfront1.Stop();
+        //    }
+
+        //    while (Attributes.Count > 8)
+        //    {
+
+        //        try
+        //        {
+        //            rotationback1.Stop();
+        //            rotationfront1.Stop();
+        //            DispatcherTimer tm8 = new DispatcherTimer();
+        //            tm8.Interval = TimeSpan.FromSeconds(10);
+        //            tm8.Tick += (sender, args) =>
+        //            {
+        //                rotationback1.Begin();
+        //                rotationfront1.Begin();
+
+        //                BackImg1.Opacity = 0;
+
+        //                grid1.Opacity = 0;
+
+        //                Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
+
+        //                grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
+
+        //                BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
+
+        //                tm8.Stop();
+        //            };
+        //            tm8.Start();
+        //        }
+        //        finally
+        //        {
+        //            rotationback1.Stop();
+        //            rotationfront1.Stop();
+        //        }
+        //    }
+        //}
+
+        //public void StartTimer(int IntervalSec)
+        //{
+        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        //    if (IntervalSec > 0)
+        //    {
+        //        DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
+        //        DisTimer.Tick += TimerOnTick;
+        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+        //        DisTimer.Start();
+        //    }
+        //    else
+        //    {
+        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+        //        DisTimer.Stop();
+        //        _allowexicution = false;
+        //    }
+        //}
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
 
         public void TimerOnTick(object sender, object o)
         {
@@ -495,9 +603,35 @@ namespace Project_BackFire.Views
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             //    LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
             //    RectangelGrid2.Fill = RedBrush;
+=======
+            //LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
+
+            //RectangelGrid2.Fill = RedBrush;
+
+<<<<<<< HEAD
+            //DispatcherTimer ColorTimer = new DispatcherTimer();
+            //ColorTimer.Interval = TimeSpan.FromSeconds(5);
+            //ColorTimer.Tick += (Sender, args) =>
+            //{
+            //    YellowindIcatorColorToGreenIndicatorColor();
+            //    ColorTimer.Stop();
+            //};
+            //ColorTimer.Start();
+=======
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(5);
+            ColorTimer.Tick += (Sender, args) =>
+            {
+                YellowindIcatorColorToGreenIndicatorColor();
+                ColorTimer.Stop();
+            };
+            ColorTimer.Start();
+=======
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
 
             //    DispatcherTimer ColorTimer = new DispatcherTimer();
             //    ColorTimer.Interval = TimeSpan.FromSeconds(5);
@@ -508,6 +642,7 @@ namespace Project_BackFire.Views
             //    };
             //    ColorTimer.Start();
 
+<<<<<<< HEAD
 
 
         }
@@ -518,6 +653,21 @@ namespace Project_BackFire.Views
         //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
         //    RectangelGrid2.Fill = YellowBrush;
 
+=======
+=======
+            
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
+>>>>>>> 09ffc7ac8d39515288470d5523799c5ef8c7fc6e
+>>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
+        }
+
+        //public void YellowindIcatorColorToGreenIndicatorColor()
+        //{
+        //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
+        //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+        //    RectangelGrid2.Fill = YellowBrush;
+
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
         //    DispatcherTimer ColorTimer2 = new DispatcherTimer();
         //    ColorTimer2.Interval = TimeSpan.FromMinutes(45);
         //    ColorTimer2.Tick += (Zender, Args) =>
@@ -533,7 +683,10 @@ namespace Project_BackFire.Views
             attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> d5a4a3a5cde24ef241e01deebb217bffaaabe3ff
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
