@@ -62,6 +62,7 @@ namespace Project_BackFire.Views
 
         public void SwitchAttributes()
         {
+            bool Proj = Attributes.Projector;
             switch (Attributes.Projector)
             {
                 case false:
