@@ -23,17 +23,17 @@ namespace Project_BackFire.Views
         List<DependencyObject> List { get; set; }
 
         DependencyObject ImageArray { get; set; }
-        
-        public ObservableCollection<Attributes> attributes;
+
+        public ObservableCollection<Attributes> Attributes;
+
         public bool projactor { get; set; }
-        
+
         public int Count { get; set; }
         private Storyboard rotationfront1 = new Storyboard();
         private Storyboard rotationback1 = new Storyboard();
         public DispatcherTimer DisTimer = new DispatcherTimer();
         private TimeSpan SpanTime;
-        
-        
+
         //public static BitmapImage One = new BitmapImage(new Uri("ms-appx///Images/c1.jpeg"));
         //public static BitmapImage Two = new BitmapImage(new Uri("ms-appx///Images/c2.jpeg"));
         //public static BitmapImage Three = new BitmapImage(new Uri("ms-appx///Images/c3.jpg"));
@@ -46,7 +46,6 @@ namespace Project_BackFire.Views
         public Main()
         {
             InitializeComponent();
-
             DataContext = this;
             DisTimer.Tick += TimerTick;
             DisTimer.Interval = new TimeSpan(0, 0, 1);
@@ -55,8 +54,8 @@ namespace Project_BackFire.Views
             //AnimationBack();
             //AnimationFront();                     
             //FlipCardConditions();
-            SwitchAttributes();
             hidesettinggrid();
+<<<<<<< HEAD
             //Attributes = AttributeManager.GetAttributes();
         }
 
@@ -90,32 +89,21 @@ namespace Project_BackFire.Views
                         ErrWboard.Visibility = Visibility.Visible;
                         break;
                     }
+=======
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
 
-                case true:
-                    {
-                        CheckWhiteboard.Visibility = Visibility.Visible;
-                        ErrWboard.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
+            Attributes = new ObservableCollection<Attributes>();
 
-            switch (c1.Tv)
-            {
-                case false:
-                    {
-                        CheckTV.Visibility = Visibility.Collapsed;
-                        ErrTv.Visibility = Visibility.Visible;
-                        break;
-                    }
+            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            Attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
+            Attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
+            Attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
+            Attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            Attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            Attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            Attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
 
-                case true:
-                    {
-                        CheckTV.Visibility = Visibility.Visible;
-                        ErrTv.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
-
+<<<<<<< HEAD
             switch (c1.Wifi)
             {
                 case false:
@@ -132,7 +120,10 @@ namespace Project_BackFire.Views
                         break;
                     }
             }
+=======
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
         }
+
 
         async void Getname()
         {
@@ -162,6 +153,7 @@ namespace Project_BackFire.Views
                     }
             }
         }
+
         public async void InputApiBox()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
@@ -371,7 +363,6 @@ namespace Project_BackFire.Views
 
         private void TimerTick(object sender, object e)
         {
-
             TimeDate.Text = DateTime.Now.ToString("HH:mm");
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
@@ -435,8 +426,7 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-
-            attributes.Clear();
+            Attributes.Clear();
             //Fade();
             //Animation();
         }
@@ -552,12 +542,11 @@ namespace Project_BackFire.Views
 
         public void hidesettinggrid()
         {
-
             switch (SettingsGrid)
             {
-           
+
             }
-            
+
         }
 
         private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
@@ -575,6 +564,7 @@ namespace Project_BackFire.Views
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
             RectangelGrid2.Fill = RedBrush;
@@ -587,6 +577,10 @@ namespace Project_BackFire.Views
                 ColorTimer.Stop();
             };
             ColorTimer.Start();
+=======
+
+            
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
         }
 
         public void YellowindIcatorColorToGreenIndicatorColor()
@@ -616,17 +610,8 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            //if (Grid3x2.Visibility == Visibility.Collapsed)
-            //{
-            //    Grid3x2.Visibility = Visibility.Visible;
-            //    Grid2x2.Visibility = Visibility.Collapsed;
-            //    Grid2x3.Visibility = Visibility.Collapsed;
-            //    Grid4x2.Visibility = Visibility.Collapsed;
-            //}           
-            //else if (Grid3x2.Visibility == Visibility.Visible) 
-            //{
-            //    Grid3x2.Visibility = Visibility.Collapsed;
-            //}
+            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+           
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
