@@ -94,6 +94,49 @@
 
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
+<<<<<<< HEAD
+        <GridView x:Name="GridView" ItemsSource="{Binding attributes}"  Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" Canvas.ZIndex="1">
+            <Image x:Name="img1" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355" FocusVisualPrimaryBrush="Black">
+            </Image>
+            <Border  x:Name="grid2"  BorderBrush="Black" BorderThickness="4"  Margin="20,20,20,20" Opacity="100" Canvas.ZIndex="2" Width="391" Height="355">
+                <Grid Margin="0,0,0,0">
+                    <Rectangle x:Name="RectangelGrid2" x:Uid='BookedIndicator' Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#00000000" Offset="0.801"/>
+                                <GradientStop Color="#CC17FF00" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock x:Name="SeatsIcon" Width="40" Margin="0,13,65,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
+                    <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0.88"/>
+                                <GradientStop Color="#00000000" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+
+                    <Grid Margin="0,0,0,0" Width="311">
+                        <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" Margin="8,140,0,0" Text="{Binding Note}" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="99" FontSize="16" FocusVisualSecondaryBrush="#99FFFFFF"/>
+                        <TextBlock x:Name="ProjIcon" Height="40" Margin="15,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
+                        <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="100,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="Wifiicon" Width="40" Margin="171,0,0,10" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="Tvicon" Width="40" Margin="245,0,0,3" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="ErrWboard"  Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="ErrProj"  Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40"/>
+                        <TextBlock x:Name="ErrWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                        <TextBlock x:Name="ErrTv" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
+                    </Grid>
+                </Grid>
+            </Border>
+=======
 
         <GridView x:Name="GridView" ItemsSource="{x:Bind attributes}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
             <GridView.ItemTemplate>
@@ -101,6 +144,11 @@
                     <local:TemplateGrid/>
                 </DataTemplate>
             </GridView.ItemTemplate>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
+>>>>>>> 09ffc7ac8d39515288470d5523799c5ef8c7fc6e
         </GridView>
 
         <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">

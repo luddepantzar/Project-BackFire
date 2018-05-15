@@ -55,6 +55,42 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
             hidesettinggrid();
+<<<<<<< HEAD
+            //Attributes = AttributeManager.GetAttributes();
+        }
+
+        public void SwitchAttributes()
+        {
+            Attributes c1 = new Attributes { RoomID = 10, RoomName = "Rum 10", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg",
+                                                Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" };
+
+            switch (c1.Projector)
+            {
+                case false:
+                    {
+                        CheckProj.Visibility = Visibility.Collapsed;
+                        ErrProj.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        ErrProj.Visibility = Visibility.Collapsed;
+                        CheckProj.Visibility = Visibility.Visible;
+                        break;
+                    }
+            }
+
+            switch (c1.Wboard)
+            {
+                case false:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Collapsed;
+                        ErrWboard.Visibility = Visibility.Visible;
+                        break;
+                    }
+=======
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
 
             attributes = new ObservableCollection<Attributes>();
 
@@ -67,6 +103,25 @@ namespace Project_BackFire.Views
             attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
             attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
 
+<<<<<<< HEAD
+            switch (c1.Wifi)
+            {
+                case false:
+                    {
+                        CheckWifi.Visibility = Visibility.Collapsed;
+                        ErrWifi.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckWifi.Visibility = Visibility.Visible;
+                        ErrWifi.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+=======
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
         }
 
 
@@ -509,24 +564,43 @@ namespace Project_BackFire.Views
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
+            RectangelGrid2.Fill = RedBrush;
 
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(5);
+            ColorTimer.Tick += (Sender, args) =>
+            {
+                YellowindIcatorColorToGreenIndicatorColor();
+                ColorTimer.Stop();
+            };
+            ColorTimer.Start();
+=======
+
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
+>>>>>>> 09ffc7ac8d39515288470d5523799c5ef8c7fc6e
         }
 
         public void YellowindIcatorColorToGreenIndicatorColor()
         {
-            //LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-            //LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
-            //RectangelGrid2.Fill = YellowBrush;
+            LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
+            LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            RectangelGrid2.Fill = YellowBrush;
 
-            //DispatcherTimer ColorTimer2 = new DispatcherTimer();
-            //ColorTimer2.Interval = TimeSpan.FromMinutes(45);
-            //ColorTimer2.Tick += (Zender, Args) =>
-            //{
-            //    RectangelGrid2.Fill = GreenBrush;
-            //    ColorTimer2.Stop();
-            //};
-            //ColorTimer2.Start();
+            DispatcherTimer ColorTimer2 = new DispatcherTimer();
+            ColorTimer2.Interval = TimeSpan.FromMinutes(45);
+            ColorTimer2.Tick += (Zender, Args) =>
+            {
+                RectangelGrid2.Fill = GreenBrush;
+                ColorTimer2.Stop();
+            };
+            ColorTimer2.Start();
         }
 
         public void Image_Loaded(object sender, RoutedEventArgs e)
