@@ -62,20 +62,22 @@ namespace Project_BackFire.Views
 
         public void SwitchAttributes()
         {
-            bool Proj = Attributes.Projector;
-            switch (Attributes.Projector)
+            Attributes c1 = new Attributes { RoomID = 10, RoomName = "Rum 10", FrontImage = "ms-appx:///Images/c1.jpeg", BackImage = "ms-appx:///Images/c2.jpeg",
+                                                Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" };
+
+            switch (c1.Projector)
             {
                 case false:
                     {
-                        CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 255, 0, 0));
-                        CheckProj1.Text = "&#xF13E;";
+                        CheckProj.Visibility = Visibility.Collapsed;
+                        ErrProj.Visibility = Visibility.Visible;
                         break;
                     }
 
                 case true:
                     {
-                        CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 0, 255, 0));
-                        CheckProj1.Text = "&#xF13D;";
+                        ErrProj.Visibility = Visibility.Collapsed;
+                        CheckProj.Visibility = Visibility.Visible;
                         break;
                     }
 
@@ -83,56 +85,56 @@ namespace Project_BackFire.Views
                     break;
             }
 
-            //switch (Wboard)
-            //{
-            //    case false:
-            //        {
-            //            CheckWboard.Visibility = Visibility.Collapsed;
-            //            ErrWboard.Visibility = Visibility.Visible;
-            //            break;
-            //        }
+            switch (c1.Wboard)
+            {
+                case false:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Collapsed;
+                        ErrWboard.Visibility = Visibility.Visible;
+                        break;
+                    }
 
-            //    case true:
-            //        {
-            //            CheckWboard.Visibility = Visibility.Visible;
-            //            ErrWboard.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-            //}
+                case true:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Visible;
+                        ErrWboard.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
 
-            //switch (Tv)
-            //{
-            //    case false:
-            //        {
-            //            CheckTv.Visibility = Visibility.Collapsed;
-            //            ErrTv.Visibility = Visibility.Visible;
-            //            break;
-            //        }
+            switch (c1.Tv)
+            {
+                case false:
+                    {
+                        CheckTV.Visibility = Visibility.Collapsed;
+                        ErrTv.Visibility = Visibility.Visible;
+                        break;
+                    }
 
-            //    case true:
-            //        {
-            //            CheckTv.Visibility = Visibility.Visible;
-            //            ErrTv.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-            //}
+                case true:
+                    {
+                        CheckTV.Visibility = Visibility.Visible;
+                        ErrTv.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
 
-            //switch (Wifi)
-            //{
-            //    case false:
-            //        {
-            //            CheckWifi.Visibility = Visibility.Collapsed;
-            //            ErrWifi.Visibility = Visibility.Visible;
-            //            break;
-            //        }
+            switch (c1.Wifi)
+            {
+                case false:
+                    {
+                        CheckWifi.Visibility = Visibility.Collapsed;
+                        ErrWifi.Visibility = Visibility.Visible;
+                        break;
+                    }
 
-            //    case true:
-            //        {
-            //            CheckWifi.Visibility = Visibility.Visible;
-            //            ErrWifi.Visibility = Visibility.Collapsed;
-            //            break;
-            //        }
-            //}
+                case true:
+                    {
+                        CheckWifi.Visibility = Visibility.Visible;
+                        ErrWifi.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
         }
 
         async void Getname()
