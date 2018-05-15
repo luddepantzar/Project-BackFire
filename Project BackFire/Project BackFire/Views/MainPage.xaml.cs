@@ -25,7 +25,7 @@ namespace Project_BackFire.Views
 
         DependencyObject ImageArray { get; set; }
 
-        public ObservableCollection<Attributes> Attributes;
+        public ObservableCollection<Attributes> attributes;
 
         //public int Count { get; set; }
         //private Storyboard rotationfront1 = new Storyboard();
@@ -50,8 +50,9 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
 
-            Attributes = new ObservableCollection<Attributes>();
+            attributes = new ObservableCollection<Attributes>();
 
+<<<<<<< HEAD
             Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage= "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
             Attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
             Attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
@@ -60,6 +61,36 @@ namespace Project_BackFire.Views
             Attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
             Attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
             Attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+=======
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10  });
+            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
+            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
+            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
+            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
+            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
+            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
+
+<<<<<<< HEAD
+            switch (c1.Wifi)
+            {
+                case false:
+                    {
+                        CheckWifi.Visibility = Visibility.Collapsed;
+                        ErrWifi.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckWifi.Visibility = Visibility.Visible;
+                        ErrWifi.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+=======
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
+>>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
         }
 
         async void Getname()
@@ -363,7 +394,7 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            Attributes.Clear();
+            attributes.Clear();
             //Fade();
             //Animation();
         }
@@ -496,6 +527,7 @@ namespace Project_BackFire.Views
 
             //RectangelGrid2.Fill = RedBrush;
 
+<<<<<<< HEAD
             //DispatcherTimer ColorTimer = new DispatcherTimer();
             //ColorTimer.Interval = TimeSpan.FromSeconds(5);
             //ColorTimer.Tick += (Sender, args) =>
@@ -504,6 +536,24 @@ namespace Project_BackFire.Views
             //    ColorTimer.Stop();
             //};
             //ColorTimer.Start();
+=======
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(5);
+            ColorTimer.Tick += (Sender, args) =>
+            {
+                YellowindIcatorColorToGreenIndicatorColor();
+                ColorTimer.Stop();
+            };
+            ColorTimer.Start();
+=======
+
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> a4ca9df9fa646614d4db73ba51efeb62978b1f22
+>>>>>>> 09ffc7ac8d39515288470d5523799c5ef8c7fc6e
+>>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
         }
 
         //public void YellowindIcatorColorToGreenIndicatorColor()
@@ -524,8 +574,7 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            Attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-           
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

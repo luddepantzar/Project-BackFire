@@ -6,8 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+<<<<<<< HEAD
     d:DesignHeight="395"
     d:DesignWidth="431">
+=======
+    d:DesignHeight="400"
+    d:DesignWidth="450">
+>>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
 
     <Grid>
         <Image x:Name="img1" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
@@ -26,7 +31,7 @@
                     </Rectangle.Fill>
                 </Rectangle>
                 <TextBlock x:Name="SeatsIcon" Width="40" Margin="0,13,65,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
-                <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{Binding Seats}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
+                <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{Binding RoomID}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
                 <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
