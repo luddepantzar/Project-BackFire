@@ -51,27 +51,15 @@ namespace Project_BackFire.Views
             //FlipCardConditions();
 
             attributes = new ObservableCollection<Attributes>();
-<<<<<<< HEAD
 
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage= "ms-appx:///Images/c1.jpeg", Projector = "&#xF13E;", Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "&#xF13D;", Wboard = true, Tv = true, Wifi = true, Seats = 10 });
-            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "&#xF13D;", Wboard = false, Tv = true, Wifi = false, Seats = 4 });
-            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "&#xF13E;", Wboard = true, Tv = false, Wifi = true, Seats = 15 });
-            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "&#xF13E;", Wboard = false, Tv = false, Wifi = true, Seats = 7 });
-            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "&#xF13D;", Wboard = true, Tv = true, Wifi = false, Seats = 22 });
-            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "&#xF13D;", Wboard = false, Tv = true, Wifi = true, Seats = 12 });
-            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "&#xF13E;", Wboard = true, Tv = false, Wifi = false, Seats = 30 });
-=======
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", Projector = false, Wboard = true, Tv = true, Wifi = true, Seats = 10 });
-            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", Projector = false, Wboard = false, Tv = true, Wifi = false, Seats = 4 });
-            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", Projector = true, Wboard = true, Tv = false, Wifi = true, Seats = 15 });
-            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", Projector = true, Wboard = false, Tv = false, Wifi = true, Seats = 7 });
-            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", Projector = false, Wboard = true, Tv = true, Wifi = false, Seats = 22 });
-            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", Projector = false, Wboard = false, Tv = true, Wifi = true, Seats = 12 });
-            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", Projector = true, Wboard = true, Tv = false, Wifi = false, Seats = 30 });
->>>>>>> 85c57dfb05c6cddfc3176b931a5f23bb8f8fd91b
-
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage= "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13E", Seats = 10 });
+            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13D", Seats = 4 });
+            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13E", Seats = 15 });
+            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 7 });
+            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13D", Seats = 22 });
+            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13E", Seats = 12 });
+            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13D", Seats = 30 });
         }
 
         async void Getname()
@@ -564,51 +552,9 @@ namespace Project_BackFire.Views
             ButtonTimer.Start();
         }
 
-        private void btn2_Click(object sender, RoutedEventArgs e)
-        {
-<<<<<<< HEAD
-            //LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-
-            //RectangelGrid2.Fill = RedBrush;
-
-            //DispatcherTimer ColorTimer = new DispatcherTimer();
-            //ColorTimer.Interval = TimeSpan.FromSeconds(5);
-            //ColorTimer.Tick += (Sender, args) =>
-            //{
-            //    YellowindIcatorColorToGreenIndicatorColor();
-            //    ColorTimer.Stop();
-            //};
-            //ColorTimer.Start();
-=======
-
->>>>>>> 85c57dfb05c6cddfc3176b931a5f23bb8f8fd91b
-        }
-
-        //public void YellowindIcatorColorToGreenIndicatorColor()
-        //{
-        //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-        //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
-        //    RectangelGrid2.Fill = YellowBrush;
-        //}
-
-        //public void YellowindIcatorColorToGreenIndicatorColor()
-        //{
-        //    LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-        //    LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
-        //    RectangelGrid2.Fill = YellowBrush;
-        //    DispatcherTimer ColorTimer2 = new DispatcherTimer();
-        //    ColorTimer2.Interval = TimeSpan.FromMinutes(45);
-        //    ColorTimer2.Tick += (Zender, Args) =>
-        //    {
-        //        RectangelGrid2.Fill = GreenBrush;
-        //        ColorTimer2.Stop();
-        //    };
-        //    ColorTimer2.Start();
-        //}
-
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = "&#xF13D;", Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+           // attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = "&#xF13D;", Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
 

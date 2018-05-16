@@ -77,7 +77,7 @@
                 <MenuFlyout>
                     <MenuFlyoutItem Text="Booking"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem x:Name="TestBtn1" Text="Room 1" Click="btn2_Click"/>
+                    <MenuFlyoutItem x:Name="TestBtn1" Text="Room 1"/>
                     <MenuFlyoutItem x:Name="TestBtn2" Text="Room 2"/>
                     <MenuFlyoutItem x:Name="TestBtn3" Text="Room 3"/>
                     <MenuFlyoutItem x:Name="TestBtn4" Text="Room 4"/>
@@ -91,29 +91,17 @@
 
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
 
-<<<<<<< HEAD
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
 
-                <GridView x:Name="GridView" ItemsSource="{x:Bind attributes}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
-                    <GridView.ItemTemplate>
-                        <DataTemplate x:DataType="data:Attributes">
-                            <local:TemplateGrid/>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-                </GridView>
-=======
-        <GridView x:Name="GridView" ItemsSource="{x:Bind attributes}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
+            <GridView x:Name="GridView" ItemsSource="{x:Bind attributes}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="data:Attributes">
+                        <local:TemplateGrid/>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
 
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:Attributes">
-                    <local:TemplateGrid/>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-
-        </GridView>
->>>>>>> 85c57dfb05c6cddfc3176b931a5f23bb8f8fd91b
-
-        <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
+            <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid></Grid>
             </CommandBar.Content>

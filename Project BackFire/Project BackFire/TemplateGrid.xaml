@@ -9,6 +9,23 @@
     d:DesignHeight="395"
     d:DesignWidth="431">
 
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="GreenLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#00000000" Offset="0.801"/>
+            <GradientStop Color="#CC17FF00" Offset="0.098"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="RedLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#00000000" Offset="0.801"/>
+            <GradientStop Color="#CCD33F49" Offset="0.098"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="YellowLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#00000000" Offset="0.801"/>
+            <GradientStop Color="#CCFFDC00" Offset="0.098"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+
     <Grid x:Name="MainGrid">
         <Image x:Name="MainImage" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
             <Image.Projection>
@@ -17,11 +34,7 @@
         </Image>
         <Border  x:Name="MainBorder"  BorderBrush="Black" BorderThickness="4" Width="391"  Height="355" Margin="20,20,20,20" Opacity="100" Canvas.ZIndex="2">
             <Grid Margin="0,0,0,0">
-<<<<<<< HEAD
-                <Rectangle x:Name="FadeColor" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
-=======
-                <Rectangle x:Name="RectangelGrid2" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
->>>>>>> 85c57dfb05c6cddfc3176b931a5f23bb8f8fd91b
+                <Rectangle x:Name="StatusColor" Margin="0,0,0,0" Height="158" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -46,9 +59,9 @@
                     <TextBlock x:Name="Wifiicon" Width="40" Margin="171,0,0,10" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
                     <TextBlock x:Name="Tvicon" Width="40" Margin="245,0,0,3" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
                     <TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
-                    <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13e;"  Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Collapsed" />
-                    <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13e;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Collapsed" />
-                    <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13e;" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Collapsed" />
+                    <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}"  Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
+                    <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
+                    <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
                     <TextBlock x:Name="ErrWboard" Height="40" Margin="136,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13d;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                     <TextBlock x:Name="ErrProj" Height="40" Margin="55,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13d;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
                     <TextBlock x:Name="ErrWifi" Height="40" Margin="203,0,0,5" FontFamily="Segoe MDL2 Assets" Text="&#xF13d;" Foreground="#FFFF2300" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" FocusVisualPrimaryBrush="Red" Visibility="Collapsed" />
