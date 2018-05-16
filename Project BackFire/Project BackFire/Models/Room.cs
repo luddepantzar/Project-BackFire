@@ -12,7 +12,7 @@ using System.Collections.ObjectModel;
 
 namespace Project_BackFire.Models
 {
-    public class Attributes
+    public class Room
     {
         public int RoomID { get; set; }
         public string RoomName { get; set; }
@@ -25,6 +25,8 @@ namespace Project_BackFire.Models
         public string CompanyNote { get; set; }
         public string Note { get; set; }
         public int Status { get; set; }
+        public int Booked { get; set; }
+        public int NotBooked { get; set;}
     }
 
 

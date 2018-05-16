@@ -26,23 +26,43 @@ namespace Project_BackFire
 {
     public sealed partial class TemplateGrid : UserControl
     {
-        //public Models.Attributes Attributes {  get { return this.DataContext as Models.Attributes; } }
+        //public Models.Rooms Rooms {  get { return this.DataContext as Models.Rooms; } }
 
-        public ObservableCollection<Attributes> attributes;
+        public ObservableCollection<Room> Rooms;
 
         public TemplateGrid()
         {
             InitializeComponent();
             //this.DataContextChanged += (s, e) => Bindings.Update();
-            SwitchAttributes();
+            SwitchRooms();
             OnBooked();
         }
 
-        public void SwitchAttributes()
+        public void SwitchRooms()
         {
-            attributes = new ObservableCollection<Attributes>();
+            Rooms = new ObservableCollection<Room>();
 
-            //Attributes c1 = new Attributes
+
+
+            var status = Rooms.Any(p => p.RoomID <= 1);
+
+
+            switch (status)
+            {
+                case true:
+                    MainImage.Width = 500;
+                    MainImage.Height = 500;
+                    break;
+
+                case false:
+
+                    break;
+
+            }
+
+
+
+            //Rooms c1 = new Rooms
             //{
             //    RoomID = 10,
             //    RoomName = "Rum 10",
@@ -120,7 +140,7 @@ namespace Project_BackFire
         private void OnBooked()
         {
             LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-            var FirstCard = attributes.IndexOf(new Attributes { RoomID = 1 });
+            var FirstCard = Rooms.IndexOf(new Room { RoomID = 1 });
             StatusColor.Fill = RedBrush;
 
             DispatcherTimer ColorTimer = new DispatcherTimer();

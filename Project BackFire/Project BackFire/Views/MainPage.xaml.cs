@@ -25,7 +25,7 @@ namespace Project_BackFire.Views
 
         DependencyObject ImageArray { get; set; }
 
-        public ObservableCollection<Attributes> attributes;
+        public ObservableCollection<Room> Rooms;
 
 
         public DispatcherTimer DisTimer = new DispatcherTimer();
@@ -49,16 +49,16 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
 
-            attributes = new ObservableCollection<Attributes>();
+            Rooms = new ObservableCollection<Room>();
 
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13E", Seats = 10 });
-            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13D", Seats = 4 });
-            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13E", Seats = 15 });
-            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 7 });
-            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13D", Seats = 22 });
-            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13E", Seats = 12 });
-            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13D", Seats = 30 });
+            Rooms.Add(new Room{ RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            Rooms.Add(new Room{ RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13E", Seats = 10 });
+            Rooms.Add(new Room{ RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13D", Seats = 4 });
+            Rooms.Add(new Room{ RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13E", Seats = 15 });
+            Rooms.Add(new Room{ RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 7 });
+            Rooms.Add(new Room{ RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13D", Seats = 22 });
+            Rooms.Add(new Room{ RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13E", Seats = 12 });
+            Rooms.Add(new Room{ RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13D", Seats = 30 });
 
         }
 
@@ -406,20 +406,20 @@ namespace Project_BackFire.Views
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
 
-            attributes.Clear();
+            Rooms.Clear();
             //Fade();
             //Animation();
         }
 
         private void FlipCardConditions()
         {
-            //    //if (Attributes.Count < 8)
+            //    //if (Rooms.Count < 8)
             //    //{
             //    //    rotationback1.Stop();
             //    //    rotationfront1.Stop();
             //    //}
 
-            //    //while (Attributes.Count > 8)
+            //    //while (Rooms.Count > 8)
             //    //{
 
             //    //    try
@@ -475,13 +475,13 @@ namespace Project_BackFire.Views
 
         //private void FlipCardConditions()
         //{
-        //    if (Attributes.Count < 8)
+        //    if (Rooms.Count < 8)
         //    {
         //        rotationback1.Stop();
         //        rotationfront1.Stop();
         //    }
 
-        //    while (Attributes.Count > 8)
+        //    while (Rooms.Count > 8)
         //    {
 
         //        try
@@ -597,7 +597,7 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            Rooms.Add(new Room{ RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
