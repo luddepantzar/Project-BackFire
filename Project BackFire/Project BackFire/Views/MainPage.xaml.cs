@@ -32,7 +32,6 @@ namespace Project_BackFire.Views
 
         private TimeSpan SpanTime;
 
-
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -52,7 +51,7 @@ namespace Project_BackFire.Views
 
             attributes = new ObservableCollection<Attributes>();
 
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage= "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
             attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13E", Seats = 10 });
             attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13D", Seats = 4 });
             attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13E", Seats = 15 });
@@ -60,9 +59,11 @@ namespace Project_BackFire.Views
             attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13D", Seats = 22 });
             attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13E", Seats = 12 });
             attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13D", Seats = 30 });
+
         }
 
-        async void Getname()
+
+        async void GetnameExeo()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
@@ -81,9 +82,9 @@ namespace Project_BackFire.Views
                         Logo.Source = image;
                         ContentArea.Background = (LinearGradientBrush)Resources["Test"];
                         MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+                        ApiOutput.Text = "Välkommen "+ data.name;
                         break;
                     }
-                    
                 default:
                     {
                         break;
@@ -91,11 +92,9 @@ namespace Project_BackFire.Views
             }
         }
 
-        public async void InputApiBox()
+        async void GetTestCompany()
         {
-            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
-
-            BitmapImage image = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/image"));
+            string url = "https://api.rumsbokning.nu/api/companies/03ce761a-cd17-4eb3-9352-b5ba4ff4e303";
 
             HttpClient client = new HttpClient();
 
@@ -103,9 +102,52 @@ namespace Project_BackFire.Views
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
 
-            if (ApiInput.Password == data.code)
+            switch (data.code)
             {
-                Getname();
+                case "0":
+                    {
+                        ContentArea.Background = (LinearGradientBrush)Resources["Company3"];
+                        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+
+                        ApiOutput.Text = "Välkommen " + data.name;
+
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+        }
+
+        public void InputApiBox()
+        {
+            /*Just nu hämtas inte API-lösenordet från SQL databasen här*/
+            //string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
+
+            //HttpClient client = new HttpClient();
+
+            //string response = await client.GetStringAsync(url);
+
+            //var data = JsonConvert.DeserializeObject<Rootobject>(response);
+
+            switch (ApiInput.Password)
+            {
+                case "1234":
+                    {
+                        GetnameExeo();
+                        break;
+                    }
+                case "0":
+                    {
+                        GetTestCompany();
+                        break;
+                    }
+
+                case "Default":
+                    ContentArea.Background = (LinearGradientBrush)Resources["DefaultB"];
+                    MenuBar.Background = (LinearGradientBrush)Resources["DefaultMenu"];
+                    break;
             }
         }
 
@@ -363,6 +405,7 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
+
             attributes.Clear();
             //Fade();
             //Animation();
@@ -554,9 +597,8 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-           // attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", Projector = "&#xF13D;", Wboard = false, Tv = false, Wifi = true, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
-
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
