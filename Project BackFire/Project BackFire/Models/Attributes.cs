@@ -16,7 +16,7 @@ namespace Project_BackFire.Models
     {
         public int RoomID { get; set; }
         public string RoomName { get; set; }
-        public bool Projector { get; set; }
+        public string Projector { get; set; }
         public bool Wboard { get; set; }
         public int Seats { get; set; }
         public bool Tv { get; set; }

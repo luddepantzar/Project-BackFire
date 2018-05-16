@@ -31,14 +31,8 @@ namespace Project_BackFire
 
         public TemplateGrid()
         {
-<<<<<<< HEAD
             InitializeComponent();
-=======
-            this.InitializeComponent();
-
             //this.DataContextChanged += (s, e) => Bindings.Update();
-
->>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
             SwitchAttributes();
         }
 
@@ -47,90 +41,99 @@ namespace Project_BackFire
 
             attributes = new ObservableCollection<Attributes>();
 
-            Attributes c1 = new Attributes
-            {
-                RoomID = 10,
-                RoomName = "Rum 10",
-                Projector = true,
-                Wboard = false,
-                Tv = false,
-                Wifi = true,
-                Seats = 5,
-                Note = "Lorem ipsum dolor sit amet, co"
-            };
+            //Attributes c1 = new Attributes
+            //{
+            //    RoomID = 10,
+            //    RoomName = "Rum 10",
+            //    Projector = true,
+            //    Wboard = false,
+            //    Tv = false,
+            //    Wifi = true,
+            //    Seats = 5,
+            //    Note = "Lorem ipsum dolor sit amet, co"
+            //};
 
-            switch (c1.Projector)
-            {
-                case false:
-                    {
-                        CheckProj.Visibility = Visibility.Collapsed;
-                        ErrProj.Visibility = Visibility.Visible;
-                        break;
-                    }
-                case true:
-                    {
-                        ErrProj.Visibility = Visibility.Collapsed;
-                        CheckProj.Visibility = Visibility.Visible;
-                        break;
-                    }
+            //Attributes c2 = new Attributes
+            //{
+            //    RoomID = 11,
+            //    RoomName = "Rum 10",
+            //    Projector = false,
+            //    Wboard = true,
+            //    Tv = true,
+            //    Wifi = false,
+            //    Seats = 9,
+            //    Note = "Lorem ipsum dolor sit amet, co"
+            //};
 
-                default:
-                    break;
-            }
+            //switch (c1.Projector && c2.Projector)
+            //{
+            //    case false:
+            //        {
+            //            CheckProj.Visibility = Visibility.Collapsed;
+            //            ErrProj.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+            //    case true:
+            //        {
+            //            ErrProj.Visibility = Visibility.Collapsed;
+            //            CheckProj.Visibility = Visibility.Visible;
+            //            break;
+            //        }
+            //}
 
-            switch (c1.Wboard)
-            {
-                case false:
-                    {
-                        CheckWhiteboard.Visibility = Visibility.Collapsed;
-                        ErrWboard.Visibility = Visibility.Visible;
-                        break;
-                    }
+            //switch (c1.Wboard && c2.Wboard)
+            //{
+            //    case false:
+            //        {
+            //            CheckWhiteboard.Visibility = Visibility.Collapsed;
+            //            ErrWboard.Visibility = Visibility.Visible;
+            //            break;
+            //        }
 
-                case true:
-                    {
-                        CheckWhiteboard.Visibility = Visibility.Visible;
-                        ErrWboard.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
+            //    case true:
+            //        {
+            //            CheckWhiteboard.Visibility = Visibility.Visible;
+            //            ErrWboard.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
 
-            switch (c1.Tv)
-            {
-                case false:
-                    {
-                        CheckTV.Visibility = Visibility.Collapsed;
-                        ErrTv.Visibility = Visibility.Visible;
-                        break;
-                    }
+            //switch (c1.Tv && c2.Tv)
+            //{
+            //    case false:
+            //        {
+            //            CheckTV.Visibility = Visibility.Collapsed;
+            //            ErrTv.Visibility = Visibility.Visible;
+            //            break;
+            //        }
 
-                case true:
-                    {
-                        CheckTV.Visibility = Visibility.Visible;
-                        ErrTv.Visibility = Visibility.Collapsed;
-                        break;
-                    }
-            }
+            //    case true:
+            //        {
+            //            CheckTV.Visibility = Visibility.Visible;
+            //            ErrTv.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
+            //}
 
-            switch (c1.Wifi)
-            {
-                case false:
-                    {
-                        CheckWifi.Visibility = Visibility.Collapsed;
-                        ErrWifi.Visibility = Visibility.Visible;
-                        break;
-                    }
+            //switch (c1.Wifi && c2.Wifi)
+            //{
+            //    case false:
+            //        {
+            //            CheckWifi.Visibility = Visibility.Collapsed;
+            //            ErrWifi.Visibility = Visibility.Visible;
+            //            break;
+            //        }
 
-                case true:
-                    {
-                        CheckWifi.Visibility = Visibility.Visible;
-                        ErrWifi.Visibility = Visibility.Collapsed;
-                        break;
-                    }
+            //    case true:
+            //        {
+            //            CheckWifi.Visibility = Visibility.Visible;
+            //            ErrWifi.Visibility = Visibility.Collapsed;
+            //            break;
+            //        }
 
 
 
-            }
+            //}
         }
 
     }
