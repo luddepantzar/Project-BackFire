@@ -29,7 +29,7 @@ namespace Project_BackFire
     {
         //public Models.Attributes Attributes {  get { return this.DataContext as Models.Attributes; } }
 
-        public ObservableCollection<Attributes> attributes;
+        public List<Attributes> attributes;
 
         public TemplateGrid()
         {
@@ -41,7 +41,7 @@ namespace Project_BackFire
 
         public void SwitchAttributes()
         {
-            attributes = new ObservableCollection<Attributes>();
+            attributes = new List<Attributes>();
 
             if (attributes.Any(p => p.Projector == "\uF13E"))
             {
@@ -135,8 +135,25 @@ namespace Project_BackFire
         private void OnBooked()
         {
             LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-            var FirstCard = attributes.IndexAt();
-            StatusColor.Fill = RedBrush;
+
+            //var FirstCard = attributes.IndexOf( attributes.Where(x => x.RoomID == 3).FirstOrDefault() );
+            List<Attributes> attrib = new List<Attributes>();
+            var FirstCard = attrib.FindAll(x => x.RoomID == 0);
+            
+            switch(FirstCard.Count)
+            {
+                case 1:
+                    {
+                        StatusColor.Fill = RedBrush;
+                        break;
+                    }
+
+                default:
+                    {
+                        CheckSeats.Text = FirstCard.Count.ToString();
+                        break;
+                    }
+            }
 
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
