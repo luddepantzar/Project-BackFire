@@ -24,7 +24,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Project_BackFire
 {
-
     public sealed partial class TemplateGrid : UserControl
     {
         //public Models.Attributes Attributes {  get { return this.DataContext as Models.Attributes; } }
@@ -43,15 +42,6 @@ namespace Project_BackFire
         {
             attributes = new List<Attributes>();
 
-            if (attributes.Any(p => p.Projector == "\uF13E"))
-            {
-                CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 0, 255, 1));
-            }
-            else if(attributes.Any(p => p.Projector == "\uF13D"))
-            {
-                CheckProj.Foreground = new SolidColorBrush(Color.FromArgb(1, 255, 0, 1));
-            }
-
             //Attributes c1 = new Attributes
             //{
             //    RoomID = 10,
@@ -63,7 +53,6 @@ namespace Project_BackFire
             //    Seats = 5,
             //    Note = "Lorem ipsum dolor sit amet, co"
             //};
-
             //switch (c1.Projector)
             //{
             //    case false:
@@ -79,7 +68,6 @@ namespace Project_BackFire
             //            break;
             //        }
             //}
-
             //switch (c1.Wboard)
             //{
             //    case false:
@@ -96,7 +84,6 @@ namespace Project_BackFire
             //            break;
             //        }
             //}
-
             //switch (c1.Tv)
             //{
             //    case false:
@@ -113,7 +100,6 @@ namespace Project_BackFire
             //            break;
             //        }
             //}
-
             //switch (c1.Wifi)
             //{
             //    case false:
@@ -122,7 +108,6 @@ namespace Project_BackFire
             //            ErrWifi.Visibility = Visibility.Visible;
             //            break;
             //        }
-
             //    case true:
             //        {
             //            CheckWifi.Visibility = Visibility.Visible;
@@ -135,6 +120,7 @@ namespace Project_BackFire
         private void OnBooked()
         {
             LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
+<<<<<<< HEAD
 
             //var FirstCard = attributes.IndexOf( attributes.Where(x => x.RoomID == 3).FirstOrDefault() );
             List<Attributes> attrib = new List<Attributes>();
@@ -154,6 +140,10 @@ namespace Project_BackFire
                         break;
                     }
             }
+=======
+            var FirstCard = attributes.IndexOf(new Attributes { RoomID = 1 });
+            StatusColor.Fill = RedBrush;
+>>>>>>> 38530c03acf03985fa3bf85415134699274921ad
 
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
@@ -179,8 +169,6 @@ namespace Project_BackFire
             };
             ColorTimer2.Start();
         }
-
-
 
     }
 }

@@ -35,11 +35,27 @@
             <GradientStop Color="#455254" Offset="0.010"/>
             <GradientStop Color="#293132" Offset="0.48"/>
         </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="Company3" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF741111" Offset="0.525"/>
+            <GradientStop Color="#FFB40909" Offset="0.74"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="DefaultB"  EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop  Color="#FFACACAC" Offset="0.096"/>
+            <GradientStop Color="#FF363636" Offset="0.932"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Name="DefaultMenu" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
+            <GradientStop Color="#FF6A6A69" Offset="0.48"/>
+        </LinearGradientBrush>
+
     </Page.Resources>
 
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="1890" BorderBrush="Black" PointerMoved="OnPointerMoved" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
         <Grid.Background>
-            <LinearGradientBrush  EndPoint="0.5,1" StartPoint="0.5,0">
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop  Color="#FFACACAC" Offset="0.096"/>
                 <GradientStop Color="#FF363636" Offset="0.932"/>
             </LinearGradientBrush>
@@ -51,7 +67,7 @@
 
         <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
             <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush x:Name="Defaultmenu" EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
                     <GradientStop Color="#FF6A6A69" Offset="0.48"/>
                 </LinearGradientBrush>
