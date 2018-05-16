@@ -29,10 +29,16 @@ namespace Project_BackFire
         //public Models.Attributes Attributes {  get { return this.DataContext as Models.Attributes; } }
 
         public List<Attributes> attributes;
+        private LinearGradientBrush GreenBrush;
+        private LinearGradientBrush YellowBrush;
+        private LinearGradientBrush RedBrush;
 
         public TemplateGrid()
         {
             InitializeComponent();
+            GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
+            YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
             //this.DataContextChanged += (s, e) => Bindings.Update();
             SwitchAttributes();
             OnBooked();
@@ -40,7 +46,7 @@ namespace Project_BackFire
 
         public void SwitchAttributes()
         {
-            attributes = new List<Attributes>();
+            
 
             //Attributes c1 = new Attributes
             //{
@@ -119,32 +125,23 @@ namespace Project_BackFire
 
         private void OnBooked()
         {
-            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
-<<<<<<< HEAD
 
             //var FirstCard = attributes.IndexOf( attributes.Where(x => x.RoomID == 3).FirstOrDefault() );
-            List<Attributes> attrib = new List<Attributes>();
-            var FirstCard = attrib.FindAll(x => x.RoomID == 0);
-            
-            switch(FirstCard.Count)
-            {
-                case 1:
-                    {
-                        StatusColor.Fill = RedBrush;
-                        break;
-                    }
-
-                default:
-                    {
-                        CheckSeats.Text = FirstCard.Count.ToString();
-                        break;
-                    }
-            }
-=======
-            var FirstCard = attributes.IndexOf(new Attributes { RoomID = 1 });
-            StatusColor.Fill = RedBrush;
->>>>>>> 38530c03acf03985fa3bf85415134699274921ad
-
+           ////foreach(Attributes attribute in attributes)
+           //// {
+           ////     switch(attribute.Status)
+           ////     {
+           ////         case 0:
+           ////             StatusColor.Fill = GreenBrush;
+           ////             break;
+           ////         case 1:
+           ////             StatusColor.Fill = YellowBrush;
+           ////             break;
+           ////         case 2:
+           ////             StatusColor.Fill = RedBrush;
+           ////             break;
+           ////     }
+           //// }
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
             ColorTimer.Tick += (Sender, args) =>
@@ -157,8 +154,7 @@ namespace Project_BackFire
 
         public void YellowindIcatorColorToGreenIndicatorColor()
         {
-            LinearGradientBrush GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
-            LinearGradientBrush YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            
             StatusColor.Fill = YellowBrush;
             DispatcherTimer ColorTimer2 = new DispatcherTimer();
             ColorTimer2.Interval = TimeSpan.FromSeconds(7);

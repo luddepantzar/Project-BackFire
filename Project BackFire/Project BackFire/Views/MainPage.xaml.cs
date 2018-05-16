@@ -51,18 +51,17 @@ namespace Project_BackFire.Views
 
             attributes = new ObservableCollection<Attributes>();
 
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13E", Seats = 10 });
-            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13D", Seats = 4 });
-            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13E", Seats = 15 });
-            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 7 });
-            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13D", Wboard = "\uF13E", Tv = "\uF13E", Wifi = "\uF13D", Seats = 22 });
-            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = "\uF13D", Wboard = "\uF13D", Tv = "\uF13E", Wifi = "\uF13E", Seats = 12 });
-            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = "\uF13E", Wboard = "\uF13E", Tv = "\uF13D", Wifi = "\uF13D", Seats = 30 });
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10 });
+            attributes.Add(new Attributes { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4 });
+            attributes.Add(new Attributes { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15 });
+            attributes.Add(new Attributes { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7 });
+            attributes.Add(new Attributes { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22 });
+            attributes.Add(new Attributes { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12 });
+            attributes.Add(new Attributes { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30 });
 
         }
-
-
+        
         async void GetnameExeo()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
@@ -597,7 +596,7 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = "\uF13E", Wboard = "\uF13D", Tv = "\uF13D", Wifi = "\uF13E", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+            attributes.Add(new Attributes { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

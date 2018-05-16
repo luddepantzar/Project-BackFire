@@ -16,11 +16,11 @@ namespace Project_BackFire.Models
     {
         public int RoomID { get; set; }
         public string RoomName { get; set; }
-        public string Projector { get; set; }
-        public string Wboard { get; set; }
+        public Visibility Projector { get; set; }
+        public Visibility Wboard { get; set; }
         public int Seats { get; set; }
-        public string Tv { get; set; }
-        public string Wifi { get; set; }
+        public Visibility Tv { get; set; }
+        public Visibility Wifi { get; set; }
         public string FrontImage { get; set; }
         public string CompanyNote { get; set; }
         public string Note { get; set; }
