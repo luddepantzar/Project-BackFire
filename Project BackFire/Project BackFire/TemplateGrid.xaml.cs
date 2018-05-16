@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Toolkit.Uwp.UI.Animations;
+using Newtonsoft.Json;
 using Project_BackFire.Models;
 using System;
 using System.Collections.Generic;
@@ -32,15 +33,22 @@ namespace Project_BackFire
         public TemplateGrid()
         {
             InitializeComponent();
+<<<<<<< HEAD
             //this.DataContextChanged += (s, e) => Bindings.Update();
+=======
+            this.InitializeComponent();
+
+            //this.DataContextChanged += (s, e) => Bindings.Update();
+
+>>>>>>> 85c57dfb05c6cddfc3176b931a5f23bb8f8fd91b
             SwitchAttributes();
         }
 
         public void SwitchAttributes()
         {
-
             attributes = new ObservableCollection<Attributes>();
 
+<<<<<<< HEAD
             //Attributes c1 = new Attributes
             //{
             //    RoomID = 10,
@@ -134,7 +142,104 @@ namespace Project_BackFire
 
 
             //}
+=======
+            Attributes c1 = new Attributes
+            {
+                RoomID = 10,
+                RoomName = "Rum 10",
+                Projector = true,
+                Wboard = false,
+                Tv = false,
+                Wifi = true,
+                Seats = 5,
+                Note = "Lorem ipsum dolor sit amet, co"
+            };
+
+            //var res = attributes.Any(p => p.Projector == true);
+            //switch (res)
+            //{
+            //    case true:
+            //        ErrProj.Visibility = Visibility.Collapsed;
+            //        CheckProj.Visibility = Visibility.Visible;
+            //        break;
+            //    case false:
+            //        CheckProj.Visibility = Visibility.Collapsed;
+            //        ErrProj.Visibility = Visibility.Visible;
+            //        break;
+            //}
+
+            switch (c1.Projector)
+            {
+                case false:
+                    {
+                        CheckProj.Visibility = Visibility.Collapsed;
+                        ErrProj.Visibility = Visibility.Visible;
+                        break;
+                    }
+                case true:
+                    {
+                        ErrProj.Visibility = Visibility.Collapsed;
+                        CheckProj.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                default:
+                    break;
+            }
+
+            switch (c1.Wboard)
+            {
+                case false:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Collapsed;
+                        ErrWboard.Visibility = Visibility.Visible;
+                        break;
+                    }
+                case true:
+                    {
+                        CheckWhiteboard.Visibility = Visibility.Visible;
+                        ErrWboard.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+
+            switch (c1.Tv)
+            {
+                case false:
+                    {
+                        CheckTV.Visibility = Visibility.Collapsed;
+                        ErrTv.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckTV.Visibility = Visibility.Visible;
+                        ErrTv.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+
+            switch (c1.Wifi)
+            {
+                case false:
+                    {
+                        CheckWifi.Visibility = Visibility.Collapsed;
+                        ErrWifi.Visibility = Visibility.Visible;
+                        break;
+                    }
+
+                case true:
+                    {
+                        CheckWifi.Visibility = Visibility.Visible;
+                        ErrWifi.Visibility = Visibility.Collapsed;
+                        break;
+                    }
+            }
+>>>>>>> 85c57dfb05c6cddfc3176b931a5f23bb8f8fd91b
         }
+
+
 
     }
 }
