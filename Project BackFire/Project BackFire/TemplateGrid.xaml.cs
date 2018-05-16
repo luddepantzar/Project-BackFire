@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Toolkit.Uwp.UI.Animations;
+using Newtonsoft.Json;
 using Project_BackFire.Models;
 using System;
 using System.Collections.Generic;
@@ -31,20 +32,16 @@ namespace Project_BackFire
 
         public TemplateGrid()
         {
-<<<<<<< HEAD
             InitializeComponent();
-=======
             this.InitializeComponent();
 
             //this.DataContextChanged += (s, e) => Bindings.Update();
 
->>>>>>> 76a925722fb1a060134dd7d8e738a8e02edfbe38
             SwitchAttributes();
         }
 
         public void SwitchAttributes()
         {
-
             attributes = new ObservableCollection<Attributes>();
 
             Attributes c1 = new Attributes
@@ -58,6 +55,19 @@ namespace Project_BackFire
                 Seats = 5,
                 Note = "Lorem ipsum dolor sit amet, co"
             };
+
+            //var res = attributes.Any(p => p.Projector == true);
+            //switch (res)
+            //{
+            //    case true:
+            //        ErrProj.Visibility = Visibility.Collapsed;
+            //        CheckProj.Visibility = Visibility.Visible;
+            //        break;
+            //    case false:
+            //        CheckProj.Visibility = Visibility.Collapsed;
+            //        ErrProj.Visibility = Visibility.Visible;
+            //        break;
+            //}
 
             switch (c1.Projector)
             {
@@ -86,7 +96,6 @@ namespace Project_BackFire
                         ErrWboard.Visibility = Visibility.Visible;
                         break;
                     }
-
                 case true:
                     {
                         CheckWhiteboard.Visibility = Visibility.Visible;
@@ -127,11 +136,10 @@ namespace Project_BackFire
                         ErrWifi.Visibility = Visibility.Collapsed;
                         break;
                     }
-
-
-
             }
         }
+
+
 
     }
 }
