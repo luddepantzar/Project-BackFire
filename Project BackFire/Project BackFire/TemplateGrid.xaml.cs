@@ -28,7 +28,11 @@ namespace Project_BackFire
     {
         //public Models.Rooms Rooms {  get { return this.DataContext as Models.Rooms; } }
 
+<<<<<<< HEAD
         public ObservableCollection<Room> Rooms;
+=======
+        public List<Attributes> attributes;
+>>>>>>> 84a15fe2d8c273fcce1a5c05f5ccb952af8a3cd7
 
         public TemplateGrid()
         {
@@ -40,7 +44,11 @@ namespace Project_BackFire
 
         public void SwitchRooms()
         {
+<<<<<<< HEAD
             Rooms = new ObservableCollection<Room>();
+=======
+            attributes = new List<Attributes>();
+>>>>>>> 84a15fe2d8c273fcce1a5c05f5ccb952af8a3cd7
 
 
 
@@ -140,8 +148,34 @@ namespace Project_BackFire
         private void OnBooked()
         {
             LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
+<<<<<<< HEAD
             var FirstCard = Rooms.IndexOf(new Room { RoomID = 1 });
+=======
+<<<<<<< HEAD
+
+            //var FirstCard = attributes.IndexOf( attributes.Where(x => x.RoomID == 3).FirstOrDefault() );
+            List<Attributes> attrib = new List<Attributes>();
+            var FirstCard = attrib.FindAll(x => x.RoomID == 0);
+            
+            switch(FirstCard.Count)
+            {
+                case 1:
+                    {
+                        StatusColor.Fill = RedBrush;
+                        break;
+                    }
+
+                default:
+                    {
+                        CheckSeats.Text = FirstCard.Count.ToString();
+                        break;
+                    }
+            }
+=======
+            var FirstCard = attributes.IndexOf(new Attributes { RoomID = 1 });
+>>>>>>> 84a15fe2d8c273fcce1a5c05f5ccb952af8a3cd7
             StatusColor.Fill = RedBrush;
+>>>>>>> 38530c03acf03985fa3bf85415134699274921ad
 
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
