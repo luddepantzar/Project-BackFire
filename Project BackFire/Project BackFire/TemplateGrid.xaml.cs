@@ -26,12 +26,19 @@ namespace Project_BackFire
 {
     public sealed partial class TemplateGrid : UserControl
     {
-        //public Models.Attributes Attributes {  get { return this.DataContext as Models.Attributes; } }
+        //public Models.Rooms Rooms {  get { return this.DataContext as Models.Rooms; } }
 
+<<<<<<< HEAD
+        public ObservableCollection<Room> Rooms;
+=======
         public List<Attributes> attributes;
+<<<<<<< HEAD
         private LinearGradientBrush GreenBrush;
         private LinearGradientBrush YellowBrush;
         private LinearGradientBrush RedBrush;
+=======
+>>>>>>> 84a15fe2d8c273fcce1a5c05f5ccb952af8a3cd7
+>>>>>>> 249bcf2fedbd53f3f33e621ccedde5e1b286e58e
 
         public TemplateGrid()
         {
@@ -40,15 +47,43 @@ namespace Project_BackFire
             YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
             RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
             //this.DataContextChanged += (s, e) => Bindings.Update();
-            SwitchAttributes();
+            SwitchRooms();
             OnBooked();
         }
 
-        public void SwitchAttributes()
+        public void SwitchRooms()
         {
+<<<<<<< HEAD
             
+=======
+<<<<<<< HEAD
+            Rooms = new ObservableCollection<Room>();
+=======
+            attributes = new List<Attributes>();
+>>>>>>> 84a15fe2d8c273fcce1a5c05f5ccb952af8a3cd7
 
-            //Attributes c1 = new Attributes
+
+
+            var status = Rooms.Any(p => p.RoomID <= 1);
+
+
+            switch (status)
+            {
+                case true:
+                    MainImage.Width = 500;
+                    MainImage.Height = 500;
+                    break;
+
+                case false:
+
+                    break;
+
+            }
+>>>>>>> 249bcf2fedbd53f3f33e621ccedde5e1b286e58e
+
+
+
+            //Rooms c1 = new Rooms
             //{
             //    RoomID = 10,
             //    RoomName = "Rum 10",
@@ -125,6 +160,7 @@ namespace Project_BackFire
 
         private void OnBooked()
         {
+<<<<<<< HEAD
 
             //var FirstCard = attributes.IndexOf( attributes.Where(x => x.RoomID == 3).FirstOrDefault() );
            ////foreach(Attributes attribute in attributes)
@@ -142,6 +178,38 @@ namespace Project_BackFire
            ////             break;
            ////     }
            //// }
+=======
+            LinearGradientBrush RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
+<<<<<<< HEAD
+            var FirstCard = Rooms.IndexOf(new Room { RoomID = 1 });
+=======
+<<<<<<< HEAD
+
+            //var FirstCard = attributes.IndexOf( attributes.Where(x => x.RoomID == 3).FirstOrDefault() );
+            List<Attributes> attrib = new List<Attributes>();
+            var FirstCard = attrib.FindAll(x => x.RoomID == 0);
+            
+            switch(FirstCard.Count)
+            {
+                case 1:
+                    {
+                        StatusColor.Fill = RedBrush;
+                        break;
+                    }
+
+                default:
+                    {
+                        CheckSeats.Text = FirstCard.Count.ToString();
+                        break;
+                    }
+            }
+=======
+            var FirstCard = attributes.IndexOf(new Attributes { RoomID = 1 });
+>>>>>>> 84a15fe2d8c273fcce1a5c05f5ccb952af8a3cd7
+            StatusColor.Fill = RedBrush;
+>>>>>>> 38530c03acf03985fa3bf85415134699274921ad
+
+>>>>>>> 249bcf2fedbd53f3f33e621ccedde5e1b286e58e
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
             ColorTimer.Tick += (Sender, args) =>
