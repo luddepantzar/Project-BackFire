@@ -27,8 +27,14 @@ namespace Project_BackFire
     public sealed partial class TemplateGrid : UserControl
     {
         //public Models.Rooms Rooms {  get { return this.DataContext as Models.Rooms; } }
+<<<<<<< HEAD
         public ObservableCollection<Room> Rooms;
         public List<Room> attributes;
+=======
+
+        public ObservableCollection<Room> Rooms;
+
+>>>>>>> 2725604eabd26d76343e32032bb12281c4bce0ee
         private LinearGradientBrush GreenBrush;
         private LinearGradientBrush YellowBrush;
         private LinearGradientBrush RedBrush;
@@ -40,10 +46,10 @@ namespace Project_BackFire
             YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
             RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
             //this.DataContextChanged += (s, e) => Bindings.Update();
-            SwitchRooms();
-            OnBooked();
+           
         }
 
+<<<<<<< HEAD
         public void SwitchRooms()
         {
             Rooms = new ObservableCollection<Room>();
@@ -169,10 +175,15 @@ namespace Project_BackFire
             };
             ColorTimer.Start();
         }
+=======
+    
+
+     
+>>>>>>> 2725604eabd26d76343e32032bb12281c4bce0ee
 
         public void YellowindIcatorColorToGreenIndicatorColor()
         {
-            
+
             StatusColor.Fill = YellowBrush;
             DispatcherTimer ColorTimer2 = new DispatcherTimer();
             ColorTimer2.Interval = TimeSpan.FromSeconds(7);
