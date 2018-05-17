@@ -18,15 +18,15 @@ namespace Project_BackFire.Models
         public string RoomName { get; set; }
         public Visibility Projector { get; set; }
         public Visibility Wboard { get; set; }
-        public int Seats { get; set; }
         public Visibility Tv { get; set; }
         public Visibility Wifi { get; set; }
+        public int Seats { get; set; }
         public string FrontImage { get; set; }
         public string CompanyNote { get; set; }
         public string Note { get; set; }
         public int Status { get; set; }
         public int Booked { get; set; }
-        public int NotBooked { get; set;}
+        public int NotBooked { get; set; }
     }
 
 

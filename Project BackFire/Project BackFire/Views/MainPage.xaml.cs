@@ -27,7 +27,6 @@ namespace Project_BackFire.Views
 
         public ObservableCollection<Room> Rooms;
 
-
         public DispatcherTimer DisTimer = new DispatcherTimer();
 
         private TimeSpan SpanTime;
@@ -51,7 +50,6 @@ namespace Project_BackFire.Views
 
             Rooms = new ObservableCollection<Room>();
 
-<<<<<<< HEAD
             Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
             Rooms.Add(new Room { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10 });
             Rooms.Add(new Room { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4 });
@@ -60,18 +58,6 @@ namespace Project_BackFire.Views
             Rooms.Add(new Room { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22 });
             Rooms.Add(new Room { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12 });
             Rooms.Add(new Room { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30 });
-=======
-
-            Rooms.Add(new Room{ RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room{ RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Seats = 10 });
-            Rooms.Add(new Room{ RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Seats = 4 });
-            Rooms.Add(new Room{ RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Seats = 15 });
-            Rooms.Add(new Room{ RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Seats = 7 });
-            Rooms.Add(new Room{ RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Seats = 22 });
-            Rooms.Add(new Room{ RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Seats = 12 });
-            Rooms.Add(new Room{ RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Seats = 30 });
->>>>>>> 2725604eabd26d76343e32032bb12281c4bce0ee
-
         }
 
         async void GetnameExeo()
@@ -93,7 +79,7 @@ namespace Project_BackFire.Views
                         Logo.Source = image;
                         ContentArea.Background = (LinearGradientBrush)Resources["Test"];
                         MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
-                        ApiOutput.Text = "Välkommen "+ data.name;
+                        ApiOutput.Text = "Välkommen " + data.name;
                         break;
                     }
                 default:
@@ -608,11 +594,7 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            Rooms.Add(new Room{ RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg",  Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
-=======
-            Rooms.Add(new Room{ RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
->>>>>>> 2725604eabd26d76343e32032bb12281c4bce0ee
+            Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
