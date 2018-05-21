@@ -50,31 +50,31 @@
         </LinearGradientBrush>
 
         <LinearGradientBrush x:Name="DefaultMenu" EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
-            <GradientStop Color="#FF6A6A69" Offset="0.48"/>
+            <GradientStop Color="#100B00" Offset="0.046"/>
+            <GradientStop Color="#1B2021" Offset="0.48"/>
         </LinearGradientBrush>
 
     </Page.Resources>
 
-    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}"  Height="Auto" Width="1890" BorderBrush="Black" PointerMoved="OnPointerMoved" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
-        <Grid.Background>
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}" Background="{StaticResource MenuTest}" Height="Auto" Width="1890" BorderBrush="Black" PointerMoved="OnPointerMoved" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
+        <!--<Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop  Color="#FFACACAC" Offset="0.096"/>
                 <GradientStop Color="#FF363636" Offset="0.932"/>
             </LinearGradientBrush>
-        </Grid.Background>
+        </Grid.Background>-->
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="CheckProj1" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
 
-        <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
-            <Grid.Background>
+        <Grid x:Name="MenuBar" Background="{StaticResource DefaultMenu}" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
+            <!--<Grid.Background>
                 <LinearGradientBrush x:Name="Defaultmenu" EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
                     <GradientStop Color="#FF6A6A69" Offset="0.48"/>
                 </LinearGradientBrush>
-            </Grid.Background>
+            </Grid.Background>-->
 
             <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Assets/test_logo_whitetxt.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
 
@@ -120,18 +120,18 @@
             </GridView.ItemTemplate>
         </GridView>
 
-        <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
+        <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
-                <Grid></Grid>
+                <Grid Margin="683"></Grid>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
         </CommandBar>
 
-        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+        <Grid x:Name="SettingsGrid" Background="{StaticResource MenuTest}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
-                    <StackPanel  Background="{StaticResource SettingsBackground}">
+                    <StackPanel  Background="#1B2021">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="50" Height="50"  Click="HamburgerButton_Click" Background="{x:Null}"/>
                         <StackPanel Orientation="Horizontal">
