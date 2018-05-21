@@ -1,6 +1,7 @@
 ﻿using Microsoft.Toolkit.Uwp.UI.Animations;
 using Newtonsoft.Json;
 using Project_BackFire.Models;
+using Project_BackFire.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -35,16 +36,47 @@ namespace Project_BackFire
         public TemplateGrid()
         {
             this.InitializeComponent();
+<<<<<<< HEAD
 
 
             Rooms = new ObservableCollection<Room>();
+=======
+=======
+            InitializeComponent();
+            Rooms = new ObservableCollection<Room>();
+<<<<<<< HEAD
+            Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co", Status = 0 });
+            Rooms.Add(new Room { RoomID = 2, RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 3, RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 4, RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 6, RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 7, RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 8, RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 9, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 25, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 10, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 14, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 11, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 16, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 12, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 8, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 13, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 11, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 14, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 15, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 43, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 16, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 1, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+
+=======
+>>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
+>>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
+>>>>>>> 07f876db84ffe10edb713a815e64a33b8ccecfb8
             GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
             YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
             RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
             // Easteregg();
             OnBooked();
+<<<<<<< HEAD
+            CardConditions();
+=======
             //FlipCardConditions();
+>>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
             //FadeIn();
         }
 
@@ -246,6 +278,7 @@ namespace Project_BackFire
             //    {
             //        StatusColor.Fill = YellowBrush;
             //    }
+<<<<<<< HEAD
 
             //foreach (Room Rooms in Rooms)
             //{
@@ -262,7 +295,55 @@ namespace Project_BackFire
             //            break;
             //    }
             //}
+=======
+=======
+            foreach (Room Rooms in Rooms)
+            {
+                switch (Rooms.Status)
+                {
+                    case 0:
+                        StatusColor.Fill = GreenBrush;
+                        break;
+                    case 1:
+                        YellowindIcatorColorToGreenIndicatorColor();
+                        break;
+                    case 2:
+                        RedIndicatorColorToYellowIndicatorColor();
+                        break;
+                }
 
+<<<<<<< HEAD
+                //if (Rooms.Status == 0)
+                //{
+                //    StatusColor.Fill = GreenBrush;
+                //}
+                //else if (Rooms.Status == 1)
+                //{
+                //    StatusColor.Fill = YellowBrush;
+                //}
+                //else if(Rooms.Status == 2)
+                //{
+                //    StatusColor.Fill = RedBrush;
+                //}
+            }
+        }
+>>>>>>> 07f876db84ffe10edb713a815e64a33b8ccecfb8
+
+        public void RedIndicatorColorToYellowIndicatorColor()
+        {
+            StatusColor.Fill = RedBrush;
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(7);
+            ColorTimer.Tick += (Sender, args) =>
+            {
+                YellowindIcatorColorToGreenIndicatorColor();
+                ColorTimer.Stop();
+            };
+            ColorTimer.Start();
+        }
+
+        public void YellowindIcatorColorToGreenIndicatorColor()
+=======
             //    StatusColor.Fill = RedBrush;
             //    DispatcherTimer ColorTimer = new DispatcherTimer();
             //    ColorTimer.Interval = TimeSpan.FromSeconds(7);
@@ -300,6 +381,7 @@ namespace Project_BackFire
 
 
         public void FlipCardConditions()
+<<<<<<< HEAD
         {
 
             //if (Rooms.Count > 8)
@@ -323,6 +405,121 @@ namespace Project_BackFire
             //FadeTimer.Start();
 
 
+=======
+>>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
+>>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
+        {
+            StatusColor.Fill = YellowBrush;
+            DispatcherTimer ColorTimer2 = new DispatcherTimer();
+            ColorTimer2.Interval = TimeSpan.FromSeconds(7);
+            ColorTimer2.Tick += (Zender, Args) =>
+            {
+                StatusColor.Fill = GreenBrush;
+                ColorTimer2.Stop();
+            };
+            ColorTimer2.Start();
+        }
+
+        public void CardConditions()
+        {
+            if (Rooms.Count > 8)
+            {
+<<<<<<< HEAD
+                StatusColor.Fill = GreenBrush;
+                ColorTimer2.Stop();
+            };
+            ColorTimer2.Start();
+        }
+        //public void FlipCardConditions()
+        //{
+        //    MainGrid.Opacity = 1;
+        //    MainGrid.Fade(duration: 1000, delay: 4000, value: 0).Start();
+        //    MainGrid.Fade(duration: 1000, delay: 10000, value: 1).Start();
+        //}
+=======
+                MainGrid.Fade(duration: 1000, delay: 2000, value: 0).Start();
+                StatusColor.Fill = RedBrush;
+
+                DispatcherTimer FadeTimer = new DispatcherTimer();
+                FadeTimer.Interval = TimeSpan.FromSeconds(3);
+                FadeTimer.Tick += (sender, args) =>
+                {
+                    var index0 = Rooms.Where(p => p.RoomID == 1);
+                    var index1 = Rooms.Where(p => p.RoomID == 2);
+                    var index2 = Rooms.Where(p => p.RoomID == 3);
+
+                    foreach (Room Rooms in Rooms)
+                    {
+                        switch (Rooms.RoomID)
+                        {
+                            case 2:
+                                {
+                                    StatusColor.Fill = GreenBrush;
+                                    break;
+                                }
+
+                            case 1:
+                                {
+                                    StatusColor.Fill = YellowBrush;
+                                    break;
+                                }
+                        }
+                    }
+                    MainGrid.Fade(duration: 1000, delay: 2000, value: 1).Start();
+                };
+                FadeTimer.Start();
+            }
+
+            switch(Rooms.Count)
+            {
+                case 2:
+                    {
+                        MainImage.Width = 550;
+                        MainImage.Height = 500;
+                        MainBorder.Width = 550;
+                        MainBorder.Height = 500;
+                        MainGrid.Width = 850;
+                        MainGrid.Height = 800;
+                        break;
+                    }
+
+                case 3:
+                    {
+                        MainImage.Width = 450;
+                        MainImage.Height = 400;
+                        MainBorder.Width = 450;
+                        MainBorder.Height = 400;
+                        MainGrid.Width = 570;
+                        MainGrid.Height = 750;
+                        break;
+                    }
+
+                case 4:
+                    {
+                        MainGrid.Width = 431;
+                        MainGrid.Height = 799;
+                        break;
+                    }
+
+                case 6:
+                    {
+                        MainImage.Width = 391;
+                        MainImage.Height = 355;
+                        MainBorder.Width = 391;
+                        MainBorder.Height = 355;
+                        MainGrid.Width = 570;
+                        MainGrid.Height = 400;
+                        break;
+                    }
+
+                case 8:
+                    {
+                        MainGrid.Height = 395;
+                        MainGrid.Width = 431;
+                        break;
+                    }
+            }
+>>>>>>> 07f876db84ffe10edb713a815e64a33b8ccecfb8
         }
         //public async void FadeIn()
         //{

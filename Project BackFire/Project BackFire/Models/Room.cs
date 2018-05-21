@@ -25,8 +25,6 @@ namespace Project_BackFire.Models
         public string CompanyNote { get; set; }
         public string Note { get; set; }
         public int Status { get; set; }
-        public int Booked { get; set; }
-        public int NotBooked { get; set; }
     }
 
 
