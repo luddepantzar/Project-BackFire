@@ -114,7 +114,6 @@ namespace Project_BackFire.Views
                     {
                         ContentArea.Background = (LinearGradientBrush)Resources["Company3"];
                         MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
-
                         ApiOutput.Text = "Välkommen " + data.name;
 
                         break;
@@ -411,7 +410,6 @@ namespace Project_BackFire.Views
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-
             Rooms.Clear();
             //Fade();
             //Animation();

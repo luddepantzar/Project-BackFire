@@ -43,8 +43,13 @@
                     </Rectangle.Fill>
                 </Rectangle>
                 <TextBlock x:Name="SeatsIcon" Width="40" Margin="0,13,65,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
+<<<<<<< HEAD
+                <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
+                <TextBlock x:Name="CompanyName" Height="50" VerticalAlignment="Top" Text="{Binding RoomName}" FontSize="40" Margin="10,0,0,0"/>
+=======
                 <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{Binding Seats}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
                 <TextBlock x:Name="CompanyName" Height="50" VerticalAlignment="Top" Text="{Binding RoomName}" FontSize="40"/>
+>>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
                 <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -54,14 +59,32 @@
                     </Border.Background>
                 </Border>
                 <Grid Margin="0,0,0,0" Width="311">
+<<<<<<< HEAD
+
+                    <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" TextAlignment="Center" Margin="8,127,0,0"  Text="{Binding Note}" Foreground="Black" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" Height="99" FontSize="26" FocusVisualSecondaryBrush="#99FFFFFF"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,266,0,0">
+                        <TextBlock x:Name="ProjIcon" Height="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible"/>
+                        <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="Wifiicon" Width="40" Margin="30,0,0,14" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="Visible"/>
+                        <TextBlock x:Name="Tvicon" Width="40" Margin="30,0,0,7" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="Visible"/>
+                    </StackPanel>
+                    <!--<TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
+
+=======
                     <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" Margin="8,140,0,0" Text="" Foreground="Black" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="99" FontSize="16" FocusVisualSecondaryBrush="#99FFFFFF"/>
+>>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
                     <StackPanel Orientation="Horizontal" Margin="0,266,0,0">
                         <TextBlock x:Name="ProjIcon" Height="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="{Binding Projector}"/>
                         <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Wboard}"/>
                         <TextBlock x:Name="Wifiicon" Width="40" Margin="30,0,0,14" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Wifi}"/>
                         <TextBlock x:Name="Tvicon" Width="40" Margin="30,0,0,7" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Tv}"/>
                     </StackPanel>
+<<<<<<< HEAD
+                        <TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
+=======
                     <!--<TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
+>>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
                     <TextBlock x:Name="CheckWhiteboard" Height="40" Margin="134,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wboard}"  Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
                     <TextBlock x:Name="CheckWifi" Height="40" Margin="201,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Wifi}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
                     <TextBlock x:Name="CheckTV" Height="40" Margin="276,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Tv}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
