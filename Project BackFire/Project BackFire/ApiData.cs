@@ -14,8 +14,7 @@ namespace Project_BackFire
 
 public class Rootobject
 {
-    public List<Class1> Property1 { get; set; } 
-
+    public List<Class1> Property1 { get; set; }
 
     public string name { get; set; }
     public string id { get; set; }
@@ -28,5 +27,5 @@ public class Rootobject
 
 public class Class1
 {
-    
+
 }

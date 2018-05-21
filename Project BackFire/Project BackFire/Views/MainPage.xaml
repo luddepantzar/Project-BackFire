@@ -100,35 +100,22 @@
             </Button.Flyout>
         </Button>
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
-
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
-<<<<<<< HEAD
-            <GridView x:Name="GridView" ItemsSource="{x:Bind Rooms}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="data:Room">
-                        <local:TemplateGrid/>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-=======
-
-        <GridView x:Name="GridView" ItemsSource="{x:Bind Rooms}" Width="1740" Height="835" HorizontalAlignment="Center" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
+        <GridView x:Name="GridView" ItemsSource="{x:Bind Rooms}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:Room">
                     <local:TemplateGrid/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-
->>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
-        <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
+        <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid></Grid>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
         </CommandBar>
-        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
+        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="{StaticResource SettingsBackground}">
@@ -170,6 +157,7 @@
                             <Border x:Name="ApiContainer" BorderBrush="#FF272727" BorderThickness="2" HorizontalAlignment="Left" Height="26" Margin="75,173,0,0" VerticalAlignment="Top" Width="286" Background="#FF959593" Visibility="Collapsed">
                                 <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible"/>
                             </Border>
+                            <ProgressBar x:Name="prog" Height="50" Width="50" Foreground="Black" Value="0" Maximum="100" Margin="0,12"/>
                             <Button x:Name="ApiSubmitBut" Content="Hämta API" HorizontalAlignment="Left" Margin="179,95,0,0" VerticalAlignment="Top" Background="#FF959592" BorderBrush="#FF353532" Click="ApiSubmitBut_Click"/>
                         </Grid>
                     </Grid>

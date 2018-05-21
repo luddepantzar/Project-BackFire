@@ -35,7 +35,6 @@ namespace Project_BackFire.Views
         {
             get { return DataContext as MainViewModel; }
         }
-
         public Main()
         {
             InitializeComponent();
@@ -61,6 +60,53 @@ namespace Project_BackFire.Views
             Rooms.Add(new Room { RoomID = 9, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 25, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
         }
 
+        public void Layout()
+        {
+
+
+            switch (Rooms.Count)
+            {
+                case 2:
+                    {
+
+                        break;
+                    }
+
+                case 3:
+                    {
+                        break;
+                    }
+
+                case 4:
+                    {
+                        break;
+                    }
+
+                case 5:
+                    {
+                        break;
+                    }
+
+                case 6:
+                    {
+                        break;
+                    }
+
+                case 7:
+                    {
+                        break;
+                    }
+
+                case 8:
+                    {
+                        break;
+                    }
+            }
+
+
+
+        }
+
         async void GetnameExeo()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
@@ -72,11 +118,12 @@ namespace Project_BackFire.Views
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
-
+            prog.IsIndeterminate = false;
             switch (data.code)
             {
                 case "1234":
                     {
+                        prog.IsIndeterminate = false;
                         Logo.Source = image;
                         ContentArea.Background = (LinearGradientBrush)Resources["Test"];
                         MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
@@ -107,7 +154,6 @@ namespace Project_BackFire.Views
                         ContentArea.Background = (LinearGradientBrush)Resources["Company3"];
                         MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
                         ApiOutput.Text = "Välkommen " + data.name;
-
                         break;
                     }
                 default:
@@ -133,6 +179,7 @@ namespace Project_BackFire.Views
                 case "1234":
                     {
                         GetnameExeo();
+                        prog.IsIndeterminate = true;
                         break;
                     }
                 case "0":
@@ -140,7 +187,6 @@ namespace Project_BackFire.Views
                         GetTestCompany();
                         break;
                     }
-
                 case "Default":
                     ContentArea.Background = (LinearGradientBrush)Resources["DefaultB"];
                     MenuBar.Background = (LinearGradientBrush)Resources["DefaultMenu"];
@@ -153,6 +199,8 @@ namespace Project_BackFire.Views
             ApiContainer.Visibility = Visibility.Visible;
             InputApiBox();
         }
+
+
 
         //public void AnimationFront()
         //{
@@ -598,7 +646,6 @@ namespace Project_BackFire.Views
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
 
         }
     }
