@@ -31,6 +31,20 @@ namespace Project_BackFire.Views
 
         private TimeSpan SpanTime;
 
+        //public Image MainImage
+        //{
+        //    get { return MainImage; }
+        //}
+
+        //public Border MainBorder
+        //{
+        //    get { return MainBorder; }
+        //}
+        //public Grid MainGrid
+        //{
+        //    get { return MainGrid; }
+        //}
+
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -48,71 +62,61 @@ namespace Project_BackFire.Views
             //FlipCardConditions();
 
             Rooms = new ObservableCollection<Room>();
-
-            Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 2, RoomName = "Rum 2 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 3, RoomName = "Rum 3 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 4, RoomName = "Rum 4 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 5, RoomName = "Rum 5 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 6, RoomName = "Rum 6 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 7, RoomName = "Rum 7 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 8, RoomName = "Rum 8 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 9, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 25, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 10, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 14, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 11, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 16, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 12, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 8, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 13, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 11, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 14, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 15, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 43, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            Rooms.Add(new Room { RoomID = 16, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 1, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-
-        }
-
-        public void Layout()
-        {
+            //Rooms.Add(new Room { RoomID = 9, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 25, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 10, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 14, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 11, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 16, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 12, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 8, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 13, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 11, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 14, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 15, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 43, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //Rooms.Add(new Room { RoomID = 16, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 1, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
 
 
-            switch (Rooms.Count)
-            {
-                case 2:
-                    {
-
-                        break;
-                    }
-
-                case 3:
-                    {
-                        break;
-                    }
-
-                case 4:
-                    {
-                        break;
-                    }
-
-                case 5:
-                    {
-                        break;
-                    }
-
-                case 6:
-                    {
-                        break;
-                    }
-
-                case 7:
-                    {
-                        break;
-                    }
-
-                case 8:
-                    {
-                        break;
-                    }
-            }
-
-
-
+            //switch (Rooms.Count)
+            //{
+            //    case 2:
+            //        {
+            //            MainImage.Width = 550;
+            //            MainImage.Height = 500;
+            //            MainBorder.Width = 550;
+            //            MainBorder.Height = 500;
+            //            MainGrid.Width = 850;
+            //            MainGrid.Height = 800;
+            //            break;
+            //        }
+            //    case 3:
+            //        {
+            //            MainImage.Width = 450;
+            //            MainImage.Height = 400;
+            //            MainBorder.Width = 450;
+            //            MainBorder.Height = 400;
+            //            MainGrid.Width = 570;
+            //            MainGrid.Height = 750;
+            //            break;
+            //        }
+            //    case 4:
+            //        {
+            //            MainGrid.Width = 431;
+            //            MainGrid.Height = 799;
+            //            break;
+            //        }
+            //    case 6:
+            //        {
+            //            MainImage.Width = 460;
+            //            MainImage.Height = 355;
+            //            MainBorder.Width = 460;
+            //            MainBorder.Height = 355;
+            //            MainGrid.Width = 570;
+            //            MainGrid.Height = 400;
+            //            break;
+            //        }
+            //    case 8:
+            //        {
+            //            MainGrid.Height = 395;
+            //            MainGrid.Width = 431;
+            //            break;
+            //        }
+            //}
         }
 
         async void GetnameExeo()
@@ -126,23 +130,20 @@ namespace Project_BackFire.Views
             string response = await client.GetStringAsync(url);
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
-            prog.IsIndeterminate = false;
-            switch (data.code)
-            {
-                case "1234":
-                    {
-                        prog.IsIndeterminate = false;
-                        Logo.Source = image;
-                        ContentArea.Background = (LinearGradientBrush)Resources["Test"];
-                        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
-                        ApiOutput.Text = "Välkommen " + data.name;
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+
+            Logo.Source = image;
+            ContentArea.Background = (LinearGradientBrush)Resources["Test"];
+            MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+            ApiOutput.Text = "Välkommen " + data.name;
+
+        }
+
+        void GetDefault()
+        {
+            BitmapImage newlogo = new BitmapImage(new Uri("ms-appx:///Assets/test_logo_whitetxt.png"));
+            Logo.Source = newlogo;
+            ContentArea.Background = (LinearGradientBrush)Resources["MenuTest"];
+            MenuBar.Background = (LinearGradientBrush)Resources["DefaultMenu"];
         }
 
         async void GetTestCompany()
@@ -155,39 +156,32 @@ namespace Project_BackFire.Views
 
             var data = JsonConvert.DeserializeObject<Rootobject>(response);
 
-            switch (data.code)
-            {
-                case "0":
-                    {
-                        ContentArea.Background = (LinearGradientBrush)Resources["Company3"];
-                        MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
-                        ApiOutput.Text = "Välkommen " + data.name;
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+            ContentArea.Background = (LinearGradientBrush)Resources["Company3"];
+            MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
+            ApiOutput.Text = "Välkommen " + data.name;
+
+
         }
 
         public void InputApiBox()
         {
-            /*Just nu hämtas inte API-lösenordet från SQL databasen här*/
-            //string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
+            ///*Just nu hämtas inte API-lösenordet från SQL databasen här*/
+            ////string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
 
-            //HttpClient client = new HttpClient();
+            ////HttpClient client = new HttpClient();
 
-            //string response = await client.GetStringAsync(url);
+            ////string response = await client.GetStringAsync(url);
 
-            //var data = JsonConvert.DeserializeObject<Rootobject>(response);
+            ////var data = JsonConvert.DeserializeObject<Rootobject>(response);
+
+            //BitmapImage newlogo = new BitmapImage(new Uri("ms-appx:///Assets/test_logo_whitetxt.png"));
+
 
             switch (ApiInput.Password)
             {
                 case "1234":
                     {
                         GetnameExeo();
-                        prog.IsIndeterminate = true;
                         break;
                     }
                 case "0":
@@ -196,8 +190,7 @@ namespace Project_BackFire.Views
                         break;
                     }
                 case "Default":
-                    ContentArea.Background = (LinearGradientBrush)Resources["MenuTest"];
-                    MenuBar.Background = (LinearGradientBrush)Resources["DefaultMenu"];
+                    GetDefault();
                     break;
             }
         }
@@ -207,8 +200,6 @@ namespace Project_BackFire.Views
             ApiContainer.Visibility = Visibility.Visible;
             InputApiBox();
         }
-
-
 
         //public void AnimationFront()
         //{
@@ -649,12 +640,54 @@ namespace Project_BackFire.Views
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Note = "Lorem ipsum dolor sit amet, co" });
+
+            Random rnd = new Random();
+            int val = rnd.Next(0, 8);
+
+            switch (val)
+            {
+                case 1:
+                    Rooms.Add(new Room { RoomID = 7, RoomName = "Rum 7 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 2:
+                    Rooms.Add(new Room { RoomID = 8, RoomName = "Rum 8 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 3:
+                    Rooms.Add(new Room { RoomID = 3, RoomName = "Rum 3 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 4:
+                    Rooms.Add(new Room { RoomID = 6, RoomName = "Rum 6 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 5:
+                    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 6:
+                    Rooms.Add(new Room { RoomID = 4, RoomName = "Rum 4 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 7:
+                    Rooms.Add(new Room { RoomID = 2, RoomName = "Rum 2 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 8:
+                    Rooms.Add(new Room { RoomID = 5, RoomName = "Rum 5 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+            }
+
+
+            if (Rooms.Count == 9)
+            {
+
+
+            }
+
+
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
+
+
     }
 }
