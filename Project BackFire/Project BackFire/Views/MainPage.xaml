@@ -63,24 +63,15 @@
             <RowDefinition x:Name="TitleRow"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="CheckProj1" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
-<<<<<<< HEAD
 
         <Grid x:Name="MenuBar" Background="{StaticResource DefaultMenu}" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
-            <!--<Grid.Background>
-=======
-        <Grid x:Name="MenuBar" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
-            <Grid.Background>
->>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
+            <!--<Grid.Background>76a2e
                 <LinearGradientBrush x:Name="Defaultmenu" EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFD1D1D1" Offset="0.046"/>
+                    <GradientStop Col31d82d1553eor="#FFD1D1D1" Offset="0.046"/>
                     <GradientStop Color="#FF6A6A69" Offset="0.48"/>
                 </LinearGradientBrush>
-<<<<<<< HEAD
             </Grid.Background>-->
 
-=======
-            </Grid.Background>
->>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
             <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Assets/test_logo_whitetxt.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
                 <Image.FocusVisualPrimaryBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -94,6 +85,7 @@
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
+        
         <Button x:Name="FlyoutBtn" Content="Flyout" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" >
             <Button.Flyout>
                 <MenuFlyout>
@@ -119,33 +111,16 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-<<<<<<< HEAD
-        <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
-=======
 
-<<<<<<< HEAD
         <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
-=======
->>>>>>> e994a3a028f0cf8403957ef07b3b41f13b3a3a47
-        <CommandBar x:Name="CmdBar" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
->>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
->>>>>>> 07f876db84ffe10edb713a815e64a33b8ccecfb8
-            <CommandBar.Content>
+                <CommandBar.Content>
                 <Grid Margin="683"></Grid>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
         </CommandBar>
-<<<<<<< HEAD
-        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
-=======
-<<<<<<< HEAD
 
-        <Grid x:Name="SettingsGrid" Background="{StaticResource MenuTest}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
-=======
-        <Grid x:Name="SettingsGrid" Background="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,653,0,0" Padding="0,0,0,0">
->>>>>>> e8424875f8cd7b096ad9474a76a2e31d82d1553e
->>>>>>> 07f876db84ffe10edb713a815e64a33b8ccecfb8
+        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="#1B2021">
