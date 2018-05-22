@@ -42,14 +42,18 @@
         </LinearGradientBrush>
 
         <LinearGradientBrush x:Key="DefaultB"  EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop  Color="#FFACACAC" Offset="0.096"/>
+            <GradientStop  Color="#FF363636" Offset="0.096"/>
             <GradientStop Color="#FF363636" Offset="0.932"/>
         </LinearGradientBrush>
 
         <LinearGradientBrush x:Name="DefaultMenu" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#100B00" Offset="0.046"/>
-            <GradientStop Color="#1B2021" Offset="0.48"/>
+            <GradientStop Color="#FF3A3A3A" Offset="0.48"/>
         </LinearGradientBrush>
+
+        <Style TargetType="GridViewItem" x:Key="testgrid">
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
     </Page.Resources>
 
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}" Background="{StaticResource MenuTest}" Height="Auto" Width="1890" BorderBrush="Black" PointerMoved="OnPointerMoved" RenderTransformOrigin="0.5,0.551" Visibility="Visible">
@@ -65,6 +69,7 @@
         <TextBlock x:Name="CheckProj1" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
 
         <Grid x:Name="MenuBar" Background="{StaticResource DefaultMenu}" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
+<<<<<<< HEAD
             <!--<Grid.Background>76a2e
                 <LinearGradientBrush x:Name="Defaultmenu" EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Col31d82d1553eor="#FFD1D1D1" Offset="0.046"/>
@@ -72,6 +77,8 @@
                 </LinearGradientBrush>
             </Grid.Background>-->
 
+=======
+>>>>>>> b7737a0583efe514abeb89f4a9f367a3c340f0a5
             <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Assets/test_logo_whitetxt.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
                 <Image.FocusVisualPrimaryBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -81,8 +88,8 @@
                 </Image.FocusVisualPrimaryBrush>
             </Image>
             <Button x:Name="btn1" Content="btn1" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
-            <TextBlock x:Name="TodaysDate" Margin="0,78,30,14"   TextWrapping="Wrap" FontSize="20" Foreground="White" HorizontalAlignment="Right" Width="Auto"  FocusVisualPrimaryBrush="Black"/>
-            <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" HorizontalAlignment="Right" Width="Auto"     FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TodaysDate" Margin="0,85,30,14" TextWrapping="Wrap" FontSize="20" Foreground="White" FontFamily="Microsoft YaHei" HorizontalAlignment="Right" Width="Auto" FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" FontFamily="Microsoft YaHei"  HorizontalAlignment="Right" Width="Auto" FocusVisualPrimaryBrush="Black"/>
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
         
@@ -104,7 +111,7 @@
         </Button>
         <Button x:Name="btn3" Content="3-3" HorizontalAlignment="Left" Margin="1318,95,0,-127" VerticalAlignment="Top" Click="btn3_Click"/>
         <!--<TextBlock x:Name="TimeDate12h" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="Black" HorizontalAlignment="Right" Width="Auto"   FocusVisualPrimaryBrush="Black"/>-->
-        <GridView x:Name="GridView" ItemsSource="{x:Bind Rooms}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" >
+        <GridView x:Name="GridView1" ItemContainerStyle="{StaticResource testgrid}" ItemsSource="{x:Bind Rooms}" Width="1740" Height="835" IsHitTestVisible="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="75,190,75,100" FontFamily="Segoe MDL2 Assets" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:Room">
                     <local:TemplateGrid/>
@@ -113,14 +120,22 @@
         </GridView>
 
         <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
+<<<<<<< HEAD
                 <CommandBar.Content>
+=======
+            <CommandBar.Content>
+>>>>>>> b7737a0583efe514abeb89f4a9f367a3c340f0a5
                 <Grid Margin="683"></Grid>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
         </CommandBar>
+<<<<<<< HEAD
 
         <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
+=======
+        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB }" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0">
+>>>>>>> b7737a0583efe514abeb89f4a9f367a3c340f0a5
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="#1B2021">
@@ -140,14 +155,7 @@
                 </SplitView.Pane>
                 <SplitView.Content>
                     <Grid>
-                        <Button x:Name="EscBtn" FontFamily="Segoe MDL2 Assets" Content="&#xF13D;" HorizontalAlignment="Left" Margin="405,256,0,0" VerticalAlignment="Top" Click="LeaveSettingsMenu_Click" Width="30" Height="30">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF303030"/>
-                                    <GradientStop Color="White" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
+                        <Button x:Name="EscBtn" FontFamily="Segoe MDL2 Assets" Content="&#xF13D;"  HorizontalAlignment="Center" FontSize="20" Margin="405,256,0,0" VerticalAlignment="Center" Click="LeaveSettingsMenu_Click" Width="40" Height="40" Background="Black"/>
                         <Grid x:Name="GeneralSettingsGrid" Visibility="Collapsed">
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,40,0,0" VerticalAlignment="Top" Width="20" Fill="#FF14A61E"/>
                             <Rectangle HorizontalAlignment="Left" Height="20" Margin="44,87,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE2E201"/>
@@ -160,9 +168,8 @@
                             <PasswordBox x:Name="ApiInput" HorizontalAlignment="Left" Margin="75,59,0,125" VerticalAlignment="Top" Width="286" Canvas.ZIndex="2"/>
                             <TextBlock HorizontalAlignment="Left" Margin="133,18,0,0" Text="API Lösenord" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontStyle="Italic" FontFamily="Franklin Gothic Demi"/>
                             <Border x:Name="ApiContainer" BorderBrush="#FF272727" BorderThickness="2" HorizontalAlignment="Left" Height="26" Margin="75,173,0,0" VerticalAlignment="Top" Width="286" Background="#FF959593" Visibility="Collapsed">
-                                <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible"/>
+                                <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible" HorizontalAlignment="Center" />
                             </Border>
-                            <ProgressBar x:Name="prog" Height="50" Width="50" Foreground="Black" Value="0" Maximum="100" Margin="0,12"/>
                             <Button x:Name="ApiSubmitBut" Content="Hämta API" HorizontalAlignment="Left" Margin="179,95,0,0" VerticalAlignment="Top" Background="#FF959592" BorderBrush="#FF353532" Click="ApiSubmitBut_Click"/>
                         </Grid>
                     </Grid>
