@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:data="using:Project_BackFire.Models"
     xmlns:func="using:Project_BackFire.Views"
-    xmlns:local="using:Project_BackFire">
+    xmlns:local="using:Project_BackFire" RequestedTheme="Default">
 
     <Page.Resources>
         <LinearGradientBrush x:Key="GreenLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
@@ -69,16 +69,6 @@
         <TextBlock x:Name="CheckProj1" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" />
 
         <Grid x:Name="MenuBar" Background="{StaticResource DefaultMenu}" Margin="0,0,0,-158" BorderThickness="0,0,0,6" VerticalAlignment="Top" Height="145" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FF323030">
-<<<<<<< HEAD
-            <!--<Grid.Background>76a2e
-                <LinearGradientBrush x:Name="Defaultmenu" EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Col31d82d1553eor="#FFD1D1D1" Offset="0.046"/>
-                    <GradientStop Color="#FF6A6A69" Offset="0.48"/>
-                </LinearGradientBrush>
-            </Grid.Background>-->
-
-=======
->>>>>>> b7737a0583efe514abeb89f4a9f367a3c340f0a5
             <Image x:Name="Logo" Margin="10,10,0,26" Source="ms-appx:///Assets/test_logo_whitetxt.png" RenderTransformOrigin="0.536,0.781" HorizontalAlignment="Left" Width="473" MinWidth="100" FocusVisualSecondaryBrush="{x:Null}">
                 <Image.FocusVisualPrimaryBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -92,7 +82,7 @@
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" FontFamily="Microsoft YaHei"  HorizontalAlignment="Right" Width="Auto" FocusVisualPrimaryBrush="Black"/>
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
-        
+
         <Button x:Name="FlyoutBtn" Content="Flyout" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" >
             <Button.Flyout>
                 <MenuFlyout>
@@ -120,23 +110,16 @@
         </GridView>
 
         <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
-<<<<<<< HEAD
-                <CommandBar.Content>
-=======
             <CommandBar.Content>
->>>>>>> b7737a0583efe514abeb89f4a9f367a3c340f0a5
                 <Grid Margin="683"></Grid>
             </CommandBar.Content>
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
         </CommandBar>
-<<<<<<< HEAD
+
 
         <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
-=======
-        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB }" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0">
->>>>>>> b7737a0583efe514abeb89f4a9f367a3c340f0a5
-            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
+            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Microsoft JhengHei" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="#1B2021">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
@@ -150,6 +133,11 @@
                             <Button x:Name="ApiButton" FontFamily="Segoe MDL2 Assets" Content="&#xF080;"
                         Width="50" Height="50"  Click="ApiButton_Click" Background="{x:Null}"/>
                             <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="About" FontFamily="Segoe MDL2 Assets" Content="&#xE946;"
+                        Width="50" Height="50"  Background="{x:Null}" Click="About_Click"/>
+                            <TextBlock Text="About" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                     </StackPanel>
                 </SplitView.Pane>
@@ -171,6 +159,11 @@
                                 <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible" HorizontalAlignment="Center" />
                             </Border>
                             <Button x:Name="ApiSubmitBut" Content="Hämta API" HorizontalAlignment="Left" Margin="179,95,0,0" VerticalAlignment="Top" Background="#FF959592" BorderBrush="#FF353532" Click="ApiSubmitBut_Click"/>
+                        </Grid>
+                        <Grid x:Name="AboutSettingsGrid" Visibility="Collapsed">
+                            <TextBlock HorizontalAlignment="Center" Margin="0,22,0,0" Text="Om applikationen" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontFamily="Microsoft JhengHei" FontWeight="Bold"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="96,88,0,0" Text="windows 10 fall creators update 10.0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <TextBlock HorizontalAlignment="Center" Margin="0,113,0,0" Text="© Copyright Exeo AB" TextWrapping="Wrap" VerticalAlignment="Top"/>
                         </Grid>
                     </Grid>
                 </SplitView.Content>

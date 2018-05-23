@@ -26,6 +26,4 @@ namespace Project_BackFire.Models
         public string Note { get; set; }
         public int Status { get; set; }
     }
-
-
 }
