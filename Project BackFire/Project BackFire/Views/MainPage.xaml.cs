@@ -16,7 +16,11 @@ using Microsoft.Toolkit.Uwp.UI.Animations;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
 using System.Collections.ObjectModel;
+<<<<<<< HEAD
 using Windows.Storage;
+=======
+using Windows.UI.Xaml.Shapes;
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
 
 namespace Project_BackFire.Views
 {
@@ -29,20 +33,33 @@ namespace Project_BackFire.Views
         public ObservableCollection<Room> Rooms;
 
         public DispatcherTimer DisTimer = new DispatcherTimer();
+        private DispatcherTimer Timer {get; set;}
 
         private TimeSpan SpanTime;
+
+        private LinearGradientBrush GreenBrush;
+        private LinearGradientBrush YellowBrush;
+        private LinearGradientBrush RedBrush;
 
         //public Image MainImage
         //{
         //    get { return MainImage; }
         //}
+<<<<<<< HEAD
         //public Border MainBorder
-        //{
-        //    get { return MainBorder; }
-        //}
+=======
+        //private Grid _MainGrid;
         //public Grid MainGrid
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
         //{
-        //    get { return MainGrid; }
+        //    get { return _MainGrid; }
+        //    set { _MainGrid = value; }
+        //}
+        //private Rectangle _statuscolor;
+        //public Rectangle StatusColor
+        //{
+        //    get { return _statuscolor; }
+        //    set { _statuscolor = value; }
         //}
 
         private MainViewModel ViewModel
@@ -52,23 +69,37 @@ namespace Project_BackFire.Views
 
         public Main()
         {
+<<<<<<< HEAD
 
             InitializeComponent();
+=======
+            this.InitializeComponent();
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
             DataContext = this;
             DisTimer.Tick += TimerTick;
             DisTimer.Interval = new TimeSpan(0, 0, 1);
             DisTimer.Start();
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-            //AnimationBack();
-            //AnimationFront();                     
-            //FlipCardConditions();
 
+<<<<<<< HEAD
 
 
 
             Rooms = new ObservableCollection<Room>();
+=======
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            Timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(15) };
+            Timer.Tick += (sender, args) => {
+                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                Timer.Stop();
+            };
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
 
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+            GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
+            YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
+            RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
+<<<<<<< HEAD
 
 
             Windows.Storage.ApplicationDataContainer localSettings =
@@ -112,6 +143,9 @@ namespace Project_BackFire.Views
        async private void RemoveSettings()
         {
             await ApplicationData.Current.ClearAsync();
+=======
+            Rooms = new ObservableCollection<Room>();
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
         }
 
 
@@ -201,6 +235,10 @@ namespace Project_BackFire.Views
             InputApiBox();
         }
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
 
         private void TimerTick(object sender, object e)
         {
@@ -401,7 +439,7 @@ namespace Project_BackFire.Views
             SpanTime = SpanTime.Add(DisTimer.Interval);
         }
 
-        public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
+        public async void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
             ////StartTimer(5);
             //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
@@ -410,8 +448,13 @@ namespace Project_BackFire.Views
             //ButtonTimer.Tick += (sender, args) =>
             //{
             //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+            //    ButtonTimer.Stop();
             //};
             //ButtonTimer.Start();
+
+            Timer.Stop();
+            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+            Timer.Start();
         }
 
         private void SettingsButtonAppBar_Click(object sender, RoutedEventArgs e)
@@ -419,6 +462,8 @@ namespace Project_BackFire.Views
             SettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            AboutSettingsGrid.Visibility = Visibility.Collapsed;
+
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -435,26 +480,37 @@ namespace Project_BackFire.Views
         {
             ApiSettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Collapsed;
+            AboutSettingsGrid.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            GeneralSettingsGrid.Visibility = Visibility.Collapsed;
+            AboutSettingsGrid.Visibility = Visibility.Visible;
         }
 
         private void GeneralSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
+            AboutSettingsGrid.Visibility = Visibility.Collapsed;
+
         }
 
-        private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
-        {
-            CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            DispatcherTimer ButtonTimer = new DispatcherTimer();
-            ButtonTimer.Interval = TimeSpan.FromSeconds(20);
-            ButtonTimer.Tick += (sender, args) =>
-            {
-                CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-                ButtonTimer.Stop();
-            };
-            ButtonTimer.Start();
-        }
+        //private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
+        //{
+        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
+        //    DispatcherTimer ButtonTimer = new DispatcherTimer();
+        //    ButtonTimer.Interval = TimeSpan.FromSeconds(20);
+        //    ButtonTimer.Tick += (sender, args) =>
+        //    {
+        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+        //        ButtonTimer.Stop();
+        //    };
+        //    ButtonTimer.Start();
+        //}
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
@@ -490,19 +546,118 @@ namespace Project_BackFire.Views
                     break;
             }
 
+<<<<<<< HEAD
             if (Rooms.Count == 9)
+=======
+            switch (Rooms.Count)
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
             {
-
-
+                case 1:
+                    {
+                        //MainImage.Width = 550;
+                        //MainImage.Height = 500;
+                        //MainBorder.Width = 550;
+                        //MainBorder.Height = 500;
+                        //MainGrid.Width = 850;
+                        //MainGrid.Height = 800;
+                        GridView1.Height = 450;
+                        GridView1.Width = 880;
+                        break;
+                    }
+                case  2 :
+                    {
+                        //MainImage.Width = 550;
+                        //MainImage.Height = 500;
+                        //MainBorder.Width = 550;
+                        //MainBorder.Height = 500;
+                        //MainGrid.Width = 850;
+                        //MainGrid.Height = 800;
+                        GridView1.Height = 450;
+                        GridView1.Width = 880;
+                        break;
+                    }
+                case 3:
+                    {
+                        //MainImage.Width = 450;
+                        //MainImage.Height = 400;
+                        //MainBorder.Width = 450;
+                        //MainBorder.Height = 400;
+                        //MainGrid.Width = 570;
+                        //MainGrid.Height = 750;
+                        GridView1.Height = 450;
+                        GridView1.Width = 1305;
+                        break;
+                    }
+                case 4:
+                    {
+                        //MainGrid.Width = 431;
+                        //MainGrid.Height = 799;
+                        GridView1.Height = 450;
+                        GridView1.Width = 1740;
+                        break;
+                    }
+                case 5:
+                    {
+                        //Rooms.RemoveAt(0);
+                        //DispatcherTimer tmer = new DispatcherTimer();
+                        //tmer.Interval = TimeSpan.FromSeconds(3);
+                        //tmer.Tick += (Sender, args) =>
+                        //{
+                        //    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                        //};
+                        GridView1.Height = 450;
+                        GridView1.Width = 1740;
+                        break;
+                    }
+                case 6:
+                    {
+                        //MainImage.Width = 460;
+                        //MainImage.Height = 355;
+                        //MainBorder.Width = 460;
+                        //MainBorder.Height = 355;
+                        //MainGrid.Width = 570;
+                        //MainGrid.Height = 400;
+                        GridView1.Height = 835;
+                        GridView1.Width = 1305;
+                        break;
+                    }
+                case 7:
+                    {
+                        //Rooms.RemoveAt(0);
+                        //DispatcherTimer tmer = new DispatcherTimer();
+                        //tmer.Interval = TimeSpan.FromSeconds(3);
+                        //tmer.Tick += (Sender, args) =>
+                        //{
+                        //    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                        //};
+                        GridView1.Height = 835;
+                        GridView1.Width = 1305;
+                        break;
+                    }
+                case 8:
+                    {
+                        //MainGrid.Height = 395;
+                        //MainGrid.Width = 431;
+                        GridView1.Height = 835;
+                        GridView1.Width = 1740;
+                        break;
+                    }
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
+<<<<<<< HEAD
 
         }
 
+=======
+        }
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
     }
 }

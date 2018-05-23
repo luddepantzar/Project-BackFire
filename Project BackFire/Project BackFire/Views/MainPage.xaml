@@ -3,7 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:data="using:Project_BackFire.Models"
     xmlns:func="using:Project_BackFire.Views"
+<<<<<<< HEAD
     xmlns:local="using:Project_BackFire">
+=======
+    xmlns:local="using:Project_BackFire" RequestedTheme="Default">
+
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
     <Page.Resources>
         <LinearGradientBrush x:Key="GreenLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -81,6 +86,7 @@
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" FontFamily="Microsoft YaHei"  HorizontalAlignment="Right" Width="Auto" FocusVisualPrimaryBrush="Black"/>
             <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
+
         <Button x:Name="FlyoutBtn" Content="Flyout" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" >
             <Button.Flyout>
                 <MenuFlyout>
@@ -113,8 +119,10 @@
             <AppBarButton x:Name="SettingsButtonAppBar" Icon="Setting" Label="Inställningar" Click="SettingsButtonAppBar_Click" Width="72"/>
             <AppBarSeparator/>
         </CommandBar>
-        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB }" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0">
-            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Franklin Gothic Demi" OpenPaneLength="120" CompactPaneLength="50">
+
+
+        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
+            <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Microsoft JhengHei" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="#1B2021">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
@@ -128,6 +136,11 @@
                             <Button x:Name="ApiButton" FontFamily="Segoe MDL2 Assets" Content="&#xF080;"
                         Width="50" Height="50"  Click="ApiButton_Click" Background="{x:Null}"/>
                             <TextBlock Text="API" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="About" FontFamily="Segoe MDL2 Assets" Content="&#xE946;"
+                        Width="50" Height="50"  Background="{x:Null}" Click="About_Click"/>
+                            <TextBlock Text="About" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                     </StackPanel>
                 </SplitView.Pane>
@@ -149,6 +162,11 @@
                                 <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible" HorizontalAlignment="Center" />
                             </Border>
                             <Button x:Name="ApiSubmitBut" Content="Hämta API" HorizontalAlignment="Left" Margin="179,95,0,0" VerticalAlignment="Top" Background="#FF959592" BorderBrush="#FF353532" Click="ApiSubmitBut_Click"/>
+                        </Grid>
+                        <Grid x:Name="AboutSettingsGrid" Visibility="Collapsed">
+                            <TextBlock HorizontalAlignment="Center" Margin="0,22,0,0" Text="Om applikationen" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontFamily="Microsoft JhengHei" FontWeight="Bold"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="96,88,0,0" Text="windows 10 fall creators update 10.0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <TextBlock HorizontalAlignment="Center" Margin="0,113,0,0" Text="© Copyright Exeo AB" TextWrapping="Wrap" VerticalAlignment="Top"/>
                         </Grid>
                     </Grid>
                 </SplitView.Content>

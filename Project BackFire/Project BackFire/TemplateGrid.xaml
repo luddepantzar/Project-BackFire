@@ -30,9 +30,11 @@
             <GradientStop Color="#00000000" Offset="0.801"/>
             <GradientStop Color="#CCFFDC00" Offset="0.098"/>
         </LinearGradientBrush>
+        
     </UserControl.Resources>
 
     <Grid x:Name="MainGrid" Margin="0,0,0,0">
+        
         <Image x:Name="MainImage" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
             <Image.Projection>
                 <PlaneProjection RotationY="0"/>
@@ -72,7 +74,11 @@
                         <TextBlock x:Name="ProjIcon" Height="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="{Binding Projector}"/>
                         <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Wboard}"/>
                         <TextBlock x:Name="Wifiicon" Width="40" Margin="30,0,0,14" FontFamily="Segoe MDL2 Assets" Text="&#xe701;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Wifi}"/>
+<<<<<<< HEAD
                         <TextBlock x:Name="Tvicon" Width="40" Margin="30,0,0,7" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Tv}" />
+=======
+                        <TextBlock x:Name="Tvicon" Width="40" Margin="30,0,0,7" FontFamily="Segoe MDL2 Assets" Text="&#xe7F4;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Tv}"/>
+>>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
                     </StackPanel>
                     <!--<TextBlock x:Name="CheckProj" Height="40" Margin="52,0,0,5" FontFamily="Segoe MDL2 Assets" Text="{Binding Projector}" Foreground="#FF32FF05" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="Visible" />
                     <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" Margin="8,140,0,0" Text="" Foreground="Black" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="99" FontSize="16" FocusVisualSecondaryBrush="#99FFFFFF"/>
