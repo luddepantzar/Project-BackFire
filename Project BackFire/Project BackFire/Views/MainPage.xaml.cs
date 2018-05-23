@@ -16,6 +16,7 @@ using Microsoft.Toolkit.Uwp.UI.Animations;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
 using System.Collections.ObjectModel;
+using Windows.Storage;
 
 namespace Project_BackFire.Views
 {
@@ -35,7 +36,6 @@ namespace Project_BackFire.Views
         //{
         //    get { return MainImage; }
         //}
-
         //public Border MainBorder
         //{
         //    get { return MainBorder; }
@@ -49,8 +49,10 @@ namespace Project_BackFire.Views
         {
             get { return DataContext as MainViewModel; }
         }
+
         public Main()
         {
+
             InitializeComponent();
             DataContext = this;
             DisTimer.Tick += TimerTick;
@@ -61,63 +63,58 @@ namespace Project_BackFire.Views
             //AnimationFront();                     
             //FlipCardConditions();
 
+
+
+
             Rooms = new ObservableCollection<Room>();
-            //Rooms.Add(new Room { RoomID = 9, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 25, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 10, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 14, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 11, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 16, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 12, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 8, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 13, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 11, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 14, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 15, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 43, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
-            //Rooms.Add(new Room { RoomID = 16, RoomName = "Rum 9", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 1, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
 
 
-            //switch (Rooms.Count)
-            //{
-            //    case 2:
-            //        {
-            //            MainImage.Width = 550;
-            //            MainImage.Height = 500;
-            //            MainBorder.Width = 550;
-            //            MainBorder.Height = 500;
-            //            MainGrid.Width = 850;
-            //            MainGrid.Height = 800;
-            //            break;
-            //        }
-            //    case 3:
-            //        {
-            //            MainImage.Width = 450;
-            //            MainImage.Height = 400;
-            //            MainBorder.Width = 450;
-            //            MainBorder.Height = 400;
-            //            MainGrid.Width = 570;
-            //            MainGrid.Height = 750;
-            //            break;
-            //        }
-            //    case 4:
-            //        {
-            //            MainGrid.Width = 431;
-            //            MainGrid.Height = 799;
-            //            break;
-            //        }
-            //    case 6:
-            //        {
-            //            MainImage.Width = 460;
-            //            MainImage.Height = 355;
-            //            MainBorder.Width = 460;
-            //            MainBorder.Height = 355;
-            //            MainGrid.Width = 570;
-            //            MainGrid.Height = 400;
-            //            break;
-            //        }
-            //    case 8:
-            //        {
-            //            MainGrid.Height = 395;
-            //            MainGrid.Width = 431;
-            //            break;
-            //        }
-            //}
+
+
+            Windows.Storage.ApplicationDataContainer localSettings =
+            Windows.Storage.ApplicationData.Current.LocalSettings;
+            Windows.Storage.StorageFolder localFolder =
+            Windows.Storage.ApplicationData.Current.LocalFolder;
+
+            Windows.Storage.ApplicationDataCompositeValue composite =
+           (Windows.Storage.ApplicationDataCompositeValue)localSettings.Values["exampleCompositeSetting"];
+
+
+            if (composite == null)
+            {
+                // No data
+            }
+            else
+            {
+                GetnameExeo();
+            }
         }
+
+
+
+        private void Settings()
+        {
+            Windows.Storage.ApplicationDataContainer localSettings =
+    Windows.Storage.ApplicationData.Current.LocalSettings;
+            Windows.Storage.StorageFolder localFolder =
+                Windows.Storage.ApplicationData.Current.LocalFolder;
+
+
+            Windows.Storage.ApplicationDataCompositeValue composite =
+    new Windows.Storage.ApplicationDataCompositeValue();
+            composite["intVal"] = 1;
+            composite["strVal"] = "string";
+
+            localSettings.Values["exampleCompositeSetting"] = composite;
+        }
+
+
+       async private void RemoveSettings()
+        {
+            await ApplicationData.Current.ClearAsync();
+        }
+
+
 
         async void GetnameExeo()
         {
@@ -144,6 +141,7 @@ namespace Project_BackFire.Views
             Logo.Source = newlogo;
             ContentArea.Background = (LinearGradientBrush)Resources["MenuTest"];
             MenuBar.Background = (LinearGradientBrush)Resources["DefaultMenu"];
+            ApiOutput.Text = "Default";
         }
 
         async void GetTestCompany()
@@ -182,6 +180,7 @@ namespace Project_BackFire.Views
                 case "1234":
                     {
                         GetnameExeo();
+                        Settings();
                         break;
                     }
                 case "0":
@@ -191,6 +190,7 @@ namespace Project_BackFire.Views
                     }
                 case "Default":
                     GetDefault();
+                    RemoveSettings();
                     break;
             }
         }
@@ -201,188 +201,6 @@ namespace Project_BackFire.Views
             InputApiBox();
         }
 
-        //public void AnimationFront()
-        //{
-        //    DoubleAnimation animation1 = new DoubleAnimation();
-        //    animation1.From = 0.0;
-        //    animation1.To = 180.0;
-        //    animation1.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation1.RepeatBehavior = new RepeatBehavior(1);
-        //    animation1.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation1, List[0]);
-        //    Storyboard.SetTargetProperty(animation1, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationfront1.Children.Clear();
-        //    rotationfront1.Children.Add(animation1);
-
-        //    DoubleAnimation animation3 = new DoubleAnimation();
-        //    animation3.From = 0.0;
-        //    animation3.To = 180.0;
-        //    animation3.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation3.RepeatBehavior = new RepeatBehavior(1);
-        //    animation3.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation3, List[1]);
-        //    Storyboard.SetTargetProperty(animation3, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //    //rotationfront2.Children.Clear();
-        //    rotationfront2.Children.Add(animation3);
-
-        //    DoubleAnimation animation5 = new DoubleAnimation();
-        //    animation5.From = 0.0;
-        //    animation5.To = 180.0;
-        //    animation5.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation5.RepeatBehavior = new RepeatBehavior(1);
-        //    animation5.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation5, List[2]);
-        //    Storyboard.SetTargetProperty(animation5, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //    //rotationfront3.Children.Clear();
-        //    rotationfront3.Children.Add(animation5);
-
-        //    DoubleAnimation animation7 = new DoubleAnimation();
-        //    animation7.From = 0.0;
-        //    animation7.To = 180.0;
-        //    animation7.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation7.RepeatBehavior = new RepeatBehavior(1);
-        //    animation7.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation7, List[3]);
-        //    Storyboard.SetTargetProperty(animation7, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //  //rotationfront4.Children.Clear();
-        //    rotationfront4.Children.Add(animation7);
-
-        //    DoubleAnimation animation9 = new DoubleAnimation();
-        //    animation9.From = 0.0;
-        //    animation9.To = 180.0;
-        //    animation9.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation9.RepeatBehavior = new RepeatBehavior(1);
-        //    animation9.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation9, List[4]);
-        //    Storyboard.SetTargetProperty(animation9, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationfront5.Children.Clear();
-        //    rotationfront5.Children.Add(animation9);
-
-        //    DoubleAnimation animation11 = new DoubleAnimation();
-        //    animation11.From = 0.0;
-        //    animation11.To = 180.0;
-        //    animation11.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation11.RepeatBehavior = new RepeatBehavior(1);
-        //    animation11.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation11, List[5]);
-        //    Storyboard.SetTargetProperty(animation11, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationfront6.Children.Clear();
-        //    rotationfront6.Children.Add(animation11);
-
-        //    DoubleAnimation animation13 = new DoubleAnimation();
-        //    animation13.From = 0.0;
-        //    animation13.To = 180.0;
-        //    animation13.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation13.RepeatBehavior = new RepeatBehavior(1);
-        //    animation13.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation13, List[6]);
-        //    Storyboard.SetTargetProperty(animation13, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //    //rotationfront7.Children.Clear();
-        //    rotationfront7.Children.Add(animation13);
-
-        //    DoubleAnimation animation15 = new DoubleAnimation();
-        //    animation15.From = 0.0;
-        //    animation15.To = 180.0;
-        //    animation15.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation15.RepeatBehavior = new RepeatBehavior(1);
-        //    animation15.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation15, List[7]);
-        //    Storyboard.SetTargetProperty(animation15, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationfront8.Children.Clear();
-        //    rotationfront8.Children.Add(animation15);
-        //}
-
-        //public void AnimationBack()
-        //{
-        //    DependencyObject[] list = new DependencyObject[8] { BackImg1, BackImg2, BackImg3, BackImg4, BackImg5, BackImg6, BackImg7, BackImg8 };
-        //    DoubleAnimation animation2 = new DoubleAnimation();
-        //    animation2.From = 180;
-        //    animation2.To = 360;
-        //    animation2.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation2.RepeatBehavior = new RepeatBehavior(1);
-        //    animation2.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation2, list[0]);
-        //    Storyboard.SetTargetProperty(animation2, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationback1.Children.Clear();
-        //    rotationback1.Children.Add(animation2);
-
-        //    DoubleAnimation animation4 = new DoubleAnimation();
-        //    animation4.From = 180;
-        //    animation4.To = 360;
-        //    animation4.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation4.RepeatBehavior = new RepeatBehavior(1);
-        //    animation4.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation4, list[1]);
-        //    Storyboard.SetTargetProperty(animation4, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationback2.Children.Clear();
-        //    rotationback2.Children.Add(animation4);
-
-        //    DoubleAnimation animation6 = new DoubleAnimation();
-        //    animation6.From = 180;
-        //    animation6.To = 360;
-        //    animation6.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation6.RepeatBehavior = new RepeatBehavior(1);
-        //    animation6.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation6, list[2]);
-        //    Storyboard.SetTargetProperty(animation6, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //  //  rotationback3.Children.Clear();
-        //    rotationback3.Children.Add(animation6);
-
-        //    DoubleAnimation animation8 = new DoubleAnimation();
-        //    animation8.From = 180;
-        //    animation8.To = 360;
-        //    animation8.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation8.RepeatBehavior = new RepeatBehavior(1);
-        //    animation8.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation8, list[3]);
-        //    Storyboard.SetTargetProperty(animation8, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationback4.Children.Clear();
-        //    rotationback4.Children.Add(animation8);
-
-        //    DoubleAnimation animation10 = new DoubleAnimation();
-        //    animation10.From = 180;
-        //    animation10.To = 360;
-        //    animation10.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation10.RepeatBehavior = new RepeatBehavior(1);
-        //    animation10.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation10, list[4]);
-        //    Storyboard.SetTargetProperty(animation10, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   // rotationback5.Children.Clear();
-        //    rotationback5.Children.Add(animation10);
-
-        //    DoubleAnimation animation12 = new DoubleAnimation();
-        //    animation12.From = 180;
-        //    animation12.To = 360;
-        //    animation12.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation12.RepeatBehavior = new RepeatBehavior(1);
-        //    animation12.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation12, list[5]);
-        //    Storyboard.SetTargetProperty(animation12, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //  //rotationback6.Children.Clear();
-        //    rotationback6.Children.Add(animation12);
-
-        //    DoubleAnimation animation14 = new DoubleAnimation();
-        //    animation14.From = 180;
-        //    animation14.To = 360;
-        //    animation14.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation14.RepeatBehavior = new RepeatBehavior(1);
-        //    animation14.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation14, list[6]);
-        //    Storyboard.SetTargetProperty(animation14, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //  //rotationback7.Children.Clear();
-        //    rotationback7.Children.Add(animation14);
-
-        //    DoubleAnimation animation16 = new DoubleAnimation();
-        //    animation16.From = 180;
-        //    animation16.To = 360;
-        //    animation16.BeginTime = TimeSpan.FromSeconds(0);
-        //    animation16.RepeatBehavior = new RepeatBehavior(1);
-        //    animation16.Duration = TimeSpan.FromSeconds(3);
-        //    Storyboard.SetTarget(animation16, list[7]);
-        //    Storyboard.SetTargetProperty(animation16, "(UIElement.Projection).(PlaneProjection.RotationY)");
-        //   //rotationback8.Children.Clear();
-        //    rotationback8.Children.Add(animation16);
-        //}
 
         private void TimerTick(object sender, object e)
         {
@@ -642,36 +460,35 @@ namespace Project_BackFire.Views
         {
 
             Random rnd = new Random();
-            int val = rnd.Next(0, 8);
+            int val = rnd.Next(0, 9);
 
             switch (val)
             {
                 case 1:
-                    Rooms.Add(new Room { RoomID = 7, RoomName = "Rum 7 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+                    Rooms.Add(new Room { RoomID = 7, RoomName = "Rum 7 Main", FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 2:
-                    Rooms.Add(new Room { RoomID = 8, RoomName = "Rum 8 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+                    Rooms.Add(new Room { RoomID = 8, RoomName = "Rum 8 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 3:
                     Rooms.Add(new Room { RoomID = 3, RoomName = "Rum 3 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 4:
-                    Rooms.Add(new Room { RoomID = 6, RoomName = "Rum 6 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                    Rooms.Add(new Room { RoomID = 6, RoomName = "Rum 6 Main", FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 5:
-                    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 6:
                     Rooms.Add(new Room { RoomID = 4, RoomName = "Rum 4 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 7:
-                    Rooms.Add(new Room { RoomID = 2, RoomName = "Rum 2 Main", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+                    Rooms.Add(new Room { RoomID = 2, RoomName = "Rum 2 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
                 case 8:
                     Rooms.Add(new Room { RoomID = 5, RoomName = "Rum 5 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
             }
-
 
             if (Rooms.Count == 9)
             {
@@ -679,15 +496,13 @@ namespace Project_BackFire.Views
 
             }
 
-
-
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-        }
 
+        }
 
     }
 }

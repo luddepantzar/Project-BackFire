@@ -4,7 +4,6 @@
     xmlns:data="using:Project_BackFire.Models"
     xmlns:func="using:Project_BackFire.Views"
     xmlns:local="using:Project_BackFire">
-
     <Page.Resources>
         <LinearGradientBrush x:Key="GreenLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#00000000" Offset="0.801"/>
@@ -107,7 +106,6 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-
         <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid Margin="683"></Grid>
