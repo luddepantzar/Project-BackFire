@@ -16,11 +16,9 @@ using Microsoft.Toolkit.Uwp.UI.Animations;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
 using System.Collections.ObjectModel;
-<<<<<<< HEAD
 using Windows.Storage;
-=======
 using Windows.UI.Xaml.Shapes;
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
+
 
 namespace Project_BackFire.Views
 {
@@ -45,12 +43,8 @@ namespace Project_BackFire.Views
         //{
         //    get { return MainImage; }
         //}
-<<<<<<< HEAD
-        //public Border MainBorder
-=======
         //private Grid _MainGrid;
         //public Grid MainGrid
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
         //{
         //    get { return _MainGrid; }
         //    set { _MainGrid = value; }
@@ -69,46 +63,35 @@ namespace Project_BackFire.Views
 
         public Main()
         {
-<<<<<<< HEAD
-
-            InitializeComponent();
-=======
             this.InitializeComponent();
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
+
             DataContext = this;
             DisTimer.Tick += TimerTick;
             DisTimer.Interval = new TimeSpan(0, 0, 1);
             DisTimer.Start();
 
-<<<<<<< HEAD
-
-
-
             Rooms = new ObservableCollection<Room>();
-=======
+
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
             Timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(15) };
             Timer.Tick += (sender, args) => {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 Timer.Stop();
             };
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
 
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
             YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
             RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
 
-<<<<<<< HEAD
 
+            ApplicationDataContainer localSettings =
+            ApplicationData.Current.LocalSettings;
+            StorageFolder localFolder =
+            ApplicationData.Current.LocalFolder;
 
-            Windows.Storage.ApplicationDataContainer localSettings =
-            Windows.Storage.ApplicationData.Current.LocalSettings;
-            Windows.Storage.StorageFolder localFolder =
-            Windows.Storage.ApplicationData.Current.LocalFolder;
-
-            Windows.Storage.ApplicationDataCompositeValue composite =
-           (Windows.Storage.ApplicationDataCompositeValue)localSettings.Values["exampleCompositeSetting"];
+            ApplicationDataCompositeValue composite =
+           (ApplicationDataCompositeValue)localSettings.Values["exampleCompositeSetting"];
 
 
             if (composite == null)
@@ -125,14 +108,14 @@ namespace Project_BackFire.Views
 
         private void Settings()
         {
-            Windows.Storage.ApplicationDataContainer localSettings =
-    Windows.Storage.ApplicationData.Current.LocalSettings;
-            Windows.Storage.StorageFolder localFolder =
-                Windows.Storage.ApplicationData.Current.LocalFolder;
+            ApplicationDataContainer localSettings =
+            ApplicationData.Current.LocalSettings;
+            StorageFolder localFolder =
+            ApplicationData.Current.LocalFolder;
 
 
-            Windows.Storage.ApplicationDataCompositeValue composite =
-    new Windows.Storage.ApplicationDataCompositeValue();
+            ApplicationDataCompositeValue composite =
+            new ApplicationDataCompositeValue();
             composite["intVal"] = 1;
             composite["strVal"] = "string";
 
@@ -143,9 +126,6 @@ namespace Project_BackFire.Views
        async private void RemoveSettings()
         {
             await ApplicationData.Current.ClearAsync();
-=======
-            Rooms = new ObservableCollection<Room>();
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
         }
 
 
@@ -234,11 +214,6 @@ namespace Project_BackFire.Views
             ApiContainer.Visibility = Visibility.Visible;
             InputApiBox();
         }
-
-<<<<<<< HEAD
-=======
-        
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
 
         private void TimerTick(object sender, object e)
         {
@@ -354,104 +329,13 @@ namespace Project_BackFire.Views
             //    //}
         }
 
-        public void StartTimer(int IntervalSec)
-        {
-            //    //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //    //if (IntervalSec > 0)
-            //    //{
-            //    //    DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-            //    //    DisTimer.Tick += TimerOnTick;
-            //    //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    //    DisTimer.Start();
-            //    //}
-            //    //else
-            //    //{
-            //    //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    //    DisTimer.Stop();
-            //    //    _allowexicution = false;
-            //    //}
-        }
-
-        //private void FlipCardConditions()
-        //{
-        //    if (Rooms.Count < 8)
-        //    {
-        //        rotationback1.Stop();
-        //        rotationfront1.Stop();
-        //    }
-
-        //    while (Rooms.Count > 8)
-        //    {
-
-        //        try
-        //        {
-        //            rotationback1.Stop();
-        //            rotationfront1.Stop();
-        //            DispatcherTimer tm8 = new DispatcherTimer();
-        //            tm8.Interval = TimeSpan.FromSeconds(10);
-        //            tm8.Tick += (sender, args) =>
-        //            {
-        //                rotationback1.Begin();
-        //                rotationfront1.Begin();
-
-        //                BackImg1.Opacity = 0;
-
-        //                grid1.Opacity = 0;
-
-        //                Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-        //                grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
-        //                BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
-        //                tm8.Stop();
-        //            };
-        //            tm8.Start();
-        //        }
-        //        finally
-        //        {
-        //            rotationback1.Stop();
-        //            rotationfront1.Stop();
-        //        }
-        //    }
-        //}
-
-        //public void StartTimer(int IntervalSec)
-        //{
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //    if (IntervalSec > 0)
-        //    {
-        //        DisTimer.Interval = new TimeSpan(0, 0, IntervalSec);
-        //        DisTimer.Tick += TimerOnTick;
-        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-        //        DisTimer.Start();
-        //    }
-        //    else
-        //    {
-        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-        //        DisTimer.Stop();
-        //        _allowexicution = false;
-        //    }
-        //}
-
         public void TimerOnTick(object sender, object o)
         {
             SpanTime = SpanTime.Add(DisTimer.Interval);
         }
 
-        public async void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
+        public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
         {
-            ////StartTimer(5);
-            //CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-            //DispatcherTimer ButtonTimer = new DispatcherTimer();
-            //ButtonTimer.Interval = TimeSpan.FromSeconds(5);
-            //ButtonTimer.Tick += (sender, args) =>
-            //{
-            //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            //    ButtonTimer.Stop();
-            //};
-            //ButtonTimer.Start();
-
             Timer.Stop();
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
             Timer.Start();
@@ -545,12 +429,7 @@ namespace Project_BackFire.Views
                     Rooms.Add(new Room { RoomID = 5, RoomName = "Rum 5 Main", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
             }
-
-<<<<<<< HEAD
-            if (Rooms.Count == 9)
-=======
             switch (Rooms.Count)
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
             {
                 case 1:
                     {
@@ -643,21 +522,12 @@ namespace Project_BackFire.Views
                         break;
                     }
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-<<<<<<< HEAD
-
         }
-
-=======
-        }
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
     }
 }

@@ -3,12 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:data="using:Project_BackFire.Models"
     xmlns:func="using:Project_BackFire.Views"
-<<<<<<< HEAD
     xmlns:local="using:Project_BackFire">
-=======
-    xmlns:local="using:Project_BackFire" RequestedTheme="Default">
-
->>>>>>> 09ee0a1cc86f935681471a889101f9f356788334
+    
     <Page.Resources>
         <LinearGradientBrush x:Key="GreenLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#00000000" Offset="0.801"/>
