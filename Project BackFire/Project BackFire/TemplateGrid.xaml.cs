@@ -46,110 +46,9 @@ namespace Project_BackFire
 
             Easteregg();
             OnBooked();
-            //FlipCardConditions();
+            FlipCardConditions();
             //FadeIn();
         }
-
-        //public void SwitchRooms()
-        //{
-        //    Rooms = new ObservableCollection<Room>();
-        //    var status = Rooms.Any(p => p.RoomID <= 1);
-        //    switch (status)
-        //    {
-        //        case true:
-        //            MainImage.Width = 500;
-        //            MainImage.Height = 500;
-        //            break;
-        //        case false:
-        //            break;
-        //    }
-        //    //Rooms c1 = new Rooms
-        //    //{
-        //    //    RoomID = 10,
-        //    //    RoomName = "Rum 10",
-        //    //    Projector = true,
-        //    //    Wboard = false,
-        //    //    Tv = false,
-        //    //    Wifi = true,
-        //    //    Seats = 5,
-        //    //    Note = "Lorem ipsum dolor sit amet, co"
-        //    //};
-        //    //switch (c1.Projector)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckProj.Visibility = Visibility.Collapsed;
-        //    //            ErrProj.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            ErrProj.Visibility = Visibility.Collapsed;
-        //    //            CheckProj.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //}
-        //    //switch (c1.Wboard)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckWhiteboard.Visibility = Visibility.Collapsed;
-        //    //            ErrWboard.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            CheckWhiteboard.Visibility = Visibility.Visible;
-        //    //            ErrWboard.Visibility = Visibility.Collapsed;
-        //    //            break;
-        //    //        }
-        //    //}
-        //    //switch (c1.Tv)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckTV.Visibility = Visibility.Collapsed;
-        //    //            ErrTv.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            CheckTV.Visibility = Visibility.Visible;
-        //    //            ErrTv.Visibility = Visibility.Collapsed;
-        //    //            break;
-        //    //        }
-        //    //}
-        //    //switch (c1.Wifi)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckWifi.Visibility = Visibility.Collapsed;
-        //    //            ErrWifi.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            CheckWifi.Visibility = Visibility.Visible;
-        //    //            ErrWifi.Visibility = Visibility.Collapsed;
-        //    //            break;
-        //    //        }
-        //    //}
-        //}
-
-        //private void EightRooms()
-        //{
-        //    foreach (Room attribute in Rooms)
-        //    {
-        //        switch (attribute.RoomID)
-        //        {
-        //            case 1:
-        //                StatusColor.Fill = YellowBrush;
-        //                break;
-        //            default:
-        //                break;
-        //        }
-        //    }
-        //}
 
         public void OnBooked()
         {
@@ -189,6 +88,7 @@ namespace Project_BackFire
 
         public void RedIndicatorColorToYellowIndicatorColor()
         {
+            StatusColor.Fade(duration: 1000, delay: 2000, value: 0).Start();
             StatusColor.Fill = RedBrush;
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
@@ -202,54 +102,54 @@ namespace Project_BackFire
 
         public void YellowindIcatorColorToGreenIndicatorColor()
         {
+            StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
             StatusColor.Fill = YellowBrush;
+            StatusColor.Fade(duration: 1000, delay: 10000, value: 0).Start();
             DispatcherTimer ColorTimer2 = new DispatcherTimer();
             ColorTimer2.Interval = TimeSpan.FromSeconds(7);
             ColorTimer2.Tick += (Zender, Args) =>
             {
+                StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
                 StatusColor.Fill = GreenBrush;
                 ColorTimer2.Stop();
             };
             ColorTimer2.Start();
         }
 
-        public async void FlipCardConditions()
+        public void FlipCardConditions()
         {
-            start:
+            //start:
 
-            StatusColor.Fill = GreenBrush;
+            //int test = 1;
 
-            //for (var i = 0; i >= 0; i++)
+            //switch (test)
             //{
-            //    MainGrid.Fade(duration: 1000, delay: 2000, value: 0).Start();
-            //    StatusColor.Fill = RedBrush;
-            //    MainGrid.Fade(duration: 1000, delay: 5000, value: 1).Start();
+            //    case 1:
+            //        {
+            //            RedIndicatorColorToYellowIndicatorColor();
+            //            await StatusColor.Fade(duration: 1000, delay: 2000, value: 0).StartAsync();
+            //            goto case 2;
+            //        }
+
+            //    case 2:
+            //        {
+            //            YellowindIcatorColorToGreenIndicatorColor();
+            //            await StatusColor.Fade(duration: 1000, delay: 2000, value: 1).StartAsync();
+            //            goto case 3;
+            //        }
+
+            //    case 3:
+            //        {
+
+            //            goto start;
+            //        }
+
             //}
 
-            int test = 1;
+            RedIndicatorColorToYellowIndicatorColor();
 
-            switch (test)
-            {
-                case 1:
-                    {
-                        await MainGrid.Fade(duration: 1000, delay: 10000, value: 0).StartAsync();
-                        StatusColor.Fill = RedBrush;
-                        goto case 2;
-                    }
-
-                case 2:
-                    {
-                        await MainGrid.Fade(duration: 1000, delay: 2000, value: 1).StartAsync();
-                        goto start;
-                    }
-            }
 
         }
-
-        //public async void FadeIn()
-        //{
-        //    await MainGrid.Fade(duration: 1000, delay: 10000, value: 1).StartAsync();
-        //}
 
         public void Easteregg()
         {

@@ -116,7 +116,7 @@
         </CommandBar>
 
 
-        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Visible" Margin="0,683,0,0" Padding="0,0,0,0">
+        <Grid x:Name="SettingsGrid" Background="{StaticResource DefaultB}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="500" Height="300" Visibility="Collapsed" Margin="0,683,0,0" Padding="0,0,0,0">
             <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" FontFamily="Microsoft JhengHei" OpenPaneLength="120" CompactPaneLength="50">
                 <SplitView.Pane>
                     <StackPanel  Background="#1B2021">
@@ -157,7 +157,6 @@
                                 <TextBlock x:Name="ApiOutput" Text="" TextWrapping="Wrap" Foreground="Black" Visibility="Visible" HorizontalAlignment="Center" />
                             </Border>
                             <Button x:Name="ApiSubmitBut" Content="Hämta API" HorizontalAlignment="Left" Margin="168,96,0,0" VerticalAlignment="Top" Background="#FF959592" BorderBrush="#FF353532" Click="ApiSubmitBut_Click"/>
-                            <ProgressRing x:Name="ProgRing" HorizontalAlignment="Left" Margin="150,204,0,0" VerticalAlignment="Top" IsActive="false"  Width="35" RequestedTheme="Default" Background="#00000000" Height="27"/>
                         </Grid>
                         <Grid x:Name="AboutSettingsGrid" Visibility="Collapsed">
                             <TextBlock HorizontalAlignment="Center" Margin="0,22,0,0" Text="Om applikationen" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontFamily="Microsoft JhengHei" FontWeight="Bold"/>

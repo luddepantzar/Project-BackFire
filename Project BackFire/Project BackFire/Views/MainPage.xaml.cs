@@ -24,10 +24,6 @@ namespace Project_BackFire.Views
 {
     public partial class Main : Page
     {
-        List<DependencyObject> List { get; set; }
-
-        DependencyObject ImageArray { get; set; }
-
         public ObservableCollection<Room> Rooms;
 
         public DispatcherTimer DisTimer = new DispatcherTimer();
@@ -39,23 +35,6 @@ namespace Project_BackFire.Views
         private LinearGradientBrush YellowBrush;
         private LinearGradientBrush RedBrush;
 
-        //public Image MainImage
-        //{
-        //    get { return MainImage; }
-        //}
-        //private Grid _MainGrid;
-        //public Grid MainGrid
-        //{
-        //    get { return _MainGrid; }
-        //    set { _MainGrid = value; }
-        //}
-        //private Rectangle _statuscolor;
-        //public Rectangle StatusColor
-        //{
-        //    get { return _statuscolor; }
-        //    set { _statuscolor = value; }
-        //}
-
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -63,7 +42,7 @@ namespace Project_BackFire.Views
 
         public Main()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             DataContext = this;
             DisTimer.Tick += TimerTick;
@@ -73,9 +52,10 @@ namespace Project_BackFire.Views
             Rooms = new ObservableCollection<Room>();
 
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-            Timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(15) };
+            Timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(5) };
             Timer.Tick += (sender, args) => {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
+                SettingsGrid.Visibility = Visibility.Collapsed;
                 Timer.Stop();
             };
 
@@ -120,13 +100,10 @@ namespace Project_BackFire.Views
             localSettings.Values["exampleCompositeSetting"] = composite;
         }
 
-
        async private void RemoveSettings()
         {
             await ApplicationData.Current.ClearAsync();
         }
-
-
 
         async void GetnameExeo()
         {
@@ -144,7 +121,6 @@ namespace Project_BackFire.Views
             ContentArea.Background = (LinearGradientBrush)Resources["Test"];
             MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
             ApiOutput.Text = "Välkommen " + data.name;
-            ProgRing.IsActive = false;
         }
 
         void GetDefault()
@@ -210,7 +186,6 @@ namespace Project_BackFire.Views
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
             ApiContainer.Visibility = Visibility.Visible;
-            ProgRing.IsActive = true;
             InputApiBox();
         }
 
@@ -220,117 +195,11 @@ namespace Project_BackFire.Views
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
-        //private void Animation()
-        //{
-        //    rotationfront1.Begin();
-        //    rotationback1.Begin();
-        //}
-
-        //private void Fade()
-        //{
-        //    //BackImg1.Opacity = 0;
-        //    //BackImg2.Opacity = 0;
-        //    //BackImg3.Opacity = 0;
-        //    //BackImg4.Opacity = 0;
-        //    //BackImg5.Opacity = 0;
-        //    //BackImg6.Opacity = 0;
-        //    //BackImg7.Opacity = 0;
-        //    //BackImg8.Opacity = 0;
-
-        //    //grid1.Opacity = 0;
-        //    //grid2.Opacity = 0;
-        //    //grid3.Opacity = 0;
-        //    //grid4.Opacity = 0;
-        //    //grid5.Opacity = 0;
-        //    //grid6.Opacity = 0;
-        //    //grid7.Opacity = 0;
-        //    //grid8.Opacity = 0;
-
-        //    // bild1.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-        //    //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
-        //    //BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
-        //    //rotationback8.Begin();
-        //}
-
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Rooms.Clear();
             //Fade();
             //Animation();
-        }
-
-        private void FlipCardConditions()
-        {
-            //    //if (Rooms.Count < 8)
-            //    //{
-            //    //    rotationback1.Stop();
-            //    //    rotationfront1.Stop();
-            //    //}
-
-            //    //while (Rooms.Count > 8)
-            //    //{
-
-            //    //    try
-            //    //    {
-            //    //        rotationback1.Stop();
-            //    //        rotationfront1.Stop();
-            //    //        DispatcherTimer tm8 = new DispatcherTimer();
-            //    //        tm8.Interval = TimeSpan.FromSeconds(10);
-            //    //        tm8.Tick += (sender, args) =>
-            //    //        {
-            //    //            rotationback1.Begin();
-            //    //            rotationfront1.Begin();
-
-            //    //            BackImg1.Opacity = 0;
-
-            //    //            grid1.Opacity = 0;
-
-            //    //            Imgbox1.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-            //    //            grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
-            //    //            BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
-            //    //            tm8.Stop();
-            //    //        };
-            //    //        tm8.Start();
-            //    //    }
-            //    //    finally
-            //    //    {
-            //    //        rotationback1.Stop();
-            //    //        rotationfront1.Stop();
-            //    //    }
-            //    //}
-        }
-
-        public void TimerOnTick(object sender, object o)
-        {
-            SpanTime = SpanTime.Add(DisTimer.Interval);
         }
 
         public void OnPointerMoved(object Sender, PointerRoutedEventArgs e)
@@ -382,19 +251,6 @@ namespace Project_BackFire.Views
 
         }
 
-        //private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
-        //{
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //    DispatcherTimer ButtonTimer = new DispatcherTimer();
-        //    ButtonTimer.Interval = TimeSpan.FromSeconds(20);
-        //    ButtonTimer.Tick += (sender, args) =>
-        //    {
-        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-        //        ButtonTimer.Stop();
-        //    };
-        //    ButtonTimer.Start();
-        //}
-
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
 
@@ -432,44 +288,24 @@ namespace Project_BackFire.Views
             {
                 case 1:
                     {
-                        //MainImage.Width = 550;
-                        //MainImage.Height = 500;
-                        //MainBorder.Width = 550;
-                        //MainBorder.Height = 500;
-                        //MainGrid.Width = 850;
-                        //MainGrid.Height = 800;
                         GridView1.Height = 450;
                         GridView1.Width = 880;
                         break;
                     }
                 case  2 :
                     {
-                        //MainImage.Width = 550;
-                        //MainImage.Height = 500;
-                        //MainBorder.Width = 550;
-                        //MainBorder.Height = 500;
-                        //MainGrid.Width = 850;
-                        //MainGrid.Height = 800;
                         GridView1.Height = 450;
                         GridView1.Width = 880;
                         break;
                     }
                 case 3:
                     {
-                        //MainImage.Width = 450;
-                        //MainImage.Height = 400;
-                        //MainBorder.Width = 450;
-                        //MainBorder.Height = 400;
-                        //MainGrid.Width = 570;
-                        //MainGrid.Height = 750;
                         GridView1.Height = 450;
                         GridView1.Width = 1305;
                         break;
                     }
                 case 4:
                     {
-                        //MainGrid.Width = 431;
-                        //MainGrid.Height = 799;
                         GridView1.Height = 450;
                         GridView1.Width = 1740;
                         break;
@@ -489,12 +325,6 @@ namespace Project_BackFire.Views
                     }
                 case 6:
                     {
-                        //MainImage.Width = 460;
-                        //MainImage.Height = 355;
-                        //MainBorder.Width = 460;
-                        //MainBorder.Height = 355;
-                        //MainGrid.Width = 570;
-                        //MainGrid.Height = 400;
                         GridView1.Height = 835;
                         GridView1.Width = 1305;
                         break;
@@ -514,8 +344,6 @@ namespace Project_BackFire.Views
                     }
                 case 8:
                     {
-                        //MainGrid.Height = 395;
-                        //MainGrid.Width = 431;
                         GridView1.Height = 835;
                         GridView1.Width = 1740;
                         break;
