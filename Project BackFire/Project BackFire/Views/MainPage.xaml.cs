@@ -35,6 +35,11 @@ namespace Project_BackFire.Views
         private LinearGradientBrush YellowBrush;
         private LinearGradientBrush RedBrush;
 
+<<<<<<< HEAD
+=======
+        
+
+>>>>>>> 4368b69eb4a60dbf38c091f906f82f6af4a91e4b
         private MainViewModel ViewModel
         {
             get { return DataContext as MainViewModel; }
@@ -105,6 +110,10 @@ namespace Project_BackFire.Views
             await ApplicationData.Current.ClearAsync();
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4368b69eb4a60dbf38c091f906f82f6af4a91e4b
         async void GetnameExeo()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
@@ -195,6 +204,10 @@ namespace Project_BackFire.Views
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4368b69eb4a60dbf38c091f906f82f6af4a91e4b
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             Rooms.Clear();
@@ -251,6 +264,10 @@ namespace Project_BackFire.Views
 
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4368b69eb4a60dbf38c091f906f82f6af4a91e4b
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
 
@@ -317,10 +334,9 @@ namespace Project_BackFire.Views
                         //tmer.Interval = TimeSpan.FromSeconds(3);
                         //tmer.Tick += (Sender, args) =>
                         //{
-                        //    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                         Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
                         //};
-                        GridView1.Height = 450;
-                        GridView1.Width = 1740;
+                     
                         break;
                     }
                 case 6:
