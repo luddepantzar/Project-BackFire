@@ -27,7 +27,7 @@ namespace Project_BackFire.Views
         public ObservableCollection<Room> Rooms;
 
         public DispatcherTimer DisTimer = new DispatcherTimer();
-        private DispatcherTimer Timer {get; set;}
+        private DispatcherTimer Timer { get; set; }
 
         private LinearGradientBrush GreenBrush;
         private LinearGradientBrush YellowBrush;
@@ -51,7 +51,8 @@ namespace Project_BackFire.Views
 
             CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
             Timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(5) };
-            Timer.Tick += (sender, args) => {
+            Timer.Tick += (sender, args) =>
+            {
                 CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
                 SettingsGrid.Visibility = Visibility.Collapsed;
                 Timer.Stop();
@@ -98,7 +99,7 @@ namespace Project_BackFire.Views
             localSettings.Values["exampleCompositeSetting"] = composite;
         }
 
-       async private void RemoveSettings()
+        async private void RemoveSettings()
         {
             await ApplicationData.Current.ClearAsync();
         }
@@ -213,7 +214,6 @@ namespace Project_BackFire.Views
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
             AboutSettingsGrid.Visibility = Visibility.Collapsed;
-
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -231,7 +231,6 @@ namespace Project_BackFire.Views
             ApiSettingsGrid.Visibility = Visibility.Visible;
             GeneralSettingsGrid.Visibility = Visibility.Collapsed;
             AboutSettingsGrid.Visibility = Visibility.Collapsed;
-
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
@@ -246,7 +245,6 @@ namespace Project_BackFire.Views
             GeneralSettingsGrid.Visibility = Visibility.Visible;
             ApiSettingsGrid.Visibility = Visibility.Collapsed;
             AboutSettingsGrid.Visibility = Visibility.Collapsed;
-
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
@@ -282,6 +280,7 @@ namespace Project_BackFire.Views
                     Rooms.Add(new Room { RoomID = 5, RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
             }
+
             switch (Rooms.Count)
             {
                 case 1:
@@ -290,7 +289,7 @@ namespace Project_BackFire.Views
                         GridView1.Width = 880;
                         break;
                     }
-                case  2 :
+                case 2:
                     {
                         GridView1.Height = 450;
                         GridView1.Width = 880;
@@ -310,7 +309,6 @@ namespace Project_BackFire.Views
                     }
                 case 5:
                     {
-                       
                         goto case 6;
                     }
                 case 6:
@@ -321,7 +319,6 @@ namespace Project_BackFire.Views
                     }
                 case 7:
                     {
-                       
                         goto case 8;
                     }
                 case 8:
