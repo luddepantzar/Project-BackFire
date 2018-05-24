@@ -86,14 +86,24 @@ namespace Project_BackFire
             }
         }
 
-        public void RedIndicatorColorToYellowIndicatorColor()
+        public async void RedIndicatorColorToYellowIndicatorColor()
         {
+<<<<<<< HEAD
             StatusColor.Fill = RedBrush;
+=======
+>>>>>>> f07dd5734a33f067c6ded6d8ca2ea2b918fc391e
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
-            ColorTimer.Tick += (Sender, args) =>
+            ColorTimer.Tick += async (Sender, args) =>
             {
+<<<<<<< HEAD
                 StatusColor.Fade(duration: 1000, delay: 2000, value: 0).Start();         
+=======
+                await StatusColor.Fade(duration: 1000, delay: 0, value: 0).StartAsync();
+                StatusColor.Fill = RedBrush;
+                await StatusColor.Fade(duration: 1200, delay: 0, value: 1).StartAsync();
+
+>>>>>>> f07dd5734a33f067c6ded6d8ca2ea2b918fc391e
                 YellowindIcatorColorToGreenIndicatorColor();
                 StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
                 ColorTimer.Stop();
@@ -103,50 +113,52 @@ namespace Project_BackFire
 
         public  void YellowindIcatorColorToGreenIndicatorColor()
         {
+<<<<<<< HEAD
             //await StatusColor.Fade(duration: 1000, delay: 1000, value: 0).StartAsync();
             StatusColor.Fill = YellowBrush;
+=======
+>>>>>>> f07dd5734a33f067c6ded6d8ca2ea2b918fc391e
             DispatcherTimer ColorTimer2 = new DispatcherTimer();
             ColorTimer2.Interval = TimeSpan.FromSeconds(7);
-            ColorTimer2.Tick += (Zender, Args) =>
+            ColorTimer2.Tick += async (Zender, Args) =>
             {
+<<<<<<< HEAD
                 //StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
                 StatusColor.Fill = GreenBrush;
+=======
+                await StatusColor.Fade(duration: 1000, delay: 0, value: 0).StartAsync();
+                StatusColor.Fill = YellowBrush;
+                await StatusColor.Fade(duration: 1200, delay: 0, value: 1).StartAsync();
+                red2green();
+>>>>>>> f07dd5734a33f067c6ded6d8ca2ea2b918fc391e
                 ColorTimer2.Stop();
             };
             ColorTimer2.Start();
         }
 
-        public void FlipCardConditions()
+        public  void red2green()
         {
-            //start:
+            DispatcherTimer ColorTimer = new DispatcherTimer();
+            ColorTimer.Interval = TimeSpan.FromSeconds(7);
+            ColorTimer.Tick += async (Sender, args) =>
+            {
+                await StatusColor.Fade(duration: 1000, delay: 0, value: 0).StartAsync();
+                StatusColor.Fill = GreenBrush;
+                await StatusColor.Fade(duration: 1200, delay: 0, value: 1).StartAsync();
 
-            //int test = 1;
+                ColorTimer.Stop();
+            };
+            ColorTimer.Start();
+        }
 
-            //switch (test)
-            //{
-            //    case 1:
-            //        {
-            //            RedIndicatorColorToYellowIndicatorColor();
-            //            await StatusColor.Fade(duration: 1000, delay: 2000, value: 0).StartAsync();
-            //            goto case 2;
-            //        }
+        public async void FlipCardConditions()
+        {
 
-            //    case 2:
-            //        {
-            //            YellowindIcatorColorToGreenIndicatorColor();
-            //            await StatusColor.Fade(duration: 1000, delay: 2000, value: 1).StartAsync();
-            //            goto case 3;
-            //        }
-
-            //    case 3:
-            //        {
-
-            //            goto start;
-            //        }
-
-            //}
 
             RedIndicatorColorToYellowIndicatorColor();
+
+
+
 
 
         }
