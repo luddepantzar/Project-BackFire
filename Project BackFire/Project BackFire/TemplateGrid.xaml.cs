@@ -50,106 +50,6 @@ namespace Project_BackFire
             //FadeIn();
         }
 
-        //public void SwitchRooms()
-        //{
-        //    Rooms = new ObservableCollection<Room>();
-        //    var status = Rooms.Any(p => p.RoomID <= 1);
-        //    switch (status)
-        //    {
-        //        case true:
-        //            MainImage.Width = 500;
-        //            MainImage.Height = 500;
-        //            break;
-        //        case false:
-        //            break;
-        //    }
-        //    //Rooms c1 = new Rooms
-        //    //{
-        //    //    RoomID = 10,
-        //    //    RoomName = "Rum 10",
-        //    //    Projector = true,
-        //    //    Wboard = false,
-        //    //    Tv = false,
-        //    //    Wifi = true,
-        //    //    Seats = 5,
-        //    //    Note = "Lorem ipsum dolor sit amet, co"
-        //    //};
-        //    //switch (c1.Projector)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckProj.Visibility = Visibility.Collapsed;
-        //    //            ErrProj.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            ErrProj.Visibility = Visibility.Collapsed;
-        //    //            CheckProj.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //}
-        //    //switch (c1.Wboard)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckWhiteboard.Visibility = Visibility.Collapsed;
-        //    //            ErrWboard.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            CheckWhiteboard.Visibility = Visibility.Visible;
-        //    //            ErrWboard.Visibility = Visibility.Collapsed;
-        //    //            break;
-        //    //        }
-        //    //}
-        //    //switch (c1.Tv)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckTV.Visibility = Visibility.Collapsed;
-        //    //            ErrTv.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            CheckTV.Visibility = Visibility.Visible;
-        //    //            ErrTv.Visibility = Visibility.Collapsed;
-        //    //            break;
-        //    //        }
-        //    //}
-        //    //switch (c1.Wifi)
-        //    //{
-        //    //    case false:
-        //    //        {
-        //    //            CheckWifi.Visibility = Visibility.Collapsed;
-        //    //            ErrWifi.Visibility = Visibility.Visible;
-        //    //            break;
-        //    //        }
-        //    //    case true:
-        //    //        {
-        //    //            CheckWifi.Visibility = Visibility.Visible;
-        //    //            ErrWifi.Visibility = Visibility.Collapsed;
-        //    //            break;
-        //    //        }
-        //    //}
-        //}
-
-        //private void EightRooms()
-        //{
-        //    foreach (Room attribute in Rooms)
-        //    {
-        //        switch (attribute.RoomID)
-        //        {
-        //            case 1:
-        //                StatusColor.Fill = YellowBrush;
-        //                break;
-        //            default:
-        //                break;
-        //        }
-        //    }
-        //}
 
         public void OnBooked()
         {
@@ -245,11 +145,6 @@ namespace Project_BackFire
             }
 
         }
-
-        //public async void FadeIn()
-        //{
-        //    await MainGrid.Fade(duration: 1000, delay: 10000, value: 1).StartAsync();
-        //}
 
         public void Easteregg()
         {

@@ -39,22 +39,7 @@ namespace Project_BackFire.Views
         private LinearGradientBrush YellowBrush;
         private LinearGradientBrush RedBrush;
 
-        //public Image MainImage
-        //{
-        //    get { return MainImage; }
-        //}
-        //private Grid _MainGrid;
-        //public Grid MainGrid
-        //{
-        //    get { return _MainGrid; }
-        //    set { _MainGrid = value; }
-        //}
-        //private Rectangle _statuscolor;
-        //public Rectangle StatusColor
-        //{
-        //    get { return _statuscolor; }
-        //    set { _statuscolor = value; }
-        //}
+        
 
         private MainViewModel ViewModel
         {
@@ -125,7 +110,6 @@ namespace Project_BackFire.Views
         {
             await ApplicationData.Current.ClearAsync();
         }
-
 
 
         async void GetnameExeo()
@@ -219,62 +203,6 @@ namespace Project_BackFire.Views
             TodaysDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
-        //private void Animation()
-        //{
-        //    rotationfront1.Begin();
-        //    rotationback1.Begin();
-        //}
-
-        //private void Fade()
-        //{
-        //    //BackImg1.Opacity = 0;
-        //    //BackImg2.Opacity = 0;
-        //    //BackImg3.Opacity = 0;
-        //    //BackImg4.Opacity = 0;
-        //    //BackImg5.Opacity = 0;
-        //    //BackImg6.Opacity = 0;
-        //    //BackImg7.Opacity = 0;
-        //    //BackImg8.Opacity = 0;
-
-        //    //grid1.Opacity = 0;
-        //    //grid2.Opacity = 0;
-        //    //grid3.Opacity = 0;
-        //    //grid4.Opacity = 0;
-        //    //grid5.Opacity = 0;
-        //    //grid6.Opacity = 0;
-        //    //grid7.Opacity = 0;
-        //    //grid8.Opacity = 0;
-
-        //    // bild1.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox2.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox3.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox4.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox5.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox6.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox7.Fade(duration: 1000, delay: 0, value: 0).Start();
-        //    //Imgbox8.Fade(duration: 1000, delay: 0, value: 0).Start();
-
-        //    //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid1.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid2.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid3.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid4.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid5.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid6.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid7.Fade(duration: 4000, delay: 3000, value: 1).Start();
-        //    //grid8.Fade(duration: 4000, delay: 3000, value: 1).Start();
-
-        //    //BackImg1.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg2.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg3.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg4.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg5.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg6.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg7.Fade(duration: 4000, delay: 1200, value: 1).Start();
-        //    //BackImg8.Fade(duration: 4000, delay: 1200, value: 1).Start();
-
-        //    //rotationback8.Begin();
-        //}
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
@@ -381,18 +309,6 @@ namespace Project_BackFire.Views
 
         }
 
-        //private void ContentArea_Tapped(object Sender, TappedRoutedEventArgs e)
-        //{
-        //    CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
-        //    DispatcherTimer ButtonTimer = new DispatcherTimer();
-        //    ButtonTimer.Interval = TimeSpan.FromSeconds(20);
-        //    ButtonTimer.Tick += (sender, args) =>
-        //    {
-        //        CmdBar.ClosedDisplayMode = AppBarClosedDisplayMode.Hidden;
-        //        ButtonTimer.Stop();
-        //    };
-        //    ButtonTimer.Start();
-        //}
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
@@ -480,10 +396,9 @@ namespace Project_BackFire.Views
                         //tmer.Interval = TimeSpan.FromSeconds(3);
                         //tmer.Tick += (Sender, args) =>
                         //{
-                        //    Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                         Rooms.Add(new Room { RoomID = 1, RoomName = "Rum 1 Main", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
                         //};
-                        GridView1.Height = 450;
-                        GridView1.Width = 1740;
+                     
                         break;
                     }
                 case 6:
