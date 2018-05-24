@@ -30,18 +30,17 @@
             <GradientStop Color="#00000000" Offset="0.801"/>
             <GradientStop Color="#CCFFDC00" Offset="0.098"/>
         </LinearGradientBrush>
-        
+
     </UserControl.Resources>
 
     <Grid x:Name="MainGrid" Margin="0,0,0,0">
-        
         <Image x:Name="MainImage" Margin="20,20,20,20" Source="{Binding FrontImage}" Stretch="Fill" Canvas.ZIndex="2" Width="391" Height="355">
             <Image.Projection>
                 <PlaneProjection RotationY="0"/>
             </Image.Projection>
         </Image>
         <Border  x:Name="MainBorder" BorderBrush="Black" BorderThickness="4" Width="391"  Height="355" Margin="20,20,20,20" Opacity="1" Canvas.ZIndex="2">
-            <Grid Margin="0,0,0,0">
+            <Grid Margin="0,0,0,0" ManipulationMode="None">
                 <Rectangle x:Name="StatusColor" Margin="0,0,0,0" Height="218" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -53,7 +52,7 @@
                 <TextBlock x:Name="SeatsIcon" Width="40" Margin="0,13,65,0" FontFamily="Segoe MDL2 Assets" Text="&#xEA8C;" FontSize="40" Foreground="White"   HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
                 <TextBlock x:Name="CheckSeats" Height="47" Margin="0,9,10,0" Text="{Binding Seats}" Foreground="White" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" FontFamily="Berlin Sans FB Demi" />
                 <TextBlock x:Name="CompanyName" Height="50" VerticalAlignment="Top" Text="{Binding RoomName}" FontSize="40" Margin="10,0,0,0"/>
-                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom">
+                <Border Height="98" Margin="0,0,0,0" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="Black">
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="0.88"/>
@@ -61,15 +60,13 @@
                         </LinearGradientBrush>
                     </Border.Background>
                 </Border>
-                <Rectangle  x:Name="acrylgrid" HorizontalAlignment="Center" Margin="0,197,0,0" VerticalAlignment="Top" Width="383" Height="65" >
+                <Rectangle  x:Name="acrylgrid" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" Width="383" Height="65" >
                     <Rectangle.Fill>
                         <AcrylicBrush TintColor="#F2000000" TintOpacity="0.1"  FallbackColor="Black" AlwaysUseFallback="False" BackgroundSource="Backdrop"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" TextAlignment="Center" Margin="37,197,0,0" Text="{Binding Note}"  Foreground="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" Height="65" FontSize="24"/>
-
+                <TextBlock x:Name="CompanyNote" HorizontalAlignment="Left" TextAlignment="Center" Margin="37,177,0,0" Text="{Binding Note}"  Foreground="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" Height="65" FontSize="24"/>
                 <Grid Margin="0,0,0,0" Width="311">
-
                     <StackPanel Orientation="Horizontal" Margin="0,266,0,0">
                         <TextBlock x:Name="ProjIcon" Height="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE714;" Foreground="White" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" Visibility="{Binding Projector}"/>
                         <TextBlock x:Name="WhiteboardIcon" Width="40" Margin="30,0,0,9" FontFamily="Segoe MDL2 Assets" Text="&#xE7B8;" FontSize="40" Foreground="White" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom" Visibility="{Binding Wboard}"/>

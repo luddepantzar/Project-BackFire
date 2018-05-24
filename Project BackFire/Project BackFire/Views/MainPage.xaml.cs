@@ -104,8 +104,6 @@ namespace Project_BackFire.Views
             }
         }
 
-
-
         private void Settings()
         {
             ApplicationDataContainer localSettings =
