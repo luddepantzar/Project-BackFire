@@ -107,6 +107,7 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
+        
         <CommandBar x:Name="CmdBar" OverflowButtonVisibility="Collapsed" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" VerticalAlignment="Bottom">
             <CommandBar.Content>
                 <Grid Margin="683"></Grid>

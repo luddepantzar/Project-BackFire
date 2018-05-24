@@ -88,28 +88,28 @@ namespace Project_BackFire
 
         public void RedIndicatorColorToYellowIndicatorColor()
         {
-            StatusColor.Fade(duration: 1000, delay: 2000, value: 0).Start();
             StatusColor.Fill = RedBrush;
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
             ColorTimer.Tick += (Sender, args) =>
             {
+                StatusColor.Fade(duration: 1000, delay: 2000, value: 0).Start();         
                 YellowindIcatorColorToGreenIndicatorColor();
+                StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
                 ColorTimer.Stop();
             };
             ColorTimer.Start();
         }
 
-        public void YellowindIcatorColorToGreenIndicatorColor()
+        public  void YellowindIcatorColorToGreenIndicatorColor()
         {
-            StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
+            //await StatusColor.Fade(duration: 1000, delay: 1000, value: 0).StartAsync();
             StatusColor.Fill = YellowBrush;
-            StatusColor.Fade(duration: 1000, delay: 10000, value: 0).Start();
             DispatcherTimer ColorTimer2 = new DispatcherTimer();
             ColorTimer2.Interval = TimeSpan.FromSeconds(7);
             ColorTimer2.Tick += (Zender, Args) =>
             {
-                StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
+                //StatusColor.Fade(duration: 1000, delay: 0, value: 1).Start();
                 StatusColor.Fill = GreenBrush;
                 ColorTimer2.Stop();
             };
