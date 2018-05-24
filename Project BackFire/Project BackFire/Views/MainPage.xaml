@@ -80,7 +80,6 @@
             <Button x:Name="btn1" Content="btn1" HorizontalAlignment="Left" Margin="855,78,0,35" VerticalAlignment="Stretch" RenderTransformOrigin="0.508,0.375" Click="btn1_Click"/>
             <TextBlock x:Name="TodaysDate" Margin="0,85,30,14" TextWrapping="Wrap" FontSize="20" Foreground="White" FontFamily="Microsoft YaHei" HorizontalAlignment="Right" Width="Auto" FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TimeDate" Margin="0,10,15,58" TextWrapping="Wrap" FontSize="60"  Foreground="White" FontFamily="Microsoft YaHei"  HorizontalAlignment="Right" Width="Auto" FocusVisualPrimaryBrush="Black"/>
-            <TextBlock  HorizontalAlignment="Left" Margin="940,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="103" Width="250"/>
         </Grid>
 
         <Button x:Name="FlyoutBtn" Content="Flyout" HorizontalAlignment="Left" Margin="1213,95,0,-127" VerticalAlignment="Top" >

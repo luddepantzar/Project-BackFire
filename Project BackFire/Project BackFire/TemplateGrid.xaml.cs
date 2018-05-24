@@ -39,7 +39,7 @@ namespace Project_BackFire
         {
             InitializeComponent();
             Rooms = new ObservableCollection<Room>();
-           
+
             GreenBrush = (LinearGradientBrush)Resources["GreenLinearBrush"];
             YellowBrush = (LinearGradientBrush)Resources["YellowLinearBrush"];
             RedBrush = (LinearGradientBrush)Resources["RedLinearBrush"];
@@ -135,7 +135,7 @@ namespace Project_BackFire
         //    //        }
         //    //}
         //}
-        
+
         //private void EightRooms()
         //{
         //    foreach (Room attribute in Rooms)
@@ -171,7 +171,7 @@ namespace Project_BackFire
                         break;
                 }
             }
-            
+
             foreach (Room Rooms in Rooms)
             {
                 switch (Rooms.Status <= 7)
@@ -223,7 +223,6 @@ namespace Project_BackFire
             //{
             //    MainGrid.Fade(duration: 1000, delay: 2000, value: 0).Start();
             //    StatusColor.Fill = RedBrush;
-
             //    MainGrid.Fade(duration: 1000, delay: 5000, value: 1).Start();
             //}
 
