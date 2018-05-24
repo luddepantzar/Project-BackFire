@@ -146,7 +146,7 @@ namespace Project_BackFire.Views
             ContentArea.Background = (LinearGradientBrush)Resources["Test"];
             MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
             ApiOutput.Text = "Välkommen " + data.name;
-
+            ProgRing.IsActive = false;
         }
 
         void GetDefault()
@@ -212,6 +212,7 @@ namespace Project_BackFire.Views
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
         {
             ApiContainer.Visibility = Visibility.Visible;
+            ProgRing.IsActive = true;
             InputApiBox();
         }
 
