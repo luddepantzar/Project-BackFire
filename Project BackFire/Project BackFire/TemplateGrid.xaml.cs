@@ -50,10 +50,6 @@ namespace Project_BackFire
             //FadeIn();
         }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4368b69eb4a60dbf38c091f906f82f6af4a91e4b
         public void OnBooked()
         {
             foreach (Room Rooms in Rooms)
