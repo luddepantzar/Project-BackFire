@@ -114,7 +114,7 @@ namespace Project_BackFire.Views
             BitmapImage Img6 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/30c2b2ac-8eca-4c19-b5f0-a1d3e4980e45/image"));
             BitmapImage Img7 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a6e038e0-a4af-42c1-a19d-3f98da56b45e/image"));
             
-            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/";
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a31d1fc8-df29-419c-8308-f8bc884b378e";
 
             HttpClient client = new HttpClient();
 
