@@ -88,7 +88,10 @@ namespace Project_BackFire
 
         public void RedIndicatorColorToYellowIndicatorColor()
         {
+<<<<<<< HEAD
             StatusColor.Fill = GreenBrush;
+=======
+>>>>>>> d24ebc24aa0d6156a67e17b5666fe6b54c904390
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
             ColorTimer.Tick += async (Sender, args) =>
