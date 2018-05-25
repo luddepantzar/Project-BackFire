@@ -104,6 +104,29 @@ namespace Project_BackFire.Views
             await ApplicationData.Current.ClearAsync();
         }
 
+        async private void getImages()
+        {
+            BitmapImage Img1 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a31d1fc8-df29-419c-8308-f8bc884b378e/image"));
+            BitmapImage Img2 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/0997cae3-86fc-4414-a9ed-09f111787eca/image"));
+            BitmapImage Img3 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/e7e44beb-2598-4c92-aea6-b7c508c46dde/image"));
+            BitmapImage Img4 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/eb43b0e9-5ea5-4006-9274-33affdb874c3/image"));
+            BitmapImage Img5 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/d50fc824-947e-460f-936f-b2247ec1bd3b/image"));
+            BitmapImage Img6 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/30c2b2ac-8eca-4c19-b5f0-a1d3e4980e45/image"));
+            BitmapImage Img7 = new BitmapImage(new Uri("https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a6e038e0-a4af-42c1-a19d-3f98da56b45e/image"));
+            
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/";
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Rootobject>(response);
+
+            Rooms.Add(new Room { RoomID = data.id, RoomName = data.name, FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+
+
+        }
+
         async void GetnameExeo()
         {
             string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4";
@@ -446,7 +469,40 @@ namespace Project_BackFire.Views
             addroom6();
             addroom7();
 
+<<<<<<< HEAD
         }
+=======
+            Random rnd = new Random();
+            int val = rnd.Next(0, 9);
+
+            switch (val)
+            {
+                case 1:
+                    Rooms.Add(new Room { RoomID = "7", RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 2:
+                    Rooms.Add(new Room { RoomID = "8", RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 3:
+                    Rooms.Add(new Room { RoomID = "3", RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 4:
+                    Rooms.Add(new Room { RoomID = "6", RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 5:
+                    Rooms.Add(new Room { RoomID = "1", RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 6:
+                    Rooms.Add(new Room { RoomID = "4", RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 7:
+                    Rooms.Add(new Room { RoomID = "2", RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+                case 8:
+                    Rooms.Add(new Room { RoomID = "5", RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+                    break;
+            }
+>>>>>>> fd80a3fa9deb4200bdb00f83e0d6aa70f247fea8
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {

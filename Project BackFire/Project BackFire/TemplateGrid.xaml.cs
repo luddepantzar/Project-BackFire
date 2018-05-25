@@ -86,8 +86,12 @@ namespace Project_BackFire
             }
         }
 
-        public async void RedIndicatorColorToYellowIndicatorColor()
+        public void RedIndicatorColorToYellowIndicatorColor()
         {
+<<<<<<< HEAD
+            StatusColor.Fill = GreenBrush;
+=======
+>>>>>>> d24ebc24aa0d6156a67e17b5666fe6b54c904390
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
             ColorTimer.Tick += async (Sender, args) =>
@@ -111,6 +115,7 @@ namespace Project_BackFire
                 await StatusColor.Fade(duration: 1000, delay: 0, value: 0).StartAsync();
                 StatusColor.Fill = YellowBrush;
                 await StatusColor.Fade(duration: 1200, delay: 0, value: 1).StartAsync();
+
                 red2green();
                 ColorTimer2.Stop();
             };
@@ -132,12 +137,13 @@ namespace Project_BackFire
             ColorTimer.Start();
         }
 
-        public async void FlipCardConditions()
+        public void FlipCardConditions()
         {
-
-
             RedIndicatorColorToYellowIndicatorColor();
+<<<<<<< HEAD
 
+=======
+>>>>>>> fd80a3fa9deb4200bdb00f83e0d6aa70f247fea8
         }
 
         public void Easteregg()
