@@ -117,7 +117,7 @@ namespace Project_BackFire
             ColorTimer2.Start();
         }
 
-        public  void red2green()
+        public void red2green()
         {
             DispatcherTimer ColorTimer = new DispatcherTimer();
             ColorTimer.Interval = TimeSpan.FromSeconds(7);
@@ -137,10 +137,6 @@ namespace Project_BackFire
 
 
             RedIndicatorColorToYellowIndicatorColor();
-
-
-
-
 
         }
 
