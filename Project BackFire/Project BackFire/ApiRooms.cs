@@ -9,7 +9,6 @@ using Windows.UI;
 public class room_Rootobject
 {
     public List<Class2> Property1 { get; set; }
-
 }
 
 public class Class2

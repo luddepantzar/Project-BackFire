@@ -120,6 +120,7 @@ namespace Project_BackFire.Views
             ContentArea.Background = (LinearGradientBrush)Resources["Test"];
             MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
             ApiOutput.Text = "Välkommen " + data.name;
+            GetExeoRooms();
         }
 
         void GetDefault()
@@ -184,7 +185,7 @@ namespace Project_BackFire.Views
 
         async void addroom1()
         {
-            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/";
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a31d1fc8-df29-419c-8308-f8bc884b378e";
 
             HttpClient client = new HttpClient();
 
@@ -319,19 +320,18 @@ namespace Project_BackFire.Views
         async void addroom6()
         {
 
-            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms";
-
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/30c2b2ac-8eca-4c19-b5f0-a1d3e4980e45";
 
             HttpClient client = new HttpClient();
 
             string response = await client.GetStringAsync(url);
 
-            var data = JsonConvert.DeserializeObject<List<Class2>>(response);
+            var data = JsonConvert.DeserializeObject<Class2>(response);
 
             Rooms.Add(new Room
             {
-                RoomID = data.,
-                RoomName = ,
+                RoomID = data.id,
+                RoomName = data.name,
                 FrontImage = "ms-appx:///Images/c5.jpeg",
                 Projector = Visibility.Collapsed,
                 Wboard = Visibility.Collapsed,
@@ -439,12 +439,12 @@ namespace Project_BackFire.Views
         private void GetExeoRooms()
         {
             addroom1();
-            //addroom2();
-            //addroom3();
-            //addroom4();
-            //addroom5();
-            //addroom6();
-            //addroom7();
+            addroom2();
+            addroom3();
+            addroom4();
+            addroom5();
+            addroom6();
+            addroom7();
 
         }
 
