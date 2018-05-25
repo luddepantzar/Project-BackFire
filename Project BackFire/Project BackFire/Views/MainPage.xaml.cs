@@ -143,6 +143,7 @@ namespace Project_BackFire.Views
             ContentArea.Background = (LinearGradientBrush)Resources["Test"];
             MenuBar.Background = (LinearGradientBrush)Resources["MenuTest"];
             ApiOutput.Text = "Välkommen " + data.name;
+            GetExeoRooms();
         }
 
         void GetDefault()
@@ -184,13 +185,13 @@ namespace Project_BackFire.Views
 
             //BitmapImage newlogo = new BitmapImage(new Uri("ms-appx:///Assets/test_logo_whitetxt.png"));
 
-
             switch (ApiInput.Password)
             {
                 case "1234":
                     {
                         GetnameExeo();
                         Settings();
+                        GetExeoRooms();
                         break;
                     }
                 case "0":
@@ -203,6 +204,194 @@ namespace Project_BackFire.Views
                     RemoveSettings();
                     break;
             }
+        }
+
+        async void addroom1()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a31d1fc8-df29-419c-8308-f8bc884b378e";
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+        }
+
+        async void addroom2()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/0997cae3-86fc-4414-a9ed-09f111787eca";
+
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+
+        }
+
+        async void addroom3()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/e7e44beb-2598-4c92-aea6-b7c508c46dde";
+
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+
+        }
+
+        async void addroom4()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/eb43b0e9-5ea5-4006-9274-33affdb874c3";
+
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+
+        }
+
+        async void addroom5()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/d50fc824-947e-460f-936f-b2247ec1bd3b";
+
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+
+        }
+
+        async void addroom6()
+        {
+
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/30c2b2ac-8eca-4c19-b5f0-a1d3e4980e45";
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+
+        }
+
+        async void addroom7()
+        {
+            string url = "https://api.rumsbokning.nu/api/companies/aab96aa1-d8ca-4f74-8e35-ded190c38dd4/rooms/a6e038e0-a4af-42c1-a19d-3f98da56b45e";
+
+
+            HttpClient client = new HttpClient();
+
+            string response = await client.GetStringAsync(url);
+
+            var data = JsonConvert.DeserializeObject<Class2>(response);
+
+            Rooms.Add(new Room
+            {
+                RoomID = data.id,
+                RoomName = data.name,
+                FrontImage = "ms-appx:///Images/c5.jpeg",
+                Projector = Visibility.Collapsed,
+                Wboard = Visibility.Collapsed,
+                Tv = Visibility.Visible,
+                Wifi = Visibility.Visible,
+                Seats = data.seats,
+                Status = 3,
+                Note = "Lorem ipsum dolor sit amet, co"
+            });
+
         }
 
         private void ApiSubmitBut_Click(object sender, RoutedEventArgs e)
@@ -270,9 +459,19 @@ namespace Project_BackFire.Views
             AboutSettingsGrid.Visibility = Visibility.Collapsed;
         }
 
-        private void btn3_Click(object sender, RoutedEventArgs e)
+        private void GetExeoRooms()
         {
+            addroom1();
+            addroom2();
+            addroom3();
+            addroom4();
+            addroom5();
+            addroom6();
+            addroom7();
 
+<<<<<<< HEAD
+        }
+=======
             Random rnd = new Random();
             int val = rnd.Next(0, 9);
 
@@ -303,55 +502,89 @@ namespace Project_BackFire.Views
                     Rooms.Add(new Room { RoomID = "5", RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
                     break;
             }
+>>>>>>> fd80a3fa9deb4200bdb00f83e0d6aa70f247fea8
 
-            switch (Rooms.Count)
-            {
-                case 1:
-                    {
-                        GridView1.Height = 450;
-                        GridView1.Width = 880;
-                        break;
-                    }
-                case 2:
-                    {
-                        GridView1.Height = 450;
-                        GridView1.Width = 880;
-                        break;
-                    }
-                case 3:
-                    {
-                        GridView1.Height = 450;
-                        GridView1.Width = 1305;
-                        break;
-                    }
-                case 4:
-                    {
-                        GridView1.Height = 450;
-                        GridView1.Width = 1740;
-                        break;
-                    }
-                case 5:
-                    {
-                        goto case 6;
-                    }
-                case 6:
-                    {
-                        GridView1.Height = 835;
-                        GridView1.Width = 1305;
-                        break;
-                    }
-                case 7:
-                    {
-                        goto case 8;
-                    }
-                case 8:
-                    {
-                        GridView1.Height = 835;
-                        GridView1.Width = 1740;
-                        break;
-                    }
-            }
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
 
+            //Random rnd = new Random();
+            //int val = rnd.Next(0, 9);
+
+            //switch (val)
+            //{
+            //    case 1:
+            //        Rooms.Add(new Room {  RoomName = "Rum 7", FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 12, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 2:
+            //        Rooms.Add(new Room {  RoomName = "Rum 8", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Collapsed, Seats = 30, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 3:
+            //        Rooms.Add(new Room {  RoomName = "Rum 3", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Collapsed, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 4, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 4:
+            //        Rooms.Add(new Room {  RoomName = "Rum 6", FrontImage = "ms-appx:///Images/c5.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Collapsed, Seats = 22, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 5:
+            //        Rooms.Add(new Room {  RoomName = "Rum 1", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 5, Status = 0, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 6:
+            //        Rooms.Add(new Room {  RoomName = "Rum 4", FrontImage = "ms-appx:///Images/c2.jpeg", Projector = Visibility.Visible, Wboard = Visibility.Visible, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 15, Status = 2, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 7:
+            //        Rooms.Add(new Room {  RoomName = "Rum 2", FrontImage = "ms-appx:///Images/c1.jpeg", Projector = Visibility.Collapsed, Wboard = Visibility.Visible, Tv = Visibility.Visible, Wifi = Visibility.Visible, Seats = 10, Status = 1, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //    case 8:
+            //        Rooms.Add(new Room {  RoomName = "Rum 5", FrontImage = "ms-appx:///Images/c3.jpg", Projector = Visibility.Visible, Wboard = Visibility.Collapsed, Tv = Visibility.Collapsed, Wifi = Visibility.Visible, Seats = 7, Status = 3, Note = "Lorem ipsum dolor sit amet, co" });
+            //        break;
+            //}
+
+            //switch (Rooms.Count)
+            //{
+            //    case 1:
+            //        {
+            //            GridView1.Height = 450;
+            //            GridView1.Width = 880;
+            //            break;
+            //        }
+            //    case 2:
+            //        {
+            //            GridView1.Height = 450;
+            //            GridView1.Width = 880;
+            //            break;
+            //        }
+            //    case 3:
+            //        {
+            //            GridView1.Height = 450;
+            //            GridView1.Width = 1305;
+            //            break;
+            //        }
+            //    case 4:
+            //        {
+            //            GridView1.Height = 450;
+            //            GridView1.Width = 1740;
+            //            break;
+            //        }
+            //    case 5:
+            //        {
+            //            goto case 6;
+            //        }
+            //    case 6:
+            //        {
+            //            GridView1.Height = 835;
+            //            GridView1.Width = 1305;
+            //            break;
+            //        }
+            //    case 7:
+            //        {
+            //            goto case 8;
+            //        }
+            //    case 8:
+            //        {
+            //            GridView1.Height = 835;
+            //            GridView1.Width = 1740;
+            //            break;
+            //        }
+            //}
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

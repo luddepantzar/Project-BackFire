@@ -41,7 +41,7 @@
         </Image>
         <Border  x:Name="MainBorder" BorderBrush="Black" BorderThickness="4" Width="391"  Height="355" Margin="20,20,20,20" Opacity="1" Canvas.ZIndex="2">
             <Grid Margin="0,0,0,0" ManipulationMode="None">
-                <Rectangle x:Name="StatusColor" Margin="0,0,0,0" Height="294" VerticalAlignment="Top">
+                <Rectangle x:Name="StatusColor" Margin="0,0,0,0" Height="218" VerticalAlignment="Top">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#00000000" Offset="0.901"/>

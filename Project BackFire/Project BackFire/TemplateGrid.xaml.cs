@@ -137,6 +137,10 @@ namespace Project_BackFire
         public void FlipCardConditions()
         {
             RedIndicatorColorToYellowIndicatorColor();
+<<<<<<< HEAD
+
+=======
+>>>>>>> fd80a3fa9deb4200bdb00f83e0d6aa70f247fea8
         }
 
         public void Easteregg()
