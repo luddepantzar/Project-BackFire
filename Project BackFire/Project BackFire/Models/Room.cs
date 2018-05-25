@@ -14,7 +14,7 @@ namespace Project_BackFire.Models
 {
     public class Room
     {
-        public int RoomID { get; set; }
+        public string RoomID { get; set; }
         public string RoomName { get; set; }
         public Visibility Projector { get; set; }
         public Visibility Wboard { get; set; }
